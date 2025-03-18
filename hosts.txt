@@ -16,10 +16,6 @@
 
 39.156.66.1 baidu.com
  
-20.70.246.20 microsoft.com
- 
-20.236.44.162 microsoft.com/zh-cn
-
 59.111.160.244 163.com
 
 103.135.240.78 music.163.com
