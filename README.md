@@ -8,10 +8,18 @@ Gmail联系方式：toney871030@gmail.com
 
 再次感谢您对原创内容的保护和尊重。
 
-Loyalsoldier大佬的仓库地址: https://github.com/Loyalsoldier
+#Loyalsoldier大佬的仓库地址: 
+https://github.com/Loyalsoldier
 
-blackmatrix7大佬的rule分类仓库: https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/README.md
+#blackmatrix7大佬的rule分类仓库:
+https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/README.md
 
-qichiyuhub大佬的rulesList仓库: https://github.com/qichiyuhub/rule
+#qichiyuhub大佬的rulesList仓库:
+https://github.com/qichiyuhub/rule
+
+#在线订阅转换
+科学上网工具：https://v2rayse.com
+Yuju的订阅转换网站:https://sub.yuju.love
+
 
 
