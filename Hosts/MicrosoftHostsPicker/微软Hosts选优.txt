@@ -1,0 +1,27 @@
+Microsoft 主机选择器 - M$💊
+一个轻量级的 Python 脚本，帮助你选择最快的 IP 地址以用于 Microsoft 服务。
+
+这个工具为什么？
+在某些地区，由于 DNS 解析到次优 IP 地址，Microsoft 服务可能无法正常运行。此脚本旨在通过找到各种 Microsoft 服务的最响应 IP 地址来解决该问题。
+
+开始使用
+安装依赖项：
+pip install -r requirements.txt
+从这个仓库下载最新的压缩包。
+
+将内容提取到您喜欢的位置。
+
+运行脚本：
+
+python MicrosoftHostsPicker.py
+工作原理
+脚本会自动选择最适合的各种 Microsoft 服务的 IP 地址。结果会保存在与"MicrosoftHostsPicker.py"在同一目录的"hosts"文件中。
+
+使用提示
+只替换系统 hosts 文件中的有问题的 IP 地址。
+避免覆盖所有条目，因为这可能会导致意外的问题。
+一些服务（例如，Office 下载和 Windows 更新）使用全球 CDN 节点，除非您的 DNS 解析不正确，否则可能不需要手动配置。
+享受更快更可靠的 Microsoft 服务访问！
+
+About
+一个轻量级的 Python 脚本，帮助你选择最快的 IP 地址以用于 Microsoft 服务。
