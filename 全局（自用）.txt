@@ -1,207 +1,211 @@
-// ÓòÃûÅäÖÃ
+// åŸŸåé…ç½®
 const forceProxyDomains = [
-    "DOMAIN-SUFFIX,ip138.com,¹úÄÚÖ±Á¬",
-    "DOMAIN-SUFFIX,agedm.org,¹úÄÚÖ±Á¬",
-    "DOMAIN-SUFFIX,m.mubai.link,¹úÄÚÖ±Á¬",
-    "DOMAIN-SUFFIX,linux.do,¹úÄÚÖ±Á¬",
-    "DOMAIN-SUFFIX,hybase.com,¹úÄÚÖ±Á¬",
-    "DOMAIN-SUFFIX,masuit.net,¹úÄÚÖ±Á¬",
-    "DOMAIN-SUFFIX,4fb.cn,¹úÄÚÖ±Á¬",
-    "DOMAIN-SUFFIX,applnn.com,¹úÄÚÖ±Á¬",
-    "DOMAIN-SUFFIX,hifini.com,¹úÄÚÖ±Á¬",
-    "DOMAIN-SUFFIX,genspark.ai,×Ô¶¯Ñ¡Ôñ",
-    "DOMAIN-SUFFIX,wallhaven.cc,×Ô¶¯Ñ¡Ôñ",
-    "DOMAIN-SUFFIX,xvideos.com,×Ô¶¯Ñ¡Ôñ",
-    "DOMAIN-SUFFIX,pornhub.com,×Ô¶¯Ñ¡Ôñ",
-    "DOMAIN-SUFFIX,spankbang.com,×Ô¶¯Ñ¡Ôñ",
-    "DOMAIN-SUFFIX,sehuatang.net,×Ô¶¯Ñ¡Ôñ",
-    "DOMAIN-SUFFIX,krx18.com,×Ô¶¯Ñ¡Ôñ",
-    "DOMAIN-SUFFIX,chat.openai.com,×Ô¶¯Ñ¡Ôñ",
-    "DOMAIN-SUFFIX,music.ydev.tech/#/,×Ô¶¯Ñ¡Ôñ",
-    "DOMAIN-SUFFIX,v.ikanbot.com,¹úÄÚÖ±Á¬",
-    "DOMAIN-SUFFIX,customer.l53.net,×Ô¶¯Ñ¡Ôñ",
-    "DOMAIN-SUFFIX,pan666.net,¹úÄÚÖ±Á¬",
-    "DOMAIN-SUFFIX,haowallpaper.com,¹úÄÚÖ±Á¬",
-   
+    "DOMAIN-SUFFIX,ip138.com,å›½å†…ç›´è¿",
+    "DOMAIN-SUFFIX,agedm.org,å›½å†…ç›´è¿",
+    "DOMAIN-SUFFIX,m.mubai.link,å›½å†…ç›´è¿",
+    "DOMAIN-SUFFIX,linux.do,å›½å†…ç›´è¿",
+    "DOMAIN-SUFFIX,hybase.com,å›½å†…ç›´è¿",
+    "DOMAIN-SUFFIX,masuit.net,å›½å†…ç›´è¿",
+    "DOMAIN-SUFFIX,4fb.cn,å›½å†…ç›´è¿",
+    "DOMAIN-SUFFIX,applnn.com,å›½å†…ç›´è¿",
+    "DOMAIN-SUFFIX,hifini.com,å›½å†…ç›´è¿",
+    "DOMAIN-SUFFIX,genspark.ai,è‡ªåŠ¨é€‰æ‹©",
+    "DOMAIN-SUFFIX,wallhaven.cc,è‡ªåŠ¨é€‰æ‹©",
+    "DOMAIN-SUFFIX,xvideos.com,è‡ªåŠ¨é€‰æ‹©",
+    "DOMAIN-SUFFIX,pornhub.com,è‡ªåŠ¨é€‰æ‹©",
+    "DOMAIN-SUFFIX,spankbang.com,è‡ªåŠ¨é€‰æ‹©",
+    "DOMAIN-SUFFIX,sehuatang.net,è‡ªåŠ¨é€‰æ‹©",
+    "DOMAIN-SUFFIX,krx18.com,è‡ªåŠ¨é€‰æ‹©",
+    "DOMAIN-SUFFIX,chat.openai.com,è‡ªåŠ¨é€‰æ‹©",
+    "DOMAIN-SUFFIX,music.ydev.tech/#/,è‡ªåŠ¨é€‰æ‹©",
+    "DOMAIN-SUFFIX,v.ikanbot.com,å›½å†…ç›´è¿",
+    "DOMAIN-SUFFIX,customer.l53.net,è‡ªåŠ¨é€‰æ‹©",
+    "DOMAIN-SUFFIX,pan666.net,å›½å†…ç›´è¿",
+    "DOMAIN-SUFFIX,haowallpaper.com,å›½å†…ç›´è¿",
 ];
 
-
-
-// ¹æÔò¼¯ÅäÖÃ
+// è§„åˆ™é›†é…ç½®
 const ruleConfig = [
     {
-        name: "¹ã¸æ¼¯ºÏ",
+        name: "å¹¿å‘Šé›†åˆ",
         url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/AdvertisingLite/AdvertisingLite.yaml",
-        group: "¹ã¸æÀ¹½Ø"
-        
+        group: "å¹¿å‘Šæ‹¦æˆª"
     },
-
     {
-        name: "Direct.list",
-        url:  "https://github.com/qichiyuhub/rule/blob/master/Direct.list",
-        group: "¹úÄÚÖ±Á¬"
-        
+        name: "Direct",
+        url: "https://raw.githubusercontent.com/qichiyuhub/rule/master/Direct.list",
+        group: "å›½å†…ç›´è¿"
     },
-
     {
-        name: "AI.list",
-        url:  "https://github.com/qichiyuhub/rule/blob/master/AI.list",
-        group: "×Ô¶¯Ñ¡Ôñ"
-        
+        name: "AI",
+        url: "https://raw.githubusercontent.com/qichiyuhub/rule/master/AI.list",
+        group: "è‡ªåŠ¨é€‰æ‹©"
     },
-    
+    {
+        name: "Python",
+        url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Python/Python.yaml",
+        group: "è‡ªåŠ¨é€‰æ‹©"
+    },
     {
         name: "Proxy+ProxyLite",
         urls: [
-              "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Proxy/Proxy.yaml",
-              "https://raw.githubusercontent.com/qichiyuhub/rule/refs/heads/master/ProxyLite.list"
+            "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Proxy/Proxy.yaml",
+            "https://raw.githubusercontent.com/qichiyuhub/rule/master/ProxyLite.list"
         ],
-        group: "×Ô¶¯Ñ¡Ôñ"
-        
+        group: "è‡ªåŠ¨é€‰æ‹©"
     }
 ];
 
+// å¸¸é‡å®šä¹‰
+const MULTIPLIER_REGEX = /(?:[4-9](?:\.5)?x)/i;
+const RULE_UPDATE_INTERVAL = 86400;
+
 function main(config) {
-    const newConfig = JSON.parse(JSON.stringify(config));
-    
-    // ¹ıÂË¸ß±¶ÂÊ½Úµã
-    const multiplierRegex = /(?:[4-9](?:\.5)?x)/i;
-    newConfig.proxies = newConfig.proxies.filter(proxy => !multiplierRegex.test(proxy.name));
+    try {
+        // å…‹éš†é…ç½®å¯¹è±¡
+        const newConfig = Object.assign({}, config);
+        
+        // è¿‡æ»¤é«˜å€ç‡èŠ‚ç‚¹
+        newConfig.proxies = newConfig.proxies.filter(proxy => !MULTIPLIER_REGEX.test(proxy.name));
 
-    // ¹¹½¨´úÀí×é
-    const proxyGroups = [
-        {
-            "name": "×Ô¶¯Ñ¡Ôñ",
-            "icon":"https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg", 
-            "type": "url-test",
-            "url": "http://www.gstatic.com/generate_204",
-            "interval": 300,
-            "tolerance": 50,
-            "proxies": newConfig.proxies.map(p => p.name)
+        // æ„å»ºä»£ç†ç»„
+        const proxyGroups = [
+            {
+                "name": "è‡ªåŠ¨é€‰æ‹©",
+                "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg",
+                "type": "url-test",
+                "url": "http://www.gstatic.com/generate_204",
+                "interval": 300,
+                "tolerance": 50,
+                "proxies": newConfig.proxies.map(p => p.name)
+            },
+            {
+                "name": "æ‰‹åŠ¨é€‰æ‹©",
+                "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg",
+                "type": "select",
+                "proxies": ["è‡ªåŠ¨é€‰æ‹©", "DIRECT"]
+            },
+            {
+                "name": "å›½å†…ç›´è¿",
+                "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg",
+                "type": "select",
+                "proxies": ["DIRECT"]
+            },
+            {
+                "name": "å¹¿å‘Šæ‹¦æˆª",
+                "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/ambulance.svg",
+                "type": "select",
+                "proxies": ["REJECT"]
+            }
+        ];
 
-        },
-        {
-            "name": "ÊÖ¶¯Ñ¡Ôñ",
-            "icon":"https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg", 
-            "type": "select",
-            "proxies": ["×Ô¶¯Ñ¡Ôñ", "DIRECT"]
-        },
-        {
-            "name": "¹úÄÚÖ±Á¬",
-            "icon":"https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg", 
-            "type": "select",
-            "proxies": ["DIRECT"]
-        },
-        {
-            "name": "¹ã¸æÀ¹½Ø",
-            "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/ambulance.svg", 
-            "type": "select",
-            "proxies": ["REJECT"]
-        }
-    ];
+        // è§„åˆ™é…ç½®
+        const rules = [];
+        
+        // è‡ªå®šä¹‰åŸŸå
+        forceProxyDomains.forEach(domain => {
+            rules.push(domain);
+        });
 
-    // ¹æÔòÅäÖÃ
-    const rules = [];
-    
-    // ×Ô¶¨ÒåÓòÃû
-    forceProxyDomains.forEach(domain => {
-        rules.push(domain);
-    });
+        // è‡ªå®šä¹‰è§„åˆ™é›†
+        const ruleProviders = {};
+        ruleConfig.forEach(({ name, url, urls, group }) => {
+            const urlsToUse = urls || [url];
+            urlsToUse.forEach(url => {
+                const providerKey = `${name.toLowerCase()}_rules`;
+                ruleProviders[providerKey] = {
+                    "type": "http",
+                    "behavior": "classical",
+                    "url": url,
+                    "interval": RULE_UPDATE_INTERVAL,
+                    "path": `./rule-providers/${providerKey}.yaml`
+                };
+                rules.push(`RULE-SET,${providerKey},${group}`);
+            });
+        });
+        
+        // GEOè§„åˆ™
+        rules.push(
+            "GEOSITE,geolocation-!cn,è‡ªåŠ¨é€‰æ‹©",
+            "GEOSITE,gfw,è‡ªåŠ¨é€‰æ‹©",
+            "GEOSITE,onedrive,å›½å†…ç›´è¿",
+            "GEOSITE,microsoft@cn,å›½å†…ç›´è¿",
+            "GEOSITE,steam@cn,å›½å†…ç›´è¿",
+            "GEOSITE,category-games@cn,å›½å†…ç›´è¿",
+            "GEOSITE,private,å›½å†…ç›´è¿",
+            "GEOSITE,cn,å›½å†…ç›´è¿",
+            "GEOIP,private,å›½å†…ç›´è¿,no-resolve",
+            "GEOIP,cn,å›½å†…ç›´è¿",
+            "GEOIP,telegram,è‡ªåŠ¨é€‰æ‹©",
+            "GEOIP,netflix,è‡ªåŠ¨é€‰æ‹©",
+            "GEOIP,cloudflare,è‡ªåŠ¨é€‰æ‹©",
+            "GEOIP,cloudfront,è‡ªåŠ¨é€‰æ‹©",
+            "GEOIP,facebook,è‡ªåŠ¨é€‰æ‹©",
+            "GEOIP,fastly,è‡ªåŠ¨é€‰æ‹©",
+            "GEOIP,google,è‡ªåŠ¨é€‰æ‹©",
+            "GEOIP,twitter,è‡ªåŠ¨é€‰æ‹©",
+            "GEOIP,tor,è‡ªåŠ¨é€‰æ‹©",
+            "MATCH,æ‰‹åŠ¨é€‰æ‹©"
+        );
 
-    // ×Ô¶¨Òå¹æÔò¼¯
-    const ruleProviders = {};
-    ruleConfig.forEach(({ name, url, group }) => {
-        const providerKey = `${name.toLowerCase()}_rules`;
-        ruleProviders[providerKey] = {
-            "type": "http",
-            "behavior": "classical",
-            "url": url,
-            "interval": 86400,
-            "path": `./rule-providers/${providerKey}.yaml`
+        // å…¨å±€é…ç½®
+        const globalConfig = {
+            "global-client-fingerprint": "chrome",
+            "tcp-concurrent": true,
+            "geox-url": {
+                "geoip": "https://ghfast.top/https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/geoip.dat",
+                "geosite": "https://github.com/Loyalsoldier/domain-list-custom/releases/latest/download/geosite.dat",
+                "mmdb": "https://ghfast.top/https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country.mmdb"
+            }
         };
-        rules.push(`RULE-SET,${providerKey},${group}`);
-    });
-    
-    // È«¾ÖÅäÖÃ
-    const globalConfig = {
-        "global-client-fingerprint": "chrome",
-        "tcp-concurrent": true,
-        "geox-url": {
-            "geoip": "https://ghfast.top/https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/geoip.dat",
-            "geosite": "https://github.com/Loyalsoldier/domain-list-custom/releases/latest/download/geosite.dat",
-            "mmdb": "https://ghfast.top/https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country.mmdb"
-        }
-    };
 
-    // DNSÓÅ»¯ÅäÖÃ
-    const dnsConfig = {
-        "enable": true,
-        "ipv6": true,
-        "use-system-hosts": true,
-        "respect-rules": true,
-        "enhanced-mode": "fake-ip",
-        "fake-ip-range": "198.18.0.1/16",
-        "fake-ip-filter": [
-            "+.lan",
-            "+.local"
-        ],
-        "default-nameserver": [
-            "223.5.5.5",
-            "120.53.53.53"
-        ],
-        "nameserver": [
-            "https://223.5.5.5/dns-query",
-            "https://120.53.53.53/dns-query"
-        ],
-        // ½âÎö´úÀí½ÚµãµÄDNS£¬½öÖ§³Ö´¿IP
-        "proxy-server-nameserver": [
-            "https://84.200.69.80/dns-query",
-            "https://8.8.8.8/dns-query"
-        ],
-        "nameserver-policy": {
-            "geosite:private,cn": [
+        // DNSä¼˜åŒ–é…ç½®
+        const dnsConfig = {
+            "enable": true,
+            "ipv6": true,
+            "use-system-hosts": true,
+            "respect-rules": true,
+            "enhanced-mode": "fake-ip",
+            "fake-ip-range": "198.18.0.1/16",
+            "fake-ip-filter": [
+                "+.lan",
+                "+.local"
+            ],
+            "default-nameserver": [
+                "223.5.5.5",
+                "120.53.53.53"
+            ],
+            "nameserver": [
                 "https://223.5.5.5/dns-query",
                 "https://120.53.53.53/dns-query"
             ],
-            "geosite:geolocation-!cn,gfw": [
-                "https://84.200.69.80/dns-query",
-                "https://8.8.8.8/dns-query"
-            ]
-        }
-    };
+            "proxy-server-nameserver": [
+                "https://8.8.8.8/dns-query",
+                "https://8.8.4.4/dns-query"
+            ],
+            "nameserver-policy": {
+                "geosite:private,cn": [
+                    "https://223.5.5.5/dns-query",
+                    "https://120.53.53.53/dns-query"
+                ],
+                "geosite:geolocation-!cn,gfw": [
+                    "https://8.8.8.8/dns-query",
+                    "https://8.8.4.4/dns-query"
+                ]
+            }
+        };
 
-    // GEO¹æÔò
-    rules.push(
-        // GEOSITE ¹æÔò
-        "GEOSITE,geolocation-!cn,×Ô¶¯Ñ¡Ôñ",
-        "GEOSITE,gfw,×Ô¶¯Ñ¡Ôñ",
-        "GEOSITE,onedrive,¹úÄÚÖ±Á¬",
-        "GEOSITE,microsoft@cn,¹úÄÚÖ±Á¬",
-        "GEOSITE,steam@cn,¹úÄÚÖ±Á¬",
-        "GEOSITE,category-games@cn,¹úÄÚÖ±Á¬",
-        "GEOSITE,private,¹úÄÚÖ±Á¬",
-        "GEOSITE,cn,¹úÄÚÖ±Á¬",
-        // GEOIP ¹æÔò
-        "GEOIP,private,¹úÄÚÖ±Á¬,no-resolve",
-        "GEOIP,cn,¹úÄÚÖ±Á¬",
-        "GEOIP,telegram,×Ô¶¯Ñ¡Ôñ",
-        "GEOIP,netflix,×Ô¶¯Ñ¡Ôñ",
-        "GEOIP,cloudflare,×Ô¶¯Ñ¡Ôñ",
-        "GEOIP,cloudfront,×Ô¶¯Ñ¡Ôñ",
-        "GEOIP,facebook,×Ô¶¯Ñ¡Ôñ",
-        "GEOIP,fastly,×Ô¶¯Ñ¡Ôñ",
-        "GEOIP,google,×Ô¶¯Ñ¡Ôñ",
-        "GEOIP,twitter,×Ô¶¯Ñ¡Ôñ",
-        "GEOIP,tor,×Ô¶¯Ñ¡Ôñ",
-        "MATCH,ÊÖ¶¯Ñ¡Ôñ"
-    );
-return {
-    ...newConfig,
-    ...globalConfig,
-    "proxy-groups": proxyGroups,
-    "rules": rules,
-    "rule-providers": ruleProviders,
-    "dns": dnsConfig
-
-    };
+        // æ›´æ–°é…ç½®
+        return {
+            ...newConfig,
+            ...globalConfig,
+            "proxy-groups": proxyGroups,
+            "rules": rules,
+            "rule-providers": ruleProviders,
+            "dns": dnsConfig
+        };
+    } catch (error) {
+        console.error('å‘ç”Ÿé”™è¯¯:', error);
+        return config; // è¿”å›åŸå§‹é…ç½®ä»¥é˜²å‡ºé”™
+    }
 }
