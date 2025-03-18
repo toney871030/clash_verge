@@ -33,10 +33,11 @@ Gmail联系方式：toney871030@gmail.com
 
 # linux do论坛
   https://linux.do/
-  hosts: 104.18.2.161 linux.do
-         104.18.3.161 linux.do
-         162.159.152.2 linux.do
-         162.159.153.2 linux.do
+# linux do论坛hosts  
+ 104.18.2.161 linux.do
+ 104.18.3.161 linux.do
+ 162.159.152.2 linux.do
+ 162.159.153.2 linux.do
         
 
 
