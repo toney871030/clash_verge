@@ -1,0 +1,112 @@
+#破解、禁止ip#
+
+#[迅雷]#
+127.0.0.1 hub5btmain.sandai.net
+127.0.0.1 hub5emu.sandai.net
+127.0.0.1 upgrade.xl9.xunlei.com
+
+
+#搜索引擎、服务器类ip#
+
+104.16.133.229 cloudflare.com
+
+150.171.28.10 bing.com
+
+13.107.21.200 cn.bing.com
+
+39.156.66.1 baidu.com
+ 
+20.70.246.20 microsoft.com
+ 
+20.236.44.162 microsoft.com/zh-cn
+
+59.111.160.244 163.com
+
+103.135.240.78 music.163.com
+
+109.244.194.121 tencent.com
+
+43.159.233.74 wx.mail.qq.com
+
+172.217.12.142 google.com
+
+142.250.189.3 Google.com.hk
+
+172.217.14.78 google.com/search
+
+142.250.217.133 mail.google.com
+
+172.217.72.142 translate.google.com
+
+#软件、论坛、博客站点ip#
+
+104.18.2.161 linux.do
+104.18.3.161 linux.do
+
+124.232.185.97 52pojie.cn
+ 
+124.156.141.225  winos.me
+
+127.0.0.1 pc528.net 
+
+172.67.185.24 meta.appinn.net
+
+104.21.46.211 bbs.rainmeter.cn
+
+172.241.24.66 www04.eyny.com
+
+172.67.72.23 oursogo.com
+
+172.67.188.231 sehuatang.net
+
+104.21.25.138 18comic-mhws.club
+
+117.24.12.35 bbs.3dmgame.com
+
+104.21.18.193 masuit.net
+
+43.249.193.76 hybase.com
+
+43.129.235.19 4fb.cn
+ 
+104.21.32.1 applnn.com
+
+23.225.203.180 hifini.com
+
+#娱乐、影视、音乐站点ip#
+
+173.249.198.82 3jihome.com
+
+104.21.93.9 v.ikanbot.com
+
+104.21.89.43 music.ydev.tech
+
+23.224.60.155 agedm.org
+ 
+104.26.11.121 ddys.pro
+
+104.21.51.29 5wu7rv.shop
+
+172.67.132.31 m.mubai.link
+
+#DNS、网络代理站点ip#
+
+104.26.9.179 ping.pe
+
+216.239.32.27 toolbox.googleapps.com
+
+#其它资源站点ip#
+
+172.67.164.117 greasyfork.org
+104.21.96.1 sleazyfork.org
+
+104.26.10.35 wallhaven.cc
+104.26.11.35 wallhaven.cc
+
+110.42.51.228 haowallpaper.com
+
+#网盘下载ip#
+
+13.107.137.11 onedrive.live.com
+
+104.21.16.49 pan666.net
