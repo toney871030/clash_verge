@@ -31,6 +31,9 @@ Gmail联系方式：toney871030@gmail.com
 # v2rayn下载地址
   https://github.com/2dust/v2rayN/releases
 
+# SwitchHosts下载地址
+  https://github.com/oldj/SwitchHosts/releases
+  
 # linux do论坛
   https://linux.do/
 # linux do论坛hosts  
