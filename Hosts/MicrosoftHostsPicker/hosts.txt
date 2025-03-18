@@ -1,0 +1,49 @@
+# OneDrive (Beta, only for China)
+ 134.170.108.26 onedrive.live.com
+ 134.170.109.48 skyapi.onedrive.live.com
+
+# Microsoft Login
+13.107.42.22 logincdn.msauth.net
+13.107.42.22 login.live.com
+13.107.42.22 acctcdn.msauth.net
+13.107.42.22 account.live.com
+
+# Microsoft Account
+104.100.19.155 account.microsoft.com
+
+# Xbox Live CDN
+23.32.237.51 gameclipscontent-d2009.xboxlive.com
+23.32.237.51 images-eds.xboxlive.com
+23.32.237.51 xbl-smooth.xboxlive.com
+23.32.237.51 titlehub.xboxlive.com
+23.32.237.51 compass.xboxlive.com
+23.32.237.51 xnotify.xboxlive.com
+23.32.237.51 activityhub.xboxlive.com
+23.32.237.51 xboxcare.xboxlive.com
+23.32.237.51 images-eds-ssl.xboxlive.com
+23.32.237.51 rta.xboxlive.com
+23.32.237.51 peoplehub.xboxlive.com
+23.32.237.51 editorial.xboxlive.com
+
+# Xbox Cloud Sync
+13.107.51.50 titlestorage.xboxlive.com
+
+# Office CDN
+42.49.13.28 officecdn.microsoft.com
+
+# Microsoft Store Images
+104.75.165.226 store-images.s-microsoft.com
+
+# Microsoft Store Pages
+182.247.226.216 storeedgefd.dsx.mp.microsoft.com
+
+# Microsoft Games Download
+23.50.49.179 xvcf1.xboxlive.com
+23.50.49.179 xvcf2.xboxlive.com
+
+# Windows Update
+123.245.253.229 tlu.dl.delivery.mp.microsoft.com
+123.245.253.229 dl.delivery.mp.microsoft.com
+123.245.253.229 assets1.xboxlive.cn
+123.245.253.229 assets2.xboxlive.cn
+
