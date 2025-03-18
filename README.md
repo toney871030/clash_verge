@@ -1,4 +1,4 @@
-在Github上存储自用Clash Verge文件的仓库
+
 
 Loyalsoldier大佬的clash-rules仓库地址:
 https://github.com/Loyalsoldier/clash-rules
