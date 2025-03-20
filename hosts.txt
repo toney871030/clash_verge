@@ -24,16 +24,6 @@
 
 43.159.233.74 wx.mail.qq.com
 
-172.217.12.142 google.com
-
-142.250.189.3 Google.com.hk
-
-172.217.14.78 google.com/search
-
-142.250.217.133 mail.google.com
-
-172.217.72.142 translate.google.com
-
 #软件、论坛、博客站点ip#
 
 104.18.2.161 linux.do
