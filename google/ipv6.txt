@@ -5279,7 +5279,6 @@ ipv6.freeipv6.info
 2001:778:0:ffff:64:0:5bc6:aee8 zh.wiktionary.org
 2001:778:0:ffff:64:0:5bc6:aee8 zh-min-nan.wiktionary.org
 2001:778:0:ffff:64:0:5bc6:aee8 zu.wiktionary.org
-###IPv6 代理翻墙
 
-#IPv6 HTTP 代理：gfw-proxy.co.cc:3128
-2607:fcd0:1337:4b::2 gfw-proxy.co.cc
+
+
