@@ -87,6 +87,10 @@
 
 172.67.211.131 jinricp.niuc.net
 
+45.207.192.191 boju.cc
+
+172.67.211.131 jinricp.niuc.net
+
 #DNS、网络代理站点ip#
 
 104.26.9.179 ping.pe
