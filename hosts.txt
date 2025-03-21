@@ -81,6 +81,14 @@
 
 23.225.203.180 hifini.com
 
+185.88.181.10 xvideos.com
+
+66.254.114.41 cn.pornhub.com
+
+104.19.239.156 spankbang.com
+
+104.21.48.1 krx18.com
+
 #DNS、网络代理站点ip#
 
 104.26.9.179 ping.pe
