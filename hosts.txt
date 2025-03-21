@@ -61,6 +61,8 @@
  
 104.21.32.1 applnn.com
 
+104.20.3.235 pastebin.com
+
 #娱乐、影视、音乐站点ip#
 
 172.67.173.61 3jihome.com
