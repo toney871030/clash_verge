@@ -1,0 +1,10 @@
+#Google Hosts
+
+142.250.207.5 translate.googleapis.com
+142.250.207.5 translate.google.com
+142.250.207.5 translate-pa.googleapis.com
+
+2607:f8b0:4009:80a::2017 translate.googleapis.com
+2607:f8b0:4009:80a::2017 translate.google.com
+2607:f8b0:4009:80a::2017 translate-pa.googleapis.com
+
