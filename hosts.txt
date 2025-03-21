@@ -5,6 +5,10 @@
 127.0.0.1 hub5emu.sandai.net
 127.0.0.1 upgrade.xl9.xunlei.com
 
+#AI#
+
+104.18.32.47 chatgpt.com
+
 
 #搜索引擎、服务器类ip#
 
