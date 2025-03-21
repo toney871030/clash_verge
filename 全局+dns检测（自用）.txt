@@ -1,0 +1,306 @@
+// 域名配置
+const forceProxyDomains = [
+    "DOMAIN-SUFFIX,ip138.com,国内直连",
+    "DOMAIN-SUFFIX,agedm.org,国内直连",
+    "DOMAIN-SUFFIX,m.mubai.link,国内直连",
+    "DOMAIN-SUFFIX,linux.do,国内直连",
+    "DOMAIN-SUFFIX,hybase.com,国内直连",
+    "DOMAIN-SUFFIX,masuit.net,国内直连",
+    "DOMAIN-SUFFIX,4fb.cn,国内直连",
+    "DOMAIN-SUFFIX,applnn.com,国内直连",
+    "DOMAIN-SUFFIX,hifini.com,国内直连",
+    "DOMAIN-SUFFIX,genspark.ai,自动选择",
+    "DOMAIN-SUFFIX,wallhaven.cc,自动选择",
+    "DOMAIN-SUFFIX,xvideos.com,自动选择",
+    "DOMAIN-SUFFIX,pornhub.com,自动选择",
+    "DOMAIN-SUFFIX,spankbang.com,自动选择",
+    "DOMAIN-SUFFIX,sehuatang.net,自动选择",
+    "DOMAIN-SUFFIX,krx18.com,自动选择",
+    "DOMAIN-SUFFIX,chat.openai.com,自动选择",
+    "DOMAIN-SUFFIX,music.ydev.tech/#/,自动选择",
+    "DOMAIN-SUFFIX,v.ikanbot.com,国内直连",
+    "DOMAIN-SUFFIX,customer.l53.net,自动选择",
+    "DOMAIN-SUFFIX,pan666.net,国内直连",
+    "DOMAIN-SUFFIX,haowallpaper.com,国内直连",
+];
+
+// 规则集配置
+const ruleConfig = [
+    {
+        name: "广告集合",
+        url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/AdvertisingLite/AdvertisingLite.yaml",
+        group: "广告拦截"
+    },
+    {
+        name: "Direct",
+        url: "https://raw.githubusercontent.com/qichiyuhub/rule/master/Direct.list",
+        group: "国内直连"
+    },
+    {
+        name: "AI",
+        url: "https://raw.githubusercontent.com/qichiyuhub/rule/master/AI.list",
+        group: "自动选择"
+    },
+    {
+        name: "Python",
+        url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Python/Python.yaml",
+        group: "自动选择"
+    },
+    {
+        name: "Proxy+ProxyLite",
+        urls: [
+            "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Proxy/Proxy.yaml",
+            "https://raw.githubusercontent.com/qichiyuhub/rule/master/ProxyLite.list"
+        ],
+        group: "自动选择"
+    }
+];
+
+// 常量定义
+// 匹配高倍率节点的正则表达式
+const MULTIPLIER_REGEX = /(?:[4-9](?:\.5)?x)/i;
+// 规则更新间隔（秒） 86400相当于一天
+const RULE_UPDATE_INTERVAL = 86400;
+// 测试连接URL
+const TEST_URL = "https://www.gstatic.com/generate_204";
+// 自动测试间隔 (秒)
+const TEST_INTERVAL = 300;
+// 自动选择容差 (毫秒)
+const TEST_TOLERANCE = 20;
+// 负载均衡策略："round-robin" | "sticky-sessions" | "consistent-hashing"
+const BALANCESTRATEGY = "sticky-sessions";
+//DNS变量定义
+const DNS_CONFIG = {
+    defaultDNS: ["223.5.5.5", "120.53.53.53"],
+    cnDnsList: ["https://223.5.5.5/dns-query", "https://120.53.53.53/dns-query"],
+    proxyDnsList: ["https://8.8.8.8/dns-query", "https://8.8.4.4/dns-query"]
+
+};
+// 高质量节点关键词列表
+const HIGH_QUALITY_KEYWORDS = [
+    "家宽", "家庭宽带", "IEPL", "Iepl", "iepl",
+    "IPLC", "iplc", "Iplc", "专线", "高速",
+    "高级", "精品", "原生", "SVIP", "svip", 
+    "Svip", "VIP", "vip", "Vip", "Premium", 
+    "premium",
+    "特殊", "特殊线路", "游戏", "Game", "game"
+];
+// 预编译高质量节点匹配的正则表达式
+const HIGH_QUALITY_REGEX = new RegExp(HIGH_QUALITY_KEYWORDS.join("|"), "i");
+/**
+ * 筛选高质量节点 - 使用正则表达式优化性能
+ * @param {Array} proxies - 所有代理节点
+ * @returns {Array} 符合条件的高质量节点名称列表
+ */
+function filterHighQualityProxies(proxies) {
+    if (!proxies || !Array.isArray(proxies)) {
+        return [];
+    }
+    
+    const result = [];
+    const len = proxies.length;
+    const regex = HIGH_QUALITY_REGEX; // 缓存引用
+    
+    for (let i = 0; i < len; i++) {
+        const proxy = proxies[i];
+        const proxyName = proxy.name || "";
+        if (regex.test(proxyName)) {
+            result.push(proxyName);
+        }
+    }
+    
+    return result;
+}
+// 动态更新DNS配置
+async function updateDNSConfig() {
+    const { defaultDNS, cnDnsList, proxyDnsList } = DNS_CONFIG;
+
+    const isPrimaryDNSAvailable = await checkDNSAvailability(defaultDNS[0]);
+    const isSecondaryDNSAvailable = await checkDNSAvailability(defaultDNS[1]);
+
+    if (!isPrimaryDNSAvailable && !isSecondaryDNSAvailable) {
+        console.log("主DNS和备DNS都不可用，切换到备用DNS");
+        DNS_CONFIG.nameserver = proxyDnsList; // 切换到备用DNS
+    } else {
+        console.log("DNS状态正常");
+        DNS_CONFIG.nameserver = cnDnsList; // 恢复主DNS和备DNS
+    }
+}
+
+// 检查DNS可用性
+async function checkDNSAvailability(dns) {
+    try {
+        const response = await fetch(`https://dns.google/resolve?name=example.com&dns=${dns}`);
+        return response.ok;
+    } catch (error) {
+        return false;
+    }
+}
+
+
+
+function main(config) {
+    try {
+        // 克隆配置对象
+        const newConfig = Object.assign({}, config);
+        
+        // 过滤高倍率节点
+        newConfig.proxies = newConfig.proxies.filter(proxy => !MULTIPLIER_REGEX.test(proxy.name));
+
+        // 筛选高质量节点
+        const highQualityProxies = filterHighQualityProxies(newConfig.proxies);
+
+        // 构建代理组
+        const proxyGroups = [
+             {
+                "name": "自动选择",
+                "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg",
+                "type": "url-test",
+                "include-all": true,
+                "url": TEST_URL,
+                "interval": TEST_INTERVAL,
+                "tolerance": TEST_TOLERANCE,
+                "proxies":  [...newConfig.proxies.map(p => p.name), ...highQualityProxies]
+            },
+            {
+                "name": "负载均衡",
+                "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg",
+                "type": "load-balance",
+                "include-all": true,
+                "strategy": BALANCESTRATEGY,
+                "url": TEST_URL,
+                "interval": TEST_INTERVAL
+            },
+            {
+                "name": "手动选择",
+                "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg",
+                "type": "select",
+                "proxies": ["自动选择","高质量节点", "DIRECT"]
+            },
+            {
+                "name": "国内直连",
+                "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg",
+                "type": "select",
+                "proxies": ["DIRECT"]
+            },
+            {
+                "name": "广告拦截",
+                "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/ambulance.svg",
+                "type": "select",
+                "proxies": ["REJECT"]
+              },
+            // 新增的高质量节点组
+            {
+                "name": "高质量节点",
+                "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg",
+                "type": "select",
+                "proxies": ["自动选择", "负载均衡", "DIRECT", ...(highQualityProxies.length > 0 ? highQualityProxies : [])]
+            }
+
+        ];
+
+        // 规则配置
+        const rules = [];
+        
+        // 自定义域名
+        forceProxyDomains.forEach(domain => {
+            rules.push(domain);
+        });
+
+        // 自定义规则集
+        const ruleProviders = {};
+        ruleConfig.forEach(({ name, url, urls, group }) => {
+            const urlsToUse = urls || [url];
+            urlsToUse.forEach(url => {
+                const providerKey = `${name.toLowerCase()}_rules`;
+                ruleProviders[providerKey] = {
+                    "type": "http",
+                    "behavior": "classical",
+                    "url": url,
+                    "interval": RULE_UPDATE_INTERVAL,
+                    "path": `./rule-providers/${providerKey}.yaml`
+                };
+                rules.push(`RULE-SET,${providerKey},${group}`);
+            });
+        });
+        
+        // GEO规则
+        rules.push(
+            "GEOSITE,geolocation-!cn,自动选择",
+            "GEOSITE,gfw,自动选择",
+            "GEOSITE,onedrive,国内直连",
+            "GEOSITE,microsoft@cn,国内直连",
+            "GEOSITE,steam@cn,国内直连",
+            "GEOSITE,category-games@cn,国内直连",
+            "GEOSITE,private,国内直连",
+            "GEOSITE,cn,国内直连",
+            "GEOIP,private,国内直连,no-resolve",
+            "GEOIP,cn,国内直连",
+            "GEOIP,telegram,自动选择",
+            "GEOIP,netflix,自动选择",
+            "GEOIP,cloudflare,自动选择",
+            "GEOIP,cloudfront,自动选择",
+            "GEOIP,facebook,自动选择",
+            "GEOIP,fastly,自动选择",
+            "GEOIP,google,自动选择",
+            "GEOIP,twitter,自动选择",
+            "GEOIP,tor,自动选择",
+            "MATCH,高质量节点"
+        );
+
+        // 全局配置
+        const globalConfig = {
+            "global-client-fingerprint": "chrome",
+            "tcp-concurrent": true,
+            "geox-url": {
+                "geoip": "https://ghfast.top/https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/geoip.dat",
+                "geosite": "https://github.com/Loyalsoldier/domain-list-custom/releases/latest/download/geosite.dat",
+                "mmdb": "https://ghfast.top/https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country.mmdb"
+            }
+        };
+
+        // DNS优化配置
+        const dnsConfig = {
+            "enable": true,
+            "listen": ":53",
+            "ipv6": true,
+            "use-hosts": false,
+            "use-system-hosts": true,
+            "respect-rules": true,
+            "enhanced-mode": "fake-ip",
+            "fake-ip-range": "198.18.0.1/16",
+            "fake-ip-filter": [
+             - '+.lan',
+             - '+.local',
+             - '*.arpa',
+             - '+.stun.+',
+             - 'time.*.com',
+             - 'ntp.*.com',
+             - '*.msftncsi.com',
+             - 'www.msftconnecttest.com',
+             - 'localhost.ptlogin2.qq.com'
+            ],
+          "default-nameserver": DNS_CONFIG.defaultDNS,
+          "nameserver": DNS_CONFIG.cnDnsList,
+          "proxy-server-nameserver": DNS_CONFIG.proxyDnsList,
+          "nameserver-policy": {
+          "geosite:private,cn": DNS_CONFIG.cnDnsList,
+          "geosite:geolocation-!cn,gfw": DNS_CONFIG.proxyDnsList
+
+          }
+        };
+
+        // 更新配置
+        return {
+            ...newConfig,
+            ...globalConfig,
+            "proxy-groups": proxyGroups,
+            "rules": rules,
+            "rule-providers": ruleProviders,
+            "dns": dnsConfig
+        };
+    } catch (error) {
+        console.error('发生错误:', error);
+        return config; // 返回原始配置以防出错
+    }
+}
