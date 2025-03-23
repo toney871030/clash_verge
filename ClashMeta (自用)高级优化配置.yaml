@@ -568,7 +568,7 @@ rule-providers:
     interval: 86400
 
   # 本机直连域名规则
-  PC_DIRECT:
+  PCDIRECT:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/PC_DIRECT.yaml"
@@ -576,7 +576,7 @@ rule-providers:
     interval: 86400
 
   # 本机代理域名规则
-  PC_Proxy:
+  PCProxy:
     type: http
     behavior: classical
     url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/PC_Proxy.yaml"
@@ -611,8 +611,8 @@ rules:
   - RULE-SET,games,🎮 游戏平台,no-resolve
   - RULE-SET,dev-platforms,🔧 GitHub,no-resolve
   - RULE-SET,China,🎯 全球直连,no-resolve
-  - RULE-SET,PC_DIRECT,🎯 全球直连,no-resolve
-  - RULE-SET,PC_Proxy,♻️ 自动选择,no-resolve
+  - RULE-SET,PCDIRECT,🎯 全球直连,no-resolve
+  - RULE-SET,PCProxy,♻️ 自动选择,no-resolve
 
   # 自定义规则
   - PROCESS-NAME,clash,DIRECT
