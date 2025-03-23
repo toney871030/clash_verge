@@ -571,16 +571,16 @@ rule-providers:
   PCDIRECT:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/PC_DIRECT.yaml"
-    path: ./ruleset/PC_DIRECT.yaml
+    url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/PCDIRECT.yaml"
+    path: ./ruleset/PCDIRECT.yaml
     interval: 86400
 
   # 本机代理域名规则
   PCProxy:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/PC_Proxy.yaml"
-    path: ./ruleset/PC_Proxy.yaml
+    url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/PCProxy.yaml"
+    path: ./ruleset/PCProxy.yaml
     interval: 86400
 
 # 规则配置 - 优化版
