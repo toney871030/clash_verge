@@ -10,7 +10,7 @@ unified-delay: true         # 统一延迟：统一显示节点延迟
 allow-lan: false            # 局域网连接：允许其他设备经过本机代理
 bind-address: "*"          # 监听地址：*表示绑定所有IP地址
 find-process-mode: strict  # 进程匹配模式：strict严格,off关闭,always总是
-ipv6: true               # IPv6开关：是否启用IPv6支持
+ipv6: false               # IPv6开关：是否启用IPv6支持
 
 # 运行模式(任选其一):
 # rule: 规则模式 - 根据规则匹配来选择代理
