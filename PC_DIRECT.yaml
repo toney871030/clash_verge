@@ -10,7 +10,7 @@ payload:
   - DOMAIN,hifini.com:443
   - DOMAIN,v.ikanbot.com:443
   - DOMAIN,pan666.net:443
-  - DOMAIN,pc528.net:80
+  - DOMAIN,pc528.net
   - DOMAIN,winos.me:443
   - DOMAIN,cmdpe.com:443
   - DOMAIN,52pojie.cn:443
