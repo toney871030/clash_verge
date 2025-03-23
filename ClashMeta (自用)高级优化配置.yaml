@@ -611,7 +611,7 @@ rules:
   - RULE-SET,games,🎮 游戏平台,no-resolve
   - RULE-SET,dev-platforms,🔧 GitHub,no-resolve
   - RULE-SET,China,DIRECT,no-resolve
-  - RULE-SET,PC_DIRECT,DIRECT,no-resolve
+  - RULE-SET,PC_DIRECT,DIRECT
   - RULE-SET,PC_Proxy,♻️ 自动选择,no-resolve
 
   # 自定义规则
