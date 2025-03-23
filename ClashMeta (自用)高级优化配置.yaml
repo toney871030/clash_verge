@@ -608,6 +608,11 @@ rules:
   - DOMAIN-SUFFIX,sehuatang.net,♻️ 自动选择
   - DOMAIN-SUFFIX,krx18.com,🎬 国外媒体
   - DOMAIN-SUFFIX,music.ydev.tech/#/,♻️ 自动选择
+  - DOMAIN-SUFFIX,oursogo.com,♻️ 自动选择
+  - DOMAIN-SUFFIX,eyny.com,♻️ 自动选择
+  - DOMAIN-SUFFIX,18comic.vip,♻️ 自动选择
+  - DOMAIN-SUFFIX,greasyfork.org,♻️ 自动选择
+  - DOMAIN-SUFFIX,sleazyfork.org,♻️ 自动选择
 
   # 应用分流
   - RULE-SET,ai-platforms,🤖 AI平台,no-resolve
