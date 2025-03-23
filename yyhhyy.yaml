@@ -104,10 +104,10 @@ tun:
 NodeParam: &NodeParam {type: http, interval: 86400, health-check: {enable: true, url: 'http://cp.cloudflare.com', interval: 300}}
 # 节点订阅
 proxy-providers: 
-  Node-1:
-    url: ''
-    <<: *NodeParam
-    path: './proxy_provider/providers.yaml'
+  #Node-1:
+   # url: ''
+    #<<: *NodeParam
+   # path: './proxy_provider/providers.yaml'
   # Node-2:
   #   url: '替换订阅链接'
   #   <<: *NodeParam
