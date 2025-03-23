@@ -634,7 +634,7 @@ rules:
   - RULE-SET,games,🎮 游戏平台,no-resolve
   - RULE-SET,dev-platforms,🔧 GitHub,no-resolve
   - RULE-SET,python,♻️ 自动选择,no-resolve
-  - RULE-SET,ChinaMedia,DIRECT
+  - RULE-SET,ChinaMedia,DIRECT,no-resolve
 
   # 自定义规则
   - PROCESS-NAME,clash,DIRECT
