@@ -601,6 +601,8 @@ rules:
   - IP-CIDR,100.64.0.0/10,DIRECT
   - IP-CIDR,224.0.0.0/4,DIRECT
   - IP-CIDR6,fe80::/10,DIRECT
+  - DOMAIN-SUFFIX,pc528.net,DIRECT
+  
  
   # 应用分流
   - RULE-SET,ai-platforms,🤖 AI平台,no-resolve
