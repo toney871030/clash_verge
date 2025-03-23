@@ -109,7 +109,7 @@ dns:
     'bbs.rainmeter.cn': 'https://doh.pub/dns-query'    # Rainmeter 论坛域名使用腾讯 DNS
     'www.pc528.net': 'https://doh.pub/dns-query'    # PC528 论坛域名使用腾讯 DNS
     'www.winos.me': 'https://doh.pub/dns-query'    # Winos 论坛域名使用腾讯 DNS
-    'www.cmdpe.com': 'https://doh.pub/dns-query'    # CMDPE 论坛域名使用腾讯 DNS
+    'www.cmdpe.com': 'https://dns.alidns.com/dns-query'    # CMDPE 论坛域名使用阿里 DNS
     'www.youxiaohou.com': 'https://doh.pub/dns-query'    # 幽小厚网站域名使用腾讯 DNS
     'www.pcmoe.net': 'https://doh.pub/dns-query'    # PC萌 论坛域名使用腾讯 DNS
     'bbs.3dmgame.com': 'https://doh.pub/dns-query'    # 3DM 游戏论坛域名使用腾讯 DNS
