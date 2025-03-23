@@ -75,7 +75,7 @@ dns:
   ipv6: false              # DNS解析IPv6
   listen: 0.0.0.0:53       # DNS监听地址
   enhanced-mode: fake-ip   # DNS模式: fake-ip或redir-host
-  use-hosts: true          # 使用hosts文件
+  use-hosts: false          # 使用hosts文件
 
   # 默认DNS服务器(用于解析其他DNS服务器的域名)
   default-nameserver:
