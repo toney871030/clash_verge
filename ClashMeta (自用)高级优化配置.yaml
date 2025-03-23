@@ -610,8 +610,8 @@ rules:
   - RULE-SET,apple,🍎 苹果服务,no-resolve
   - RULE-SET,games,🎮 游戏平台,no-resolve
   - RULE-SET,dev-platforms,🔧 GitHub,no-resolve
-  - RULE-SET,China,DIRECT,no-resolve
-  - RULE-SET,PC_DIRECT,DIRECT
+  - RULE-SET,China,🎯 全球直连,no-resolve
+  - RULE-SET,PC_DIRECT,🎯 全球直连,no-resolve
   - RULE-SET,PC_Proxy,♻️ 自动选择,no-resolve
 
   # 自定义规则
