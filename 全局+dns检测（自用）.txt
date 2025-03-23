@@ -1,28 +1,46 @@
 // 域名配置
 const forceProxyDomains = [
-    "DOMAIN-SUFFIX,ip138.com,国内直连",
-    "DOMAIN-SUFFIX,agedm.org,国内直连",
-    "DOMAIN-SUFFIX,m.mubai.link,国内直连",
-    "DOMAIN-SUFFIX,linux.do,国内直连",
-    "DOMAIN-SUFFIX,hybase.com,国内直连",
-    "DOMAIN-SUFFIX,masuit.net,国内直连",
-    "DOMAIN-SUFFIX,4fb.cn,国内直连",
-    "DOMAIN-SUFFIX,applnn.com,国内直连",
-    "DOMAIN-SUFFIX,hifini.com,国内直连",
-    "DOMAIN-SUFFIX,genspark.ai,自动选择",
-    "DOMAIN-SUFFIX,wallhaven.cc,自动选择",
-    "DOMAIN-SUFFIX,xvideos.com,自动选择",
-    "DOMAIN-SUFFIX,pornhub.com,自动选择",
-    "DOMAIN-SUFFIX,spankbang.com,自动选择",
-    "DOMAIN-SUFFIX,sehuatang.net,自动选择",
-    "DOMAIN-SUFFIX,krx18.com,自动选择",
-    "DOMAIN-SUFFIX,chat.openai.com,自动选择",
-    "DOMAIN-SUFFIX,music.ydev.tech/#/,自动选择",
-    "DOMAIN-SUFFIX,v.ikanbot.com,国内直连",
-    "DOMAIN-SUFFIX,customer.l53.net,自动选择",
-    "DOMAIN-SUFFIX,pan666.net,国内直连",
-    "DOMAIN-SUFFIX,haowallpaper.com,国内直连",
-    "DOMAIN-SUFFIX,pastebin.com,自动选择",
+//优先处理
+  - RULE-SET,广告集合,广告拦截,no-resolve
+  - DOMAIN-SUFFIX,local,DIRECT
+  - DOMAIN-SUFFIX,localhost,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,17.0.0.0/8,DIRECT
+  - IP-CIDR,100.64.0.0/10,DIRECT
+  - IP-CIDR,224.0.0.0/4,DIRECT
+  - IP-CIDR6,fe80::/10,DIRECT
+  - DOMAIN-SUFFIX,pc528.net,DIRECT,no-resolve
+// 自定义规则
+  - PROCESS-NAME,clash,DIRECT
+  - PROCESS-NAME,v2ray,DIRECT
+  - PROCESS-NAME,xray,DIRECT
+  - PROCESS-NAME,naive,DIRECT
+  - PROCESS-NAME,trojan,DIRECT
+  - PROCESS-NAME,trojan-go,DIRECT
+  - PROCESS-NAME,ss-local,DIRECT
+  - PROCESS-NAME,privoxy,DIRECT
+  - PROCESS-NAME,leaf,DIRECT
+  - PROCESS-NAME,Thunder,DIRECT
+  - PROCESS-NAME,DownloadService,DIRECT
+  - PROCESS-NAME,qBittorrent,DIRECT
+  - PROCESS-NAME,Transmission,DIRECT
+  - PROCESS-NAME,fdm,DIRECT
+  - PROCESS-NAME,aria2c,DIRECT
+  - PROCESS-NAME,Folx,DIRECT
+  - PROCESS-NAME,NetTransport,DIRECT
+  - PROCESS-NAME,uTorrent,DIRECT
+  - PROCESS-NAME,WebTorrent,DIRECT
+  - PROCESS-NAME,pikpak,DIRECT
+  - PROCESS-NAME,SwitchHosts,DIRECT
+  - PROCESS-NAME,xdm-app,DIRECT
+  - PROCESS-NAME,Motrix,DIRECT
+  - PROCESS-NAME,PixPin,DIRECT
+  - PROCESS-NAME,eCloud,DIRECT
+  - PROCESS-NAME,ProcessLasso,DIRECT
+  - PROCESS-NAME,WeChat,DIRECT
 ];
 
 // 规则集配置
@@ -42,9 +60,10 @@ const ruleConfig = [
         
     },
     {
-        name: "Directlist",
+        name: "PCDIRECT",
         group: "国内直连",
-        url: "https://raw.githubusercontent.com/qichiyuhub/rule/master/Direct.list"
+        url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/PCDIRECT.yaml"
+        path: "./ruleset/PCDIRECT.yaml"
         
     },
     {
@@ -55,32 +74,19 @@ const ruleConfig = [
         
     },
     {
-        name: "ProxyLite",
+        name: "PCProxy",
         group: "自动选择",
-        url: "https://raw.githubusercontent.com/qichiyuhub/rule/master/ProxyLite.list",
+        url: "https://github.com/toney871030/clash_verge/blob/master/PCProxy.yaml",
+        path: "./ruleset/PCProxy.yaml"
         
-    },
-    {
-        name: "OpenAI",
-        behavior: "classical",
-        group: "自动选择",
-        url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OpenAI/OpenAI.yaml"
-       
     },
     {
         name: "AI补充",
         group: "自动选择",
         url: "https://raw.githubusercontent.com/qichiyuhub/rule/master/AI.list"
        
-    },
-    {
-        name: "Python",
-        behavior: "classical",
-        group: "自动选择",
-        url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Python/Python.yaml",
-        
     }
-    
+  
 ];
 
 // 常量定义
@@ -208,13 +214,13 @@ function main(config) {
                 "name": "国内直连",
                 "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg",
                 "type": "select",
-                "proxies": ["DIRECT"]
+                "proxies": ["DIRECT","no-resolve"]
             },
             {
                 "name": "广告拦截",
                 "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/ambulance.svg",
                 "type": "select",
-                "proxies": ["REJECT"]
+                "proxies": ["REJECT","no-resolve"]
               },
             // 新增的高质量节点组
             {
