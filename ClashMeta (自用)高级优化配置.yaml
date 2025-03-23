@@ -16,7 +16,7 @@ ipv6: false               # IPv6开关：是否启用IPv6支持
 # rule: 规则模式 - 根据规则匹配来选择代理
 # global: 全局模式 - 全部流量走代理
 # direct: 直连模式 - 全部流量不走代理
-mode: rule
+mode: global
 
 # 日志等级(按详细程度排序):
 # debug: 调试
