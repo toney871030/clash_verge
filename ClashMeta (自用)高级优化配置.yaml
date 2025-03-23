@@ -3,7 +3,7 @@
 # 作者：🥞煎饼果子卷鲨鱼辣椒🌶️
 
 #------------------------基础配置------------------------#
-mixed-port: 7897            # 混合端口：HTTP(S)和SOCKS5共用端口
+mixed-port: 7890           # 混合端口：HTTP(S)和SOCKS5共用端口
 geodata-mode: true          # GEO模式：true使用geoip.dat数据库,false使用mmdb数据库
 tcp-concurrent: true        # TCP并发：允许并发连接TCP,提高并发性能
 unified-delay: true         # 统一延迟：统一显示节点延迟
@@ -16,7 +16,7 @@ ipv6: false               # IPv6开关：是否启用IPv6支持
 # rule: 规则模式 - 根据规则匹配来选择代理
 # global: 全局模式 - 全部流量走代理
 # direct: 直连模式 - 全部流量不走代理
-mode: rule
+mode: global
 
 # 日志等级(按详细程度排序):
 # debug: 调试
@@ -75,7 +75,7 @@ dns:
   ipv6: false              # DNS解析IPv6
   listen: 0.0.0.0:53       # DNS监听地址
   enhanced-mode: fake-ip   # DNS模式: fake-ip或redir-host
-  use-hosts: true          # 使用hosts文件
+  use-hosts: false          # 使用hosts文件
 
   # 默认DNS服务器(用于解析其他DNS服务器的域名)
   default-nameserver:
