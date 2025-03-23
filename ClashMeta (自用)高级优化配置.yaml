@@ -567,6 +567,22 @@ rule-providers:
     path: ./ruleset/dev-platforms.yaml
     interval: 86400
 
+  # 本机直连域名规则
+  PC_DIRECT:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/PC_DIRECT.yaml"
+    path: ./ruleset/PC_DIRECT.yaml
+    interval: 86400
+
+  # 本机代理域名规则
+  PC_Proxy:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/PC_Proxy.yaml"
+    path: ./ruleset/PC_Proxy.yaml
+    interval: 86400
+
 # 规则配置 - 优化版
 rules:
   # 优先处理
@@ -586,37 +602,6 @@ rules:
   - IP-CIDR,224.0.0.0/4,DIRECT
   - IP-CIDR6,fe80::/10,DIRECT
  
-  # 国内网站分流
-  - DOMAIN-SUFFIX,ip138.com,DIRECT
-  - DOMAIN-SUFFIX,agedm.org,DIRECT
-  - DOMAIN-SUFFIX,m.mubai.link,DIRECT
-  - DOMAIN-SUFFIX,linux.do,DIRECT
-  - DOMAIN-SUFFIX,hybase.com,DIRECT
-  - DOMAIN-SUFFIX,masuit.net,DIRECT
-  - DOMAIN-SUFFIX,4fb.cn,DIRECT
-  - DOMAIN-SUFFIX,applnn.com,DIRECT
-  - DOMAIN-SUFFIX,hifini.com,DIRECT
-  - DOMAIN-SUFFIX,v.ikanbot.com,DIRECT
-  - DOMAIN-SUFFIX,pan666.net,DIRECT
-  - DOMAIN-SUFFIX,pc528.net,DIRECT
-  - DOMAIN-SUFFIX,winos.me,DIRECT
-  - DOMAIN-SUFFIX,cmdpe.com,DIRECT
-  - DOMAIN-SUFFIX,52pojie.cn,DIRECT
-  
-  # 国外网站分流
-  - DOMAIN-SUFFIX,wallhaven.cc,♻️ 自动选择
-  - DOMAIN-SUFFIX,xvideos.com,🎬 国外媒体
-  - DOMAIN-SUFFIX,pornhub.com,🎬 国外媒体
-  - DOMAIN-SUFFIX,spankbang.com,🎬 国外媒体
-  - DOMAIN-SUFFIX,sehuatang.net,♻️ 自动选择
-  - DOMAIN-SUFFIX,krx18.com,🎬 国外媒体
-  - DOMAIN-SUFFIX,music.ydev.tech/#/,♻️ 自动选择
-  - DOMAIN-SUFFIX,oursogo.com,♻️ 自动选择
-  - DOMAIN-SUFFIX,eyny.com,♻️ 自动选择
-  - DOMAIN-SUFFIX,18comic.vip,♻️ 自动选择
-  - DOMAIN-SUFFIX,greasyfork.org,♻️ 自动选择
-  - DOMAIN-SUFFIX,sleazyfork.org,♻️ 自动选择
-
   # 应用分流
   - RULE-SET,ai-platforms,🤖 AI平台,no-resolve
   - RULE-SET,streaming,♻️ 自动选择,no-resolve
@@ -626,6 +611,8 @@ rules:
   - RULE-SET,games,🎮 游戏平台,no-resolve
   - RULE-SET,dev-platforms,🔧 GitHub,no-resolve
   - RULE-SET,China,DIRECT,no-resolve
+  - RULE-SET,PC_DIRECT,DIRECT,no-resolve
+  - RULE-SET,PC_Proxy,♻️ 自动选择,no-resolve
 
   # 自定义规则
   - PROCESS-NAME,clash,DIRECT
