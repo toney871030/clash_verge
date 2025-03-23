@@ -652,6 +652,8 @@ rules:
   - PROCESS-NAME,xdm-app,DIRECT
   - PROCESS-NAME,Motrix,DIRECT
   - PROCESS-NAME,PixPin,DIRECT
+  - PROCESS-NAME,eCloud,DIRECT
+  - PROCESS-NAME,ProcessLasso,DIRECT
 
   # 地域规则
   - GEOIP,LAN,DIRECT,no-resolve
