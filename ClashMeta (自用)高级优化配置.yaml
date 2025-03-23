@@ -654,6 +654,7 @@ rules:
   - PROCESS-NAME,PixPin,DIRECT
   - PROCESS-NAME,eCloud,DIRECT
   - PROCESS-NAME,ProcessLasso,DIRECT
+  - PROCESS-NAME,WeChat,DIRECT
 
   # 地域规则
   - GEOIP,LAN,DIRECT,no-resolve
