@@ -1,37 +1,37 @@
 #补充代理网站
-  - DOMAIN-SUFFIX,wallhaven.cc:443
-  - DOMAIN-SUFFIX,wallpaperswide.com:443
-  - DOMAIN-SUFFIX,xvideos.com:443
-  - DOMAIN-SUFFIX,pornhub.com:443
-  - DOMAIN-SUFFIX,spankbang.com:443
-  - DOMAIN-SUFFIX,sehuatang.net:443
-  - DOMAIN-SUFFIX,krx18.com:443
-  - DOMAIN-SUFFIX,music.ydev.tech:443
-  - DOMAIN-SUFFIX,oursogo.com:443
-  - DOMAIN-SUFFIX,eyny.com:443
-  - DOMAIN-SUFFIX,18comic.vip:443
-  - DOMAIN-SUFFIX,greasyfork.org:443
-  - DOMAIN-SUFFIX,sleazyfork.org:443
+- DOMAIN-SUFFIX,wallhaven.cc:443
+- DOMAIN-SUFFIX,wallpaperswide.com:443
+- DOMAIN-SUFFIX,xvideos.com:443
+- DOMAIN-SUFFIX,pornhub.com:443
+- DOMAIN-SUFFIX,spankbang.com:443
+- DOMAIN-SUFFIX,sehuatang.net:443
+- DOMAIN-SUFFIX,krx18.com:443
+- DOMAIN-SUFFIX,music.ydev.tech:443
+- DOMAIN-SUFFIX,oursogo.com:443
+- DOMAIN-SUFFIX,eyny.com:443
+- DOMAIN-SUFFIX,18comic.vip:443
+- DOMAIN-SUFFIX,greasyfork.org:443
+- DOMAIN-SUFFIX,sleazyfork.org:443
 
 # 域名后缀匹配
-  - DOMAIN-SUFFIX,qichiyu.com
+- DOMAIN-SUFFIX,qichiyu.com
 
 # 域名关键字匹配
-  - DOMAIN-KEYWORD,1e100
+- DOMAIN-KEYWORD,1e100
 
 # 国外DNS
-  - DOMAIN-SUFFIX,dns.google
-  - DOMAIN-SUFFIX,1dot1dot1dot1.cloudflare-dns.com
-  - DOMAIN-SUFFIX,dot.sb
-  - DOMAIN-SUFFIX,dns.umbrella.com
-  - DOMAIN-SUFFIX,dns.quad9.net
-  - DOMAIN-SUFFIX,cloudflare-dns.com
-  - DOMAIN-SUFFIX,doh.dns.sb
-  - DOMAIN-SUFFIX,doh.opendns.com
-  - DOMAIN-SUFFIX,hk-hkg.doh.sb
-  - IP-CIDR,8.8.8.8/32,no-resolve
-  - IP-CIDR,8.8.4.4/32,no-resolve
-  - IP-CIDR,1.1.1.1/32,no-resolve
-  - IP-CIDR,1.0.0.1/32,no-resolve
-  - IP-CIDR,185.222.222.222/32,no-resolve
-  - IP-CIDR,208.67.222.222/32,no-resolve
+- DOMAIN-SUFFIX,dns.google
+- DOMAIN-SUFFIX,1dot1dot1dot1.cloudflare-dns.com
+- DOMAIN-SUFFIX,dot.sb
+- DOMAIN-SUFFIX,dns.umbrella.com
+- DOMAIN-SUFFIX,dns.quad9.net
+- DOMAIN-SUFFIX,cloudflare-dns.com
+- DOMAIN-SUFFIX,doh.dns.sb
+- DOMAIN-SUFFIX,doh.opendns.com
+- DOMAIN-SUFFIX,hk-hkg.doh.sb
+- IP-CIDR,8.8.8.8/32,no-resolve
+- IP-CIDR,8.8.4.4/32,no-resolve
+- IP-CIDR,1.1.1.1/32,no-resolve
+- IP-CIDR,1.0.0.1/32,no-resolve
+- IP-CIDR,185.222.222.222/32,no-resolve
+- IP-CIDR,208.67.222.222/32,no-resolve
