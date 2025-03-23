@@ -598,7 +598,10 @@ rules:
   - DOMAIN-SUFFIX,hifini.com,DIRECT
   - DOMAIN-SUFFIX,v.ikanbot.com,DIRECT
   - DOMAIN-SUFFIX,pan666.net,DIRECT
-  - DOMAIN-SUFFIX,haowallpaper.com,DIRECT
+  - DOMAIN-SUFFIX,pc528.net,DIRECT
+  - DOMAIN-SUFFIX,winos.me,DIRECT
+  - DOMAIN-SUFFIX,cmdpe.com,DIRECT
+  - DOMAIN-SUFFIX,52pojie.cn,DIRECT
   
   # 国外网站分流
   - DOMAIN-SUFFIX,wallhaven.cc,♻️ 自动选择
