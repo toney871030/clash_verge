@@ -105,7 +105,7 @@ NodeParam: &NodeParam {type: http, interval: 86400, health-check: {enable: true,
 # 节点订阅
 proxy-providers: 
   Node-1:
-    url: 'https://mercedes1208.久盛电缆.com/link/RXaFqQgEw4Kyoh67?clash=1'
+    url: ''
     <<: *NodeParam
     path: './proxy_provider/providers.yaml'
   # Node-2:
