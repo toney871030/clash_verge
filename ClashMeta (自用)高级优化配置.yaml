@@ -103,27 +103,27 @@ dns:
     'chatgpt.com': 'https://dns.google/dns-query'    # ChatGPT 域名使用 Google DNS
     'greasyfork.org': 'https://dns.google/dns-query'    # GreasyFork 域名使用 Google DNS
     'sleazyfork.org': 'https://dns.google/dns-query'    # SleazyFork 域名使用 Google DNS
-    'linux.do': 'https://dns.alidns.com/dns-query',    # Linux.do 域名使用阿里 DNS
-    'www.52pojie.cn': 'https://dns.alidns.com/dns-query',    # 吾爱破解域名使用阿里 DNS
-    'meta.appinn.net': 'https://dns.alidns.com/dns-query',    # 小众软件论坛域名使用阿里 DNS
-    'bbs.rainmeter.cn': 'https://dns.alidns.com/dns-query',    # Rainmeter 论坛域名使用阿里 DNS
-    'www.pc528.net': 'https://dns.alidns.com/dns-query',    # PC528 论坛域名使用阿里 DNS
-    'www.winos.me': 'https://dns.alidns.com/dns-query',    # Winos 论坛域名使用阿里 DNS
-    'www.cmdpe.com': 'https://dns.alidns.com/dns-query',    # CMDPE 论坛域名使用阿里 DNS
-    'www.youxiaohou.com': 'https://dns.alidns.com/dns-query',    # 幽小厚网站域名使用阿里 DNS
-    'www.pcmoe.net': 'https://dns.alidns.com/dns-query',    # PC萌 论坛域名使用阿里 DNS
-    'bbs.3dmgame.com': 'https://dns.alidns.com/dns-query',    # 3DM 游戏论坛域名使用阿里 DNS
-    'www.3jihome.com': 'https://dns.alidns.com/dns-query',    # 3Jihome 论坛域名使用阿里 DNS
-    'ddys.pro': 'https://dns.alidns.com/dns-query',    # 低端影视域名使用阿里 DNS
-    'www.5wu7rv.shop': 'https://dns.alidns.com/dns-query',    # 5wu7rv 站点域名使用阿里 DNS
-    'v.ikanbot.com': 'https://dns.alidns.com/dns-query',    # 爱看机器人域名使用阿里 DNS
-    'www.boju.cc': 'https://dns.alidns.com/dns-query',    # Boju 站点域名使用阿里 DNS
-    'www.agedm.org': 'https://dns.alidns.com/dns-query',    # Age 动漫域名使用阿里 DNS
-    '4fb.cn': 'https://dns.alidns.com/dns-query',    # 4FB 站点域名使用阿里 DNS
-    'www.hybase.com': 'https://dns.alidns.com/dns-query',    # Hybase 站点域名使用阿里 DNS
-    'masuit.net': 'https://dns.alidns.com/dns-query',    # Masuit 站点域名使用阿里 DNS
-    'www.applnn.com': 'https://dns.alidns.com/dns-query',    # Applnn 站点域名使用阿里 DNS
-    'haowallpaper.com': 'https://dns.alidns.com/dns-query',    # 好壁纸站点域名使用阿里 DNS
+    'linux.do': 'https://dns.alidns.com/dns-query'    # Linux.do 域名使用阿里 DNS
+    'www.52pojie.cn': 'https://dns.alidns.com/dns-query'    # 吾爱破解域名使用阿里 DNS
+    'meta.appinn.net': 'https://dns.alidns.com/dns-query'    # 小众软件论坛域名使用阿里 DNS
+    'bbs.rainmeter.cn': 'https://dns.alidns.com/dns-query'    # Rainmeter 论坛域名使用阿里 DNS
+    'www.pc528.net': 'https://dns.alidns.com/dns-query'    # PC528 论坛域名使用阿里 DNS
+    'www.winos.me': 'https://dns.alidns.com/dns-query'    # Winos 论坛域名使用阿里 DNS
+    'www.cmdpe.com': 'https://dns.alidns.com/dns-query'    # CMDPE 论坛域名使用阿里 DNS
+    'www.youxiaohou.com': 'https://dns.alidns.com/dns-query'    # 幽小厚网站域名使用阿里 DNS
+    'www.pcmoe.net': 'https://dns.alidns.com/dns-query'    # PC萌 论坛域名使用阿里 DNS
+    'bbs.3dmgame.com': 'https://dns.alidns.com/dns-query'    # 3DM 游戏论坛域名使用阿里 DNS
+    'www.3jihome.com': 'https://dns.alidns.com/dns-query'   # 3Jihome 论坛域名使用阿里 DNS
+    'ddys.pro': 'https://dns.alidns.com/dns-query'    # 低端影视域名使用阿里 DNS
+    'www.5wu7rv.shop': 'https://dns.alidns.com/dns-query'    # 5wu7rv 站点域名使用阿里 DNS
+    'v.ikanbot.com': 'https://dns.alidns.com/dns-query'    # 爱看机器人域名使用阿里 DNS
+    'www.boju.cc': 'https://dns.alidns.com/dns-query'    # Boju 站点域名使用阿里 DNS
+    'www.agedm.org': 'https://dns.alidns.com/dns-query'    # Age 动漫域名使用阿里 DNS
+    '4fb.cn': 'https://dns.alidns.com/dns-query'    # 4FB 站点域名使用阿里 DNS
+    'www.hybase.com': 'https://dns.alidns.com/dns-query'    # Hybase 站点域名使用阿里 DNS
+    'masuit.net': 'https://dns.alidns.com/dns-query'    # Masuit 站点域名使用阿里 DNS
+    'www.applnn.com': 'https://dns.alidns.com/dns-query'    # Applnn 站点域名使用阿里 DNS
+    'haowallpaper.com': 'https://dns.alidns.com/dns-query'    # 好壁纸站点域名使用阿里 DNS
     '.cn': 'https://dns.alidns.com/dns-query'                    # 中国域名使用国内DNS
 
   # Fake-IP配置
