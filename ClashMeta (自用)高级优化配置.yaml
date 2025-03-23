@@ -135,9 +135,9 @@ dns:
   # 主要DNS服务器
   nameserver:
     # 国内DNS服务器
-    - https://doh.pub/dns-query#h3=true                # DNSPod DOH
     - https://dns.alidns.com/dns-query#h3=true         # 阿里 DOH
     - tls://223.5.5.5:853                              # 阿里 DOT
+    - https://doh.pub/dns-query#h3=true                # DNSPod DOH
 
     # 国外DNS服务器
     - https://dns.google/dns-query#h3=true             # Google DOH
