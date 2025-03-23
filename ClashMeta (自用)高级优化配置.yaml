@@ -511,11 +511,11 @@ rule-providers:
     path: ./ruleset/ai-platforms.yaml
     interval: 86400
 
-  # 流媒体规则
+  # 全球代理规则
   streaming:
     type: http
     behavior: classical
-    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script/rule/Clash/GlobalMedia/GlobalMedia.yaml"
+    url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Global/Global.yaml"
     path: ./ruleset/streaming.yaml
     interval: 86400
 
@@ -565,14 +565,6 @@ rule-providers:
     behavior: classical
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script/rule/Clash/GitHub/GitHub.yaml"
     path: ./ruleset/dev-platforms.yaml
-    interval: 86400
-    
-  # Python规则
-  python:
-    type: http
-    behavior: classical
-    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Python/Python.yaml"
-    path: ./ruleset/Python.yaml
     interval: 86400
 
 # 规则配置 - 优化版
@@ -627,13 +619,12 @@ rules:
 
   # 应用分流
   - RULE-SET,ai-platforms,🤖 AI平台,no-resolve
-  - RULE-SET,streaming,🎬 国外媒体,no-resolve
+  - RULE-SET,streaming,♻️ 自动选择,no-resolve
   - RULE-SET,social,📱 即时通讯,no-resolve
   - RULE-SET,microsoft,Ⓜ️ 微软服务,no-resolve
   - RULE-SET,apple,🍎 苹果服务,no-resolve
   - RULE-SET,games,🎮 游戏平台,no-resolve
   - RULE-SET,dev-platforms,🔧 GitHub,no-resolve
-  - RULE-SET,python,♻️ 自动选择,no-resolve
   - RULE-SET,China,DIRECT,no-resolve
 
   # 自定义规则
