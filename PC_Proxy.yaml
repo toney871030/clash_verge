@@ -1,14 +1,15 @@
 payload:
-  - DOMAIN,wallhaven.cc
-  - DOMAIN,wallpaperswide.com
-  - DOMAIN,xvideos.com
-  - DOMAIN,pornhub.com
-  - DOMAIN,spankbang.com
-  - DOMAIN,sehuatang.net
-  - DOMAIN,krx18.com
-  - DOMAIN,music.ydev.tech
-  - DOMAIN,oursogo.com
-  - DOMAIN,eyny.com
-  - DOMAIN,18comic.vip
-  - DOMAIN,greasyfork.org
-  - DOMAIN,sleazyfork.org
+  - DOMAIN,wallhaven.cc:443
+  - DOMAIN,wallpaperswide.com:443
+  - DOMAIN,xvideos.com:443
+  - DOMAIN,pornhub.com:443
+  - DOMAIN,spankbang.com:443
+  - DOMAIN,sehuatang.net:443
+  - DOMAIN,krx18.com:443
+  - DOMAIN,music.ydev.tech:443
+  - DOMAIN,oursogo.com:443
+  - DOMAIN,eyny.com:443
+  - DOMAIN,18comic.vip:443
+  - DOMAIN,greasyfork.org:443
+  - DOMAIN,sleazyfork.org:443
+
