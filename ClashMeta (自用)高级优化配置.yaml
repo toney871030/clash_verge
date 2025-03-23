@@ -16,7 +16,7 @@ ipv6: false               # IPv6开关：是否启用IPv6支持
 # rule: 规则模式 - 根据规则匹配来选择代理
 # global: 全局模式 - 全部流量走代理
 # direct: 直连模式 - 全部流量不走代理
-mode: global
+mode: rule
 
 # 日志等级(按详细程度排序):
 # debug: 调试
@@ -598,7 +598,7 @@ rules:
   - DOMAIN-SUFFIX,hifini.com,DIRECT
   - DOMAIN-SUFFIX,v.ikanbot.com,DIRECT
   - DOMAIN-SUFFIX,pan666.net,DIRECT
-  - DOMAIN-SUFFIX,pc528.net,DIRECT,no-resolve
+  - DOMAIN-SUFFIX,pc528.net,DIRECT
   - DOMAIN-SUFFIX,winos.me,DIRECT
   - DOMAIN-SUFFIX,cmdpe.com,DIRECT
   - DOMAIN-SUFFIX,52pojie.cn,DIRECT
