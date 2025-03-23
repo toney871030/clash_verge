@@ -29,7 +29,7 @@ log-level: error
 # 外部控制设置
 external-controller: 0.0.0.0:9090  # 外部控制器监听地址
 external-ui: folder               # 外部控制器UI目录
-secret: "Gry131204!"                       # 外部控制器密码
+secret: ""                       # 外部控制器密码
 
 #------------------------性能调优------------------------#
 tcp-concurrent-users: 64      # TCP并发连接数,根据服务器性能调整,建议值:16-128
@@ -75,7 +75,7 @@ dns:
   ipv6: false              # DNS解析IPv6
   listen: 0.0.0.0:53       # DNS监听地址
   enhanced-mode: fake-ip   # DNS模式: fake-ip或redir-host
-  use-hosts: false          # 使用hosts文件
+  use-hosts: true          # 使用hosts文件
 
   # 默认DNS服务器(用于解析其他DNS服务器的域名)
   default-nameserver:
