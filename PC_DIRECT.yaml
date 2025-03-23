@@ -13,7 +13,7 @@ payload:
   - DOMAIN,pc528.net:443
   - DOMAIN,winos.me:443
   - DOMAIN,cmdpe.com:443
-  - DOMAIN,52pojie.cn:443
+  //- DOMAIN,52pojie.cn:443
   - DOMAIN,youxiaohou.com:443
   - DOMAIN,bbs.3dmgame.com:443
   - DOMAIN,bbs.rainmeter.cn:443
