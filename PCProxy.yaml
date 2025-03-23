@@ -1,3 +1,4 @@
+rules:
   - DOMAIN-SUFFIX,wallhaven.cc:443
   - DOMAIN-SUFFIX,wallpaperswide.com:443
   - DOMAIN-SUFFIX,xvideos.com:443
