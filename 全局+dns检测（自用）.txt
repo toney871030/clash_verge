@@ -1,45 +1,47 @@
 // 域名配置
 const forceProxyDomains = [
-    "DOMAIN-SUFFIX,local,DIRECT",
-    "DOMAIN-SUFFIX,localhost,DIRECT",
-    "IP-CIDR,127.0.0.0/8,DIRECT",
-    "IP-CIDR,172.16.0.0/12,DIRECT",
-    "IP-CIDR,192.168.0.0/16,DIRECT",
-    "IP-CIDR,10.0.0.0/8,DIRECT",
-    "IP-CIDR,17.0.0.0/8,DIRECT",
-    "IP-CIDR,100.64.0.0/10,DIRECT",
-    "IP-CIDR,224.0.0.0/4,DIRECT",
-    "IP-CIDR6,fe80::/10,DIRECT",
-    "DOMAIN-KEYWORD,pc528.net,DIRECT,no-resolve",
-    // 进程规则
-    "PROCESS-NAME,clash,DIRECT",
-    "PROCESS-NAME,v2ray,DIRECT",
-    "PROCESS-NAME,xray,DIRECT",
-    "PROCESS-NAME,naive,DIRECT",
-    "PROCESS-NAME,trojan,DIRECT",
-    "PROCESS-NAME,trojan-go,DIRECT",
-    "PROCESS-NAME,ss-local,DIRECT",
-    "PROCESS-NAME,privoxy,DIRECT",
-    "PROCESS-NAME,leaf,DIRECT",
-    "PROCESS-NAME,Thunder,DIRECT",
-    "PROCESS-NAME,DownloadService,DIRECT",
-    "PROCESS-NAME,qBittorrent,DIRECT",
-    "PROCESS-NAME,Transmission,DIRECT",
-    "PROCESS-NAME,fdm,DIRECT",
-    "PROCESS-NAME,aria2c,DIRECT",
-    "PROCESS-NAME,Folx,DIRECT",
-    "PROCESS-NAME,NetTransport,DIRECT",
-    "PROCESS-NAME,uTorrent,DIRECT",
-    "PROCESS-NAME,WebTorrent,DIRECT",
-    "PROCESS-NAME,pikpak,DIRECT",
-    "PROCESS-NAME,SwitchHosts,DIRECT",
-    "PROCESS-NAME,xdm-app,DIRECT",
-    "PROCESS-NAME,Motrix,DIRECT",
-    "PROCESS-NAME,PixPin,DIRECT",
-    "PROCESS-NAME,eCloud,DIRECT",
-    "PROCESS-NAME,ProcessLasso,DIRECT",
-    "PROCESS-NAME,WeChat,DIRECT"
+    // 以下是将某些域名或IP范围直接连接的规则
+    "DOMAIN-SUFFIX,local,DIRECT", // local 域名直接连接
+    "DOMAIN-SUFFIX,localhost,DIRECT", // localhost 域名直接连接
+    "IP-CIDR,127.0.0.0/8,DIRECT", // 本地回环地址直接连接
+    "IP-CIDR,172.16.0.0/12,DIRECT", // 172.x.x.x 范围直接连接
+    "IP-CIDR,192.168.0.0/16,DIRECT", // 192.168.x.x 范围直接连接
+    "IP-CIDR,10.0.0.0/8,DIRECT", // 10.x.x.x 范围直接连接
+    "IP-CIDR,17.0.0.0/8,DIRECT", // 17.x.x.x 范围直接连接
+    "IP-CIDR,100.64.0.0/10,DIRECT", // 100.x.x.x 范围直接连接
+    "IP-CIDR,224.0.0.0/4,DIRECT", // 224.x.x.x 范围直接连接
+    "IP-CIDR6,fe80::/10,DIRECT", // IPv6 本地地址直接连接
+    "DOMAIN-KEYWORD,pc528.net,DIRECT,no-resolve", // 特定域名不解析，直接连接
+    // 以下是某些进程直接连接的规则
+    "PROCESS-NAME,clash,DIRECT", // clash 进程直接连接
+    "PROCESS-NAME,v2ray,DIRECT", // v2ray 进程直接连接
+    "PROCESS-NAME,xray,DIRECT", // xray 进程直接连接
+    "PROCESS-NAME,naive,DIRECT", // naive 进程直接连接
+    "PROCESS-NAME,trojan,DIRECT", // trojan 进程直接连接
+    "PROCESS-NAME,trojan-go,DIRECT", // trojan-go 进程直接连接
+    "PROCESS-NAME,ss-local,DIRECT", // ss-local 进程直接连接
+    "PROCESS-NAME,privoxy,DIRECT", // privoxy 进程直接连接
+    "PROCESS-NAME,leaf,DIRECT", // leaf 进程直接连接
+    "PROCESS-NAME,Thunder,DIRECT", // Thunder 进程直接连接
+    "PROCESS-NAME,DownloadService,DIRECT", // DownloadService 进程直接连接
+    "PROCESS-NAME,qBittorrent,DIRECT", // qBittorrent 进程直接连接
+    "PROCESS-NAME,Transmission,DIRECT", // Transmission 进程直接连接
+    "PROCESS-NAME,fdm,DIRECT", // fdm 进程直接连接
+    "PROCESS-NAME,aria2c,DIRECT", // aria2c 进程直接连接
+    "PROCESS-NAME,Folx,DIRECT", // Folx 进程直接连接
+    "PROCESS-NAME,NetTransport,DIRECT", // NetTransport 进程直接连接
+    "PROCESS-NAME,uTorrent,DIRECT", // uTorrent 进程直接连接
+    "PROCESS-NAME,WebTorrent,DIRECT", // WebTorrent 进程直接连接
+    "PROCESS-NAME,pikpak,DIRECT", // pikpak 进程直接连接
+    "PROCESS-NAME,SwitchHosts,DIRECT", // SwitchHosts 进程直接连接
+    "PROCESS-NAME,xdm-app,DIRECT", // xdm-app 进程直接连接
+    "PROCESS-NAME,Motrix,DIRECT", // Motrix 进程直接连接
+    "PROCESS-NAME,PixPin,DIRECT", // PixPin 进程直接连接
+    "PROCESS-NAME,eCloud,DIRECT", // eCloud 进程直接连接
+    "PROCESS-NAME,ProcessLasso,DIRECT", // ProcessLasso 进程直接连接
+    "PROCESS-NAME,WeChat,DIRECT" // WeChat 进程直接连接
 ];
+
 
 // 规则集配置
 const ruleConfig = [
@@ -76,19 +78,20 @@ const ruleConfig = [
 ];
 
 // 常量定义
-const MULTIPLIER_REGEX = /(?:[4-9](?:\.5)?x)/i;
-const RULE_UPDATE_INTERVAL = 86400;
-const TEST_URL = "https://www.gstatic.com/generate_204";
-const TEST_INTERVAL = 300;
-const TEST_TOLERANCE = 20;
-const BALANCESTRATEGY = "sticky-sessions";
+const MULTIPLIER_REGEX = /(?:[4-9](?:\.5)?x)/i; // 匹配带倍数标识的规则
+const RULE_UPDATE_INTERVAL = 86400; // 规则更新间隔（秒）
+const TEST_URL = "https://www.gstatic.com/generate_204"; // 测试URL
+const TEST_INTERVAL = 300; // 测试间隔（秒）
+const TEST_TOLERANCE = 20; // 测试容忍度（毫秒）
+const BALANCESTRATEGY = "sticky-sessions"; // 负载均衡策略
 
 const DNS_CONFIG = {
-    defaultDNS: ["tls://223.5.5.5:853", "tls://120.53.53.53:853"],
-    cnDnsList: ["https://dns.alidns.com/dns-query#h3=true", "https://doh.pub/dns-query#h3=true"],
-    proxyDnsList: ["https://dns.google/dns-query#h3=true", "https://cloudflare-dns.com/dns-query#h3=true", "quic://dns.adguard.com:784"]
+    defaultDNS: ["tls://223.5.5.5:853", "tls://120.53.53.53:853"], // 默认DNS服务器
+    cnDnsList: ["https://dns.alidns.com/dns-query#h3=true", "https://doh.pub/dns-query#h3=true"], // 国内DNS列表
+    proxyDnsList: ["https://dns.google/dns-query#h3=true", "https://cloudflare-dns.com/dns-query#h3=true", "quic://dns.adguard.com:784"] // 代理服务器DNS列表
 };
 
+// 高质量节点关键词
 const HIGH_QUALITY_KEYWORDS = [
     "家宽", "家庭宽带", "IEPL", "Iepl", "iepl",
     "IPLC", "iplc", "Iplc", "专线", "高速",
@@ -98,8 +101,11 @@ const HIGH_QUALITY_KEYWORDS = [
     "特殊", "特殊线路", "游戏", "Game", "game"
 ];
 
+
+// 高质量节点匹配正则
 const HIGH_QUALITY_REGEX = new RegExp(HIGH_QUALITY_KEYWORDS.join("|"), "i");
 
+// 过滤出高质量节点
 function filterHighQualityProxies(proxies) {
     if (!proxies || !Array.isArray(proxies)) {
         return [];
@@ -108,109 +114,130 @@ function filterHighQualityProxies(proxies) {
     const result = [];
     const regex = HIGH_QUALITY_REGEX;
     
+    // 遍历代理节点，匹配高质量节点
     for (const proxy of proxies) {
         const proxyName = proxy.name || "";
         if (regex.test(proxyName)) {
             result.push(proxyName);
         }
     }
-    
     return result;
 }
 
+// 更新DNS配置
 async function updateDNSConfig() {
     const { defaultDNS, cnDnsList, proxyDnsList } = DNS_CONFIG;
 
+    // 检查主备DNS是否可用
     const isPrimaryDNSAvailable = await checkDNSAvailability(defaultDNS[0]);
     const isSecondaryDNSAvailable = await checkDNSAvailability(defaultDNS[1]);
 
     if (!isPrimaryDNSAvailable && !isSecondaryDNSAvailable) {
         console.log("主DNS和备DNS都不可用，切换到备用DNS");
-        DNS_CONFIG.nameserver = proxyDnsList;
+        DNS_CONFIG.nameserver = proxyDnsList; // 切换到备用DNS
     } else {
         console.log("DNS状态正常");
-        DNS_CONFIG.nameserver = cnDnsList;
+        DNS_CONFIG.nameserver = cnDnsList; // 使用国内DNS
     }
 }
 
+// 检查DNS是否可用
 async function checkDNSAvailability(dns) {
     try {
+        // 使用 Google 的 DNS 解析接口，验证传入的 DNS 是否可用
         const response = await fetch(`https://dns.google/resolve?name=example.com&dns=${dns}`);
-        return response.ok;
+        return response.ok; // 如果响应正常，返回 true
     } catch (error) {
+        // 如果在检查 DNS 时出现错误，输出错误信息
         console.error(`检查 DNS ${dns} 时出错:`, error);
-        return false;
+        return false; // 如果发生错误，返回 false
     }
 }
 
+// 主函数，配置代理和规则
 function main(config) {
     try {
+        // 创建新的配置副本，避免直接修改传入的配置对象
         const newConfig = { ...config };
         
+        // 过滤掉代理节点名称中含有倍数标识的节点（例如，带有 "4x" 等字样的节点）
         newConfig.proxies = newConfig.proxies.filter(proxy => !MULTIPLIER_REGEX.test(proxy.name));
+
+        // 过滤出高质量的代理节点
         const highQualityProxies = filterHighQualityProxies(newConfig.proxies);
 
+        // 定义代理组
         const proxyGroups = [
             {
-                "name": "自动选择",
-                "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg",
-                "type": "url-test",
-                "include-all": true,
-                "url": TEST_URL,
-                "interval": TEST_INTERVAL,
-                "tolerance": TEST_TOLERANCE,
-                "proxies": [...newConfig.proxies.map(p => p.name), ...highQualityProxies]
+                "name": "自动选择", // 代理组名称
+                "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg", // 代理组图标
+                "type": "url-test", // 代理组类型
+                "include-all": true, // 包括所有代理
+                "url": TEST_URL, // 测试URL，用于检测代理的连通性
+                "interval": TEST_INTERVAL, // 测试间隔时间
+                "tolerance": TEST_TOLERANCE, // 测试容忍度
+                "proxies": [...newConfig.proxies.map(p => p.name), ...highQualityProxies] // 将所有代理节点和高质量节点合并为该组的代理
             },
             {
-                "name": "负载均衡",
-                "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg",
-                "type": "load-balance",
-                "include-all": true,
-                "strategy": BALANCESTRATEGY,
-                "url": TEST_URL,
-                "interval": TEST_INTERVAL
+                "name": "负载均衡", // 代理组名称
+                "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg", // 代理组图标
+                "type": "load-balance", // 负载均衡类型
+                "include-all": true, // 包括所有代理
+                "strategy": BALANCESTRATEGY, // 使用的负载均衡策略
+                "url": TEST_URL, // 测试URL，用于检测代理的连通性
+                "interval": TEST_INTERVAL // 测试间隔时间
             },
             {
-                "name": "手动选择",
-                "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg",
-                "type": "select",
-                "proxies": ["自动选择", "高质量节点", "DIRECT"]
+                "name": "手动选择", // 代理组名称
+                "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg", // 代理组图标
+                "type": "select", // 选择类型
+                "proxies": ["自动选择", "高质量节点", "DIRECT"] // 允许用户选择 "自动选择", "高质量节点" 或 "DIRECT" 代理
             },
             {
-                "name": "国内直连",
-                "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg",
-                "type": "select",
-                "proxies": ["DIRECT"]
+                "name": "国内直连", // 代理组名称
+                "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg", // 代理组图标
+                "type": "select", // 选择类型
+                "proxies": ["DIRECT"] // 只允许选择 "DIRECT" 代理（国内直连）
             },
             {
-                "name": "广告拦截",
-                "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/ambulance.svg",
-                "type": "select",
-                "proxies": ["REJECT"]
+                "name": "广告拦截", // 代理组名称
+                "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/ambulance.svg", // 代理组图标
+                "type": "select", // 选择类型
+                "proxies": ["REJECT"] // 只允许选择 "REJECT" 代理（广告拦截）
             },
             {
-                "name": "高质量节点",
-                "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg",
-                "type": "select",
-                "proxies": ["自动选择", "负载均衡", "DIRECT", ...highQualityProxies]
+                "name": "高质量节点", // 代理组名称
+                "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg", // 代理组图标
+                "type": "select", // 选择类型
+                "proxies": ["自动选择", "负载均衡", "DIRECT", ...highQualityProxies] // 包括 "自动选择", "负载均衡", "DIRECT" 和高质量节点
             }
         ];
 
+        // 规则列表，初始化为强制代理的域名
         const rules = [...forceProxyDomains];
 
+        // 规则提供者（配置动态加载规则）
         const ruleProviders = {};
         ruleConfig.forEach(({ name, url, group }) => {
+            // 为每个规则集生成唯一的键
             const providerKey = `${name.toLowerCase()}_rules`;
+            
+            // 配置规则提供者
             ruleProviders[providerKey] = {
-                "type": "http",
-                "behavior": "domain",
-                "url": url,
-                "interval": RULE_UPDATE_INTERVAL,
-                "path": `./rule-providers/${providerKey}.yaml`
+                "type": "http", // 使用 HTTP 请求获取规则
+                "behavior": "domain", // 规则行为为域名
+                "url": url, // 规则源的 URL
+                "interval": RULE_UPDATE_INTERVAL, // 规则更新间隔
+                "path": `./rule-providers/${providerKey}.yaml` // 规则文件保存路径
             };
-            rules.push(`RULE-SET,${providerKey},${group}`);
-        });
 
+            // 将规则添加到总规则列表中
+            rules.push(`RULE-SET,${providerKey},${group}`);
+        }
+        
+     );
+
+        
         rules.push(
             "GEOSITE,geolocation-!cn,自动选择",
             "GEOSITE,gfw,自动选择",
