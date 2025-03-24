@@ -84,17 +84,32 @@ const forceProxyDomains = [
   "IP-CIDR,17.0.0.0/8,DIRECT",
   "IP-CIDR,100.64.0.0/10,DIRECT",
   "IP-CIDR,224.0.0.0/4,DIRECT",
-  "IP-CIDR6,fe80::/10,DIRECT",
+  "IP-CIDR,fe80::/10,DIRECT",
   "DOMAIN-KEYWORD,pc528.net,DIRECT,no-resolve",
+  "PROCESS-NAME,Folx,DIRECT",
+  "PROCESS-NAME,NetTransport,DIRECT",
+  "PROCESS-NAME,uTorrent,DIRECT",
+  "PROCESS-NAME,Motrix,DIRECT",
+  "PROCESS-NAME,pikpak,DIRECT",
+  "PROCESS-NAME,xdm-app,DIRECT",
+  "PROCESS-NAME,PixPin,DIRECT",
+  "PROCESS-NAME,DownloadService,DIRECT",
+  "PROCESS-NAME,WebTorrent,DIRECT",
+  "PROCESS-NAME,Thunder,DIRECT",
+  "PROCESS-NAME,eCloud,DIRECT",
+  "PROCESS-NAME,ProcessLasso,DIRECT",
+  "PROCESS-NAME,WeChat,DIRECT"
 ];
+
+
 
 // 规则集配置 (Rule Set Configuration)
 const ruleConfig = [
-  { name: "广告集合", group: "广告拦截", url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt", path: "./rule-providers/reject.txt" },
-  { name: "直连列表", group: "国内直连", url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt", path: "./rule-providers/direct.txt" },
-  { name: "直连补充列表", group: "国内直连", url: "https://raw.githubusercontent.com/toney871030/clash_verge/master/PCDIRECT.yaml", path: "./rule-providers/PCDIRECT.yaml" },
-  { name: "代理列表", group: "自动选择", url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt", path: "./rule-providers/proxy.txt" },
-  { name: "代理补充列表", group: "自动选择", url: "https://raw.githubusercontent.com/toney871030/clash_verge/master/PCProxy.yaml", path: "./rule-providers/PCProxy.yaml" }
+  { name: "广告集合", group: "广告拦截", url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt", path: "./ruleset/reject.yaml" },
+  { name: "直连列表", group: "国内直连", url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt", path: "./ruleset/direct.yaml" },
+  { name: "直连补充列表", group: "国内直连", url: "https://raw.githubusercontent.com/toney871030/clash_verge/master/PCDIRECT.yaml", path: "./ruleset/PCDIRECT.yaml" },
+  { name: "代理列表", group: "自动选择", url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt", path: "./ruleset/proxy.yaml" },
+  { name: "代理补充列表", group: "自动选择", url: "https://raw.githubusercontent.com/toney871030/clash_verge/master/PCProxy.yaml", path: "./ruleset/PCProxy.yaml" }
 ];
 
 // -------------------- 函数定义 --------------------
@@ -120,11 +135,14 @@ function main(config) {
     // 代理组 (Proxy Groups)
     const proxyGroups = [
       { name: "自动选择", icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg", type: "url-test", "include-all": true, url: TEST_URL, interval: TEST_INTERVAL, tolerance: TEST_TOLERANCE, proxies: [...newConfig.proxies.map(p => p.name), ...highQualityProxies] },
-      { name: "负载均衡", icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg", type: "load-balance", "include-all": true, strategy: BALANCESTRATEGY, url: TEST_URL, interval: TEST_INTERVAL },
       { name: "手动选择", icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg", type: "select", proxies: ["自动选择", "高质量节点", "DIRECT"] },
+      { name: "高质量节点", icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg", type: "select", proxies: ["自动选择", "负载均衡", "DIRECT", ...highQualityProxies] },
+      { name: "负载均衡", icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg", type: "load-balance", "include-all": true, strategy: BALANCESTRATEGY, url: TEST_URL, interval: TEST_INTERVAL },
       { name: "国内直连", icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg", type: "select", proxies: ["DIRECT"] },
       { name: "广告拦截", icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/ambulance.svg", type: "select", proxies: ["REJECT"] },
-      { name: "高质量节点", icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg", type: "select", proxies: ["自动选择", "负载均衡", "DIRECT", ...highQualityProxies] }
+      //兜底策略组
+      { name: "终则",type: "select", proxies:["自动选择","国内直连"]}
+      
     ];
 
     // 规则 (Rules)
@@ -158,7 +176,7 @@ function main(config) {
       "GEOIP,google,自动选择",
       "GEOIP,twitter,自动选择",
       "GEOIP,tor,自动选择",
-      "MATCH,手动选择"
+      "MATCH,终则"
     );
 
     // DNS 配置 (DNS Configuration)
