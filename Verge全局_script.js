@@ -57,9 +57,9 @@ const BALANCESTRATEGY = "sticky-sessions"; // 负载均衡策略 (粘性会话)
 
 // DNS 配置 (DNS Configuration)
 const DNS_CONFIG = {
-  defaultDNS: ["tls://189.29.29.29", "tls://223.5.5.5"], // 默认 DNS
-  cnDnsList: ["tls://189.29.29.29", "tls://223.5.5.5"], // 国内 DNS
-  proxyDnsList: ["tls://8.8.8.8", "tls://1.1.1.1"] // 代理 DNS
+  defaultDNS: ["189.29.29.29", "223.5.5.5"], // 默认 DNS
+  cnDnsList: ["https//189.29.29.29/dns-query", "https://223.5.5.5/dns-query"], // 国内 DNS
+  proxyDnsList: ["https://8.8.8.8/dns-query", "https://1.1.1.1/dns-query"] // 代理 DNS
 };
 
 // 高质量节点关键词 (High Quality Keywords)
@@ -90,11 +90,11 @@ const forceProxyDomains = [
 
 // 规则集配置 (Rule Set Configuration)
 const ruleConfig = [
-  { name: "广告集合", group: "广告拦截", url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt", path: "./ruleset/reject.yaml" },
-  { name: "直连列表", group: "国内直连", url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt", path: "./ruleset/direct.yaml" },
-  { name: "直连补充列表", group: "国内直连", url: "https://raw.githubusercontent.com/toney871030/clash_verge/master/PCDIRECT.yaml", path: "./ruleset/PCDIRECT.yaml" },
-  { name: "代理列表", group: "自动选择", url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt", path: "./ruleset/proxy.yaml" },
-  { name: "代理补充列表", group: "自动选择", url: "https://raw.githubusercontent.com/toney871030/clash_verge/master/PCProxy.yaml", path: "./ruleset/PCProxy.yaml" }
+  { name: "广告集合", group: "广告拦截", url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt", path: "./rule-providers/reject.txt" },
+  { name: "直连列表", group: "国内直连", url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt", path: "./rule-providers/direct.txt" },
+  { name: "直连补充列表", group: "国内直连", url: "https://raw.githubusercontent.com/toney871030/clash_verge/master/PCDIRECT.yaml", path: "./rule-providers/PCDIRECT.yaml" },
+  { name: "代理列表", group: "自动选择", url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt", path: "./rule-providers/proxy.txt" },
+  { name: "代理补充列表", group: "自动选择", url: "https://raw.githubusercontent.com/toney871030/clash_verge/master/PCProxy.yaml", path: "./rule-providers/PCProxy.yaml" }
 ];
 
 // -------------------- 函数定义 --------------------
