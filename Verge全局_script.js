@@ -11,7 +11,7 @@ const globalConfig = {
   "find-process-mode": "strict", // 进程匹配模式 (strict, off, always)
   "ipv6": false,                // IPv6 开关
 
-  "mode": "global",                // 运行模式 (rule, global, direct)
+  "mode": "rule",                // 运行模式 (rule, global, direct)
   "log-level": "error",           // 日志等级 (debug, info, warning, error, silent)
 
   // 性能调优 (Performance Tuning)
@@ -40,9 +40,10 @@ const globalConfig = {
     ],
     "global-client-fingerprint": "chrome", // 全局客户端指纹
     "geox-url": {                    // GEO 数据 URL
-      "geoip": "https://ghfast.top/https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/geoip.dat",
-      "geosite": "https://github.com/Loyalsoldier/domain-list-custom/releases/latest/download/geosite.dat",
-      "mmdb": "https://ghfast.top/https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country.mmdb"
+      "geoip": "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/geoip.dat",
+      "geosite": "https://mirror.ghproxy.com/https://github.com/Loyalsoldier/domain-list-custom/releases/latest/download/geosite.dat",
+      "mmdb": "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country.mmdb"
+
     }
   }
 };
@@ -57,8 +58,8 @@ const BALANCESTRATEGY = "sticky-sessions"; // 负载均衡策略 (粘性会话)
 
 // DNS 配置 (DNS Configuration)
 const DNS_CONFIG = {
-  defaultDNS: ["189.29.29.29", "223.5.5.5"], // 默认 DNS
-  cnDnsList: ["https//189.29.29.29/dns-query", "https://223.5.5.5/dns-query"], // 国内 DNS
+  defaultDNS: ["119.29.29.29", "223.5.5.5"], // 默认 DNS
+  cnDnsList: ["https://189.29.29.29/dns-query", "https://223.5.5.5/dns-query"], // 国内 DNS
   proxyDnsList: ["https://8.8.8.8/dns-query", "https://1.1.1.1/dns-query"] // 代理 DNS
 };
 
@@ -85,7 +86,7 @@ const forceProxyDomains = [
   "IP-CIDR,100.64.0.0/10,DIRECT",
   "IP-CIDR,224.0.0.0/4,DIRECT",
   "IP-CIDR,fe80::/10,DIRECT",
-  "DOMAIN-KEYWORD,pc528.net,DIRECT,no-resolve",
+  //"DOMAIN-KEYWORD,pc528.net,DIRECT,no-resolve",
   "PROCESS-NAME,Folx,DIRECT",
   "PROCESS-NAME,NetTransport,DIRECT",
   "PROCESS-NAME,uTorrent,DIRECT",
@@ -105,11 +106,11 @@ const forceProxyDomains = [
 
 // 规则集配置 (Rule Set Configuration)
 const ruleConfig = [
-  { name: "广告集合", group: "广告拦截", url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt", path: "./ruleset/reject.yaml" },
-  { name: "直连列表", group: "国内直连", url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt", path: "./ruleset/direct.yaml" },
-  { name: "直连补充列表", group: "国内直连", url: "https://raw.githubusercontent.com/toney871030/clash_verge/master/PCDIRECT.yaml", path: "./ruleset/PCDIRECT.yaml" },
-  { name: "代理列表", group: "自动选择", url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt", path: "./ruleset/proxy.yaml" },
-  { name: "代理补充列表", group: "自动选择", url: "https://raw.githubusercontent.com/toney871030/clash_verge/master/PCProxy.yaml", path: "./ruleset/PCProxy.yaml" }
+   { name: "广告集合", group: "广告拦截", url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt" },
+  { name: "直连列表", group: "国内直连", url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt" },
+  { name: "直连补充列表", group: "国内直连", url: "https://raw.githubusercontent.com/toney871030/clash_verge/master/PCDIRECT.yaml" },
+  { name: "代理列表", group: "自动选择", url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt" },
+  { name: "代理补充列表", group: "自动选择", url: "https://raw.githubusercontent.com/toney871030/clash_verge/master/PCProxy.yaml" }
 ];
 
 // -------------------- 函数定义 --------------------
@@ -141,7 +142,8 @@ function main(config) {
       { name: "国内直连", icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg", type: "select", proxies: ["DIRECT"] },
       { name: "广告拦截", icon: "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/ambulance.svg", type: "select", proxies: ["REJECT"] },
       //兜底策略组
-      { name: "终则",type: "select", proxies:["自动选择","国内直连"]}
+      { name: "终则", type: "select", proxies: ["自动选择", "DIRECT"] }
+
       
     ];
 
