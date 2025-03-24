@@ -104,14 +104,17 @@ tun:
 NodeParam: &NodeParam {type: http, interval: 86400, health-check: {enable: true, url: 'http://cp.cloudflare.com', interval: 300}}
 # 节点订阅
 proxy-providers: 
+  
   Node-1:
     url: 'https://bestsub.bestrui.ggff.net/share/bestsub/cdcefaa4-1f0d-462e-ba76-627b344989f2/all.yaml'
     <<: *NodeParam
     path: './proxy_provider/providers.yaml'
+  
   Node-2:
     url: 'https://202503021722111.chibaba.ggff.net/api/v1/client/subscribe?token=2300c05a842f8ec6f55da6596882bfe3'
     <<: *NodeParam
     path: './proxy_provider/providers.yaml'
+  
   Node-3:
     url: 'https://mercedes1208.久盛电缆.com/link/RXaFqQgEw4Kyoh67?clash=1'
     <<: *NodeParam
