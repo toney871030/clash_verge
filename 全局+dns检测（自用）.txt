@@ -235,96 +235,139 @@ function main(config) {
         );
 
         const globalConfig = {
-            "global-client-fingerprint": "chrome",
-            "tcp-concurrent": true,
-            "geox-url": {
-                "geoip": "https://ghfast.top/https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/geoip.dat",
-                "geosite": "https://github.com/Loyalsoldier/domain-list-custom/releases/latest/download/geosite.dat",
-                "mmdb": "https://ghfast.top/https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country.mmdb"
-            }
-        };
+    // 网络和代理配置
+    "mixed-port": 7897,            // 混合端口：HTTP(S)和SOCKS5共用端口
+    "geodata-mode": true,          // GEO模式：true使用geoip.dat数据库,false使用mmdb数据库
+    "tcp-concurrent": true,        // TCP并发：允许并发连接TCP,提高并发性能
+    "unified-delay": true,         // 统一延迟：统一显示节点延迟
+    "allow-lan": true,             // 局域网连接：允许其他设备经过本机代理
+    "bind-address": "*",           // 监听地址：*表示绑定所有IP地址
+    "find-process-mode": "strict", // 进程匹配模式：strict严格,off关闭,always总是
+    "ipv6": false,                // IPv6开关：是否启用IPv6支持
 
-        const dnsConfig = {
-            "enable": true,
-            "listen": ":53",
-            "ipv6": true,
-            "prefer-h3": true,
-            "use-hosts": true,
-            "use-system-hosts": true,
-            "respect-rules": true,
-            "enhanced-mode": "fake-ip",
-            "fake-ip-range": "198.18.0.1/16",
-            "fake-ip-filter": [
-                '+.lan',
-                '+.local',
-                '*.arpa',
-                '+.stun.+',
-                'time.*.com',
-                'ntp.*.com',
-                '*.msftncsi.com',
-                'www.msftconnecttest.com',
-                'localhost.ptlogin2.qq.com'
-            ],
-            "default-nameserver": DNS_CONFIG.defaultDNS,
-            "nameserver": DNS_CONFIG.cnDnsList,
-            "proxy-server-nameserver": DNS_CONFIG.proxyDnsList,
-            "nameserver-policy": {
-                "geosite:private,cn": DNS_CONFIG.cnDnsList,
-                "geosite:geolocation-!cn,gfw": DNS_CONFIG.proxyDnsList
-            },
-            "nameserver-policy-list": [
-                ["github.com", DNS_CONFIG.proxyDnsList],
-                ["www.google.com", DNS_CONFIG.proxyDnsList],
-                ["www.facebook.com", DNS_CONFIG.proxyDnsList],
-                ["www.youtube.com", DNS_CONFIG.proxyDnsList],
-                ["www.netflix.com", DNS_CONFIG.proxyDnsList],
-                ["www.xvideos.com", DNS_CONFIG.proxyDnsList],
-                ["pornhub.com", DNS_CONFIG.proxyDnsList],
-                ["spankbang.com", DNS_CONFIG.proxyDnsList],
-                ["krx18.com", DNS_CONFIG.proxyDnsList],
-                ["wallhaven.cc", DNS_CONFIG.proxyDnsList],
-                ["wallpaperswide.com", DNS_CONFIG.proxyDnsList],
-                ["spotify.com", DNS_CONFIG.proxyDnsList],
-                ["jinricp.niuc.net", DNS_CONFIG.proxyDnsList],
-                ["sehuatang.net", DNS_CONFIG.proxyDnsList],
-                ["oursogo.com", DNS_CONFIG.proxyDnsList],
-                ["eyny.com", DNS_CONFIG.proxyDnsList],
-                ["chatgpt.com", DNS_CONFIG.proxyDnsList],
-                ["greasyfork.org", DNS_CONFIG.proxyDnsList],
-                ["sleazyfork.org", DNS_CONFIG.proxyDnsList],
-                ["linux.do", DNS_CONFIG.cnDnsList],
-                ["www.52pojie.cn", DNS_CONFIG.cnDnsList],
-                ["meta.appinn.net", DNS_CONFIG.cnDnsList],
-                ["bbs.rainmeter.cn", DNS_CONFIG.cnDnsList],
-                ["www.pc528.net", DNS_CONFIG.cnDnsList],
-                ["www.winos.me", DNS_CONFIG.cnDnsList],
-                ["www.cmdpe.com", DNS_CONFIG.cnDnsList],
-                ["www.youxiaohou.com", DNS_CONFIG.cnDnsList],
-                ["www.pcmoe.net", DNS_CONFIG.cnDnsList],
-                ["bbs.3dmgame.com", DNS_CONFIG.cnDnsList],
-                ["www.3jihome.com", DNS_CONFIG.cnDnsList],
-                ["ddys.pro", DNS_CONFIG.cnDnsList],
-                ["www.5wu7rv.shop", DNS_CONFIG.cnDnsList],
-                ["v.ikanbot.com", DNS_CONFIG.cnDnsList],
-                ["www.boju.cc", DNS_CONFIG.cnDnsList],
-                ["www.agedm.org", DNS_CONFIG.cnDnsList],
-                ["4fb.cn", DNS_CONFIG.cnDnsList],
-                ["www.hybase.com", DNS_CONFIG.cnDnsList],
-                ["masuit.net", DNS_CONFIG.cnDnsList],
-                ["www.applnn.com", DNS_CONFIG.cnDnsList],
-                ["haowallpaper.com", DNS_CONFIG.cnDnsList],
-                [".cn", DNS_CONFIG.cnDnsList]
-            ]
-        };
+    // 运行模式(任选其一)
+    "mode": "rule",                // rule:规则模式; global:全局模式; direct:直连模式
 
-        return {
-            ...newConfig,
-            ...globalConfig,
-            "proxy-groups": proxyGroups,
-            "rules": rules,
-            "rule-providers": ruleProviders,
-            "dns": dnsConfig
-        };
+    // 日志等级(按详细程度排序)
+    "log-level": "error",           // 日志等级设置: debug, info, warning, error, silent
+
+    // 外部控制设置
+    "external-controller": "0.0.0.0:9090",  // 外部控制器监听地址
+    "external-ui": "folder",               // 外部控制器UI目录
+    "secret": "",                        // 外部控制器密码
+
+    //------------------------性能调优------------------------#
+    "tcp-concurrent-users": 64,      // TCP并发连接数,建议值:16-128
+    "keep-alive-interval": 15,       // 保活心跳间隔(秒),建议值:15-30
+    "inbound-tfo": true,            // 入站TCP Fast Open
+    "outbound-tfo": true,           // 出站TCP Fast Open
+
+    // 网络接口名称: 根据操作系统和硬件选择
+    "interface-name": "以太网",      // Windows中的有线网卡名称，macOS和Linux根据具体名称设置
+
+    // 连接池配置
+    "connection-pool-size": 256,     // 连接池大小,建议值:128-512
+    "idle-timeout": 60,              // 空闲超时时间(秒)
+
+    //------------------------TLS 配置------------------------#
+    "tls": {
+        "enable": true,               // 启用TLS支持
+        "skip-cert-verify": false,    // 是否跳过证书验证
+        "alpn": ["h2", "http/1.1"],   // 应用层协议协商
+        "min-version": "1.2",         // 最低TLS版本
+        "max-version": "1.3",         // 最高TLS版本
+        "cipher-suites": [
+            "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+            "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+            "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305",
+            "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305"
+        ],
+        "global-client-fingerprint": "chrome", // 客户端指纹
+        "geox-url": {
+            "geoip": "https://ghfast.top/https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/geoip.dat",
+            "geosite": "https://github.com/Loyalsoldier/domain-list-custom/releases/latest/download/geosite.dat",
+            "mmdb": "https://ghfast.top/https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country.mmdb"
+        }
+    }
+};
+
+const dnsConfig = {
+    "enable": true,                   // 启用 DNS 解析服务
+    "listen": ":53",                  // DNS 监听端口
+    "ipv6": true,                     // 启用 IPv6 支持
+    "prefer-h3": true,                // 优先使用 HTTP/3
+    "use-hosts": true,                // 使用本地 hosts 文件
+    "use-system-hosts": true,         // 使用系统 hosts 文件
+    "respect-rules": true,            // 遵循规则
+    "enhanced-mode": "fake-ip",       // 启用假 IP 模式
+    "fake-ip-range": "198.18.0.1/16", // 假 IP 范围
+    "fake-ip-filter": [
+        '+.lan', '+.local', '*.arpa', '+.stun.+', 'time.*.com', 'ntp.*.com',
+        '*.msftncsi.com', 'www.msftconnecttest.com', 'localhost.ptlogin2.qq.com'
+    ],
+    "default-nameserver": DNS_CONFIG.defaultDNS, // 默认 DNS 服务器
+    "nameserver": DNS_CONFIG.cnDnsList,          // 国内 DNS 列表
+    "proxy-server-nameserver": DNS_CONFIG.proxyDnsList, // 代理服务器 DNS 列表
+    "nameserver-policy": {
+        "geosite:private,cn": DNS_CONFIG.cnDnsList,         // 国内私有 DNS
+        "geosite:geolocation-!cn,gfw": DNS_CONFIG.proxyDnsList // 国外 DNS
+    },
+    "nameserver-policy-list": [
+        // 为特定域名指定 DNS 服务器
+        ["github.com", DNS_CONFIG.proxyDnsList],
+        ["www.google.com", DNS_CONFIG.proxyDnsList],
+        ["www.facebook.com", DNS_CONFIG.proxyDnsList],
+        ["www.youtube.com", DNS_CONFIG.proxyDnsList],
+        ["www.netflix.com", DNS_CONFIG.proxyDnsList],
+        ["www.xvideos.com", DNS_CONFIG.proxyDnsList],
+        ["pornhub.com", DNS_CONFIG.proxyDnsList],
+        ["spankbang.com", DNS_CONFIG.proxyDnsList],
+        ["krx18.com", DNS_CONFIG.proxyDnsList],
+        ["wallhaven.cc", DNS_CONFIG.proxyDnsList],
+        ["wallpaperswide.com", DNS_CONFIG.proxyDnsList],
+        ["spotify.com", DNS_CONFIG.proxyDnsList],
+        ["jinricp.niuc.net", DNS_CONFIG.proxyDnsList],
+        ["sehuatang.net", DNS_CONFIG.proxyDnsList],
+        ["oursogo.com", DNS_CONFIG.proxyDnsList],
+        ["eyny.com", DNS_CONFIG.proxyDnsList],
+        ["chatgpt.com", DNS_CONFIG.proxyDnsList],
+        ["greasyfork.org", DNS_CONFIG.proxyDnsList],
+        ["sleazyfork.org", DNS_CONFIG.proxyDnsList],
+        ["linux.do", DNS_CONFIG.cnDnsList],
+        ["www.52pojie.cn", DNS_CONFIG.cnDnsList],
+        ["meta.appinn.net", DNS_CONFIG.cnDnsList],
+        ["bbs.rainmeter.cn", DNS_CONFIG.cnDnsList],
+        ["www.pc528.net", DNS_CONFIG.cnDnsList],
+        ["www.winos.me", DNS_CONFIG.cnDnsList],
+        ["www.cmdpe.com", DNS_CONFIG.cnDnsList],
+        ["www.youxiaohou.com", DNS_CONFIG.cnDnsList],
+        ["www.pcmoe.net", DNS_CONFIG.cnDnsList],
+        ["bbs.3dmgame.com", DNS_CONFIG.cnDnsList],
+        ["www.3jihome.com", DNS_CONFIG.cnDnsList],
+        ["ddys.pro", DNS_CONFIG.cnDnsList],
+        ["www.5wu7rv.shop", DNS_CONFIG.cnDnsList],
+        ["v.ikanbot.com", DNS_CONFIG.cnDnsList],
+        ["www.boju.cc", DNS_CONFIG.cnDnsList],
+        ["www.agedm.org", DNS_CONFIG.cnDnsList],
+        ["4fb.cn", DNS_CONFIG.cnDnsList],
+        ["www.hybase.com", DNS_CONFIG.cnDnsList],
+        ["masuit.net", DNS_CONFIG.cnDnsList],
+        ["www.applnn.com", DNS_CONFIG.cnDnsList],
+        ["haowallpaper.com", DNS_CONFIG.cnDnsList],
+        [".cn", DNS_CONFIG.cnDnsList] // 为所有 .cn 域名指定国内 DNS
+    ]
+};
+
+// 最终返回的配置对象
+return {
+    ...newConfig,
+    ...globalConfig,
+    "proxy-groups": proxyGroups,
+    "rules": rules,
+    "rule-providers": ruleProviders,
+    "dns": dnsConfig
+};
+
     } catch (error) {
         console.error('发生错误:', error);
         return config;
