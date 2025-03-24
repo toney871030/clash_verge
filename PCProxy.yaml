@@ -1,17 +1,18 @@
 #补充代理网站
-DOMAIN-SUFFIX,wallhaven.cc:443
-DOMAIN-SUFFIX,wallpaperswide.com:443
-DOMAIN-SUFFIX,xvideos.com:443
-DOMAIN-SUFFIX,pornhub.com:443
-DOMAIN-SUFFIX,spankbang.com:443
-DOMAIN-SUFFIX,sehuatang.net:443
-DOMAIN-SUFFIX,krx18.com:443
-DOMAIN-SUFFIX,music.ydev.tech:443
-DOMAIN-SUFFIX,oursogo.com:443
-DOMAIN-SUFFIX,eyny.com:443
-DOMAIN-SUFFIX,18comic.vip:443
-DOMAIN-SUFFIX,greasyfork.org:443
-DOMAIN-SUFFIX,sleazyfork.org:443
+DOMAIN-SUFFIX,wallhaven.cc
+DOMAIN-SUFFIX,wallpaperswide.com
+DOMAIN-SUFFIX,xvideos.com
+DOMAIN-SUFFIX,pornhub.com
+DOMAIN-SUFFIX,spankbang.com
+DOMAIN-SUFFIX,sehuatang.net
+DOMAIN-SUFFIX,krx18.com
+DOMAIN-SUFFIX,music.ydev.tech
+DOMAIN-SUFFIX,oursogo.com
+DOMAIN-SUFFIX,eyny.com
+DOMAIN-SUFFIX,18comic.vip
+DOMAIN-SUFFIX,greasyfork.org
+DOMAIN-SUFFIX,sleazyfork.org
+DOMAIN-SUFFIX,filen.io.org
 
 # 域名后缀匹配
 DOMAIN-SUFFIX,qichiyu.com
