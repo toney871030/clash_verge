@@ -1,32 +1,33 @@
-- DOMAIN-SUFFIX,ip138.com
-- DOMAIN-SUFFIX,agedm.org
-- DOMAIN-SUFFIX,m.mubai.link
-- DOMAIN-SUFFIX,linux.do
-- DOMAIN-SUFFIX,hybase.com
-- DOMAIN-SUFFIX,masuit.net
-- DOMAIN-SUFFIX,4fb.cn
-- DOMAIN-SUFFIX,applnn.com
-- DOMAIN-SUFFIX,hifini.com
-- DOMAIN-SUFFIX,v.ikanbot.com
-- DOMAIN-SUFFIX,pan666.net
-- DOMAIN-SUFFIX,winos.me
-- DOMAIN-SUFFIX,cmdpe.com
-- DOMAIN-SUFFIX,52pojie.cn
-- DOMAIN-SUFFIX,youxiaohou.com
-- DOMAIN-SUFFIX,bbs.3dmgame.com
-- DOMAIN-SUFFIX,bbs.rainmeter.cn
-- DOMAIN-SUFFIX,3jihome.com
-- DOMAIN-SUFFIX,boju.cc
-- DOMAIN-SUFFIX,ddys.pro
-- DOMAIN-SUFFIX,5wu7rv.shop
-- DOMAIN-SUFFIX,netflixcookies.com
-- DOMAIN-SUFFIX,haowallpaper.com
-- DOMAIN-SUFFIX,cloud.189.cn
-- DOMAIN-SUFFIX,alipan.com
-- DOMAIN-SUFFIX,pan.baidu.com
-- DOMAIN-SUFFIX,123pan.com
-- DOMAIN-SUFFIX,lanzou.com
-- DOMAIN-SUFFIX,pan.huang1111.cn
-- DOMAIN-SUFFIX,pan666.net
-- DOMAIN-SUFFIX,pan.xunlei.com
-- DOMAIN-SUFFIX,pc528.net
+payload:
+  - 'ip138.com'
+  - 'agedm.org'
+  - 'm.mubai.link'
+  - 'linux.do'
+  - 'hybase.com'
+  - 'masuit.net'
+  - '4fb.cn'
+  - 'applnn.com'
+  - 'hifini.com'
+  - 'v.ikanbot.com'
+  - 'pan666.net'
+  - 'winos.me'
+  - 'cmdpe.com'
+  - '52pojie.cn'
+  - 'youxiaohou.com'
+  - 'bbs.3dmgame.com'
+  - 'bbs.rainmeter.cn'
+  - '3jihome.com'
+  - 'boju.cc'
+  - 'ddys.pro'
+  - '5wu7rv.shop'
+  - 'netflixcookies.com'
+  - 'haowallpaper.com'
+  - 'cloud.189.cn'
+  - 'alipan.com'
+  - 'pan.baidu.com'
+  - '123pan.com'
+  - 'lanzou.com'
+  - 'pan.huang1111.cn'
+  - 'pan666.net'
+  - 'pan.xunlei.com'
+  - 'pc528.net'
