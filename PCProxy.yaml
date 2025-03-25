@@ -1,4 +1,3 @@
-#补充代理网站
 DOMAIN-SUFFIX,wallhaven.cc
 DOMAIN-SUFFIX,wallpaperswide.com
 DOMAIN-SUFFIX,xvideos.com
@@ -13,55 +12,3 @@ DOMAIN-SUFFIX,18comic.vip
 DOMAIN-SUFFIX,greasyfork.org
 DOMAIN-SUFFIX,sleazyfork.org
 DOMAIN-SUFFIX,filen.io.org
-
-# 域名后缀匹配
-DOMAIN-SUFFIX,qichiyu.com
-
-# 域名关键字匹配
-DOMAIN-KEYWORD,1e100
-
-# 国外DNS
-DOMAIN-SUFFIX,dns.google
-DOMAIN-SUFFIX,1dot1dot1dot1.cloudflare-dns.com
-DOMAIN-SUFFIX,dot.sb
-DOMAIN-SUFFIX,dns.umbrella.com
-DOMAIN-SUFFIX,dns.quad9.net
-DOMAIN-SUFFIX,cloudflare-dns.com
-DOMAIN-SUFFIX,doh.dns.sb
-DOMAIN-SUFFIX,doh.opendns.com
-DOMAIN-SUFFIX,hk-hkg.doh.sb
-IP-CIDR,8.8.8.8/32,no-resolve
-IP-CIDR,8.8.4.4/32,no-resolve
-IP-CIDR,1.1.1.1/32,no-resolve
-IP-CIDR,1.0.0.1/32,no-resolve
-IP-CIDR,185.222.222.222/32,no-resolve
-IP-CIDR,208.67.222.222/32,no-resolve
-
-#AI域名补充列表
-# 域名关键字匹配
-DOMAIN-KEYWORD,openai
-DOMAIN-KEYWORD,anthropic
-DOMAIN-KEYWORD,Claude
-
-# 域名后缀匹配
-DOMAIN-SUFFIX,perplexity.ai
-DOMAIN-SUFFIX,chatgpt.com
-DOMAIN-SUFFIX,auth0.com
-DOMAIN-SUFFIX,client-api.arkoselabs.com
-DOMAIN-SUFFIX,events.statsigapi.net
-DOMAIN-SUFFIX,featuregates.org
-DOMAIN-SUFFIX,identrust.com
-DOMAIN-SUFFIX,intercom.io
-DOMAIN-SUFFIX,intercomcdn.com
-DOMAIN-SUFFIX,oaistatic.com
-DOMAIN-SUFFIX,oaiusercontent.com
-DOMAIN-SUFFIX,openai.com
-DOMAIN-SUFFIX,openaiapi-site.azureedge.net
-DOMAIN-SUFFIX,sentry.io
-DOMAIN-SUFFIX,stripe.com
-DOMAIN-SUFFIX,bard.google.com
-DOMAIN-SUFFIX,gemini.google.com
-DOMAIN-SUFFIX,makersuite.google.com
-DOMAIN-SUFFIX,anthropic.com
-DOMAIN-SUFFIX,claude.ai.com
-DOMAIN-SUFFIX,integrate.api.nvidia.com
