@@ -53,7 +53,7 @@ const RULE_UPDATE_INTERVAL = 86400; // 规则更新间隔 (秒)
 const TEST_URL = "https://www.gstatic.com/generate_204"; // 节点连通性测试 URL
 const TEST_INTERVAL = 300; // 节点延迟测试间隔 (秒)
 const TEST_TOLERANCE = 100; // 节点延迟测试容忍度 (毫秒)
-const BALANCESTRATEGY = "round robin"; // 负载均衡策略 (粘性会话)
+const BALANCESTRATEGY = "sticky-sessions"; // 负载均衡策略 (粘性会话)
 
 // DNS 配置 (DNS Configuration)
 const DNS_CONFIG = {
