@@ -14,6 +14,8 @@ const globalConfig = {
   "mode": "rule",                // 运行模式 (rule, global, direct)
   "log-level": "error",           // 日志等级 (debug, info, warning, error, silent)
 
+  "external-controller": '127.0.0.1:9090', //指定外部控制器的服务地址（本地回环地址 + 监听端口9090）
+
   // 性能调优 (Performance Tuning)
   "tcp-concurrent-users": 64,      // TCP 并发连接数
   "keep-alive-interval": 15,       // 保活心跳间隔 (秒)
