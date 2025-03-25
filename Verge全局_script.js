@@ -15,8 +15,8 @@ const globalConfig = {
   "log-level": "error",          // 日志等级 (debug, info, warning, error, silent)
 
   // 性能调优 (Performance Tuning)
-  "tcp-concurrent-users": 64,    // TCP 并发连接数
-  "keep-alive-interval": 15,     // 保活心跳间隔 (秒)
+  "tcp-concurrent-users": 128,    // TCP 并发连接数
+  "keep-alive-interval": 30,     // 保活心跳间隔 (秒)
   "inbound-tfo": true,           // 入站 TCP Fast Open
   "outbound-tfo": true,          // 出站 TCP Fast Open
   "interface-name": "以太网",    // 网络接口名称 (修改为实际网卡名)
@@ -33,10 +33,11 @@ const globalConfig = {
     "min-version": "1.2",         // 最小 TLS 版本
     "max-version": "1.3",         // 最大 TLS 版本
     "cipher-suites": [            // TLS 密码套件
+      "TLS_AES_128_GCM_SHA256",  
+      "TLS_AES_256_GCM_SHA384",
+      "TLS_CHACHA20_POLY1305_SHA256",
       "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
-      "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
-      "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305",
-      "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305"
+      "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"
     ],
     "global-client-fingerprint": "chrome", // 全局客户端指纹
     "geox-url": {                          // GEO 数据 URL
@@ -49,7 +50,7 @@ const globalConfig = {
 
 // 常量定义 (Constants)
 const MULTIPLIER_REGEX = /(?:[4-9](?:\.5)?x)/i; // 节点名称倍数标识正则
-const RULE_UPDATE_INTERVAL = 86400;             // 规则更新间隔 (秒)
+const RULE_UPDATE_INTERVAL = 86400; // 规则更新间隔 (秒)
 const TEST_URL = "https://www.gstatic.com/generate_204"; // 节点连通性测试 URL
 const TEST_INTERVAL = 300;                      // 节点延迟测试间隔 (秒)
 const TEST_TOLERANCE = 100;                     // 节点延迟测试容忍度 (毫秒)
@@ -75,7 +76,7 @@ const HIGH_QUALITY_KEYWORDS = [
   "IPLC", "iplc", "Iplc", "专线", "高速",
   "高级", "精品", "原生", "SVIP", "svip",
   "Svip", "VIP", "vip", "Vip", "Premium",
-  "premium", "特殊", "特殊线路", "游戏", "Game", "game"
+  "premium", "特殊", "特殊线路", "游戏", "Game", "game","无限"
 ];
 const HIGH_QUALITY_REGEX = new RegExp(HIGH_QUALITY_KEYWORDS.join("|"), "i"); // 高质量节点匹配正则
 
@@ -112,12 +113,14 @@ const ruleConfig = [
     name: "广告集合",
     group: "广告拦截",
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt",
+    interval: "reject_UPDATE_INTERVAL",
     path: `./rule-providers/广告集合.yaml`
   },
   {
     name: "直连列表",
     group: "国内直连",
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt",
+    interval: "direct_UPDATE_INTERVAL",
     path: `./rule-providers/直连列表.yaml`
   },
   {
@@ -130,6 +133,7 @@ const ruleConfig = [
     name: "代理列表",
     group: "自动选择",
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt",
+    interval: "proxy_UPDATE_INTERVAL",
     path: `./rule-providers/代理列表.yaml`
   },
   {
@@ -279,7 +283,7 @@ function main(config) {
       "fake-ip-range": "198.18.0.1/16", // 定义 fake-ip 范围
       "fake-ip-filter": [
         // 过滤 fake-ip 不应处理的域名（如本地域名、时间服务器等）
-        '+.lan', '+.local', '*.arpa', '+.stun.+', 'time.*.com', 'ntp.*.com',
+        '+.lan', '+.local', "+.corp","*.internal","*.localdomain",'*.arpa', '+.stun.+', 'time.*.com', 'ntp.*.com',
         '*.msftncsi.com', 'www.msftconnecttest.com', 'localhost.ptlogin2.qq.com'
       ],
       "default-nameserver": DNS_CONFIG.defaultDNS,          // 默认的 DNS 服务器地址
