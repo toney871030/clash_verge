@@ -34,6 +34,7 @@ const PROCESS_RULES = [
     "PROCESS-NAME,ProcessLasso.exe,DIRECT",
     "PROCESS-NAME,WeChat.exe,DIRECT"
 ];
+
 const USER_RULES = [
     "DOMAIN-SUFFIX,v2ex.com,被墙网站",
     "DOMAIN-SUFFIX,nodeseek.com,被墙网站",
@@ -45,14 +46,14 @@ const USER_RULES = [
     "IP-CIDR,223.113.52.0/22,DIRECT,no-resolve",
     "DOMAIN-SUFFIX,Grok.com,被墙网站",
     "DOMAIN-SUFFIX,aistudio.google.com,Non_HK_TW",
-];
+    ];
 
 const SAVED_RULES = [
     "RULE-SET,reject,广告拦截",
     "RULE-SET,cncidr,DIRECT,no-resolve",
     "RULE-SET,direct,DIRECT",
     "RULE-SET,pcdirect,DIRECT",
-    "RULE-SET,pcproxy,被墙网站",
+    "RULE-SET,pcproxy,Non_HK_TW",
     "GEOSITE,gfw,被墙网站",
     "GEOIP,CN,国内网站",
     "MATCH,国外网站"
@@ -202,14 +203,14 @@ const DNS_CONFIG = {
         "tls://8.8.8.8", "tls://1.1.1.1", "tls://9.9.9.9",
         "https://8.8.8.8/dns-query", "https://1.1.1.1/dns-query"
     ],
-    defaultDNS: ["tls://120.53.53.53", "tls://223.5.5.5"],
+    defaultDNS: ["tls://120.53.53.53", "tls://119.29.29.29","tls://223.5.5.5"],
     cnDnsList: [
         "120.53.53.53",
         '119.29.29.29',
         '223.5.5.5',
     ],
     fakeIpFilter: [
-        "+.lan", "+.local",
+        "+.lan", "+.local","time.*.com",
         "+.msftconnecttest.com", "+.msftncsi.com",
         "localhost.ptlogin2.qq.com", "localhost.sec.qq.com",
         "localhost.work.weixin.qq.com",
@@ -416,7 +417,8 @@ function main(config) {
     const baseProxyGroups = buildBaseProxyGroups(testUrl, highQualityProxies, proxies);
 
     return {
-        mode: "rule",                  // 运行模式 (rule, global, direct)
+         mode: "rule",                 // 运行模式 (rule, global, direct)
+        "log-level": "info",          // 日志等级 (debug, info, warning, error, silent)
         "mixed-port": 7897,            // 混合端口 (HTTP/SOCKS5)
         "geodata-mode": true,          // GEO 数据模式 (geoip.dat: true, mmdb: false)
         "tcp-concurrent": true,        // TCP 并发连接
@@ -460,9 +462,9 @@ function main(config) {
         ],
         "rule-providers": ruleProviders,
         rules: [
+            ...PROCESS_RULES,
             ...rules,
-            ...SAVED_RULES,
-            ...PROCESS_RULES
+            ...SAVED_RULES
         ]
     };
 }
