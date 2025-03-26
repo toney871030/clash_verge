@@ -2,7 +2,6 @@ payload:
   - 'ip138.com'
   - 'agedm.org'
   - 'm.mubai.link'
-  - 'linux.do'
   - 'hybase.com'
   - 'masuit.net'
   - '4fb.cn'
