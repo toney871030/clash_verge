@@ -19,6 +19,21 @@ const CONFIG = {
 /**
  * 用户自定义规则（高优先级）
  */
+const PROCESS_RULES = [
+    "PROCESS-NAME,Folx.exe,DIRECT",
+    "PROCESS-NAME,NetTransport.exe,DIRECT",
+    "PROCESS-NAME,uTorrent.exe,DIRECT",
+    "PROCESS-NAME,Motrix.exe,DIRECT",
+    "PROCESS-NAME,pikpak.exe,DIRECT",
+    "PROCESS-NAME,xdm-app.exe,DIRECT",
+    "PROCESS-NAME,PixPin.exe,DIRECT",
+    "PROCESS-NAME,DownloadService.exe,DIRECT",
+    "PROCESS-NAME,WebTorrent.exe,DIRECT",
+    "PROCESS-NAME,Thunder.exe,DIRECT",
+    "PROCESS-NAME,eCloud.exe,DIRECT",
+    "PROCESS-NAME,ProcessLasso.exe,DIRECT",
+    "PROCESS-NAME,WeChat.exe,DIRECT"
+];
 const USER_RULES = [
     "DOMAIN-SUFFIX,v2ex.com,被墙网站",
     "DOMAIN-SUFFIX,nodeseek.com,被墙网站",
@@ -135,6 +150,13 @@ const PROXY_RULES = [
         icon: "https://fastly.jsdelivr.net/gh/Semporia/Hand-Painted-icon@master/Social_Media/TikTok.png"
     },
     { 
+        name: "Telegram", 
+        gfw: true, 
+        urls:["https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Telegram/Telegram_No_Resolve.yaml",
+              "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/Telegram补充_No_Resolve.yaml"],
+        icon: "https://fastly.jsdelivr.net/gh/Semporia/Hand-Painted-icon@master/Social_Media/Telegram.png"
+    },
+    { 
         name: "Facebook", 
         gfw: true, 
         urls: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Facebook/Facebook_No_Resolve.yaml",
@@ -180,12 +202,11 @@ const DNS_CONFIG = {
         "tls://8.8.8.8", "tls://1.1.1.1", "tls://9.9.9.9",
         "https://8.8.8.8/dns-query", "https://1.1.1.1/dns-query"
     ],
-    defaultDNS: ["tls://1.12.12.12", "tls://223.5.5.5"],
+    defaultDNS: ["tls://120.53.53.53", "tls://223.5.5.5"],
     cnDnsList: [
+        "120.53.53.53",
         '119.29.29.29',
         '223.5.5.5',
-        '1.12.12.12',
-        "114.114.114.114",
     ],
     fakeIpFilter: [
         "+.lan", "+.local",
@@ -395,7 +416,7 @@ function main(config) {
     const baseProxyGroups = buildBaseProxyGroups(testUrl, highQualityProxies, proxies);
 
     return {
-        mode: "rule",                // 运行模式 (rule, global, direct)
+        mode: "rule",                  // 运行模式 (rule, global, direct)
         "mixed-port": 7897,            // 混合端口 (HTTP/SOCKS5)
         "geodata-mode": true,          // GEO 数据模式 (geoip.dat: true, mmdb: false)
         "tcp-concurrent": true,        // TCP 并发连接
@@ -404,11 +425,11 @@ function main(config) {
         "bind-address": "*",           // 监听地址 (所有 IP)
         "find-process-mode": "strict", // 进程匹配模式 (strict, off, always)
         "ipv6": true,                  // IPv6 开关
-        "tcp-concurrent-users": 128,    // TCP 并发连接数
+        "tcp-concurrent-users": 128,   // TCP 并发连接数
         "keep-alive-interval": 30,     // 保活心跳间隔 (秒)
         "inbound-tfo": true,           // 入站 TCP Fast Open
         "outbound-tfo": true,          // 出站 TCP Fast Open
-        "interface-name": "以太网",    // 网络接口名称 (修改为实际网卡名)
+        "interface-name": "以太网",     // 网络接口名称 (修改为实际网卡名)
         "connection-pool-size": 256,   // 连接池大小
         "idle-timeout": 60,            // 空闲超时时间 (秒)
     "tls": {
@@ -418,7 +439,7 @@ function main(config) {
         "min-version": "1.2",         // 最小 TLS 版本
         "max-version": "1.3",         // 最大 TLS 版本
         },        
-    "cipher-suites": [            // TLS 密码套件
+    "cipher-suites": [                // TLS 密码套件
         "TLS_AES_128_GCM_SHA256",  
         "TLS_AES_256_GCM_SHA384",
         "TLS_CHACHA20_POLY1305_SHA256",
@@ -440,7 +461,8 @@ function main(config) {
         "rule-providers": ruleProviders,
         rules: [
             ...rules,
-            ...SAVED_RULES
+            ...SAVED_RULES,
+            ...PROCESS_RULES
         ]
     };
 }
