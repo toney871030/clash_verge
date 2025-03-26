@@ -1,6 +1,5 @@
 payload:
   - 'wallpaperswide.com'
-  - 'wallhaven.cc'
   - 'xvideos.com'
   - 'pornhub.com'
   - 'spankbang.com'
