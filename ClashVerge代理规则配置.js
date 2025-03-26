@@ -1,7 +1,7 @@
 /**
  * ClashVerge 代理规则配置生成脚本
  * MIT License ~
- * author : Phantasia https://github.com/MarchPhantasia
+ * author : https://github.com/toney871030/clash_verge/blob/master/ClashVerge代理规则配置.js
  */
 
 // ==================== 用户配置区（可自由修改） ====================
