@@ -15,7 +15,7 @@ payload:
   - 'youxiaohou.com'
   - 'bbs.3dmgame.com'
   - 'bbs.rainmeter.cn'
-  - '3jihome.com'
+  - 'www.3jihome.com'
   - 'boju.cc'
   - 'ddys.pro'
   - '5wu7rv.shop'
