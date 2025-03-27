@@ -14,6 +14,10 @@ DOMAIN-SUFFIX,greasyfork.org
 DOMAIN-SUFFIX,sleazyfork.org
 DOMAIN-SUFFIX,filen.io.org
 DOMAIN-SUFFIX,imbt.one
+DOMAIN-SUFFIX,subhd.tv
+DOMAIN,api.subhd.tv
+DOMAIN,cdn.subhd.tv
+DOMAIN-KEYWORD,subhd 
 
 #python域名
 DOMAIN-SUFFIX,pycon.org
