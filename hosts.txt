@@ -106,7 +106,7 @@
 172.67.164.117 greasyfork.org
 104.21.96.1 sleazyfork.org
 
-104.26.10.35 wallhaven.cc
+67.228.235.91 wallhaven.cc
 104.26.11.35 wallhaven.cc
 
 110.42.51.228 haowallpaper.com
