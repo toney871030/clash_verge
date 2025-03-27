@@ -1,3 +1,7 @@
+DOMAIN-SUFFIX,subhd.tv
+DOMAIN,api.subhd.tv
+DOMAIN,cdn.subhd.tv
+DOMAIN-KEYWORD,subhd  
 DOMAIN-SUFFIX,ip138.com
 DOMAIN-SUFFIX,linux.do
 DOMAIN-SUFFIX,agedm.org
@@ -30,7 +34,6 @@ DOMAIN-SUFFIX,pan.huang1111.cn
 DOMAIN-SUFFIX,pan666.net
 DOMAIN-SUFFIX,pan.xunlei.com
 DOMAIN-SUFFIX,pc528.net
-DOMAIN-SUFFIX,subhd.tv
 
 #download:
 DOMAIN-SUFFIX,qbittorrent.org
