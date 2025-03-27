@@ -59,6 +59,7 @@ function overwriteDns(params) {
     ];
 
     const proxyDnsList = [
+        "https://8.8.8.8/dns-query",
         "https://223.5.5.5/dns-query",
         "https://doh.pub/dns-query",
     ];
@@ -121,9 +122,18 @@ function overwriteFakeIpFilter (params) {
 // 覆写DNS.Nameserver Policy
 function overwriteNameserverPolicy (params) {
     const nameserverPolicy = {
+        "dns.google": "quic://8.8.8.8:853",
         "dns.alidns.com": "quic://223.5.5.5:853",
         "doh.pub": "https://1.12.12.12/dns-query",
         "doh.360.cn": "101.198.198.198",
+        "+.google.com": "quic://dns.google:853",
+        "+.bing.com": "quic://dns.google:853",
+        "+.chatgpt.com": "quic://dns.google:853",
+        "+.youtube.com": "quic://dns.google:853",
+        "+.xvideos.com": "quic://dns.google:853",
+        "+.pornhub.com": "quic://dns.google:853",
+        "+.spankbang.com": "quic://dns.google:853",
+        "+.netflix.com": "quic://dns.google:853",
         "+.uc.cn": "quic://dns.alidns.com:853",
         "+.alibaba.com": "quic://dns.alidns.com:853",
         "*.alicdn.com": "quic://dns.alidns.com:853",
@@ -440,6 +450,7 @@ function overwriteNameserverPolicy (params) {
 // 覆写hosts
 function overwriteHosts (params) {
     const hosts = {
+        "dns.google": ["8.8.8.8", "8.8.4.4", "2001:4860:4860::8888", "2001:4860:4860::8844"],
         "dns.alidns.com": ['223.5.5.5', '223.6.6.6', '2400:3200:baba::1', '2400:3200::1'],
         "doh.pub": ['120.53.53.53', '1.12.12.12'],
         "cdn.jsdelivr.net": ['cdn.jsdelivr.net.cdn.cloudflare.net']
@@ -668,9 +679,18 @@ function overwriteRules(params) {
         "RULE-SET,reject_non_ip_no_drop,REJECT"
     ];
 
+    const mypcRules = [
+        // 在此添加自定义规则，优先级次于ad。例子：
+        // "RULE-SET,规则name,DIRECT",
+        "RULE-SET,pcdirect,REJECT",
+        "RULE-SET,pcproxy,🎯 节点选择"
+    ];
+    
+
     const customRules = [
         // 在此添加自定义规则，优先级次于ad。例子：
         // "DOMAIN,baidu.com,DIRECT",
+        
     ];
 
     const nonipRules = [
@@ -694,6 +714,7 @@ function overwriteRules(params) {
 
     const allNonipRules = [
         ...adNonipRules,
+        ...mypcRules,
         ...customRules,
         ...nonipRules
     ];
@@ -958,7 +979,28 @@ function overwriteRules(params) {
             interval: 43200,
             format: "text",
             proxy: "🎯 节点选择"
-        }
+        },
+      //mypcRules:
+         pcdirect: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/pcdirect.txt",
+            path: "./rule_set/my_ruleset/pcdirect.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "DIRECT"
+
+         },
+         pcproxy: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/pcproxy.txt",
+            path: "./rule_set/my_ruleset/pcproxy.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "🎯 节点选择"
+
+         }
     };
 
     params["rule-providers"] = ruleProviders;
