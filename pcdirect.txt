@@ -1,34 +1,33 @@
-payload:
-  - 'ip138.com'
-  - 'linux.do'
-  - 'agedm.org'
-  - 'm.mubai.link'
-  - 'hybase.com'
-  - 'masuit.net'
-  - '4fb.cn'
-  - 'applnn.com'
-  - 'hifini.com'
-  - 'v.ikanbot.com'
-  - 'pan666.net'
-  - 'winos.me'
-  - 'cmdpe.com'
-  - '52pojie.cn'
-  - 'youxiaohou.com'
-  - 'bbs.3dmgame.com'
-  - 'bbs.rainmeter.cn'
-  - '3jihome.com'
-  - 'boju.cc'
-  - 'ddys.pro'
-  - '5wu7rv.shop'
-  - 'netflixcookies.com'
-  - 'haowallpaper.com'
-  - 'cloud.189.cn'
-  - 'alipan.com'
-  - 'pan.baidu.com'
-  - '123pan.com'
-  - 'lanzou.com'
-  - 'pan.huang1111.cn'
-  - 'pan666.net'
-  - 'pan.xunlei.com'
-  - 'pc528.net'
-  - 'subhd.tv'
+ip138.com
+linux.do
+agedm.org
+m.mubai.link
+hybase.com
+masuit.net
+4fb.cn
+applnn.com
+hifini.com
+v.ikanbot.com
+pan666.net
+winos.me
+cmdpe.com
+52pojie.cn
+youxiaohou.com
+bbs.3dmgame.com
+bbs.rainmeter.cn
+3jihome.com
+boju.cc
+ddys.pro
+5wu7rv.shop
+netflixcookies.com
+haowallpaper.com
+cloud.189.cn
+alipan.com
+pan.baidu.com
+123pan.com
+lanzou.com
+pan.huang1111.cn
+pan666.net
+pan.xunlei.com
+pc528.net
+subhd.tv
