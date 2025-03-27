@@ -512,7 +512,7 @@ function overwriteTunnel(params) {
         "dns-hijack": ["any:53", "tcp://any:53"],
         "auto-route": true,
         "auto-detect-interface": true,
-        "strict-route": true,
+        "strict-route": false,
         // 根据自己环境来看要排除哪些网段
         "route-exclude-address": [],
     };
@@ -561,8 +561,8 @@ function overwriteProxyGroups(params) {
             name: item.name,
             type: "url-test",
             url: "https://cp.cloudflare.com",
-            interval: 300,
-            tolerance: 50,
+            interval: 1800,
+            tolerance: 150,
             proxies: getProxiesByRegex(params, item.regex),
             hidden: true,
         }))
@@ -633,7 +633,7 @@ function overwriteProxyGroups(params) {
     // consistent-hashing：散列 根据请求的哈希值将请求分配到固定的节点
     // sticky-sessions：缓存 对「你的设备IP + 目标地址」组合计算哈希值，根据哈希值将请求分配到固定的节点 缓存 10 分钟过期
     // 默认值：consistent-hashing
-    const loadBalanceStrategy = "consistent-hashing";
+    const loadBalanceStrategy = "sticky-sessions";
 
     const groups = [
         {
@@ -664,7 +664,7 @@ function overwriteProxyGroups(params) {
             name: "⚖️ 负载均衡",
             type: "load-balance",
             url: "https://cp.cloudflare.com",
-            interval: 300,
+            interval: 1800,
             strategy: loadBalanceStrategy,
             proxies: allProxies,
             icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Available.png"
@@ -673,8 +673,8 @@ function overwriteProxyGroups(params) {
             name: "ALL - 自动选择",
             type: "url-test",
             url: "https://cp.cloudflare.com",
-            interval: 300,
-            tolerance: 50,
+            interval: 1800,
+            tolerance: 150,
             proxies: allProxies,
             hidden: true,
         },
