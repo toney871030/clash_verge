@@ -1,3 +1,8 @@
+#网络管理
+DOMAIN-SUFFIX,ip138.com
+DOMAIN-SUFFIX,ping.pe
+DOMAIN-SUFFIX,toolbox.googleapps.com
+
 #壁纸下载
 DOMAIN-SUFFIX,wallpaperswide.com
 DOMAIN-SUFFIX,wallhaven.cc
