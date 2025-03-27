@@ -1,17 +1,15 @@
-payload:
-  - 'wallpaperswide.com'
-  - 'wallhaven.cc'
-  - 'xvideos.com'
-  - 'pornhub.com'
-  - 'spankbang.com'
-  - 'sehuatang.net'
-  - 'krx18.com'
-  - 'music.ydev.tech'
-  - 'oursogo.com'
-  - 'eyny.com'
-  - '18comic.vip'
-  - 'greasyfork.org'
-  - 'sleazyfork.org'
-  - 'filen.io.org'
-  - 'imbt.one'
-  
+wallpaperswide.com
+wallhaven.cc
+xvideos.com
+pornhub.com
+spankbang.com
+sehuatang.net
+krx18.com
+music.ydev.tech
+oursogo.com
+eyny.com
+18comic.vip
+greasyfork.org
+sleazyfork.org
+filen.io.org
+imbt.one
