@@ -7,7 +7,7 @@
 
 #AI#
 
-104.18.32.47 chatgpt.com
+128.121.146.228 chatgpt.com
 
 
 #搜索引擎、服务器类ip#
@@ -16,17 +16,17 @@
 
 150.171.28.10 bing.com
 
-13.107.21.200 cn.bing.com
+204.79.197.200 cn.bing.com
 
-39.156.66.1 baidu.com
+110.242.68.66	 baidu.com
  
 59.111.160.244 163.com
 
-103.135.240.78 music.163.com
+111.124.200.65 music.163.com
 
 109.244.194.121 tencent.com
 
-43.159.233.74 wx.mail.qq.com
+121.14.23.119 wx.mail.qq.com
 
 #软件、论坛、博客站点ip#
 
@@ -43,25 +43,25 @@
 
 104.21.46.211 bbs.rainmeter.cn
 
-172.241.24.66 www04.eyny.com
+199.59.150.43 www04.eyny.com
 
-172.67.72.23 oursogo.com
+104.244.43.167 oursogo.com
 
-172.67.188.231 sehuatang.net
+202.160.129.37 sehuatang.net
 
 104.21.25.138 18comic-mhws.club
 
-117.24.12.35 bbs.3dmgame.com
+103.248.152.174 bbs.3dmgame.com
 
-104.21.18.193 masuit.net
+172.67.183.74 masuit.net
 
 43.249.193.76 hybase.com
 
-43.129.235.19 4fb.cn
+45.151.132.50 423down.com
  
-104.21.32.1 applnn.com
+104.21.80.1 applnn.com
 
-104.20.3.235 pastebin.com
+104.20.4.235 pastebin.com
 
 #娱乐、影视、音乐站点ip#
 
@@ -69,48 +69,45 @@
 
 104.21.93.9 v.ikanbot.com
 
-104.21.89.43 music.ydev.tech
+172.67.156.89 music.ydev.tech
 
 23.224.60.155 agedm.org
  
 104.26.10.121 ddys.pro
 
-104.21.51.29 5wu7rv.shop
+172.64.40.100 5wu7rv.shop
 
-172.67.132.31 m.mubai.link
+104.21.4.135 m.mubai.link
 
-172.67.211.131 jinricp.niuc.net
+199.16.156.7 jinricp.niuc.net
 
-45.207.192.191 boju.cc
-
-172.67.211.131 jinricp.niuc.net
+154.219.98.185 boju.cc
 
 23.225.203.180 hifini.com
 
-185.88.181.10 xvideos.com
+185.88.181.4 xvideos.com
 
 66.254.114.41 cn.pornhub.com
 
-104.19.239.156 spankbang.com
+128.242.245.180 spankbang.com
 
-104.21.48.1 krx18.com
+104.21.32.1 krx18.com
 
 #DNS、网络代理站点ip#
 
-104.26.9.179 ping.pe
+104.26.8.179 ping.pe
 
 216.239.32.27 toolbox.googleapps.com
 
 #其它资源站点ip#
 
-172.67.164.117 greasyfork.org
+103.228.130.27 greasyfork.org
 104.21.96.1 sleazyfork.org
 
 67.228.235.91 wallhaven.cc
-104.26.11.35 wallhaven.cc
 
 110.42.51.228 haowallpaper.com
 
 #网盘下载ip#
 
-104.21.16.49 pan666.net
+172.67.166.102 pan666.net
