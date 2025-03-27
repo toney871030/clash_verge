@@ -122,18 +122,63 @@ function overwriteFakeIpFilter (params) {
 // 覆写DNS.Nameserver Policy
 function overwriteNameserverPolicy (params) {
     const nameserverPolicy = {
-        "dns.google": "quic://8.8.8.8:853",
+        "dns.google": "https://8.8.8.8/dns-query",
         "dns.alidns.com": "quic://223.5.5.5:853",
         "doh.pub": "https://1.12.12.12/dns-query",
         "doh.360.cn": "101.198.198.198",
-        "+.google.com": "quic://dns.google:853",
-        "+.bing.com": "quic://dns.google:853",
-        "+.chatgpt.com": "quic://dns.google:853",
-        "+.youtube.com": "quic://dns.google:853",
-        "+.xvideos.com": "quic://dns.google:853",
-        "+.pornhub.com": "quic://dns.google:853",
-        "+.spankbang.com": "quic://dns.google:853",
-        "+.netflix.com": "quic://dns.google:853",
+        //本机常用网页
+        
+        //代理
+        "+.google.com": "https://dns.google/dns-query",
+        "+.bing.com": "https://dns.google/dns-query",
+        "github.com": "https://dns.google/dns-query",
+        "githubusercontent.com": "https://dns.google/dns-query",
+        "chatgpt.com": "https://dns.google/dns-query",
+        "youtube.com": "https://dns.google/dns-query",
+        "xvideos.com": "https://dns.google/dns-query",
+        "pornhub.com": "https://dns.google/dns-query",
+        "spankbang.com": "https://dns.google/dns-query",
+        "netflix.com": "https://dns.google/dns-query",
+        "wallpaperswide.com": "https://dns.google/dns-query",
+        "wallhaven.cc": "https://dns.google/dns-query",
+        "music.ydev.tech": "https://dns.google/dns-query",
+        "greasyfork.org": "https://dns.google/dns-query",
+        "sleazyfork.org": "https://dns.google/dns-query",
+        "oursogo.com": "https://dns.google/dns-query",
+        "eyny.com": "https://dns.google/dns-query",
+        "18comic.vip": "https://dns.google/dns-query",
+        
+        //直连
+        "linux.do": "https://doh.pub/dns-query",
+        "winos.me": "https://doh.pub/dns-query",
+        "cmdpe.com": "https://doh.pub/dns-query",
+        "52pojie.cn": "https://doh.pub/dns-query",
+        "pc528.net": "https://doh.pub/dns-query",
+        "bbs.3dmgame.com": "https://doh.pub/dns-query",
+        "bbs.rainmeter.cn": "https://doh.pub/dns-query",
+        "masuit.net": "https://doh.pub/dns-query",
+        "hybase.com": "https://doh.pub/dns-query",
+        "4fb.cn": "https://doh.pub/dns-query",
+        "applnn.com": "https://doh.pub/dns-query",
+        "pan666.net": "quic://dns.alidns.com:853",
+        "youxiaohou.com": "https://doh.pub/dns-query",
+        "netflixcookies.com": "https://doh.pub/dns-query",
+        "haowallpaper.com": "https://doh.pub/dns-query",
+        "cloud.189.cn": "https://doh.pub/dns-query",
+        "alipan.com": "https://doh.pub/dns-query",
+        "123pan.com": "https://doh.pub/dns-query",
+        "lanzou.com": "https://doh.pub/dns-query",
+        "pan.huang1111.cn": "https://doh.pub/dns-query",
+        "3jihome.com": "https://doh.pub/dns-query",
+        "boju.cc": "https://doh.pub/dns-query",
+        "ddys.pro": "https://doh.pub/dns-query",
+        "5wu7rv.shop": "https://doh.pub/dns-query",
+        "m.mubai.link": "https://doh.pub/dns-query",
+        "hifini.com": "https://doh.pub/dns-query",
+        "v.ikanbot.com": "https://doh.pub/dns-query",
+        "agedm.org": "https://doh.pub/dns-query",
+        //本机常用网页到这结束
+        
         "+.uc.cn": "quic://dns.alidns.com:853",
         "+.alibaba.com": "quic://dns.alidns.com:853",
         "*.alicdn.com": "quic://dns.alidns.com:853",
@@ -588,7 +633,7 @@ function overwriteProxyGroups(params) {
     // consistent-hashing：散列 根据请求的哈希值将请求分配到固定的节点
     // sticky-sessions：缓存 对「你的设备IP + 目标地址」组合计算哈希值，根据哈希值将请求分配到固定的节点 缓存 10 分钟过期
     // 默认值：consistent-hashing
-    const loadBalanceStrategy = "sticky-sessions";
+    const loadBalanceStrategy = "consistent-hashing";
 
     const groups = [
         {
@@ -677,7 +722,9 @@ function overwriteRules(params) {
         // 在此添加自定义规则，优先级次于ad。例子：
         // "RULE-SET,规则name,DIRECT",
         "RULE-SET,pcdirect,DIRECT",
-        "RULE-SET,pcproxy,自动选择"
+        "RULE-SET,pcproxy,🎯 节点选择",
+        "RULE-SET,github,🎯 节点选择",
+        "RULE-SET,youtube,🎯 节点选择"
     ];
     
     const customRules = [
@@ -697,6 +744,7 @@ function overwriteRules(params) {
     const nonipRules = [
         "RULE-SET,cdn_domainset,🎯 节点选择",
         "RULE-SET,cdn_non_ip,🎯 节点选择",
+        "RULE-SET,NeteaseMusic_non_ip,DIRECT",
         "RULE-SET,stream_non_ip,US - 自动选择",
         "RULE-SET,telegram_non_ip,✈️ 电报信息",
         "RULE-SET,apple_cdn,DIRECT",
@@ -723,6 +771,7 @@ function overwriteRules(params) {
     const ipRules = [
         "RULE-SET,reject_ip,REJECT",
         "RULE-SET,telegram_ip,✈️ 电报信息",
+        "RULE-SET,NeteaseMusic_ip,DIRECT",
         "RULE-SET,stream_ip,US - 自动选择",
         "RULE-SET,lan_ip,DIRECT",
         "RULE-SET,domestic_ip,DIRECT",
@@ -754,6 +803,36 @@ function overwriteRules(params) {
             behavior: "classical",
             url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/pcproxy.txt",
             path: "./rule_set/my_ruleset/pcproxy.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "自动选择"
+
+         },
+         github: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GitHub/GitHub.list",
+            path: "./rule_set/my_ruleset/github.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "自动选择"
+
+         },
+         youtube: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/YouTube/YouTube.list",
+            path: "./rule_set/my_ruleset/youtube.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "自动选择"
+            
+         },
+         google: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Google/Google.list",
+            path: "./rule_set/my_ruleset/google.txt",
             interval: 43200,
             format: "text",
             proxy: "自动选择"
@@ -896,6 +975,25 @@ function overwriteRules(params) {
             behavior: "classical",
             url: "https://ruleset.skk.moe/Clash/non_ip/apple_cn.txt",
             path: "./rule_set/sukkaw_ruleset/apple_cn_non_ip.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "🎯 节点选择"
+        },
+        //网易音乐
+        NeteaseMusic_non_ip: {
+            type: "http",
+            behavior: "classical",
+            url: "https://ruleset.skk.moe/Clash/non_ip/neteasemusic.txt",
+            path: "./rule_set/sukkaw_ruleset/NeteaseMusic_non_ip.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "🎯 节点选择"
+        },
+        NeteaseMusic_ip: {
+            type: "http",
+            behavior: "classical",
+            url: "https://ruleset.skk.moe/Clash/ip/neteasemusic.txt",
+            path: "./rule_set/sukkaw_ruleset/NeteaseMusic_ip.txt",
             interval: 43200,
             format: "text",
             proxy: "🎯 节点选择"
