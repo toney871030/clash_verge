@@ -672,13 +672,7 @@ function overwriteProxyGroups(params) {
 
 // 覆写规则
 function overwriteRules(params) {
-    const adNonipRules = [
-        "RULE-SET,reject_non_ip,REJECT",
-        "RULE-SET,reject_domainset,REJECT",
-        "RULE-SET,reject_non_ip_drop,REJECT-DROP",
-        "RULE-SET,reject_non_ip_no_drop,REJECT"
-    ];
-
+    
     const mypcRules = [
         // 在此添加自定义规则，优先级次于ad。例子：
         // "RULE-SET,规则name,DIRECT",
@@ -686,12 +680,19 @@ function overwriteRules(params) {
         "RULE-SET,pcproxy,自动选择"
     ];
     
-
     const customRules = [
         // 在此添加自定义规则，优先级次于ad。例子：
         // "DOMAIN,baidu.com,DIRECT",
         
     ];
+    
+    const adNonipRules = [
+        "RULE-SET,reject_non_ip,REJECT",
+        "RULE-SET,reject_domainset,REJECT",
+        "RULE-SET,reject_non_ip_drop,REJECT-DROP",
+        "RULE-SET,reject_non_ip_no_drop,REJECT"
+    ];
+
 
     const nonipRules = [
         "RULE-SET,cdn_domainset,🎯 节点选择",
@@ -737,6 +738,27 @@ function overwriteRules(params) {
     ];
 
     const ruleProviders = {
+       //mypcRules:
+         pcdirect: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/pcdirect.txt",
+            path: "./rule_set/my_ruleset/pcdirect.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "DIRECT"
+
+         },
+         pcproxy: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/pcproxy.txt",
+            path: "./rule_set/my_ruleset/pcproxy.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "自动选择"
+
+         },
         // 去广告
         reject_non_ip_no_drop: {
             type: "http",
@@ -979,28 +1001,7 @@ function overwriteRules(params) {
             interval: 43200,
             format: "text",
             proxy: "🎯 节点选择"
-        },
-      //mypcRules:
-         pcdirect: {
-            type: "http",
-            behavior: "classical",
-            url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/pcdirect.txt",
-            path: "./rule_set/my_ruleset/pcdirect.txt",
-            interval: 43200,
-            format: "text",
-            proxy: "DIRECT"
-
-         },
-         pcproxy: {
-            type: "http",
-            behavior: "classical",
-            url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/pcproxy.txt",
-            path: "./rule_set/my_ruleset/pcproxy.txt",
-            interval: 43200,
-            format: "text",
-            proxy: "自动选择"
-
-         }
+        }   
     };
 
     params["rule-providers"] = ruleProviders;
