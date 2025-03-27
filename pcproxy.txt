@@ -3,11 +3,11 @@ DOMAIN-SUFFIX,wallpaperswide.com
 DOMAIN-SUFFIX,wallhaven.cc
 
 #软件下载
-DOMAIN-SUFFIX,masuit.net
+
 
 #电影音乐
 DOMAIN-SUFFIX,music.ydev.tech
-DOMAIN-SUFFIX,m.mubai.link
+
 
 #脚本插件
 DOMAIN-SUFFIX,greasyfork.org
