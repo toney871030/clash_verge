@@ -1,5 +1,6 @@
 payload:
   - 'ip138.com'
+  - 'linux.do'
   - 'agedm.org'
   - 'm.mubai.link'
   - 'hybase.com'
