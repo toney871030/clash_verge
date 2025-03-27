@@ -16,7 +16,7 @@ function main(params) {
 // 覆写Basic Options
 function overwriteBasicOptions(params) {
     const otherOptions = {
-        "mixed-port": 7897,
+        "mixed-port": 7890,
         "allow-lan": true,
         mode: "rule",
         "log-level": "warning",
@@ -588,7 +588,7 @@ function overwriteProxyGroups(params) {
     // consistent-hashing：散列 根据请求的哈希值将请求分配到固定的节点
     // sticky-sessions：缓存 对「你的设备IP + 目标地址」组合计算哈希值，根据哈希值将请求分配到固定的节点 缓存 10 分钟过期
     // 默认值：consistent-hashing
-    const loadBalanceStrategy = "consistent-hashing";
+    const loadBalanceStrategy = "sticky-sessions";
 
     const groups = [
         {
@@ -683,7 +683,7 @@ function overwriteRules(params) {
         // 在此添加自定义规则，优先级次于ad。例子：
         // "RULE-SET,规则name,DIRECT",
         "RULE-SET,pcdirect,REJECT",
-        "RULE-SET,pcproxy,🎯 节点选择"
+        "RULE-SET,pcproxy,自动选择"
     ];
     
 
@@ -998,7 +998,7 @@ function overwriteRules(params) {
             path: "./rule_set/my_ruleset/pcproxy.txt",
             interval: 43200,
             format: "text",
-            proxy: "🎯 节点选择"
+            proxy: "自动选择"
 
          }
     };
