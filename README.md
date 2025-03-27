@@ -11,6 +11,9 @@ Gmail联系方式：toney871030@gmail.com
 
 再次感谢您对原创内容的保护和尊重。
 
+# linux do论坛
+  https://linux.do/
+
 # Sukka Ruleset Server仓库地址：
  https://ruleset.skk.moe/
 
@@ -20,11 +23,9 @@ Gmail联系方式：toney871030@gmail.com
 # blackmatrix7大佬的rule分类仓库:
   https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/README.md
 
-# qichiyuhub大佬的rulesList仓库:
-  https://github.com/qichiyuhub/rule
-
 # 科学上网工具：
   https://v2rayse.com
+
 # Yuju的订阅转换网站:
   https://sub.yuju.love
 
@@ -39,14 +40,7 @@ Gmail联系方式：toney871030@gmail.com
 
 # SwitchHosts下载地址
   https://github.com/oldj/SwitchHosts/releases
-  
-# linux do论坛
-  https://linux.do/
-# linux do论坛hosts  
- 104.18.2.161 linux.do
- 104.18.3.161 linux.do
- 162.159.152.2 linux.do
- 162.159.153.2 linux.do
+
         
 
 
