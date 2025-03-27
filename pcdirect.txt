@@ -1,7 +1,3 @@
-
-#网络管理
-DOMAIN-SUFFIX,ip138.com
-
 #论坛博客
 DOMAIN-SUFFIX,linux.do
 DOMAIN-SUFFIX,winos.me
