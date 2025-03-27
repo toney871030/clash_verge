@@ -983,7 +983,7 @@ function overwriteRules(params) {
       //mypcRules:
          pcdirect: {
             type: "http",
-            behavior: "classical",
+            behavior: "domain",
             url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/pcdirect.txt",
             path: "./rule_set/my_ruleset/pcdirect.txt",
             interval: 43200,
@@ -993,7 +993,7 @@ function overwriteRules(params) {
          },
          pcproxy: {
             type: "http",
-            behavior: "classical",
+            behavior: "domain",
             url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/pcproxy.txt",
             path: "./rule_set/my_ruleset/pcproxy.txt",
             interval: 43200,
