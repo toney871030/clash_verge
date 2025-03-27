@@ -1,7 +1,20 @@
 // Mihomo Party 覆写 / Clash Verge Rev 扩展脚本
 
+function getProxiesByRegex(params, regex) {
+    const matchedProxies = params.proxies.filter((e) => regex.test(e.name)).map((e) => e.name);
+    return matchedProxies.length > 0 ? matchedProxies : ["COMPATIBLE"];
+}
+
+function getManualProxiesByRegex(params, regex) {
+    const matchedProxies = params.proxies.filter((e) => regex.test(e.name)).map((e) => e.name);
+    return matchedProxies.length > 0 ? matchedProxies : ["COMPATIBLE"];
+}
+
 function main(params) {
-    if (!params.proxies) return params;
+    if (!params || !params.proxies || !Array.isArray(params.proxies)) {
+        console.error("错误：params 或 params.proxies 无效或未定义");
+        return params || {}; // 返回原始参数或空对象，避免崩溃
+    }
     overwriteBasicOptions(params);
     overwriteDns(params);
     overwriteFakeIpFilter(params);
@@ -67,7 +80,6 @@ function overwriteDns(params) {
     const dnsOptions = {
         enable: true,
         "prefer-h3": true,
-        ipv6: false,
         "enhanced-mode": "fake-ip",
         "fake-ip-range": "198.18.0.1/16",
         "respect-rules": true,
@@ -131,52 +143,52 @@ function overwriteNameserverPolicy (params) {
         //代理
         "+.google.com": "https://dns.google/dns-query",
         "+.bing.com": "https://dns.google/dns-query",
-        "github.com": "https://dns.google/dns-query",
-        "githubusercontent.com": "https://dns.google/dns-query",
-        "chatgpt.com": "https://dns.google/dns-query",
-        "youtube.com": "https://dns.google/dns-query",
-        "xvideos.com": "https://dns.google/dns-query",
-        "pornhub.com": "https://dns.google/dns-query",
-        "spankbang.com": "https://dns.google/dns-query",
-        "netflix.com": "https://dns.google/dns-query",
-        "wallpaperswide.com": "https://dns.google/dns-query",
-        "wallhaven.cc": "https://dns.google/dns-query",
-        "music.ydev.tech": "https://dns.google/dns-query",
-        "greasyfork.org": "https://dns.google/dns-query",
-        "sleazyfork.org": "https://dns.google/dns-query",
-        "oursogo.com": "https://dns.google/dns-query",
-        "eyny.com": "https://dns.google/dns-query",
-        "18comic.vip": "https://dns.google/dns-query",
+        "+.github.com": "https://dns.google/dns-query",
+        "+.githubusercontent.com": "https://dns.google/dns-query",
+        "+.chatgpt.com": "https://dns.google/dns-query",
+        "+.youtube.com": "https://dns.google/dns-query",
+        "+.xvideos.com": "https://dns.google/dns-query",
+        "+.pornhub.com": "https://dns.google/dns-query",
+        "+.spankbang.com": "https://dns.google/dns-query",
+        "+.netflix.com": "https://dns.google/dns-query",
+        "+.wallpaperswide.com": "https://dns.google/dns-query",
+        "+.wallhaven.cc": "https://dns.google/dns-query",
+        "+.music.ydev.tech": "https://dns.google/dns-query",
+        "+.greasyfork.org": "https://dns.google/dns-query",
+        "+.sleazyfork.org": "https://dns.google/dns-query",
+        "+.oursogo.com": "https://dns.google/dns-query",
+        "+.eyny.com": "https://dns.google/dns-query",
+        "+.18comic.vip": "https://dns.google/dns-query",
         
         //直连
-        "linux.do": "https://doh.pub/dns-query",
-        "winos.me": "https://doh.pub/dns-query",
-        "cmdpe.com": "https://doh.pub/dns-query",
-        "52pojie.cn": "https://doh.pub/dns-query",
-        "pc528.net": "https://doh.pub/dns-query",
-        "bbs.3dmgame.com": "https://doh.pub/dns-query",
-        "bbs.rainmeter.cn": "https://doh.pub/dns-query",
-        "masuit.net": "https://doh.pub/dns-query",
-        "hybase.com": "https://doh.pub/dns-query",
-        "4fb.cn": "https://doh.pub/dns-query",
-        "applnn.com": "https://doh.pub/dns-query",
-        "pan666.net": "quic://dns.alidns.com:853",
-        "youxiaohou.com": "https://doh.pub/dns-query",
-        "netflixcookies.com": "https://doh.pub/dns-query",
-        "haowallpaper.com": "https://doh.pub/dns-query",
-        "cloud.189.cn": "https://doh.pub/dns-query",
-        "alipan.com": "https://doh.pub/dns-query",
-        "123pan.com": "https://doh.pub/dns-query",
-        "lanzou.com": "https://doh.pub/dns-query",
-        "pan.huang1111.cn": "https://doh.pub/dns-query",
-        "3jihome.com": "https://doh.pub/dns-query",
-        "boju.cc": "https://doh.pub/dns-query",
-        "ddys.pro": "https://doh.pub/dns-query",
-        "5wu7rv.shop": "https://doh.pub/dns-query",
-        "m.mubai.link": "https://doh.pub/dns-query",
-        "hifini.com": "https://doh.pub/dns-query",
-        "v.ikanbot.com": "https://doh.pub/dns-query",
-        "agedm.org": "https://doh.pub/dns-query",
+        "+.linux.do": "quic://dns.alidns.com:853",
+        "+.winos.me": "quic://dns.alidns.com:853",
+        "+.cmdpe.com": "quic://dns.alidns.com:853",
+        "+.52pojie.cn": "quic://dns.alidns.com:853",
+        "pc528.net": "quic://dns.alidns.com:853",
+        "+.bbs.3dmgame.com": "quic://dns.alidns.com:853",
+        "+.bbs.rainmeter.cn": "quic://dns.alidns.com:853",
+        "+.masuit.net": "quic://dns.alidns.com:853",
+        "+.hybase.com": "quic://dns.alidns.com:853",
+        "+.4fb.cn": "quic://dns.alidns.com:853",
+        "+.applnn.com": "quic://dns.alidns.com:853",
+        "+.pan666.net": "quic://dns.alidns.com:853",
+        "+.youxiaohou.com": "quic://dns.alidns.com:853",
+        "+.netflixcookies.com": "quic://dns.alidns.com:853",
+        "+.haowallpaper.com": "quic://dns.alidns.com:853",
+        "+.cloud.189.cn": "quic://dns.alidns.com:853",
+        "+.alipan.com": "quic://dns.alidns.com:853",
+        "+.123pan.com": "quic://dns.alidns.com:853",
+        "+.lanzou.com": "quic://dns.alidns.com:853",
+        "+.pan.huang1111.cn": "quic://dns.alidns.com:853",
+        "+.3jihome.com": "quic://dns.alidns.com:853",
+        "+.boju.cc": "quic://dns.alidns.com:853",
+        "+.ddys.pro": "quic://dns.alidns.com:853",
+        "+.5wu7rv.shop": "quic://dns.alidns.com:853",
+        "+.m.mubai.link": "quic://dns.alidns.com:853",
+        "+.hifini.com": "quic://dns.alidns.com:853",
+        "+.v.ikanbot.com": "quic://dns.alidns.com:853",
+        "+.agedm.org": "quic://dns.alidns.com:853",
         //本机常用网页到这结束
         
         "+.uc.cn": "quic://dns.alidns.com:853",
@@ -724,7 +736,8 @@ function overwriteRules(params) {
         "RULE-SET,pcdirect,DIRECT",
         "RULE-SET,pcproxy,🎯 节点选择",
         "RULE-SET,github,🎯 节点选择",
-        "RULE-SET,youtube,🎯 节点选择"
+        "RULE-SET,youtube,🎯 节点选择",
+        "RULE-SET,google,🎯 节点选择"
     ];
     
     const customRules = [
@@ -762,10 +775,10 @@ function overwriteRules(params) {
     ];
 
     const allNonipRules = [
-        ...adNonipRules,
-        ...mypcRules,
-        ...customRules,
-        ...nonipRules
+         ...mypcRules,
+         ...customRules,
+         ...adNonipRules,
+         ...nonipRules
     ];
 
     const ipRules = [
@@ -1106,12 +1119,3 @@ function overwriteRules(params) {
     params["rules"] = rules;
 }
 
-function getProxiesByRegex(params, regex) {
-    const matchedProxies = params.proxies.filter((e) => regex.test(e.name)).map((e) => e.name);
-    return matchedProxies.length > 0 ? matchedProxies : ["COMPATIBLE"];
-}
-
-function getManualProxiesByRegex(params, regex) {
-    const matchedProxies = params.proxies.filter((e) => regex.test(e.name)).map((e) => e.name);
-    return matchedProxies.length > 0 ? matchedProxies : ["COMPATIBLE"];
-}
