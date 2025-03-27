@@ -12,6 +12,7 @@ DOMAIN-SUFFIX,bbs.3dmgame.com
 DOMAIN-SUFFIX,bbs.rainmeter.cn
 
 #软件下载站
+DOMAIN-SUFFIX,masuit.net
 DOMAIN-SUFFIX,hybase.com
 DOMAIN-SUFFIX,4fb.cn
 DOMAIN-SUFFIX,applnn.com
@@ -39,6 +40,7 @@ DOMAIN-SUFFIX,3jihome.com
 DOMAIN-SUFFIX,boju.cc
 DOMAIN-SUFFIX,ddys.pro
 DOMAIN-SUFFIX,5wu7rv.shop
+DOMAIN-SUFFIX,m.mubai.link
 DOMAIN-SUFFIX,hifini.com
 DOMAIN-SUFFIX,v.ikanbot.com
 DOMAIN-SUFFIX,agedm.org
