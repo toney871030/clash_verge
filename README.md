@@ -11,7 +11,7 @@ Gmail联系方式：toney871030@gmail.com
 
 再次感谢您对原创内容的保护和尊重。
 
-#Sukka Ruleset Server仓库地址：
+# Sukka Ruleset Server仓库地址：
  https://ruleset.skk.moe/
 
 # Loyalsoldier大佬的仓库地址: 
