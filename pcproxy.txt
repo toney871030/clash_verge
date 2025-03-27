@@ -1,3 +1,4 @@
+#常用网页
 DOMAIN-SUFFIX,wallpaperswide.com
 DOMAIN-SUFFIX,wallhaven.cc
 DOMAIN-SUFFIX,xvideos.com
@@ -13,3 +14,11 @@ DOMAIN-SUFFIX,greasyfork.org
 DOMAIN-SUFFIX,sleazyfork.org
 DOMAIN-SUFFIX,filen.io.org
 DOMAIN-SUFFIX,imbt.one
+
+#python域名
+DOMAIN-SUFFIX,pycon.org
+DOMAIN-SUFFIX,pypa.io
+DOMAIN-SUFFIX,pypi.io
+DOMAIN-SUFFIX,pypi.org
+DOMAIN-SUFFIX,python.org
+DOMAIN-SUFFIX,pythonhosted.org
