@@ -31,3 +31,4 @@ payload:
   - 'pan666.net'
   - 'pan.xunlei.com'
   - 'pc528.net'
+  - 'subhd.tv'
