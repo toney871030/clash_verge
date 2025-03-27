@@ -676,7 +676,7 @@ function overwriteRules(params) {
     const mypcRules = [
         // 在此添加自定义规则，优先级次于ad。例子：
         // "RULE-SET,规则name,DIRECT",
-        "RULE-SET,pcdirect,REJECT",
+        "RULE-SET,pcdirect,DIRECT",
         "RULE-SET,pcproxy,自动选择"
     ];
     
