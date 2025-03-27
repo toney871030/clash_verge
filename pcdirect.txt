@@ -1,7 +1,3 @@
-DOMAIN-SUFFIX,subhd.tv
-DOMAIN,api.subhd.tv
-DOMAIN,cdn.subhd.tv
-DOMAIN-KEYWORD,subhd  
 DOMAIN-SUFFIX,ip138.com
 DOMAIN-SUFFIX,linux.do
 DOMAIN-SUFFIX,agedm.org
