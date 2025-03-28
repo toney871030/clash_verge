@@ -1,5 +1,4 @@
 #网络管理
-DOMAIN-SUFFIX,ip138.com
 DOMAIN-SUFFIX,ping.pe
 DOMAIN-SUFFIX,toolbox.googleapps.com
 
