@@ -24,7 +24,7 @@
 
 111.124.200.65 music.163.com
 
-109.244.194.121 tencent.com
+123.150.76.218 qq.com
 
 121.14.23.119 wx.mail.qq.com
 
@@ -33,31 +33,31 @@
 104.18.2.161 linux.do
 104.18.3.161 linux.do
 
-124.232.185.97 52pojie.cn
+# 124.232.185.97 52pojie.cn
  
 124.156.141.225  winos.me
 
 47.57.4.127 pc528.net 
 
-172.67.185.24 meta.appinn.net
+104.21.64.126 meta.appinn.net
 
 104.21.46.211 bbs.rainmeter.cn
 
-199.59.150.43 www04.eyny.com
+172.241.24.20 eyny.com
 
-104.244.43.167 oursogo.com
+172.67.72.23 oursogo.com
 
-202.160.129.37 sehuatang.net
+172.67.188.231 sehuatang.net
 
 104.22.36.105 18comic.vip
 
 103.248.152.174 bbs.3dmgame.com
 
-172.67.183.74 masuit.net
+104.21.96.1 masuit.net
 
 43.249.193.76 hybase.com
 
-45.151.132.50 423down.com
+# 45.151.132.50 423down.com
  
 104.21.80.1 applnn.com
 
@@ -65,7 +65,7 @@
 
 #娱乐、影视、音乐站点ip#
 
-104.21.30.164 3jihome.com
+172.67.173.61 3jihome.com
 
 104.21.93.9 v.ikanbot.com
 
@@ -79,19 +79,19 @@
 
 104.21.4.135 m.mubai.link
 
-199.16.156.7 jinricp.niuc.net
+172.67.211.131 jinricp.niuc.net
 
 154.219.98.185 boju.cc
 
-23.225.203.180 hifini.com
+# 23.225.203.180 hifini.com
 
-185.88.181.4 xvideos.com
+185.88.181.1 xvideos.com
 
 66.254.114.41 cn.pornhub.com
 
-128.242.245.180 spankbang.com
+104.19.239.156 spankbang.com
 
-104.21.32.1 krx18.com
+	104.21.80.1 krx18.com
 
 #DNS、网络代理站点ip#
 
@@ -99,14 +99,14 @@
 
 104.26.8.179 ping.pe
 
-216.239.32.27 toolbox.googleapps.com
+# 216.239.32.27 toolbox.googleapps.com
 
 #其它资源站点ip#
 
-103.228.130.27 greasyfork.org
+172.67.164.117 greasyfork.org
 104.21.96.1 sleazyfork.org
 
-67.228.235.91 wallhaven.cc
+104.26.10.35 wallhaven.cc
 
 110.42.51.228 haowallpaper.com
 
@@ -118,5 +118,5 @@
 
 172.67.166.102 pan666.net
 
-146.0.41.233 filen.io
+# 146.0.41.233 filen.io
 
