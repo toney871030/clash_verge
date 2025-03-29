@@ -1,42 +1,42 @@
-#网络管理
+# 网络管理
 DOMAIN-SUFFIX,ping.pe
 DOMAIN-SUFFIX,toolbox.googleapps.com
 
-#壁纸下载
+# 壁纸下载
 DOMAIN-SUFFIX,wallpaperswide.com
 DOMAIN-SUFFIX,wallhaven.cc
 
-#软件下载
+# 软件下载
 
 
-#电影音乐
+# 电影音乐
 DOMAIN-SUFFIX,music.ydev.tech
 
 
-#脚本插件
+# 脚本插件
 DOMAIN-SUFFIX,greasyfork.org
 DOMAIN-SUFFIX,sleazyfork.org
 
-#Ribi论坛
+# Ribi论坛
 DOMAIN-SUFFIX,oursogo.com
 DOMAIN-SUFFIX,eyny.com
 DOMAIN-SUFFIX,18comic.vip
 
-#Ribi网站
+# Ribi网站
 DOMAIN-SUFFIX,xvideos.com
 DOMAIN-SUFFIX,pornhub.com
 DOMAIN-SUFFIX,spankbang.com
 DOMAIN-SUFFIX,sehuatang.net
 DOMAIN-SUFFIX,krx18.com
 
-#subhd.tv
+# subhd.tv
 DOMAIN-SUFFIX,subhd.tv
 DOMAIN,api.subhd.tv
 DOMAIN,cdn.subhd.tv
 DOMAIN-KEYWORD,subhd 
 DOMAIN-SUFFIX,imbt.one
 
-#python
+# python
 DOMAIN-SUFFIX,pycon.org
 DOMAIN-SUFFIX,pypa.io
 DOMAIN-SUFFIX,pypi.io
@@ -44,7 +44,7 @@ DOMAIN-SUFFIX,pypi.org
 DOMAIN-SUFFIX,python.org
 DOMAIN-SUFFIX,pythonhosted.org
 
-#pikpak
+# pikpak
 DOMAIN-SUFFIX,dlandroid.rcv.sandai.net
 DOMAIN-SUFFIX,hub5idx.v6.shub.sandai.net
 DOMAIN-SUFFIX,hub5pn.wap.sandai.net
@@ -53,10 +53,10 @@ DOMAIN-SUFFIX,hub5pr.v6.phub.sandai.net
 DOMAIN-SUFFIX,hubciddata.sandai.net
 DOMAIN-KEYWORD,mypikpak
 
-#filen网盘
+# filen网盘
 DOMAIN-SUFFIX,filen.io.org
 
-#Bing
+# Bing
 DOMAIN-SUFFIX,bing.com
 DOMAIN-SUFFIX,bing.com.cn
 DOMAIN-SUFFIX,bing.net
@@ -66,6 +66,51 @@ DOMAIN-SUFFIX,bingapistatistics.com
 DOMAIN-SUFFIX,bingsandbox.com
 DOMAIN-SUFFIX,bingvisualsearch.com
 DOMAIN-SUFFIX,bingworld.com
+
+# Duckduckgo
+DOMAIN-SUFFIX,cispaletter.com
+DOMAIN-SUFFIX,cispaletter.org
+DOMAIN-SUFFIX,cometotheduckside.com
+DOMAIN-SUFFIX,ddg.co
+DOMAIN-SUFFIX,ddg.gg
+DOMAIN-SUFFIX,ddh.gg
+DOMAIN-SUFFIX,dgg.gg
+DOMAIN-SUFFIX,dontbubble.us
+DOMAIN-SUFFIX,donttrack.us
+DOMAIN-SUFFIX,duck.co
+DOMAIN-SUFFIX,duck.com
+DOMAIN-SUFFIX,duckduckco.com
+DOMAIN-SUFFIX,duckduckco.de
+DOMAIN-SUFFIX,duckduckgo.ca
+DOMAIN-SUFFIX,duckduckgo.co
+DOMAIN-SUFFIX,duckduckgo.co.uk
+DOMAIN-SUFFIX,duckduckgo.com
+DOMAIN-SUFFIX,duckduckgo.com.mx
+DOMAIN-SUFFIX,duckduckgo.com.tw
+DOMAIN-SUFFIX,duckduckgo.de
+DOMAIN-SUFFIX,duckduckgo.dk
+DOMAIN-SUFFIX,duckduckgo.in
+DOMAIN-SUFFIX,duckduckgo.jp
+DOMAIN-SUFFIX,duckduckgo.ke
+DOMAIN-SUFFIX,duckduckgo.mx
+DOMAIN-SUFFIX,duckduckgo.nl
+DOMAIN-SUFFIX,duckduckgo.org
+DOMAIN-SUFFIX,duckduckgo.pl
+DOMAIN-SUFFIX,duckduckgo.sg
+DOMAIN-SUFFIX,duckduckgo.uk
+DOMAIN-SUFFIX,duckduckhack.com
+DOMAIN-SUFFIX,duckgo.com
+DOMAIN-SUFFIX,ducksear.ch
+DOMAIN-SUFFIX,duckside.com
+DOMAIN-SUFFIX,dukgo.com
+DOMAIN-SUFFIX,enteentegeh.de
+DOMAIN-SUFFIX,fixtracking.com
+DOMAIN-SUFFIX,goduckgo.com
+DOMAIN-SUFFIX,hacksear.ch
+DOMAIN-SUFFIX,justduckit.com
+DOMAIN-SUFFIX,privacysimplified.com
+DOMAIN-SUFFIX,privatebrowsingmyths.com
+DOMAIN-SUFFIX,spreadprivacy.com
 
 # 国外DNS
 DOMAIN-SUFFIX,dns.google
