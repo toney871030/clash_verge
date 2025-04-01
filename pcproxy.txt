@@ -54,7 +54,7 @@ DOMAIN-SUFFIX,hubciddata.sandai.net
 DOMAIN-KEYWORD,mypikpak
 
 # filen网盘
-DOMAIN-SUFFIX,filen.io.org
+DOMAIN-SUFFIX,filen.io
 
 # Bing
 DOMAIN-SUFFIX,bing.com
