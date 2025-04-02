@@ -21,13 +21,18 @@ DOMAIN-SUFFIX,sleazyfork.org
 DOMAIN-SUFFIX,oursogo.com
 DOMAIN-SUFFIX,eyny.com
 DOMAIN-SUFFIX,18comic.vip
+DOMAIN-SUFFIX,sehuatang.net
 
 # Ribi网站
 DOMAIN-SUFFIX,xvideos.com
-DOMAIN-SUFFIX,pornhub.com
 DOMAIN-SUFFIX,spankbang.com
-DOMAIN-SUFFIX,sehuatang.net
 DOMAIN-SUFFIX,krx18.com
+
+# Pornhub
+DOMAIN-SUFFIX,phncdn.com
+DOMAIN-SUFFIX,phprcdn.com
+DOMAIN-SUFFIX,pornhub.com
+DOMAIN-SUFFIX,pornhubpremium.com
 
 # subhd.tv
 DOMAIN-SUFFIX,subhd.tv
