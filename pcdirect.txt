@@ -42,6 +42,7 @@ DOMAIN-SUFFIX,m.mubai.link
 DOMAIN-SUFFIX,hifini.com
 DOMAIN-SUFFIX,v.ikanbot.com
 DOMAIN-SUFFIX,agedm.org
+DOMAIN-SUFFIX,zrys.pw
 
 #download:
 DOMAIN-SUFFIX,qbittorrent.org
