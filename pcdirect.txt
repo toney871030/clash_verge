@@ -15,8 +15,8 @@ DOMAIN-SUFFIX,cmdpe.com
 DOMAIN-SUFFIX,52pojie.cn
 DOMAIN-SUFFIX,pc528.net
 DOMAIN-KEYWORD,pc528
-DOMAIN-SUFFIX,bbs.3dmgame.com
-DOMAIN-SUFFIX,bbs.rainmeter.cn
+DOMAIN-SUFFIX,3dmgame.com
+DOMAIN-SUFFIX,rainmeter.cn
 
 #软件下载站
 DOMAIN-SUFFIX,masuit.net
