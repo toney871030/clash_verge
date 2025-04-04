@@ -1,7 +1,3 @@
-#rules更新
-DOMAIN-SUFFIX,ruleset.skk.moe
-DOMAIN-SUFFIX,raw.githubusercontent.com
-
 # 网络管理
 DOMAIN-SUFFIX,ping.pe
 DOMAIN-SUFFIX,toolbox.googleapps.com
