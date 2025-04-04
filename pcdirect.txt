@@ -2,7 +2,6 @@
 
 #rules更新
 DOMAIN-SUFFIX,ruleset.skk.moe
-DOMAIN-SUFFIX,raw.githubusercontent.com
 
 #论坛博客
 DOMAIN-SUFFIX,linux.do
