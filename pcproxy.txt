@@ -1,3 +1,6 @@
+#rules更新
+DOMAIN-SUFFIX,ruleset.skk.moe
+
 # 网络管理
 DOMAIN-SUFFIX,ping.pe
 DOMAIN-SUFFIX,toolbox.googleapps.com
