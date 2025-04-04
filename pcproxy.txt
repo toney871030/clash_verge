@@ -6,7 +6,10 @@ DOMAIN-SUFFIX,toolbox.googleapps.com
 DOMAIN-SUFFIX,wallpaperswide.com
 DOMAIN-SUFFIX,wallhaven.cc
 
-# 软件下载
+# 免费域名
+DOMAIN-SUFFIX,l53.net
+DOMAIN-SUFFIX,zone.id
+DOMAIN-SUFFIX,nic.eu.org
 
 
 # 电影音乐bttwo.me
