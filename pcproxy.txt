@@ -9,8 +9,9 @@ DOMAIN-SUFFIX,wallhaven.cc
 # 软件下载
 
 
-# 电影音乐
+# 电影音乐bttwo.me
 DOMAIN-SUFFIX,music.ydev.tech
+DOMAIN-SUFFIX,bttwo.me
 
 
 # 脚本插件
