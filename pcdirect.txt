@@ -21,7 +21,6 @@ DOMAIN-SUFFIX,rainmeter.cn
 #软件下载站
 DOMAIN-SUFFIX,masuit.net
 DOMAIN-SUFFIX,hybase.com
-DOMAIN-SUFFIX,4fb.cn
 DOMAIN-SUFFIX,applnn.com
 DOMAIN-SUFFIX,pan666.net
 DOMAIN-SUFFIX,youxiaohou.com
