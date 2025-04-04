@@ -12,9 +12,10 @@ DOMAIN-SUFFIX,zone.id
 DOMAIN-SUFFIX,nic.eu.org
 
 
-# 电影音乐bttwo.me
+# 电影音乐
 DOMAIN-SUFFIX,music.ydev.tech
 DOMAIN-SUFFIX,bttwo.me
+DOMAIN-SUFFIX,tv.garden
 
 
 # 脚本插件
