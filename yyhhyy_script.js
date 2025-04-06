@@ -69,6 +69,7 @@ function overwriteDns(params) {
     const dnsList = [
         "tls://223.5.5.5",
         "tls://8.8.8.8",
+        "system",
     ];
 
     const proxyDnsList = [
@@ -142,6 +143,7 @@ function overwriteNameserverPolicy (params) {
         //rules更新:
         "+.ruleset.skk.moe": "dns.alidns.com",
         "+.github.com": "dns.alidns.com",
+        "+.github.io": "dns.alidns.com",
         "+.githubusercontent.com": "dns.alidns.com",
         //代理
         "+.google.com": "dns.google",
@@ -754,6 +756,70 @@ function overwriteRules(params) {
     const customRules = [
         // 在此添加自定义规则，优先级次于ad。例子：
         // "DOMAIN,baidu.com,DIRECT",
+        
+        "PROCESS-NAME,PixPin.exe,REJECT",
+        "PROCESS-NAME,crashpad_handler.exe,REJECT",
+        
+        "PROCESS-NAME,ProcessLasso.exe,REJECT",
+        "PROCESS-NAME,ProcessGovernor.exe,REJECT",
+        "PROCESS-NAME,bitsumsessionagent.exe,REJECT",
+        
+        "PROCESS-NAME,TranslucentTB.exe,REJECT",
+        
+        "PROCESS-NAME,eCloud.exe,DIRECT",
+        
+        "PROCESS-NAME,DiskInfo64.exe,REJECT",
+        
+        "PROCESS-NAME,FlashPad.exe,REJECT",
+        
+        "PROCESS-NAME,Notepad3.exe,REJECT",
+        
+        "PROCESS-NAME,LosslessCut.exe,REJECT",
+        
+        "PROCESS-NAME,Video.UI.exe,REJECT",
+        
+        "PROCESS-NAME,RtkAudUService64.exe,REJECT",
+        
+        "PROCESS-NAME,进程管理工具(支持PE)V3.0.exe,REJECT",
+        
+        "PROCESS-NAME,YY.exe,DIRECT",
+        "PROCESS-NAME,yyexternal.exe,DIRECT",
+        "PROCESS-NAME,gslbexternal.exe,DIRECT",
+        "PROCESS-NAME,yyldrsvr.exe,DIRECT",
+        
+        "PROCESS-NAME,AliIM.exe,DIRECT",
+        "PROCESS-NAME,AliRender.exe,DIRECT",
+        
+        "PROCESS-NAME,WeChat.exe,DIRECT",
+        "PROCESS-NAME,WeChatAppEx.exe,DIRECT",
+        "PROCESS-NAME,WeChatPlayer.exe,DIRECT",
+        "PROCESS-NAME,WeChatUtility.exe,DIRECT",
+        "PROCESS-NAME,mmcrashpad_handler64.exe,DIRECT",
+        
+        "PROCESS-NAME,TIM.exe,DIRECT",
+        "PROCESS-NAME,TXPlatform.exe,DIRECT",
+        "PROCESS-NAME,QQExternal.exe,DIRECT",
+        
+        "PROCESS-NAME,wpscloudsvr.exe,REJECT",
+        "PROCESS-NAME,et.exe,REJECT",
+        "PROCESS-NAME,wps.exe,REJECT",
+        "PROCESS-NAME,wpp.exe,REJECT",
+        
+        "PROCESS-NAME,IObitUnlocker.exe,REJECT",
+        "PROCESS-NAME,IObitUnlocker辅助器.exe,REJECT",
+        
+        "PROCESS-NAME,SPlayer.exe,🎯 节点选择",
+        
+        "PROCESS-NAME,Telegram.exe,🎯 节点选择",
+        
+        "PROCESS-NAME,SwitchHosts.exe,🎯 节点选择",
+        
+        "PROCESS-NAME,Cherry Studio.exe,🎯 节点选择",
+        
+        "PROCESS-NAME,firefox.exe,🎯 节点选择"
+        
+        
+
         
     ];
     
