@@ -117,7 +117,7 @@
 172.67.211.131             jinricp.niuc.net
 104.21.77.206              jinricp.niuc.net
 2606:4700:3030::ac43:d383  jinricp.niuc.net
-2606:4700:3031::6815:4dce6 jinricp.niuc.net
+2606:4700:3031::6815:4dce6  jinricp.niuc.net
 154.219.98.185             boju.cc
 154.219.98.163             boju.cc
 104.21.53.68               my0713.com
