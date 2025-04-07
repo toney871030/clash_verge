@@ -8,14 +8,26 @@
 104.18.32.47     chatgpt.com
 
 # 搜索引擎、服务器类ip
-104.16.133.229   cloudflare.com
-150.171.28.10    bing.com
-204.79.197.200   cn.bing.com
-110.242.68.66	 baidu.com
-59.111.160.244   163.com
-111.124.200.65   music.163.com
-123.150.76.218   qq.com
-121.14.23.119    wx.mail.qq.com
+104.16.132.229        cloudflare.com
+104.16.133.229        cloudflare.com
+2606:4700::6810:85e5  cloudflare.com
+2606:4700::6810:84e5  cloudflare.com
+150.171.27.10         bing.com
+150.171.28.10         bing.com
+2620:1ec:33:1::10     bing.com
+2620:1ec:33::10       bing.com
+13.107.21.200         cn.bing.com
+204.79.197.200        cn.bing.com
+110.242.68.66	        baidu.com
+39.156.66.10	        baidu.com
+59.111.160.244        163.com
+103.135.240.77        music.163.com
+111.124.200.65        music.163.com
+203.205.254.157       qq.com
+123.150.76.218        qq.com
+113.108.81.189        qq.com
+43.159.233.74         wx.mail.qq.com
+240d:c040:0:40::57    wx.mail.qq.com
 
 # 软件、论坛、博客站点ip
 104.18.2.161     linux.do
@@ -64,7 +76,9 @@
 172.67.69.240     ddys.pro
 104.26.11.121     ddys.pro
 104.26.10.121     ddys.pro
-172.64.40.100     5wu7rv.shop
+162.159.242.14    5wu7rv.shop
+172.67.77.175     5wu7rv.shop
+104.19.127.247    5wu7rv.shop
 172.67.132.31     m.mubai.link
 104.21.4.135      m.mubai.link
 172.67.211.131    jinricp.niuc.net
