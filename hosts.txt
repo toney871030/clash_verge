@@ -10,6 +10,14 @@
 2606:4700:4400::ac40:9bd1 chatgpt.com
 
 # 搜索引擎、服务器类ip
+151.101.193.229       fastly.jsdelivr.net
+151.101.1.229         fastly.jsdelivr.net
+151.101.65.229        fastly.jsdelivr.net
+151.101.129.229       fastly.jsdelivr.net
+2a04:4e42::485        fastly.jsdelivr.net
+2a04:4e42:600::485    fastly.jsdelivr.net  
+2a04:4e42:400::485    fastly.jsdelivr.net
+2a04:4e42:200::485    fastly.jsdelivr.net
 104.16.132.229        cloudflare.com
 104.16.133.229        cloudflare.com
 2606:4700::6810:85e5  cloudflare.com
