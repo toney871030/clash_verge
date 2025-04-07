@@ -59,6 +59,8 @@
 172.67.209.172    my0713.com
 154.40.48.37      zrys.pw
 156.238.226.179   zrys.pw
+104.21.16.1       tv.garden
+104.21.96.1       tv.garden
 23.225.203.180    hifini.com
 185.88.181.1      xvideos.com
 104.21.80.1       krx18.com
