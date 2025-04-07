@@ -60,7 +60,7 @@
 104.26.9.179    ping.pe
 104.26.3.223    whoer.net
 95.85.16.212    ipleak.net
-104.21.5.253    dnslookup.org
+89.106.200.1    dnslookup.org
 104.26.7.89     dnschecker.org
 104.26.7.229    whatsmydns.net
 172.67.165.117  check-host.net
