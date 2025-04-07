@@ -1,126 +1,81 @@
-#破解、禁止ip#
+# 迅雷
+127.0.0.1   hub5btmain.sandai.net
+127.0.0.1   hub5emu.sandai.net
+127.0.0.1   upgrade.xl9.xunlei.com
 
-#[迅雷]#
-127.0.0.1 hub5btmain.sandai.net
-127.0.0.1 hub5emu.sandai.net
-127.0.0.1 upgrade.xl9.xunlei.com
-
-#AI#
-
-104.18.32.47 chatgpt.com
+# AI
+104.18.32.47   chatgpt.com
 
 
-#搜索引擎、服务器类ip#
+# 搜索引擎、服务器类ip
+104.16.133.229   cloudflare.com
+150.171.28.10    bing.com
+204.79.197.200   cn.bing.com
+110.242.68.66	   baidu.com
+59.111.160.244   163.com
+111.124.200.65   music.163.com
+123.150.76.218   qq.com
+121.14.23.119    wx.mail.qq.com
 
-104.16.133.229 cloudflare.com
-
-150.171.28.10 bing.com
-
-204.79.197.200 cn.bing.com
-
-110.242.68.66	 baidu.com
- 
-59.111.160.244 163.com
-
-111.124.200.65 music.163.com
-
-123.150.76.218 qq.com
-
-121.14.23.119 wx.mail.qq.com
-
-#软件、论坛、博客站点ip#
-
-104.18.2.161 linux.do
-104.18.3.161 linux.do
-
-124.232.185.11 52pojie.cn
- 
+# 软件、论坛、博客站点ip
+104.18.2.161     linux.do
+104.18.3.161     linux.do
+124.232.185.11   52pojie.cn
 124.156.141.225  winos.me
+47.57.4.127      pc528.net 
+104.21.64.126    meta.appinn.net
+104.21.46.211    bbs.rainmeter.cn
+172.241.24.20    eyny.com
+172.67.72.23     oursogo.com
+172.67.188.231   sehuatang.net
+104.22.36.105    18comic.vip
+103.248.152.174  bbs.3dmgame.com
+104.21.96.1      masuit.net
+43.249.193.76    hybase.com
+# 45.151.132.50  423down.com
+ 104.21.80.1     applnn.com
+104.20.4.235     pastebin.com
 
-47.57.4.127 pc528.net 
-
-104.21.64.126 meta.appinn.net
-
-104.21.46.211 bbs.rainmeter.cn
-
-172.241.24.20 eyny.com
-
-172.67.72.23 oursogo.com
-
-172.67.188.231 sehuatang.net
-
-104.22.36.105 18comic.vip
-
-103.248.152.174 bbs.3dmgame.com
-
-104.21.96.1 masuit.net
-
-43.249.193.76 hybase.com
-
-# 45.151.132.50 423down.com
- 
-104.21.80.1 applnn.com
-
-104.20.4.235 pastebin.com
-
-#娱乐、影视、音乐站点ip#
-
-203.210.16.115 bttwo.me
-
-172.67.173.61 3jihome.com
-
-104.21.93.9 v.ikanbot.com
-
-172.67.156.89 music.ydev.tech
-
-23.224.60.155 agedm.org
- 
-104.26.10.121 ddys.pro
-
-172.64.40.100 5wu7rv.shop
-
-104.21.4.135 m.mubai.link
-
-172.67.211.131 jinricp.niuc.net
-
-154.219.98.185 boju.cc
-
+# 娱乐、影视、音乐站点ip
+203.210.16.115    bttwo.me
+172.67.173.61     3jihome.com
+104.21.93.9       v.ikanbot.com
+172.67.156.89     music.ydev.tech
+23.224.60.155     agedm.org
+104.26.10.121     ddys.pro
+172.64.40.100     5wu7rv.shop
+104.21.4.135      m.mubai.link
+172.67.211.131    jinricp.niuc.net
+154.219.98.185    boju.cc
 2606:4700:3035::6815:3544 my0713.com
+149.88.64.112     zrys.pw
+# 23.225.203.180  hifini.com
+185.88.181.1      xvideos.com
+104.21.80.1       krx18.com
+66.254.114.41     cn.pornhub.com
+104.19.239.156    spankbang.com
 
-149.88.64.112 zrys.pw
-
-# 23.225.203.180 hifini.com
-
-185.88.181.1 xvideos.com
-
-104.21.80.1 krx18.com
-
-66.254.114.41 cn.pornhub.com
-
-104.19.239.156 spankbang.com
-
-#DNS、网络代理站点ip#
-
-104.26.8.179 ping.pe
-
+# DNS、网络代理站点ip
+104.26.8.179    ping.pe
+104.26.9.179    ping.pe
+104.26.3.223    whoer.net
+95.85.16.212    ipleak.net
+104.21.5.253    dnslookup.org
+104.26.7.89     dnschecker.org
+104.26.7.229    whatsmydns.net
+172.67.165.117  check-host.net
+118.212.233.24  ipip.net
 # 216.239.32.27 toolbox.googleapps.com
 
-#其它资源站点ip#
-
+# 其它资源站点ip
 172.67.164.117 greasyfork.org
-104.21.96.1 sleazyfork.org
+104.21.96.1    sleazyfork.org
+104.26.10.35   wallhaven.cc
+110.42.51.228  haowallpaper.com
+154.17.3.217   subhd.tv
+144.76.236.14  wallpaperswide.com
 
-104.26.10.35 wallhaven.cc
-
-110.42.51.228 haowallpaper.com
-
-154.17.3.217 subhd.tv
-
-144.76.236.14 wallpaperswide.com
-
-#网盘下载ip#
-
+# 网盘下载ip
 172.67.166.102 pan666.net
-
 # 146.0.41.233 filen.io
 
