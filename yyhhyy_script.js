@@ -34,6 +34,13 @@ function overwriteBasicOptions(params) {
         mode: "rule",
         "log-level": "info",
         ipv6: true,
+        "interface-name": "以太网",
+        "tcp-concurrent-users": 128,
+        "keep-alive-interval": 30,
+        "inbound-tfo": true,
+        "outbound-tfo": true,
+        "connection-pool-size": 256,
+        "idle-timeout": 60,   
         "find-process-mode": "strict",
         profile: {
             "store-selected": true,
@@ -42,6 +49,13 @@ function overwriteBasicOptions(params) {
         "unified-delay": true,
         "tcp-concurrent": true,
         "global-client-fingerprint": "chrome",
+        "cipher-suites": [                
+        "TLS_AES_128_GCM_SHA256",  
+        "TLS_AES_256_GCM_SHA384",
+        "TLS_CHACHA20_POLY1305_SHA256",
+        "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+        "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"
+        ],
         sniffer: {
             enable: true,
             sniff: {
@@ -51,6 +65,10 @@ function overwriteBasicOptions(params) {
                 },
                 TLS: {
                     ports: [443, 8443],
+                    "skip-cert-verify": false,
+                    "alpn": ["h2", "http/1.1"],
+                    "min-version": "1.2",
+                    "max-version": "1.3",     
                 },
                 QUIC: {
                     ports: [443, 8443],
@@ -80,6 +98,8 @@ function overwriteDns(params) {
     const dnsOptions = {
         enable: true,
         "prefer-h3": true,
+        "use-hosts": true,
+        "use-system-hosts": true,
         "enhanced-mode": "fake-ip",
         "fake-ip-range": "198.18.0.1/16",
         "respect-rules": true,
@@ -782,6 +802,44 @@ function overwriteRules(params) {
         
         "PROCESS-NAME,进程管理工具(支持PE)V3.0.exe,REJECT",
         
+        "PROCESS-NAME,clash,DIRECT",
+        
+        "PROCESS-NAME,v2ray,DIRECT",
+  
+        "PROCESS-NAME,xray,DIRECT",
+  
+        "PROCESS-NAME,naive,DIRECT",
+  
+        "PROCESS-NAME,trojan,DIRECT",
+  
+        "PROCESS-NAME,trojan-go,DIRECT",
+  
+        "PROCESS-NAME,ss-local,DIRECT",
+ 
+        "PROCESS-NAME,privoxy,DIRECT",
+  
+        "PROCESS-NAME,leaf,DIRECT",
+  
+        "PROCESS-NAME,Thunder,DIRECT",
+  
+        "PROCESS-NAME,DownloadService,DIRECT",
+  
+        "PROCESS-NAME,qBittorrent,DIRECT",
+  
+        "PROCESS-NAME,Transmission,DIRECT",
+  
+        "PROCESS-NAME,fdm,DIRECT",
+  
+        "PROCESS-NAME,aria2c,DIRECT",
+  
+        "PROCESS-NAME,Folx,DIRECT",
+ 
+        "PROCESS-NAME,NetTransport,DIRECT",
+  
+        "PROCESS-NAME,uTorrent,DIRECT",
+  
+        "PROCESS-NAME,WebTorrent,DIRECT",
+        
         "PROCESS-NAME,YY.exe,DIRECT",
         "PROCESS-NAME,yyexternal.exe,DIRECT",
         "PROCESS-NAME,gslbexternal.exe,DIRECT",
@@ -814,12 +872,8 @@ function overwriteRules(params) {
         
         "PROCESS-NAME,SwitchHosts.exe,🎯 节点选择",
         
-        "PROCESS-NAME,Cherry Studio.exe,🎯 节点选择",
+        "PROCESS-NAME,Cherry Studio.exe,🎯 节点选择"
         
-        "PROCESS-NAME,firefox.exe,🎯 节点选择"
-        
-        
-
         
     ];
     
