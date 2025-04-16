@@ -48,7 +48,7 @@ DOMAIN-SUFFIX,pan.xunlei.com
 DOMAIN-SUFFIX,3jihome.com
 DOMAIN-SUFFIX,boju.cc
 DOMAIN-SUFFIX,ddys.pro
-DOMAIN-SUFFIX,5wu7rv.shop
+DOMAIN-SUFFIX,ofcofjun2x.shop
 DOMAIN-SUFFIX,m.mubai.link
 DOMAIN-SUFFIX,hifini.com
 DOMAIN-SUFFIX,v.ikanbot.com
