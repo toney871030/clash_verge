@@ -154,9 +154,9 @@
 2606:4700:20::681a:a79     ddys.pro
 2606:4700:20::ac43:45f0    ddys.pro
 
-162.159.242.14             5wu7rv.shop
-172.67.77.175              5wu7rv.shop
-104.19.127.247             5wu7rv.shop
+162.159.242.14             ofcofjun2x.shop
+172.67.77.175              ofcofjun2x.shop
+104.19.127.247             ofcofjun2x.shop
 
 172.67.132.31              m.mubai.link
 104.21.4.135               m.mubai.link
