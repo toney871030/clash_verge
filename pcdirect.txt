@@ -55,6 +55,7 @@ DOMAIN-SUFFIX,v.ikanbot.com
 DOMAIN-SUFFIX,agedm.org
 DOMAIN-SUFFIX,zrys.pw
 DOMAIN-SUFFIX,my0713.com
+DOMAIN-SUFFIX,82mao.com
 
 #download:
 DOMAIN-SUFFIX,qbittorrent.org
