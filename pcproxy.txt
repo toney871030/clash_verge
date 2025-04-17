@@ -19,9 +19,20 @@ IP-CIDR,208.67.222.222/32,no-resolve
 IP-CIDR,208.67.220.220/32,no-resolve
 
 
-# 网络管理
+# IP DNS监测
 DOMAIN-SUFFIX,ping.pe
 DOMAIN-SUFFIX,toolbox.googleapps.com
+DOMAIN-SUFFIX,dnschecker.org
+DOMAIN-SUFFIX,whoer.net
+DOMAIN-SUFFIX,ipleak.net
+DOMAIN-SUFFIX,whatsmydns.net
+DOMAIN-SUFFIX,check-host.net
+DOMAIN-SUFFIX,ipip.net
+DOMAIN-SUFFIX,nslookup.io
+DOMAIN-SUFFIX,ping0.cc
+
+# AI图像生成
+DOMAIN-SUFFIX,styleai.art
 
 # 壁纸下载
 DOMAIN-SUFFIX,wallpaperswide.com
