@@ -1,4 +1,5 @@
 # 直连补充列表(国内域名不解析时，防止走代理使用)
+
 # 国内DNS
 DOMAIN-SUFFIX,dns.alidns.com
 DOMAIN-SUFFIX,doh.360.cn
@@ -9,10 +10,15 @@ IP-CIDR,223.5.5.5/32,no-resolve
 IP-CIDR,223.6.6.6/32,no-resolve
 IP-CIDR,114.114.114.114/32,no-resolve
 
-#rules更新
+# rules更新
 DOMAIN-SUFFIX,ruleset.skk.moe
 
-#论坛博客
+# 大陆维权网站
+DOMAIN-SUFFIX,ts.isc.org.cn
+DOMAIN-SUFFIX,sswz.spb.gov.cn
+DOMAIN-SUFFIX,tousu.sina.com.cn
+
+# 论坛博客
 DOMAIN-SUFFIX,linux.do
 DOMAIN-SUFFIX,winos.me
 DOMAIN-SUFFIX,cmdpe.com
@@ -22,20 +28,20 @@ DOMAIN-KEYWORD,pc528
 DOMAIN-SUFFIX,3dmgame.com
 DOMAIN-SUFFIX,rainmeter.cn
 
-#软件下载站
+# 软件下载站
 DOMAIN-SUFFIX,masuit.net
 DOMAIN-SUFFIX,hybase.com
 DOMAIN-SUFFIX,applnn.com
 DOMAIN-SUFFIX,pan666.net
 DOMAIN-SUFFIX,youxiaohou.com
 
-#免费奈飞cookies
+# 免费奈飞cookies
 DOMAIN-SUFFIX,netflixcookies.com
 
-#壁纸下载站
+# 壁纸下载站
 DOMAIN-SUFFIX,haowallpaper.com
 
-#网盘登录
+# 网盘登录
 DOMAIN-SUFFIX,cloud.189.cn
 DOMAIN-SUFFIX,alipan.com
 DOMAIN-SUFFIX,pan.baidu.com
@@ -44,7 +50,7 @@ DOMAIN-SUFFIX,pan.huang1111.cn
 DOMAIN-SUFFIX,pan666.net
 DOMAIN-SUFFIX,pan.xunlei.com
 
-#在线影音
+# 在线影音
 DOMAIN-SUFFIX,3jihome.com
 DOMAIN-SUFFIX,boju.cc
 DOMAIN-SUFFIX,ddys.pro
@@ -57,7 +63,7 @@ DOMAIN-SUFFIX,zrys.pw
 DOMAIN-SUFFIX,my0713.com
 DOMAIN-SUFFIX,82mao.com
 
-#download:
+# Download:
 DOMAIN-SUFFIX,qbittorrent.org
 DOMAIN-KEYWORD,aria2
 DOMAIN-KEYWORD,thunder
