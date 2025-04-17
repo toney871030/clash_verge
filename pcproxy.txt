@@ -48,6 +48,7 @@ DOMAIN-SUFFIX,nic.eu.org
 DOMAIN-SUFFIX,music.ydev.tech
 DOMAIN-SUFFIX,bttwo.me
 DOMAIN-SUFFIX,tv.garden
+DOMAIN-SUFFIX,netflixcookies.com
 
 
 # 脚本插件
