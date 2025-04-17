@@ -36,7 +36,7 @@ DOMAIN-SUFFIX,pan666.net
 DOMAIN-SUFFIX,youxiaohou.com
 
 # 免费奈飞cookies
-DOMAIN-SUFFIX,netflixcookies.com
+# DOMAIN-SUFFIX,netflixcookies.com
 
 # 壁纸下载站
 DOMAIN-SUFFIX,haowallpaper.com
