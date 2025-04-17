@@ -11,6 +11,8 @@
 2606:4700:4400::6812:202f chatgpt.com
 2606:4700:4400::ac40:9bd1 chatgpt.com
 
+76.76.21.21               styleai.art
+
 # 搜索引擎、服务器类
 
 151.101.193.229       fastly.jsdelivr.net
@@ -211,8 +213,6 @@
 
 95.85.16.212               ipleak.net
 2a03:b0c0:0:1010::509:d001 ipleak.net
-
-89.106.200.1              dnslookup.org
 
 172.67.73.216             dnschecker.org
 104.26.7.89               dnschecker.org
