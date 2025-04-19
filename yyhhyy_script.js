@@ -159,12 +159,24 @@ function overwriteNameserverPolicy (params) {
         "dns.alidns.com": "tls://223.5.5.5",
         "doh.pub": "tls://119.29.29.29",
         
-        //本机常用网页:
         //rules更新:
-        "+.ruleset.skk.moe": "dns.alidns.com",
-        "+.github.com": "dns.alidns.com",
-        "+.github.io": "dns.alidns.com",
-        "+.githubusercontent.com": "dns.alidns.com",
+        "+.ruleset.skk.moe": ["dns.alidns.com","doh.pub"],
+        "+.github.com": ["dns.alidns.com","doh.pub"],
+        "+.github.io": ["dns.alidns.com","doh.pub"],
+        "+.githubusercontent.com": ["dns.alidns.com","doh.pub"],
+       
+       //IP DNS监测:
+        "+.ping.pe": "dns.google",
+        "+.toolbox.googleapps.com": "dns.google",
+        "+.dnschecker.org": "dns.google",
+        "+.whoer.net": "dns.google",
+        "+.ipleak.net": "dns.google",
+        "+.whatsmydns.net": "dns.google",
+        "+.check-host.net": "dns.google",
+        "+.ipip.net": "dns.google",
+        "+.nslookup.io": "dns.google",
+        "+.ping0.cc": "dns.google",
+        
         //代理
         "+.google.com": "dns.google",
         "+.bing.com": "dns.google",
@@ -174,6 +186,7 @@ function overwriteNameserverPolicy (params) {
         "+.pornhub.com": "dns.google",
         "+.spankbang.com": "dns.google",
         "+.netflix.com": "dns.google",
+        "+.netflixcookies.com": "dns.google",
         "+.wallpaperswide.com": "dns.google",
         "+.wallhaven.cc": "dns.google",
         "+.music.ydev.tech": "dns.google",
@@ -185,38 +198,38 @@ function overwriteNameserverPolicy (params) {
         "+.filen.io": "dns.google",
         "+.tv.garden": "dns.google",
         "+.bttwo.me": "dns.google",
+        
         //直连
-        "+.linux.do": "dns.alidns.com",
-        "+.winos.me": "dns.alidns.com",
-        "+.cmdpe.com": "dns.alidns.com",
-        "+.52pojie.cn": "dns.alidns.com",
-        "+.pc528.net": "dns.alidns.com",
-        "+.bbs.3dmgame.com": "dns.alidns.com",
-        "+.bbs.rainmeter.cn": "dns.alidns.com",
-        "+.masuit.net": "dns.alidns.com",
-        "+.hybase.com": "dns.alidns.com",
-        "+.applnn.com": "dns.alidns.com",
-        "+.pan666.net": "dns.alidns.com",
-        "+.youxiaohou.com": "dns.alidns.com",
-        "+.netflixcookies.com": "dns.alidns.com",
-        "+.haowallpaper.com": "dns.alidns.com",
-        "+.cloud.189.cn": "dns.alidns.com",
-        "+.alipan.com": "dns.alidns.com",
-        "+.123pan.com": "dns.alidns.com",
-        "+.lanzou.com": "dns.alidns.com",
-        "+.pan.huang1111.cn": "dns.alidns.com",
-        "+.3jihome.com": "dns.alidns.com",
-        "+.boju.cc": "dns.alidns.com",
-        "+.ddys.pro": "dns.alidns.com",
-        "+.5wu7rv.shop": "dns.alidns.com",
-        "+.m.mubai.link": "dns.alidns.com",
-        "+.meta.appinn.net": "dns.alidns.com",
-        "+.hifini.com": "dns.alidns.com",
-        "+.v.ikanbot.com": "dns.alidns.com",
-        "+.agedm.org": "dns.alidns.com",
-        "+.zrys.pw": "dns.alidns.com",
-        "+.my0713.com": "dns.alidns.com",
-        //本机常用网页到这结束
+        "+.linux.do": ["dns.alidns.com","doh.pub"],
+        "+.winos.me": ["dns.alidns.com","doh.pub"],
+        "+.cmdpe.com": ["dns.alidns.com","doh.pub"],
+        "+.52pojie.cn": ["dns.alidns.com","doh.pub"],
+        "+.pc528.net": ["dns.alidns.com","doh.pub"],
+        "+.bbs.3dmgame.com": ["dns.alidns.com","doh.pub"],
+        "+.bbs.rainmeter.cn": ["dns.alidns.com","doh.pub"],
+        "+.masuit.net": ["dns.alidns.com","doh.pub"],
+        "+.hybase.com": ["dns.alidns.com","doh.pub"],
+        "+.applnn.com": ["dns.alidns.com","doh.pub"],
+        "+.pan666.net": ["dns.alidns.com","doh.pub"],
+        "+.youxiaohou.com": ["dns.alidns.com","doh.pub"],
+        "+.haowallpaper.com": ["dns.alidns.com","doh.pub"],
+        "+.cloud.189.cn": ["dns.alidns.com","doh.pub"],
+        "+.alipan.com": ["dns.alidns.com","doh.pub"],
+        "+.123pan.com": ["dns.alidns.com","doh.pub"],
+        "+.lanzou.com": ["dns.alidns.com","doh.pub"],
+        "+.pan.huang1111.cn": ["dns.alidns.com","doh.pub"],
+        "+.3jihome.com": ["dns.alidns.com","doh.pub"],
+        "+.boju.cc": ["dns.alidns.com","doh.pub"],
+        "+.ddys.pro": ["dns.alidns.com","doh.pub"],
+        "+.ofcofjun2x.shop": ["dns.alidns.com","doh.pub"],
+        "+.m.mubai.link": ["dns.alidns.com","doh.pub"],
+        "+.meta.appinn.net": ["dns.alidns.com","doh.pub"],
+        "+.hifini.com": ["dns.alidns.com","doh.pub"],
+        "+.v.ikanbot.com": ["dns.alidns.com","doh.pub"],
+        "+.agedm.org": ["dns.alidns.com","doh.pub"],
+        "+.zrys.pw": ["dns.alidns.com","doh.pub"],
+        "+.my0713.com": ["dns.alidns.com","doh.pub"],
+        "+.82mao.com": ["dns.alidns.com","doh.pub"],
         
         //下面用阿里DNS解析:
         "+.uc.cn": "dns.alidns.com",
@@ -783,12 +796,24 @@ function overwriteRules(params) {
         "PROCESS-NAME,ProcessLasso.exe,REJECT",
         "PROCESS-NAME,ProcessGovernor.exe,REJECT",
         "PROCESS-NAME,bitsumsessionagent.exe,REJECT",
+        "PROCESS-NAME,srvstub.exe,REJECT",
+        
+        "PROCESS-NAME,MacTray.exe,REJECT",
+        "PROCESS-NAME,mt64agnt.exe,REJECT",
         
         "PROCESS-NAME,TranslucentTB.exe,REJECT",
         
         "PROCESS-NAME,eCloud.exe,DIRECT",
         
         "PROCESS-NAME,DiskInfo64.exe,REJECT",
+        
+        "PROCESS-NAME,SSDFresh.exe,REJECT",
+        
+        "PROCESS-NAME,careueyes.exe,REJECT",
+        
+        "PROCESS-NAME,FxSound.exe,REJECT",
+        
+        "PROCESS-NAME,FanControl.exe,REJECT",
         
         "PROCESS-NAME,FlashPad.exe,REJECT",
         
@@ -799,6 +824,8 @@ function overwriteRules(params) {
         "PROCESS-NAME,Video.UI.exe,REJECT",
         
         "PROCESS-NAME,RtkAudUService64.exe,REJECT",
+        
+        "PROCESS-NAME,StartMenuExperienceHost.exe,REJECT",
         
         "PROCESS-NAME,进程管理工具(支持PE)V3.0.exe,REJECT",
         
@@ -865,16 +892,7 @@ function overwriteRules(params) {
         
         "PROCESS-NAME,IObitUnlocker.exe,REJECT",
         "PROCESS-NAME,IObitUnlocker辅助器.exe,REJECT",
-        
-        "PROCESS-NAME,SPlayer.exe,🎯 节点选择",
-        
-        "PROCESS-NAME,Telegram.exe,🎯 节点选择",
-        
-        "PROCESS-NAME,SwitchHosts.exe,🎯 节点选择",
-        
-        "PROCESS-NAME,Cherry Studio.exe,🎯 节点选择"
-        
-        
+          
     ];
     
     const adNonipRules = [
