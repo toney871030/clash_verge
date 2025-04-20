@@ -79,14 +79,6 @@ DOMAIN,cdn.subhd.tv
 DOMAIN-KEYWORD,subhd 
 DOMAIN-SUFFIX,imbt.one
 
-# python
-DOMAIN-SUFFIX,pycon.org
-DOMAIN-SUFFIX,pypa.io
-DOMAIN-SUFFIX,pypi.io
-DOMAIN-SUFFIX,pypi.org
-DOMAIN-SUFFIX,python.org
-DOMAIN-SUFFIX,pythonhosted.org
-
 # Jsdelivr
 DOMAIN-SUFFIX,esm.run
 DOMAIN-SUFFIX,jsdelivr.com
