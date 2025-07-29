@@ -132,6 +132,7 @@
 
 156.238.249.125            82mao.com
 
+173.249.198.82              3jihome.com
 # 172.67.173.61              3jihome.com
 # 104.21.30.164              3jihome.com
 # 2606:4700:3037::ac43:ad3d  3jihome.com
