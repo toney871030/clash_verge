@@ -132,10 +132,10 @@
 
 156.238.249.125            82mao.com
 
-172.67.173.61              3jihome.com
-104.21.30.164              3jihome.com
-2606:4700:3037::ac43:ad3d  3jihome.com
-2606:4700:3032::6815:1ea4  3jihome.com
+# 172.67.173.61              3jihome.com
+# 104.21.30.164              3jihome.com
+# 2606:4700:3037::ac43:ad3d  3jihome.com
+# 2606:4700:3032::6815:1ea4  3jihome.com
 
 104.21.93.9                v.ikanbot.com
 172.67.201.222             v.ikanbot.com
