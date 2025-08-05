@@ -131,6 +131,9 @@
 
 156.238.249.125            82mao.com
 
+173.249.198.82             3jihome.com
+221.228.32.13              3jihome.com
+
 104.21.93.9                v.ikanbot.com
 172.67.201.222             v.ikanbot.com
 2606:4700:3034::ac43:c9de  v.ikanbot.com
