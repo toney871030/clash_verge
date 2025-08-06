@@ -48,7 +48,9 @@ DOMAIN-SUFFIX,nic.eu.org
 DOMAIN-SUFFIX,music.ydev.tech
 DOMAIN-SUFFIX,bttwo.me
 DOMAIN-SUFFIX,tv.garden
-DOMAIN-SUFFIX,netflixcookies.com
+DOMAIN-SUFFIX,m.mubai.link
+DOMAIN-SUFFIX,hifini.com
+DOMAIN-SUFFIX,boju.cc
 
 
 # 脚本插件
