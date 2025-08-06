@@ -1,4 +1,5 @@
 # 直连补充列表(国内域名不解析时，防止走代理使用)
+payload:
 
 # 国内DNS
 DOMAIN-SUFFIX,dns.alidns.com
