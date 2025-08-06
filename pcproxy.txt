@@ -60,7 +60,7 @@ DOMAIN-SUFFIX,sleazyfork.org
 
 # Ribi论坛
 DOMAIN-SUFFIX,oursogo.com
-DOMAIN-SUFFIX,eyny.com
+DOMAIN-SUFFIX,www02.eyny.com
 DOMAIN-SUFFIX,18comic.vip
 DOMAIN-SUFFIX,sehuatang.net
 
