@@ -51,6 +51,7 @@ DOMAIN-SUFFIX,tv.garden
 DOMAIN-SUFFIX,m.mubai.link
 DOMAIN-SUFFIX,hifini.com
 DOMAIN-SUFFIX,ysxq.cc
+DOMAIN-SUFFIX,yfsp.tv
 
 
 # 脚本插件
