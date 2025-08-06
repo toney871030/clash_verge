@@ -125,11 +125,11 @@
 2606:4700:3037::ac43:8e32  rainmeter.cn
 2606:4700:3036::6815:2ed3  rainmeter.cn
 
-103.246.246.144            www04.eyny.com
-172.241.24.65              www04.eyny.com
-172.241.24.20              www04.eyny.com
-172.241.24.22              www04.eyny.com
-72.241.24.20               www04.eyny.com
+103.246.246.144            eyny.com
+172.241.24.65              eyny.com
+172.241.24.20              eyny.com
+172.241.24.22              eyny.com
+72.241.24.20               eyny.com
 
 104.26.12.68               oursogo.com
 104.26.13.68               oursogo.com
