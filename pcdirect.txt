@@ -35,9 +35,6 @@ DOMAIN-SUFFIX,applnn.com
 DOMAIN-SUFFIX,pan666.net
 DOMAIN-SUFFIX,youxiaohou.com
 
-# 免费奈飞cookies
-# DOMAIN-SUFFIX,netflixcookies.com
-
 # 壁纸下载站
 DOMAIN-SUFFIX,haowallpaper.com
 
@@ -52,11 +49,8 @@ DOMAIN-SUFFIX,pan.xunlei.com
 
 # 在线影音
 DOMAIN-SUFFIX,ysxq.cc
-DOMAIN-SUFFIX,boju.cc
 DOMAIN-SUFFIX,ddys.pro
 DOMAIN-SUFFIX,ofcofjun2x.shop
-DOMAIN-SUFFIX,m.mubai.link
-DOMAIN-SUFFIX,hifini.com
 DOMAIN-SUFFIX,v.ikanbot.com
 DOMAIN-SUFFIX,agedm.org
 DOMAIN-SUFFIX,zrys.pw
