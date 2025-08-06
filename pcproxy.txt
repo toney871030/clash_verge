@@ -50,7 +50,7 @@ DOMAIN-SUFFIX,bttwo.me
 DOMAIN-SUFFIX,tv.garden
 DOMAIN-SUFFIX,m.mubai.link
 DOMAIN-SUFFIX,hifini.com
-DOMAIN-SUFFIX,boju.cc
+DOMAIN-SUFFIX,ysxq.cc
 
 
 # 脚本插件
