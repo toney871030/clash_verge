@@ -219,7 +219,7 @@
 2606:4700:3030::ac43:d383  jinricp.niuc.net
 2606:4700:3031::6815:4dce  jinricp.niuc.net
 
-202.181.24.73              boju.cc
+103.231.14.222             boju.cc
 
 103.231.14.222             ysxq.cc
 
