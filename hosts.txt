@@ -132,6 +132,7 @@
 2606:4700:20::ac43:4817    oursogo.com
 2606:4700:20::681a:d44     oursogo.com
 
+0.0.0.0                    sehuatang.net
 172.67.188.231             sehuatang.net
 104.21.73.65               sehuatang.net
 2606:4700:3034::6815:4941  sehuatang.net
