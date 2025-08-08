@@ -62,8 +62,8 @@
 76.76.21.21  styleai.art
 
 # 搜索引擎、服务器类 #
-151.101.193.229  fastly.jsdelivr.net
-104.16.132.229  cloudflare.com
+151.101.1.229  fastly.jsdelivr.net
+104.16.133.229  cloudflare.com
 150.171.27.10  bing.com
 13.107.21.200  cn.bing.com
 110.242.68.66  baidu.com
@@ -95,19 +95,19 @@
 
 # 娱乐、影视、音乐站点 #
 104.18.33.60  yfsp.tv
-156.238.249.125  82mao.com
-173.249.198.82  3jihome.com
+154.12.61.177  82mao.com
+104.21.30.164  3jihome.com
 104.21.93.9  v.ikanbot.com
 172.67.156.89  music.ydev.tech
-23.224.60.155  agedm.org
-172.67.69.240  ddys.pro
+23.225.30.102  agedm.org
+104.26.11.121  ddys.pro
 162.159.242.14  ofcofjun2x.shop
-172.67.132.31  m.mubai.link
+104.21.4.135  m.mubai.link
 103.231.14.222  boju.cc
 103.231.14.222  ysxq.cc
-104.21.53.68  my0713.com
-154.40.48.37  zrys.pw
-104.21.16.1  tv.garden
+172.67.209.172  my0713.com
+0.0.0.0  zrys.pw
+104.21.32.1  tv.garden
 103.117.121.121  hifiti.com
 185.88.181.1  xvideos.com
 104.21.80.1  krx18.com
@@ -129,7 +129,7 @@
 
 # 其它资源站点 #
 104.21.33.155  greasyfork.org
-104.21.32.1  sleazyfork.org
+104.21.80.1  sleazyfork.org
 104.26.10.35  wallhaven.cc
 110.42.51.228  haowallpaper.com
 154.17.3.217  subhd.tv
