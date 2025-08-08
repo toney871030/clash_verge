@@ -1,6 +1,7 @@
 #下面是本人常用网页Hosts:
 
 # 迅雷
+
 127.0.0.1   hub5btmain.sandai.net
 127.0.0.1   hub5emu.sandai.net
 127.0.0.1   upgrade.xl9.xunlei.com
@@ -58,268 +59,92 @@
 0.0.0.0  zl.xunlei.com 
 
 # AI
-172.64.155.209            chatgpt.com
-104.18.32.47              chatgpt.com
-2606:4700:4400::6812:202f chatgpt.com
-2606:4700:4400::ac40:9bd1 chatgpt.com
 
+172.64.155.209            chatgpt.com
 76.76.21.21               styleai.art
 
 # 搜索引擎、服务器类
+
 151.101.193.229       fastly.jsdelivr.net
-151.101.1.229         fastly.jsdelivr.net
-151.101.65.229        fastly.jsdelivr.net
-151.101.129.229       fastly.jsdelivr.net
-2a04:4e42::485        fastly.jsdelivr.net
-2a04:4e42:600::485    fastly.jsdelivr.net  
-2a04:4e42:400::485    fastly.jsdelivr.net
-2a04:4e42:200::485    fastly.jsdelivr.net
-
 104.16.132.229        cloudflare.com
-104.16.133.229        cloudflare.com
-2606:4700::6810:85e5  cloudflare.com
-2606:4700::6810:84e5  cloudflare.com
-
 150.171.27.10         bing.com
-150.171.28.10         bing.com
-2620:1ec:33:1::10     bing.com
-2620:1ec:33::10       bing.com
-
 13.107.21.200         cn.bing.com
-204.79.197.200        cn.bing.com
-
-110.242.68.66	      baidu.com
-39.156.66.10	      baidu.com
-
+110.242.68.66	        baidu.com
 59.111.160.244        163.com
-
 103.135.240.77        music.163.com
-111.124.200.65        music.163.com
-
 203.205.254.157       qq.com
-123.150.76.218        qq.com
-113.108.81.189        qq.com
-
 43.159.233.74         wx.mail.qq.com
-240d:c040:0:40::57    wx.mail.qq.com
+
 
 # 软件、论坛、博客站点
+
 104.19.189.241             linux.do
 104.19.189.241             connect.linux.do
-
 124.232.185.97             52pojie.cn
-
 124.156.141.225            winos.me
-
 127.0.0.1                  pc528.net 
-
 104.21.64.126              meta.appinn.net
-172.67.185.24              meta.appinn.net
-2606:4700:3034::6815:407e  meta.appinn.net
-2606:4700:3030::ac43:b918  meta.appinn.net
-
 104.21.46.211              rainmeter.cn
-172.67.142.50              rainmeter.cn
-2606:4700:3037::ac43:8e32  rainmeter.cn
-2606:4700:3036::6815:2ed3  rainmeter.cn
-
 103.200.30.143             www02.eyny.com
-
 104.26.12.68               oursogo.com
-104.26.13.68               oursogo.com
-172.67.72.23               oursogo.com
-2606:4700:20::681a:c44     oursogo.com
-2606:4700:20::ac43:4817    oursogo.com
-2606:4700:20::681a:d44     oursogo.com
-
 0.0.0.0                    sehuatang.net
-172.67.188.231             sehuatang.net
-104.21.73.65               sehuatang.net
-2606:4700:3034::6815:4941  sehuatang.net
-2606:4700:3030::ac43:bce7  sehuatang.net
-
 104.22.36.105              18comic.vip
-104.22.37.105              18comic.vip
-172.67.12.133              18comic.vip
-2606:4700:10::ac43:c85     18comic.vip
-2606:4700:10::6816:2469    18comic.vip
-2606:4700:10::6816:2569    18comic.vip
-
 103.248.152.174            3dmgame.com
-
 104.21.18.193              masuit.net
-104.21.96.1                masuit.net
-2606:4700:3033::ac43:b74a  masuit.net
-2606:4700:3037::6815:12c1  masuit.net
-
 43.249.193.76              hybase.com
-
 45.151.132.50              423down.com
-
 104.21.32.1                applnn.com
-104.21.96.1                applnn.com
-104.21.80.1                applnn.com
-2606:4700:3030::6815:3001  applnn.com
-2606:4700:3030::6815:2001  applnn.com
-2606:4700:3030::6815:1001  applnn.com
-
 104.20.4.235               pastebin.com
-104.22.68.199              pastebin.com
-104.22.69.199              pastebin.com
-2606:4700:10::ac43:195e    pastebin.com
-2606:4700:10::6816:45c7    pastebin.com
-2606:4700:10::6816:44c7    pastebin.com
+
 
 # 娱乐、影视、音乐站点
-172.64.154.196             yfsp.tv
-104.18.33.60               yfsp.tv
 
-203.210.16.115             bttwo.me
-
+104.18.33.60             yfsp.tv
 156.238.249.125            82mao.com
-
 173.249.198.82             3jihome.com
-221.228.32.13              3jihome.com
-
 104.21.93.9                v.ikanbot.com
-172.67.201.222             v.ikanbot.com
-2606:4700:3034::ac43:c9de  v.ikanbot.com
-2606:4700:3034::6815:5d09  v.ikanbot.com
-
 172.67.156.89              music.ydev.tech
-104.21.89.43               music.ydev.tech
-2606:4700:3034::6815:592b  music.ydev.tech
-2606:4700:3033::ac43:9c59  music.ydev.tech
-
 23.224.60.155              agedm.org
-
 172.67.69.240              ddys.pro
-104.26.11.121              ddys.pro
-104.26.10.121              ddys.pro
-2606:4700:20::681a:b79     ddys.pro
-2606:4700:20::681a:a79     ddys.pro
-2606:4700:20::ac43:45f0    ddys.pro
-
 162.159.242.14             ofcofjun2x.shop
-172.67.77.175              ofcofjun2x.shop
-104.19.127.247             ofcofjun2x.shop
-
 172.67.132.31              m.mubai.link
-104.21.4.135               m.mubai.link
-2606:4700:3036::ac43:841f  m.mubai.link
-2606:4700:3037::6815:487   m.mubai.link
-
-172.67.211.131             jinricp.niuc.net
-104.21.77.206              jinricp.niuc.net
-2606:4700:3030::ac43:d383  jinricp.niuc.net
-2606:4700:3031::6815:4dce  jinricp.niuc.net
-
 103.231.14.222             boju.cc
 103.231.14.222             ysxq.cc
-
 104.21.53.68               my0713.com
-172.67.209.172             my0713.com
-2606:4700:3033::ac43:d1ac  my0713.com
-2606:4700:3035::6815:3544  my0713.com
-
 154.40.48.37               zrys.pw
-156.238.226.179            zrys.pw
-
 104.21.16.1                tv.garden
-104.21.96.1                tv.garden
-2606:4700:3030::6815:3001  tv.garden
-2606:4700:3030::6815:5001  tv.garden
-
 103.117.121.121            hifiti.com
-
 185.88.181.1               xvideos.com
-
 104.21.80.1                krx18.com
-104.21.112.1               krx18.com
-2606:4700:3030::6815:6001  krx18.com
-2606:4700:3030::6815:2001  krx18.com
-
 66.254.114.41              cn.pornhub.com
-
 104.19.239.156             spankbang.com
-104.18.96.242              spankbang.com
-2606:4700::6813:ef9c       spankbang.com
-2606:4700::6812:60f2       spankbang.com
+
 
 # DNS、网络代理站点
+
 202.140.141.28            itdog.cn
-
 104.26.8.179              ping.pe
-104.26.9.179              ping.pe
-
 104.26.3.223              whoer.net
-104.26.2.223              whoer.net
-172.67.70.188             whoer.net
-
 95.85.16.212               ipleak.net
-2a03:b0c0:0:1010::509:d001 ipleak.net
-
 172.67.73.216             dnschecker.org
-104.26.7.89               dnschecker.org
-104.26.6.89               dnschecker.org
-2606:4700:20::681a:659    dnschecker.org
-2606:4700:20::ac43:49d8   dnschecker.org
-2606:4700:20::681a:759    dnschecker.org
-
 104.26.7.229              whatsmydns.net
-104.26.7.218              whatsmydns.net
-104.26.6.218              whatsmydns.net
-172.67.68.250             whatsmydns.net
-2606:4700:20::ac43:44fa   whatsmydns.net
-2606:4700:20::681a:6da    whatsmydns.net
-2606:4700:20::681a:7da    whatsmydns.net
-
 172.67.163.103            check-host.net
-172.67.165.117            check-host.net
-
 106.55.120.91             ipip.net
-118.212.233.24            ipip.net
-
 216.239.32.27             toolbox.googleapps.com
-2001:4860:4802:32::1b     toolbox.googleapps.com
+
 
 # 其它资源站点
+
 104.21.33.155             greasyfork.org
-172.67.164.117            greasyfork.org
-2606:4700:3036::ac43:a475 greasyfork.org
-2606:4700:3033::6815:219b greasyfork.org
-
 104.21.32.1               sleazyfork.org
-104.21.96.1               sleazyfork.org
-2606:4700:3030::6815:4001 sleazyfork.org
-2606:4700:3030::6815:1001 sleazyfork.org
-2606:4700:3030::6815:2001 sleazyfork.org
-
 104.26.10.35              wallhaven.cc
-104.26.11.35              wallhaven.cc
-172.67.74.111             wallhaven.cc
-2606:4700:20::681a:b23    wallhaven.cc
-2606:4700:20::681a:a23    wallhaven.cc
-2606:4700:20::ac43:4a6f   wallhaven.cc
-
 110.42.51.228             haowallpaper.com
-
 154.17.3.217              subhd.tv
-
 144.76.236.14             wallpaperswide.com
 
 # 网盘下载
-172.67.166.102            pan666.net
-104.21.16.49              pan666.net
-2606:4700:3030::6815:1031 pan666.net
-2606:4700:3035::ac43:a666 pan666.net
 
+172.67.166.102            pan666.net
 146.0.41.232              filen.io
-146.0.41.233              filen.io
-146.0.41.206              filen.io
-146.0.41.234              filen.io
-146.0.41.231              filen.io
-146.0.41.207              filen.io
-146.0.41.208              filen.io
-146.0.41.205              filen.io
+
 
