@@ -1,7 +1,6 @@
 #下面是本人常用网页Hosts:
 
-# 迅雷
-
+# 迅雷#
 127.0.0.1   hub5btmain.sandai.net
 127.0.0.1   hub5emu.sandai.net
 127.0.0.1   upgrade.xl9.xunlei.com
@@ -58,93 +57,84 @@
 0.0.0.0  xlcache.com 
 0.0.0.0  zl.xunlei.com 
 
-# AI
+# AI #
+172.64.155.209  chatgpt.com
+76.76.21.21  styleai.art
 
-172.64.155.209            chatgpt.com
-76.76.21.21               styleai.art
-
-# 搜索引擎、服务器类
-
-151.101.193.229       fastly.jsdelivr.net
-104.16.132.229        cloudflare.com
-150.171.27.10         bing.com
-13.107.21.200         cn.bing.com
-110.242.68.66	        baidu.com
-59.111.160.244        163.com
-103.135.240.77        music.163.com
-203.205.254.157       qq.com
-43.159.233.74         wx.mail.qq.com
+# 搜索引擎、服务器类 #
+151.101.193.229  fastly.jsdelivr.net
+104.16.132.229  cloudflare.com
+150.171.27.10  bing.com
+13.107.21.200  cn.bing.com
+110.242.68.66  baidu.com
+59.111.160.244  163.com
+103.135.240.77  music.163.com
+203.205.254.157  qq.com
+43.159.233.74  wx.mail.qq.com
 
 
-# 软件、论坛、博客站点
-
-104.19.189.241             linux.do
-104.19.189.241             connect.linux.do
-124.232.185.97             52pojie.cn
-124.156.141.225            winos.me
-127.0.0.1                  pc528.net 
-104.21.64.126              meta.appinn.net
-104.21.46.211              rainmeter.cn
-103.200.30.143             www02.eyny.com
-104.26.12.68               oursogo.com
-0.0.0.0                    sehuatang.net
-104.22.36.105              18comic.vip
-103.248.152.174            3dmgame.com
-104.21.18.193              masuit.net
-43.249.193.76              hybase.com
-45.151.132.50              423down.com
-104.21.32.1                applnn.com
-104.20.4.235               pastebin.com
-
-
-# 娱乐、影视、音乐站点
-
-104.18.33.60             yfsp.tv
-156.238.249.125            82mao.com
-173.249.198.82             3jihome.com
-104.21.93.9                v.ikanbot.com
-172.67.156.89              music.ydev.tech
-23.224.60.155              agedm.org
-172.67.69.240              ddys.pro
-162.159.242.14             ofcofjun2x.shop
-172.67.132.31              m.mubai.link
-103.231.14.222             boju.cc
-103.231.14.222             ysxq.cc
-104.21.53.68               my0713.com
-154.40.48.37               zrys.pw
-104.21.16.1                tv.garden
-103.117.121.121            hifiti.com
-185.88.181.1               xvideos.com
-104.21.80.1                krx18.com
-66.254.114.41              cn.pornhub.com
-104.19.239.156             spankbang.com
+# 软件、论坛、博客站点 #
+104.19.189.241  linux.do
+104.19.189.241  connect.linux.do
+124.232.185.97  52pojie.cn
+124.156.141.225  winos.me
+127.0.0.1  pc528.net 
+104.21.64.126  meta.appinn.net
+104.21.46.211  rainmeter.cn
+103.200.30.143  www02.eyny.com
+104.26.12.68  oursogo.com
+0.0.0.0  sehuatang.net
+104.22.36.105  18comic.vip
+103.248.152.174  3dmgame.com
+104.21.18.193  masuit.net
+43.249.193.76  hybase.com
+45.151.132.50  423down.com
+104.21.32.1  applnn.com
+104.20.4.235  pastebin.com
 
 
-# DNS、网络代理站点
-
-202.140.141.28            itdog.cn
-104.26.8.179              ping.pe
-104.26.3.223              whoer.net
-95.85.16.212               ipleak.net
-172.67.73.216             dnschecker.org
-104.26.7.229              whatsmydns.net
-172.67.163.103            check-host.net
-106.55.120.91             ipip.net
-216.239.32.27             toolbox.googleapps.com
-
-
-# 其它资源站点
-
-104.21.33.155             greasyfork.org
-104.21.32.1               sleazyfork.org
-104.26.10.35              wallhaven.cc
-110.42.51.228             haowallpaper.com
-154.17.3.217              subhd.tv
-144.76.236.14             wallpaperswide.com
-
-# 网盘下载
-
-172.67.166.102            pan666.net
-146.0.41.232              filen.io
+# 娱乐、影视、音乐站点 #
+104.18.33.60  yfsp.tv
+156.238.249.125  82mao.com
+173.249.198.82  3jihome.com
+104.21.93.9  v.ikanbot.com
+172.67.156.89  music.ydev.tech
+23.224.60.155  agedm.org
+172.67.69.240  ddys.pro
+162.159.242.14  ofcofjun2x.shop
+172.67.132.31  m.mubai.link
+103.231.14.222  boju.cc
+103.231.14.222  ysxq.cc
+104.21.53.68  my0713.com
+154.40.48.37  zrys.pw
+104.21.16.1  tv.garden
+103.117.121.121  hifiti.com
+185.88.181.1  xvideos.com
+104.21.80.1  krx18.com
+66.254.114.41  cn.pornhub.com
+104.19.239.156  spankbang.com
 
 
+# DNS、网络代理站点 #
+202.140.141.28  itdog.cn
+104.26.8.179  ping.pe
+104.26.3.223  whoer.net
+95.85.16.212  ipleak.net
+172.67.73.216  dnschecker.org
+104.26.7.229  whatsmydns.net
+172.67.163.103  check-host.net
+106.55.120.91  ipip.net
+216.239.32.27  toolbox.googleapps.com
+
+
+# 其它资源站点 #
+104.21.33.155  greasyfork.org
+104.21.32.1  sleazyfork.org
+104.26.10.35  wallhaven.cc
+110.42.51.228  haowallpaper.com
+154.17.3.217  subhd.tv
+144.76.236.14  wallpaperswide.com
+
+# 网盘下载 #
+172.67.166.102  pan666.net
+146.0.41.232  filen.io
