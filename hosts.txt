@@ -6,7 +6,7 @@
 
 # 搜索引擎、服务器类 #
 151.101.1.229  fastly.jsdelivr.net
-104.16.133.229  cloudflare.com
+104.17.111.184  dash.cloudflare.com
 150.171.27.10  bing.com
 13.107.21.200  cn.bing.com
 110.242.68.66  baidu.com
