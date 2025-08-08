@@ -31,9 +31,9 @@ function overwriteBasicOptions(params) {
     const otherOptions = {
         "mixed-port": 7890,
         "allow-lan": true,
-        mode: "rule",
+         mode: "rule",
         "log-level": "info",
-        ipv6: true,
+         ipv6: true,
         "interface-name": "以太网",
         "tcp-concurrent-users": 128,
         "keep-alive-interval": 30,
@@ -86,13 +86,13 @@ function overwriteBasicOptions(params) {
 function overwriteDns(params) {
     const dnsList = [
         "tls://223.5.5.5",
-        "tls://8.8.8.8",
+        "tls://119.29.29.29",
         "system",
     ];
 
     const proxyDnsList = [
+        "tls://1.1.1.1",
         "tls://8.8.8.8",
-        "tls://223.5.5.5",
     ];
 
     const dnsOptions = {
@@ -161,45 +161,37 @@ function overwriteNameserverPolicy (params) {
         "doh.pub": "tls://119.29.29.29",
         
         //rules更新:
-        "+.ruleset.skk.moe": ["dns.alidns.com","doh.pub"],
-        "+.github.com": ["dns.alidns.com","doh.pub"],
-        "+.github.io": ["dns.alidns.com","doh.pub"],
-        "+.githubusercontent.com": ["dns.alidns.com","doh.pub"],
+        "+.ruleset.skk.moe":"dns.alidns.com",
+        "+.github.com":"dns.alidns.com",
+        "+.github.io":"dns.alidns.com",
+        "+.githubusercontent.com":"dns.alidns.com",
        
        //IP DNS监测:
-        "+.itdog.cn": ["dns.Cloudflare","dns.google"],
-        "+.ping.pe": ["dns.Cloudflare","dns.google"],
-        "+.toolbox.googleapps.com": ["dns.Cloudflare","dns.google"],
-        "+.dnschecker.org": ["dns.Cloudflare","dns.google"],
-        "+.whoer.net": ["dns.Cloudflare","dns.google"],
-        "+.ipleak.net": ["dns.Cloudflare","dns.google"],
-        "+.whatsmydns.net": ["dns.Cloudflare","dns.google"],
-        "+.check-host.net": ["dns.Cloudflare","dns.google"],
-        "+.ipip.net": ["dns.Cloudflare","dns.google"],
-        "+.nslookup.io": ["dns.Cloudflare","dns.google"],
-        "+.ping0.cc": ["dns.Cloudflare","dns.google"],
+        "+.itdog.cn":"dns.alidns.com",
+        "+.ping.pe":"dns.alidns.com",
+        "+.toolbox.googleapps.com":"dns.alidns.com",
+        "+.ping0.cc":"dns.alidns.com",
+        "+.v2rayse.com":"dns.alidns.com",
         
         //代理
-        "+.google.com": ["dns.Cloudflare","dns.google"],
-        "+.bing.com": ["dns.Cloudflare","dns.google"],
-        "+.chatgpt.com": ["dns.Cloudflare","dns.google"],
-        "+.youtube.com": ["dns.Cloudflare","dns.google"],
-        "+.xvideos.com": ["dns.Cloudflare","dns.google"],
-        "+.pornhub.com": ["dns.Cloudflare","dns.google"],
-        "+.spankbang.com": ["dns.Cloudflare","dns.google"],
-        "+.netflix.com": ["dns.Cloudflare","dns.google"],
-        "+.netflixcookies.com": ["dns.Cloudflare","dns.google"],
-        "+.wallpaperswide.com": ["dns.Cloudflare","dns.google"],
-        "+.wallhaven.cc": ["dns.Cloudflare","dns.google"],
-        "+.music.ydev.tech": ["dns.Cloudflare","dns.google"],
-        "+.greasyfork.org": ["dns.Cloudflare","dns.google"],
-        "+.sleazyfork.org": ["dns.Cloudflare","dns.google"],
-        "+.oursogo.com": ["dns.Cloudflare","dns.google"],
-        "+.eyny.com": ["dns.Cloudflare","dns.google"],
-        "+.18comic.vip": ["dns.Cloudflare","dns.google"],
-        "+.filen.io": ["dns.Cloudflare","dns.google"],
-        "+.tv.garden": ["dns.Cloudflare","dns.google"],
-        "+.bttwo.me": ["dns.Cloudflare","dns.google"],
+        "+.google.com":"dns.alidns.com",
+        "+.bing.com":"dns.alidns.com",
+        "+.chatgpt.com":"dns.alidns.com",
+        "+.youtube.com":"dns.alidns.com",
+        "+.xvideos.com":"dns.alidns.com",
+        "+.pornhub.com":"dns.alidns.com",
+        "+.spankbang.com":"dns.alidns.com",
+        "+.netflix.com":"dns.alidns.com",
+        "+.wallpaperswide.com":"dns.alidns.com",
+        "+.wallhaven.cc":"dns.alidns.com",
+        "+.music.ydev.tech":"dns.alidns.com",
+        "+.greasyfork.org":"dns.alidns.com",
+        "+.sleazyfork.org":"dns.alidns.com",
+        "+.oursogo.com":"dns.alidns.com",
+        "+.eyny.com":"dns.alidns.com",
+        "+.18comic.vip":"dns.alidns.com",
+        "+.filen.io":"dns.alidns.com",
+        "+.yfsp.tv":"dns.alidns.com",
         
         //直连
         "+.linux.do": ["dns.alidns.com","doh.pub"],
@@ -212,7 +204,7 @@ function overwriteNameserverPolicy (params) {
         "+.masuit.net": ["dns.alidns.com","doh.pub"],
         "+.hybase.com": ["dns.alidns.com","doh.pub"],
         "+.applnn.com": ["dns.alidns.com","doh.pub"],
-        "+.pan666.net": ["dns.alidns.com","doh.pub"],
+        "+.panwiki.com": ["dns.alidns.com","doh.pub"],
         "+.youxiaohou.com": ["dns.alidns.com","doh.pub"],
         "+.haowallpaper.com": ["dns.alidns.com","doh.pub"],
         "+.cloud.189.cn": ["dns.alidns.com","doh.pub"],
@@ -223,15 +215,14 @@ function overwriteNameserverPolicy (params) {
         "+.ysxq.cc": ["dns.alidns.com","doh.pub"],
         "+.boju.cc": ["dns.alidns.com","doh.pub"],
         "+.ddys.pro": ["dns.alidns.com","doh.pub"],
-        "+.ofcofjun2x.shop": ["dns.alidns.com","doh.pub"],
         "+.m.mubai.link": ["dns.alidns.com","doh.pub"],
         "+.meta.appinn.net": ["dns.alidns.com","doh.pub"],
-        "+.hifini.com": ["dns.alidns.com","doh.pub"],
+        "+.hifiti.com/": ["dns.alidns.com","doh.pub"],
         "+.v.ikanbot.com": ["dns.alidns.com","doh.pub"],
         "+.agedm.org": ["dns.alidns.com","doh.pub"],
-        "+.zrys.pw": ["dns.alidns.com","doh.pub"],
-        "+.my0713.com": ["dns.alidns.com","doh.pub"],
         "+.82mao.com": ["dns.alidns.com","doh.pub"],
+        "+.3jihome.com": ["dns.alidns.com","doh.pub"],
+        "+.svip.ffzyplay.com": ["dns.alidns.com","doh.pub"],
         
         //下面用阿里DNS解析:
         "+.uc.cn": "dns.alidns.com",
@@ -793,44 +784,44 @@ function overwriteRules(params) {
         // 在此添加自定义规则，优先级次于ad。例子：
         // "DOMAIN,baidu.com,DIRECT",
         
-        "PROCESS-NAME,PixPin.exe,REJECT",
-        "PROCESS-NAME,crashpad_handler.exe,REJECT",
+        "PROCESS-NAME,PixPin.exe,DIRECT",
+        "PROCESS-NAME,crashpad_handler.exe,DIRECT",
         
-        "PROCESS-NAME,ProcessLasso.exe,REJECT",
-        "PROCESS-NAME,ProcessGovernor.exe,REJECT",
-        "PROCESS-NAME,bitsumsessionagent.exe,REJECT",
-        "PROCESS-NAME,srvstub.exe,REJECT",
+        "PROCESS-NAME,ProcessLasso.exe,DIRECT",
+        "PROCESS-NAME,ProcessGovernor.exe,DIRECT",
+        "PROCESS-NAME,bitsumsessionagent.exe,DIRECT",
+        "PROCESS-NAME,srvstub.exe,DIRECT",
         
-        "PROCESS-NAME,MacTray.exe,REJECT",
-        "PROCESS-NAME,mt64agnt.exe,REJECT",
+        "PROCESS-NAME,MacTray.exe,DIRECT",
+        "PROCESS-NAME,mt64agnt.exe,DIRECT",
         
-        "PROCESS-NAME,TranslucentTB.exe,REJECT",
+        "PROCESS-NAME,TranslucentTB.exe,DIRECT",
         
         "PROCESS-NAME,eCloud.exe,DIRECT",
         
-        "PROCESS-NAME,DiskInfo64.exe,REJECT",
+        "PROCESS-NAME,DiskInfo64.exe,DIRECT",
         
-        "PROCESS-NAME,SSDFresh.exe,REJECT",
+        "PROCESS-NAME,SSDFresh.exe,DIRECT",
         
-        "PROCESS-NAME,careueyes.exe,REJECT",
+        "PROCESS-NAME,careueyes.exe,DIRECT",
         
-        "PROCESS-NAME,FxSound.exe,REJECT",
+        "PROCESS-NAME,FxSound.exe,DIRECT",
         
-        "PROCESS-NAME,FanControl.exe,REJECT",
+        "PROCESS-NAME,FanControl.exe,DIRECT",
         
-        "PROCESS-NAME,FlashPad.exe,REJECT",
+        "PROCESS-NAME,FlashPad.exe,DIRECT",
         
-        "PROCESS-NAME,Notepad3.exe,REJECT",
+        "PROCESS-NAME,Notepad3.exe,DIRECT",
         
-        "PROCESS-NAME,LosslessCut.exe,REJECT",
+        "PROCESS-NAME,LosslessCut.exe,DIRECT",
         
-        "PROCESS-NAME,Video.UI.exe,REJECT",
+        "PROCESS-NAME,Video.UI.exe,DIRECT",
         
-        "PROCESS-NAME,RtkAudUService64.exe,REJECT",
+        "PROCESS-NAME,RtkAudUService64.exe,DIRECT",
         
-        "PROCESS-NAME,StartMenuExperienceHost.exe,REJECT",
+        "PROCESS-NAME,StartMenuExperienceHost.exe,DIRECT",
         
-        "PROCESS-NAME,进程管理工具(支持PE)V3.0.exe,REJECT",
+        "PROCESS-NAME,进程管理工具(支持PE)V3.0.exe,DIRECT",
         
         "PROCESS-NAME,clash,DIRECT",
         
@@ -888,13 +879,13 @@ function overwriteRules(params) {
         "PROCESS-NAME,TXPlatform.exe,DIRECT",
         "PROCESS-NAME,QQExternal.exe,DIRECT",
         
-        "PROCESS-NAME,wpscloudsvr.exe,REJECT",
-        "PROCESS-NAME,et.exe,REJECT",
-        "PROCESS-NAME,wps.exe,REJECT",
-        "PROCESS-NAME,wpp.exe,REJECT",
+        "PROCESS-NAME,wpscloudsvr.exe,DIRECT",
+        "PROCESS-NAME,et.exe,DIRECT",
+        "PROCESS-NAME,wps.exe,DIRECT",
+        "PROCESS-NAME,wpp.exe,DIRECT",
         
-        "PROCESS-NAME,IObitUnlocker.exe,REJECT",
-        "PROCESS-NAME,IObitUnlocker辅助器.exe,REJECT",
+        "PROCESS-NAME,IObitUnlocker.exe,DIRECT",
+        "PROCESS-NAME,IObitUnlocker辅助器.exe,DIRECT",
           
     ];
     
