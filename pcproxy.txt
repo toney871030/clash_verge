@@ -22,14 +22,8 @@ IP-CIDR,208.67.220.220/32,no-resolve
 # IP DNS监测
 DOMAIN-SUFFIX,ping.pe
 DOMAIN-SUFFIX,toolbox.googleapps.com
-DOMAIN-SUFFIX,dnschecker.org
-DOMAIN-SUFFIX,whoer.net
-DOMAIN-SUFFIX,ipleak.net
-DOMAIN-SUFFIX,whatsmydns.net
-DOMAIN-SUFFIX,check-host.net
-DOMAIN-SUFFIX,ipip.net
-DOMAIN-SUFFIX,nslookup.io
 DOMAIN-SUFFIX,ping0.cc
+DOMAIN-SUFFIX,v2rayse.com
 
 # AI图像生成
 DOMAIN-SUFFIX,styleai.art
@@ -46,8 +40,6 @@ DOMAIN-SUFFIX,nic.eu.org
 
 # 电影音乐
 DOMAIN-SUFFIX,music.ydev.tech
-DOMAIN-SUFFIX,bttwo.me
-DOMAIN-SUFFIX,tv.garden
 DOMAIN-SUFFIX,m.mubai.link
 DOMAIN-SUFFIX,hifini.com
 DOMAIN-SUFFIX,ysxq.cc
@@ -60,7 +52,7 @@ DOMAIN-SUFFIX,sleazyfork.org
 
 # Ribi论坛
 DOMAIN-SUFFIX,oursogo.com
-DOMAIN-SUFFIX,www02.eyny.com
+DOMAIN-SUFFIX,eyny.com
 DOMAIN-SUFFIX,18comic.vip
 DOMAIN-SUFFIX,sehuatang.net
 
