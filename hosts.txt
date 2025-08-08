@@ -17,8 +17,8 @@
 
 
 # 软件、论坛、博客站点 #
-104.19.189.241  linux.do
-104.19.189.241  connect.linux.do
+104.20.16.234  linux.do
+104.20.16.234  connect.linux.do
 124.232.185.97  52pojie.cn
 124.156.141.225  winos.me
 127.0.0.1  pc528.net 
