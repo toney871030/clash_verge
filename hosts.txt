@@ -44,7 +44,7 @@
 104.21.93.9  v.ikanbot.com
 172.67.156.89  music.ydev.tech
 23.225.30.102  agedm.org
-104.26.11.121  ddys.pro
+104.26.11.121  ddys.mov
 104.21.4.135  m.mubai.link
 103.231.14.222  boju.cc
 103.231.14.222  ysxq.cc
