@@ -51,7 +51,7 @@ DOMAIN-SUFFIX,pan.xunlei.com
 
 # 在线影音
 DOMAIN-SUFFIX,ysxq.cc
-DOMAIN-SUFFIX,ddys.pro
+DOMAIN-SUFFIX,ddys.mov
 DOMAIN-SUFFIX,v.ikanbot.com
 DOMAIN-SUFFIX,agedm.org
 DOMAIN-SUFFIX,82mao.com
