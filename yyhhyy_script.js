@@ -26,21 +26,21 @@ function main(params) {
     return params;
 }
 
-// 覆写Basic Options
+// ======================= Basic Options =======================
 function overwriteBasicOptions(params) {
     const otherOptions = {
         "mixed-port": 7890,
         "allow-lan": true,
-         mode: "rule",
+        mode: "rule",
         "log-level": "info",
-         ipv6: true,
-        "interface-name": "以太网",
+        ipv6: true,
+        "interface-name": "以太网",     // 注意：Windows环境专用，macOS/Linux请自行调整
         "tcp-concurrent-users": 128,
         "keep-alive-interval": 30,
         "inbound-tfo": true,
         "outbound-tfo": true,
         "connection-pool-size": 256,
-        "idle-timeout": 60,   
+        "idle-timeout": 60,
         "find-process-mode": "strict",
         profile: {
             "store-selected": true,
@@ -49,12 +49,12 @@ function overwriteBasicOptions(params) {
         "unified-delay": true,
         "tcp-concurrent": true,
         "global-client-fingerprint": "chrome",
-        "cipher-suites": [                
-        "TLS_AES_128_GCM_SHA256",  
-        "TLS_AES_256_GCM_SHA384",
-        "TLS_CHACHA20_POLY1305_SHA256",
-        "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
-        "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"
+        "cipher-suites": [
+            "TLS_AES_128_GCM_SHA256",
+            "TLS_AES_256_GCM_SHA384",
+            "TLS_CHACHA20_POLY1305_SHA256",
+            "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+            "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"
         ],
         sniffer: {
             enable: true,
@@ -66,9 +66,9 @@ function overwriteBasicOptions(params) {
                 TLS: {
                     ports: [443, 8443],
                     "skip-cert-verify": false,
-                    "alpn": ["h2", "http/1.1"],
+                    alpn: ["h2", "http/1.1"],
                     "min-version": "1.2",
-                    "max-version": "1.3",     
+                    "max-version": "1.3",
                 },
                 QUIC: {
                     ports: [443, 8443],
@@ -77,22 +77,23 @@ function overwriteBasicOptions(params) {
             "skip-domain": ["Mijia Cloud", "+.push.apple.com"]
         },
     };
-    Object.keys(otherOptions).forEach((key) => {
+    Object.keys(otherOptions).forEach(key => {
         params[key] = otherOptions[key];
     });
 }
 
-// 覆写DNS
+// ======================= DNS 配置 =======================
 function overwriteDns(params) {
+    // 公开安全的DNS服务器
     const dnsList = [
-        "tls://223.5.5.5",
-        "tls://119.29.29.29",
-        "system",
+        "https://223.5.5.5/dns-query",
+        "https://doh.pub/dns-query",
     ];
 
+    // 代理服务器专用的DNS服务器
     const proxyDnsList = [
-        "tls://1.1.1.1",
-        "tls://8.8.8.8",
+        "https://dns.google/dns-query",
+        "https://223.5.5.5/dns-query",
     ];
 
     const dnsOptions = {
@@ -109,8 +110,8 @@ function overwriteDns(params) {
     params.dns = { ...dnsOptions };
 }
 
-// 覆写DNS.Fake IP Filter
-function overwriteFakeIpFilter (params) {
+// ======================= DNS Fake IP Filter =======================
+function overwriteFakeIpFilter(params) {
     const fakeIpFilter = [
         "+.+m2m",
         "+.$injections.adguard.org",
@@ -151,80 +152,81 @@ function overwriteFakeIpFilter (params) {
     params.dns["fake-ip-filter"] = fakeIpFilter;
 }
 
-// 覆写DNS.Nameserver Policy
-function overwriteNameserverPolicy (params) {
+// ======================= DNS Nameserver Policy =======================
+function overwriteNameserverPolicy(params) {
+    // DNS 服务器名称对应具体解析地址
     const nameserverPolicy = {
-        //DNS设置:
-        "dns.google": "tls://8.8.8.8",
-        "dns.Cloudflare": "tls://1.1.1.1",
-        "dns.alidns.com": "tls://223.5.5.5",
-        "doh.pub": "tls://119.29.29.29",
-        
-        //rules更新:
-        "+.ruleset.skk.moe":"dns.alidns.com",
-        "+.github.com":"dns.alidns.com",
-        "+.github.io":"dns.alidns.com",
-        "+.githubusercontent.com":"dns.alidns.com",
-       
-       //IP DNS监测:
-        "+.itdog.cn":"dns.alidns.com",
-        "+.ping.pe":"dns.alidns.com",
-        "+.toolbox.googleapps.com":"dns.alidns.com",
-        "+.ping0.cc":"dns.alidns.com",
-        "+.v2rayse.com":"dns.alidns.com",
-        
-        //代理
-        "+.google.com":"dns.alidns.com",
-        "+.bing.com":"dns.alidns.com",
-        "+.chatgpt.com":"dns.alidns.com",
-        "+.youtube.com":"dns.alidns.com",
-        "+.xvideos.com":"dns.alidns.com",
-        "+.pornhub.com":"dns.alidns.com",
-        "+.spankbang.com":"dns.alidns.com",
-        "+.netflix.com":"dns.alidns.com",
-        "+.wallpaperswide.com":"dns.alidns.com",
-        "+.wallhaven.cc":"dns.alidns.com",
-        "+.music.ydev.tech":"dns.alidns.com",
-        "+.greasyfork.org":"dns.alidns.com",
-        "+.sleazyfork.org":"dns.alidns.com",
-        "+.oursogo.com":"dns.alidns.com",
-        "+.eyny.com":"dns.alidns.com",
-        "+.18comic.vip":"dns.alidns.com",
-        "+.filen.io":"dns.alidns.com",
-        "+.yfsp.tv":"dns.alidns.com",
-        
-        //直连
-        "+.linux.do": ["dns.alidns.com","doh.pub"],
-        "+.winos.me": ["dns.alidns.com","doh.pub"],
-        "+.cmdpe.com": ["dns.alidns.com","doh.pub"],
-        "+.52pojie.cn": ["dns.alidns.com","doh.pub"],
-        "+.pc528.net": ["dns.alidns.com","doh.pub"],
-        "+.bbs.3dmgame.com": ["dns.alidns.com","doh.pub"],
-        "+.bbs.rainmeter.cn": ["dns.alidns.com","doh.pub"],
-        "+.masuit.net": ["dns.alidns.com","doh.pub"],
-        "+.hybase.com": ["dns.alidns.com","doh.pub"],
-        "+.applnn.com": ["dns.alidns.com","doh.pub"],
-        "+.panwiki.com": ["dns.alidns.com","doh.pub"],
-        "+.youxiaohou.com": ["dns.alidns.com","doh.pub"],
-        "+.haowallpaper.com": ["dns.alidns.com","doh.pub"],
-        "+.cloud.189.cn": ["dns.alidns.com","doh.pub"],
-        "+.alipan.com": ["dns.alidns.com","doh.pub"],
-        "+.123pan.com": ["dns.alidns.com","doh.pub"],
-        "+.lanzou.com": ["dns.alidns.com","doh.pub"],
-        "+.pan.huang1111.cn": ["dns.alidns.com","doh.pub"],
-        "+.ysxq.cc": ["dns.alidns.com","doh.pub"],
-        "+.boju.cc": ["dns.alidns.com","doh.pub"],
-        "+.ddys.pro": ["dns.alidns.com","doh.pub"],
-        "+.m.mubai.link": ["dns.alidns.com","doh.pub"],
-        "+.meta.appinn.net": ["dns.alidns.com","doh.pub"],
-        "+.hifiti.com/": ["dns.alidns.com","doh.pub"],
-        "+.v.ikanbot.com": ["dns.alidns.com","doh.pub"],
-        "+.agedm.org": ["dns.alidns.com","doh.pub"],
-        "+.82mao.com": ["dns.alidns.com","doh.pub"],
-        "+.3jihome.com": ["dns.alidns.com","doh.pub"],
-        "+.svip.ffzyplay.com": ["dns.alidns.com","doh.pub"],
-        
-        //下面用阿里DNS解析:
+        // DNS 服务器配置
+        "dns.google": "https://dns.google/dns-query",
+        "dns.alidns.com": "quic://223.5.5.5:853",
+        "doh.pub": "https://1.12.12.12/dns-query",
+
+        // DNS rules 针对特定域解析走指定 DNS
+        "+.ruleset.skk.moe": "dns.google",
+        "+.github.com": "dns.google",
+        "+.github.io": "dns.google",
+        "+.githubusercontent.com": "dns.google",
+
+        // IP DNS 监测走 Google DNS
+        "+.itdog.cn": "dns.google",
+        "+.ping.pe": "dns.google",
+        "+.toolbox.googleapps.com": "dns.google",
+        "+.ping0.cc": "dns.google",
+        "+.v2rayse.com": "dns.google",
+
+        // 代理相关域名走 Google DNS
+        "+.google.com": "dns.google",
+        "+.bing.com": "dns.google",
+        "+.chatgpt.com": "dns.google",
+        "+.youtube.com": "dns.google",
+        "+.xvideos.com": "dns.google",
+        "+.pornhub.com": "dns.google",
+        "+.spankbang.com": "dns.google",
+        "+.netflix.com": "dns.google",
+        "+.wallpaperswide.com": "dns.google",
+        "+.wallhaven.cc": "dns.google",
+        "+.music.ydev.tech": "dns.google",
+        "+.greasyfork.org": "dns.google",
+        "+.sleazyfork.org": "dns.google",
+        "+.oursogo.com": "dns.google",
+        "+.eyny.com": "dns.google",
+        "+.18comic.vip": "dns.google",
+        "+.filen.io": "dns.google",
+        "+.yfsp.tv": "dns.google",
+        "+.sehuatang.net": "dns.google",
+
+        // 直连域使用阿里DNS和 DoH 公共服务器
+        "+.linux.do": ["dns.alidns.com", "doh.pub"],
+        "+.winos.me": ["dns.alidns.com", "doh.pub"],
+        "+.cmdpe.com": ["dns.alidns.com", "doh.pub"],
+        "+.52pojie.cn": ["dns.alidns.com", "doh.pub"],
+        "+.pc528.net": ["dns.alidns.com", "doh.pub"],
+        "+.bbs.3dmgame.com": ["dns.alidns.com", "doh.pub"],
+        "+.bbs.rainmeter.cn": ["dns.alidns.com", "doh.pub"],
+        "+.masuit.net": ["dns.alidns.com", "doh.pub"],
+        "+.hybase.com": ["dns.alidns.com", "doh.pub"],
+        "+.applnn.com": ["dns.alidns.com", "doh.pub"],
+        "+.panwiki.com": ["dns.alidns.com", "doh.pub"],
+        "+.youxiaohou.com": ["dns.alidns.com", "doh.pub"],
+        "+.haowallpaper.com": ["dns.alidns.com", "doh.pub"],
+        "+.cloud.189.cn": ["dns.alidns.com", "doh.pub"],
+        "+.alipan.com": ["dns.alidns.com", "doh.pub"],
+        "+.123pan.com": ["dns.alidns.com", "doh.pub"],
+        "+.lanzou.com": ["dns.alidns.com", "doh.pub"],
+        "+.pan.huang1111.cn": ["dns.alidns.com", "doh.pub"],
+        "+.ysxq.cc": ["dns.alidns.com", "doh.pub"],
+        "+.boju.cc": ["dns.alidns.com", "doh.pub"],
+        "+.ddys.pro": ["dns.alidns.com", "doh.pub"],
+        "+.m.mubai.link": ["dns.alidns.com", "doh.pub"],
+        "+.meta.appinn.net": ["dns.alidns.com", "doh.pub"],
+        "+.hifiti.com/": ["dns.alidns.com", "doh.pub"],
+        "+.v.ikanbot.com": ["dns.alidns.com", "doh.pub"],
+        "+.agedm.org": ["dns.alidns.com", "doh.pub"],
+        "+.82mao.com": ["dns.alidns.com", "doh.pub"],
+        "+.3jihome.com": ["dns.alidns.com", "doh.pub"],
+        "+.svip.ffzyplay.com": ["dns.alidns.com", "doh.pub"],
+
+        // 阿里DNS解析范围
         "+.uc.cn": "dns.alidns.com",
         "+.alibaba.com": "dns.alidns.com",
         "*.alicdn.com": "dns.alidns.com",
@@ -480,8 +482,8 @@ function overwriteNameserverPolicy (params) {
         "*.qh-cdn.com": "dns.alidns.com",
         "+.baomitu.com": "dns.alidns.com",
         "+.qiku.com": "dns.alidns.com",
-        
-        //下面用系统DNS解析
+
+        // 系统内网DNS解析
         "+.securelogin.com.cn": ['system://', 'system', 'dhcp://system'],
         "captive.apple.com": ['system://', 'system', 'dhcp://system'],
         "hotspot.cslwifi.com": ['system://', 'system', 'dhcp://system'],
@@ -540,11 +542,10 @@ function overwriteNameserverPolicy (params) {
     params.dns["nameserver-policy"] = nameserverPolicy;
 }
 
-// 覆写hosts
-function overwriteHosts (params) {
+// ======================= Hosts =======================
+function overwriteHosts(params) {
     const hosts = {
         "dns.google": ["8.8.8.8", "8.8.4.4", "2001:4860:4860::8888", "2001:4860:4860::8844"],
-        "dns.Cloudflare": ["1.1.1.1", "1.0.0.1", "2606:4700:4700::1111", "2606:4700:4700::1001"],
         "dns.alidns.com": ['223.5.5.5', '223.6.6.6', '2400:3200:baba::1', '2400:3200::1'],
         "doh.pub": ['119.29.29.29', '1.12.12.12'],
         "cdn.jsdelivr.net": ['cdn.jsdelivr.net.cdn.cloudflare.net']
@@ -552,61 +553,61 @@ function overwriteHosts (params) {
     params.hosts = hosts;
 }
 
-// 覆写Tunnel
+// ======================= Tunnel =======================
 function overwriteTunnel(params) {
     const tunnelOptions = {
         enable: true,
         stack: "system",
-        device: "tun0",
+        device: "tun0",                  // Linux/macOS 专用设备名，Windows请根据需要修改
         "dns-hijack": ["any:53", "tcp://any:53"],
         "auto-route": true,
         "auto-detect-interface": true,
         "strict-route": false,
-        // 根据自己环境来看要排除哪些网段
-        "route-exclude-address": [],
+        "route-exclude-address": [],    // 如需排除部分网段请填写
     };
     params.tun = { ...tunnelOptions };
 }
 
-// 覆写代理组
+// ======================= 代理组配置 =======================
 function overwriteProxyGroups(params) {
-    // 所有代理
-    const allProxies = params["proxies"].map((e) => e.name);
-    // 公共的正则片段
+    // 全部代理节点名称
+    const allProxies = params.proxies.map(e => e.name);
+
+    // 排除关键词正则片段
     const excludeTerms = "剩余|到期|主页|官网|游戏|关注|网站|地址|有效|网址|禁止|邮箱|发布|客服|订阅|节点|问题|联系";
-    // 包含条件：各个国家或地区的关键词
+
+    // 各国家/地区关键词
     const includeTerms = {
-        HK: "(香港|HK|Hong|🇭🇰)",
-        TW: "(台湾|TW|Taiwan|Wan|🇹🇼|🇨🇳)",
-        SG: "(新加坡|狮城|SG|Singapore|🇸🇬)",
-        JP: "(日本|JP|Japan|🇯🇵)",
-        KR: "(韩国|韓|KR|Korea|🇰🇷)",
-        US: "(美国|US|United States|America|🇺🇸)",
-        UK: "(英国|UK|United Kingdom|🇬🇧)",
-        FR: "(法国|FR|France|🇫🇷)",
-        DE: "(德国|DE|Germany|🇩🇪)"
+        hk: "(香港|HK|Hong|🇭🇰)",
+        tw: "(台湾|TW|Taiwan|Wan|🇹🇼|🇨🇳)",  
+        sg: "(新加坡|狮城|SG|Singapore|🇸🇬)",
+        jp: "(日本|JP|Japan|🇯🇵)",
+        kr: "(韩国|韓|KR|Korea|🇰🇷)",
+        us: "(美国|US|United States|America|🇺🇸)",
+        uk: "(英国|UK|United Kingdom|🇬🇧)",
+        fr: "(法国|FR|France|🇫🇷)",
+        de: "(德国|DE|Germany|🇩🇪)"
     };
-    // 合并所有国家关键词，供"其它"条件使用
+
+    // 合并国家关键词 — 供其它组使用
     const allCountryTerms = Object.values(includeTerms).join("|");
-    // 自动代理组正则表达式配置
+
+    // 自动选择代理组正则配置
     const autoProxyGroupRegexs = [
-        { name: "HK - 自动选择", regex: new RegExp(`^(?=.*${includeTerms.HK})(?!.*${excludeTerms}).*$`, "i") },
-        { name: "TW - 自动选择", regex: new RegExp(`^(?=.*${includeTerms.TW})(?!.*${excludeTerms}).*$`, "i") },
-        { name: "SG - 自动选择", regex: new RegExp(`^(?=.*${includeTerms.SG})(?!.*${excludeTerms}).*$`, "i") },
-        { name: "JP - 自动选择", regex: new RegExp(`^(?=.*${includeTerms.JP})(?!.*${excludeTerms}).*$`, "i") },
-        { name: "KR - 自动选择", regex: new RegExp(`^(?=.*${includeTerms.KR})(?!.*${excludeTerms}).*$`, "i") },
-        { name: "US - 自动选择", regex: new RegExp(`^(?=.*${includeTerms.US})(?!.*${excludeTerms}).*$`, "i") },
-        { name: "UK - 自动选择", regex: new RegExp(`^(?=.*${includeTerms.UK})(?!.*${excludeTerms}).*$`, "i") },
-        { name: "FR - 自动选择", regex: new RegExp(`^(?=.*${includeTerms.FR})(?!.*${excludeTerms}).*$`, "i") },
-        { name: "DE - 自动选择", regex: new RegExp(`^(?=.*${includeTerms.DE})(?!.*${excludeTerms}).*$`, "i") },
-        {
-            name: "其它 - 自动选择",
-            regex: new RegExp(`^(?!.*(?:${allCountryTerms}|${excludeTerms})).*$`, "i")
-        }
+        { name: "HK - 自动选择", regex: new RegExp(`^(?=.*${includeTerms.hk})(?!.*${excludeTerms}).*$`, "i") },
+        { name: "TW - 自动选择", regex: new RegExp(`^(?=.*${includeTerms.tw})(?!.*${excludeTerms}).*$`, "i") },
+        { name: "SG - 自动选择", regex: new RegExp(`^(?=.*${includeTerms.sg})(?!.*${excludeTerms}).*$`, "i") },
+        { name: "JP - 自动选择", regex: new RegExp(`^(?=.*${includeTerms.jp})(?!.*${excludeTerms}).*$`, "i") },
+        { name: "KR - 自动选择", regex: new RegExp(`^(?=.*${includeTerms.kr})(?!.*${excludeTerms}).*$`, "i") },
+        { name: "US - 自动选择", regex: new RegExp(`^(?=.*${includeTerms.us})(?!.*${excludeTerms}).*$`, "i") },
+        { name: "UK - 自动选择", regex: new RegExp(`^(?=.*${includeTerms.uk})(?!.*${excludeTerms}).*$`, "i") },
+        { name: "FR - 自动选择", regex: new RegExp(`^(?=.*${includeTerms.fr})(?!.*${excludeTerms}).*$`, "i") },
+        { name: "DE - 自动选择", regex: new RegExp(`^(?=.*${includeTerms.de})(?!.*${excludeTerms}).*$`, "i") },
+        { name: "其它 - 自动选择", regex: new RegExp(`^(?!.*(?:${allCountryTerms}|${excludeTerms})).*$`, "i") }
     ];
 
     const autoProxyGroups = autoProxyGroupRegexs
-        .map((item) => ({
+        .map(item => ({
             name: item.name,
             type: "url-test",
             url: "https://cp.cloudflare.com",
@@ -615,73 +616,32 @@ function overwriteProxyGroups(params) {
             proxies: getProxiesByRegex(params, item.regex),
             hidden: true,
         }))
-        .filter((item) => item.proxies.length > 0);
+        .filter(item => item.proxies.length > 0);
 
-    // 手动选择代理组
+    // 手动选择代理组配置
     const manualProxyGroups = [
-        {
-            name: "HK - 手动选择",
-            regex: new RegExp(`^(?=.*${includeTerms.HK})(?!.*${excludeTerms}).*$`, "i"),
-            icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png"
-        },
-        {
-            name: "JP - 手动选择",
-            regex: new RegExp(`^(?=.*${includeTerms.JP})(?!.*${excludeTerms}).*$`, "i"),
-            icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png"
-        },
-        {
-            name: "KR - 手动选择",
-            regex: new RegExp(`^(?=.*${includeTerms.KR})(?!.*${excludeTerms}).*$`, "i"),
-            icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png"
-        },
-        {
-            name: "SG - 手动选择",
-            regex: new RegExp(`^(?=.*${includeTerms.SG})(?!.*${excludeTerms}).*$`, "i"),
-            icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png"
-        },
-        {
-            name: "US - 手动选择",
-            regex: new RegExp(`^(?=.*${includeTerms.US})(?!.*${excludeTerms}).*$`, "i"),
-            icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png"
-        },
-        {
-            name: "UK - 手动选择",
-            regex: new RegExp(`^(?=.*${includeTerms.UK})(?!.*${excludeTerms}).*$`, "i"),
-            icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/UK.png"
-        },
-        {
-            name: "FR - 手动选择",
-            regex: new RegExp(`^(?=.*${includeTerms.FR})(?!.*${excludeTerms}).*$`, "i"),
-            icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/FR.png"
-        },
-        {
-            name: "DE - 手动选择",
-            regex: new RegExp(`^(?=.*${includeTerms.DE})(?!.*${excludeTerms}).*$`, "i"),
-            icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/DE.png"
-        },
-        {
-            name: "TW - 手动选择",
-            regex: new RegExp(`^(?=.*${includeTerms.TW})(?!.*${excludeTerms}).*$`, "i"),
-            icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png"
-        }
+        { name: "HK - 手动选择", regex: new RegExp(`^(?=.*${includeTerms.hk})(?!.*${excludeTerms}).*$`, "i"), icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png" },
+        { name: "JP - 手动选择", regex: new RegExp(`^(?=.*${includeTerms.jp})(?!.*${excludeTerms}).*$`, "i"), icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png" },
+        { name: "KR - 手动选择", regex: new RegExp(`^(?=.*${includeTerms.kr})(?!.*${excludeTerms}).*$`, "i"), icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/KR.png" },
+        { name: "SG - 手动选择", regex: new RegExp(`^(?=.*${includeTerms.sg})(?!.*${excludeTerms}).*$`, "i"), icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png" },
+        { name: "US - 手动选择", regex: new RegExp(`^(?=.*${includeTerms.us})(?!.*${excludeTerms}).*$`, "i"), icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png" },
+        { name: "UK - 手动选择", regex: new RegExp(`^(?=.*${includeTerms.uk})(?!.*${excludeTerms}).*$`, "i"), icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/UK.png" },
+        { name: "FR - 手动选择", regex: new RegExp(`^(?=.*${includeTerms.fr})(?!.*${excludeTerms}).*$`, "i"), icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/FR.png" },
+        { name: "DE - 手动选择", regex: new RegExp(`^(?=.*${includeTerms.de})(?!.*${excludeTerms}).*$`, "i"), icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/DE.png" },
+        { name: "TW - 手动选择", regex: new RegExp(`^(?=.*${includeTerms.tw})(?!.*${excludeTerms}).*$`, "i"), icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png" }
     ];
 
     const manualProxyGroupsConfig = manualProxyGroups
-        .map((item) => ({
+        .map(item => ({
             name: item.name,
             type: "select",
-            proxies: getManualProxiesByRegex(params, item.regex),
+            proxies: getProxiesByRegex(params, item.regex),
             icon: item.icon,
             hidden: false,
         }))
-        .filter((item) => item.proxies.length > 0);
+        .filter(item => item.proxies.length > 0);
 
-    // 负载均衡策略
-    // 可选值：round-robin / consistent-hashing / sticky-sessions
-    // round-robin：轮询 按顺序循环使用代理列表中的节点
-    // consistent-hashing：散列 根据请求的哈希值将请求分配到固定的节点
-    // sticky-sessions：缓存 对「你的设备IP + 目标地址」组合计算哈希值，根据哈希值将请求分配到固定的节点 缓存 10 分钟过期
-    // 默认值：consistent-hashing
+    // 负载均衡策略 (可选: round-robin / consistent-hashing / sticky-sessions)
     const loadBalanceStrategy = "sticky-sessions";
 
     const groups = [
@@ -690,18 +650,13 @@ function overwriteProxyGroups(params) {
             type: "select",
             url: "https://cp.cloudflare.com",
             icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Static.png",
-            proxies: [
-                "自动选择",
-                "手动选择",
-                "⚖️ 负载均衡",
-                "DIRECT",
-            ],
+            proxies: ["自动选择", "手动选择", "⚖️ 负载均衡", "DIRECT"],
         },
         {
             name: "手动选择",
             type: "select",
             icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Cylink.png",
-            proxies: ["HK - 手动选择", "JP - 手动选择", "KR - 手动选择", "SG - 手动选择", "US - 手动选择", "UK - 手动选择", "FR - 手动选择", "DE - 手动选择", "TW - 手动选择"],
+            proxies: manualProxyGroupsConfig.map(g => g.name),
         },
         {
             name: "自动选择",
@@ -716,7 +671,7 @@ function overwriteProxyGroups(params) {
             interval: 1800,
             strategy: loadBalanceStrategy,
             proxies: allProxies,
-            icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Available.png"
+            icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Available.png",
         },
         {
             name: "ALL - 自动选择",
@@ -730,166 +685,124 @@ function overwriteProxyGroups(params) {
         {
             name: "✈️ 电报信息",
             type: "select",
-            proxies: ["🎯 节点选择", "HK - 自动选择", "JP - 自动选择", "KR - 自动选择", "SG - 自动选择", "US - 自动选择", "UK - 自动选择", "FR - 自动选择", "DE - 自动选择", "TW - 自动选择", "其它 - 自动选择"],
-            // "include-all": true,
-            icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png"
+            proxies: ["🎯 节点选择", ...autoProxyGroups.map(g => g.name), "其它 - 自动选择"],
+            icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png",
         },
         {
             name: "🤖 AIGC",
             type: "select",
-            proxies: ["US - 自动选择", "🎯 节点选择", "HK - 自动选择", "JP - 自动选择", "KR - 自动选择", "SG - 自动选择", "UK - 自动选择", "FR - 自动选择", "DE - 自动选择", "TW - 自动选择", "其它 - 自动选择"],
-            // "include-all": true,
-            icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png"
+            proxies: ["US - 自动选择", "🎯 节点选择", ...autoProxyGroups.map(g => g.name), "其它 - 自动选择"],
+            icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png",
         },
         {
             name: "🍎 苹果服务",
             type: "select",
-            proxies: ["DIRECT", "🎯 节点选择", "HK - 自动选择", "JP - 自动选择", "KR - 自动选择", "SG - 自动选择", "US - 自动选择", "UK - 自动选择", "FR - 自动选择", "DE - 自动选择", "TW - 自动选择", "其它 - 自动选择"],
-            // "include-all": true,
-            icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Apple.png"
+            proxies: ["DIRECT", "🎯 节点选择", ...autoProxyGroups.map(g => g.name), "其它 - 自动选择"],
+            icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Apple.png",
         },
         {
             name: "Ⓜ️ 微软服务",
             type: "select",
-            proxies: ["DIRECT", "🎯 节点选择", "HK - 自动选择", "JP - 自动选择", "KR - 自动选择", "SG - 自动选择", "US - 自动选择", "UK - 自动选择", "FR - 自动选择", "DE - 自动选择", "TW - 自动选择", "其它 - 自动选择"],
-            // "include-all": true,
-            icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Microsoft.png"
+            proxies: ["DIRECT", "🎯 节点选择", ...autoProxyGroups.map(g => g.name), "其它 - 自动选择"],
+            icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Microsoft.png",
         },
     ];
 
-    autoProxyGroups.length &&
-        groups[2].proxies.unshift(...autoProxyGroups.map((item) => item.name));
+    // 把自动选择组添加到“自动选择”组列表
+    if (autoProxyGroups.length > 0) {
+        groups[2].proxies.unshift(...autoProxyGroups.map(item => item.name));
+    }
+
+    // 合并自动及手动代理组到主配置中
     groups.push(...autoProxyGroups);
     groups.push(...manualProxyGroupsConfig);
+
     params["proxy-groups"] = groups;
 }
 
-// 覆写规则
+// ======================= 规则配置 =======================
 function overwriteRules(params) {
-    
-    const mypcRules = [
-        // 在此添加自定义规则，优先级次于ad。例子：
-        // "RULE-SET,规则name,DIRECT",
+    // PC相关规则列表
+    const myPcRules = [
+        "RULE-SET,China,DIRECT",
+        "RULE-SET,Global,自动选择",
         "RULE-SET,pcdirect,DIRECT",
-        "RULE-SET,pcproxy,🎯 节点选择",
-        "RULE-SET,github,🎯 节点选择",
-        "RULE-SET,youtube,🎯 节点选择",
-        "RULE-SET,google,🎯 节点选择",
-        "RULE-SET,HP,🎯 节点选择",
-        "RULE-SET,Intel,🎯 节点选择",
-        "RULE-SET,Gigabyt,🎯 节点选择"
+        "RULE-SET,pcproxy,自动选择",
+        "RULE-SET,github,自动选择",
+        "RULE-SET,youtube,自动选择",
+        "RULE-SET,google,自动选择",
+        "RULE-SET,HP,自动选择",
+        "RULE-SET,Intel,自动选择",
+        "RULE-SET,Gigabyt,自动选择"
     ];
-    
+
+    // 自定义进程名规则
     const customRules = [
-        // 在此添加自定义规则，优先级次于ad。例子：
-        // "DOMAIN,baidu.com,DIRECT",
-        
         "PROCESS-NAME,PixPin.exe,DIRECT",
         "PROCESS-NAME,crashpad_handler.exe,DIRECT",
-        
         "PROCESS-NAME,ProcessLasso.exe,DIRECT",
         "PROCESS-NAME,ProcessGovernor.exe,DIRECT",
         "PROCESS-NAME,bitsumsessionagent.exe,DIRECT",
         "PROCESS-NAME,srvstub.exe,DIRECT",
-        
         "PROCESS-NAME,MacTray.exe,DIRECT",
         "PROCESS-NAME,mt64agnt.exe,DIRECT",
-        
         "PROCESS-NAME,TranslucentTB.exe,DIRECT",
-        
         "PROCESS-NAME,eCloud.exe,DIRECT",
-        
         "PROCESS-NAME,DiskInfo64.exe,DIRECT",
-        
         "PROCESS-NAME,SSDFresh.exe,DIRECT",
-        
         "PROCESS-NAME,careueyes.exe,DIRECT",
-        
         "PROCESS-NAME,FxSound.exe,DIRECT",
-        
         "PROCESS-NAME,FanControl.exe,DIRECT",
-        
         "PROCESS-NAME,FlashPad.exe,DIRECT",
-        
         "PROCESS-NAME,Notepad3.exe,DIRECT",
-        
         "PROCESS-NAME,LosslessCut.exe,DIRECT",
-        
         "PROCESS-NAME,Video.UI.exe,DIRECT",
-        
         "PROCESS-NAME,RtkAudUService64.exe,DIRECT",
-        
         "PROCESS-NAME,StartMenuExperienceHost.exe,DIRECT",
-        
         "PROCESS-NAME,进程管理工具(支持PE)V3.0.exe,DIRECT",
-        
         "PROCESS-NAME,clash,DIRECT",
-        
         "PROCESS-NAME,v2ray,DIRECT",
-  
         "PROCESS-NAME,xray,DIRECT",
-  
         "PROCESS-NAME,naive,DIRECT",
-  
         "PROCESS-NAME,trojan,DIRECT",
-  
         "PROCESS-NAME,trojan-go,DIRECT",
-  
         "PROCESS-NAME,ss-local,DIRECT",
- 
         "PROCESS-NAME,privoxy,DIRECT",
-  
         "PROCESS-NAME,leaf,DIRECT",
-  
         "PROCESS-NAME,Thunder,DIRECT",
-  
         "PROCESS-NAME,DownloadService,DIRECT",
-  
         "PROCESS-NAME,qBittorrent,DIRECT",
-  
         "PROCESS-NAME,Transmission,DIRECT",
-  
         "PROCESS-NAME,fdm,DIRECT",
-  
         "PROCESS-NAME,aria2c,DIRECT",
-  
         "PROCESS-NAME,Folx,DIRECT",
- 
         "PROCESS-NAME,NetTransport,DIRECT",
-  
         "PROCESS-NAME,uTorrent,DIRECT",
-  
         "PROCESS-NAME,WebTorrent,DIRECT",
-        
         "PROCESS-NAME,YY.exe,DIRECT",
         "PROCESS-NAME,yyexternal.exe,DIRECT",
         "PROCESS-NAME,gslbexternal.exe,DIRECT",
         "PROCESS-NAME,yyldrsvr.exe,DIRECT",
-        
         "PROCESS-NAME,AliIM.exe,DIRECT",
         "PROCESS-NAME,AliRender.exe,DIRECT",
-        
         "PROCESS-NAME,WeChat.exe,DIRECT",
         "PROCESS-NAME,WeChatAppEx.exe,DIRECT",
         "PROCESS-NAME,WeChatPlayer.exe,DIRECT",
         "PROCESS-NAME,WeChatUtility.exe,DIRECT",
         "PROCESS-NAME,mmcrashpad_handler64.exe,DIRECT",
-        
         "PROCESS-NAME,TIM.exe,DIRECT",
         "PROCESS-NAME,TXPlatform.exe,DIRECT",
         "PROCESS-NAME,QQExternal.exe,DIRECT",
-        
         "PROCESS-NAME,wpscloudsvr.exe,DIRECT",
         "PROCESS-NAME,et.exe,DIRECT",
         "PROCESS-NAME,wps.exe,DIRECT",
         "PROCESS-NAME,wpp.exe,DIRECT",
-        
         "PROCESS-NAME,IObitUnlocker.exe,DIRECT",
         "PROCESS-NAME,IObitUnlocker辅助器.exe,DIRECT",
-          
     ];
-    
-    const adNonipRules = [
+
+    // 去广告相关规则
+    const adNonIpRules = [
         "RULE-SET,reject_non_ip,REJECT",
         "RULE-SET,reject_domainset,REJECT",
         "RULE-SET,reject_non_ip_drop,REJECT-DROP",
@@ -899,8 +812,8 @@ function overwriteRules(params) {
         "RULE-SET,Privacy,DIRECT"
     ];
 
-
-    const nonipRules = [
+    // 非IP相关规则
+    const nonIpRules = [
         "RULE-SET,cdn_domainset,🎯 节点选择",
         "RULE-SET,cdn_non_ip,🎯 节点选择",
         "RULE-SET,NeteaseMusic_non_ip,DIRECT",
@@ -921,13 +834,9 @@ function overwriteRules(params) {
         "RULE-SET,lan_non_ip,DIRECT"
     ];
 
-    const allNonipRules = [
-         ...mypcRules,
-         ...customRules,
-         ...adNonipRules,
-         ...nonipRules
-    ];
+    const allNonIpRules = [...myPcRules, ...customRules, ...adNonIpRules, ...nonIpRules];
 
+    // IP相关规则
     const ipRules = [
         "RULE-SET,reject_ip,REJECT",
         "RULE-SET,telegram_ip,✈️ 电报信息",
@@ -940,93 +849,103 @@ function overwriteRules(params) {
         "MATCH,🎯 节点选择"
     ];
 
-    const rules = [
-        // 非ip类规则
-        ...allNonipRules,
-        // ip类规则
-        ...ipRules
-    ];
+    // 合成全部规则
+    const rules = [...allNonIpRules, ...ipRules];
 
+    // =================== 规则提供者配置 ===================
     const ruleProviders = {
-       //mypcRules:
-         pcdirect: {
+        // PC相关规则 sets
+        China: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/China/China.list",
+            path: "./rule_set/my_ruleset/China.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "DIRECT"
+        },
+        Global: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/China/China.list",
+            path: "./rule_set/my_ruleset/Global.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "自动选择"
+        },
+        pcdirect: {
             type: "http",
             behavior: "classical",
             url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/pcdirect.txt",
             path: "./rule_set/my_ruleset/pcdirect.txt",
             interval: 43200,
             format: "text",
-            proxy: "🎯 节点选择"
-
-         },
-         pcproxy: {
+            proxy: "DIRECT"
+        },
+        pcproxy: {
             type: "http",
             behavior: "classical",
             url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/pcproxy.txt",
             path: "./rule_set/my_ruleset/pcproxy.txt",
             interval: 43200,
             format: "text",
-            proxy: "🎯 节点选择"
-
-         },
-         github: {
+            proxy: "自动选择"
+        },
+        github: {
             type: "http",
             behavior: "classical",
             url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GitHub/GitHub.list",
             path: "./rule_set/my_ruleset/github.txt",
             interval: 43200,
             format: "text",
-            proxy: "🎯 节点选择"
-
-         },
-         youtube: {
+            proxy: "自动选择"
+        },
+        youtube: {
             type: "http",
             behavior: "classical",
             url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/YouTube/YouTube.list",
             path: "./rule_set/my_ruleset/youtube.txt",
             interval: 43200,
             format: "text",
-            proxy: "🎯 节点选择"
-            
-         },
-         google: {
+            proxy: "自动选择"
+        },
+        google: {
             type: "http",
             behavior: "classical",
             url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Google/Google.list",
             path: "./rule_set/my_ruleset/google.txt",
             interval: 43200,
             format: "text",
-            proxy: "🎯 节点选择"
-          },
-          HP: {
+            proxy: "自动选择"
+        },
+        HP: {
             type: "http",
             behavior: "classical",
             url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/HP/HP.list",
             path: "./rule_set/my_ruleset/HP.txt",
             interval: 43200,
             format: "text",
-            proxy: "🎯 节点选择"
-          },
-          Intel: {
+            proxy: "自动选择"
+        },
+        Intel: {
             type: "http",
             behavior: "classical",
             url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Intel/Intel.list",
             path: "./rule_set/my_ruleset/Intel.txt",
             interval: 43200,
             format: "text",
-            proxy: "🎯 节点选择"
-          },
-          Gigabyt: {
+            proxy: "自动选择"
+        },
+        Gigabyt: {
             type: "http",
             behavior: "classical",
             url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Gigabyte/Gigabyte.list",
             path: "./rule_set/my_ruleset/Gigabyt.txt",
             interval: 43200,
             format: "text",
-            proxy: "🎯 节点选择"
-          
+            proxy: "自动选择"
         },
-        // 去广告
+        // 去广告规则提供者
         reject_non_ip_no_drop: {
             type: "http",
             behavior: "classical",
@@ -1071,8 +990,7 @@ function overwriteRules(params) {
             interval: 43200,
             format: "text",
             proxy: "🎯 节点选择"
-        }, 
-        //知乎广告拦截   
+        },
         ZhihuAds: {
             type: "http",
             behavior: "domain",
@@ -1080,9 +998,8 @@ function overwriteRules(params) {
             path: "./rule_set/sukkaw_ruleset/ZhihuAds.txt",
             interval: 43200,
             format: "text",
-            proxy: "🎯 节点选择"  
+            proxy: "🎯 节点选择"
         },
-        //反劫持   
         Hijacking: {
             type: "http",
             behavior: "classical",
@@ -1090,10 +1007,9 @@ function overwriteRules(params) {
             path: "./rule_set/sukkaw_ruleset/Hijacking.txt",
             interval: 43200,
             format: "text",
-            proxy: "🎯 节点选择"  
-         },
-        //隐私保护   
-         Privacy: {
+            proxy: "🎯 节点选择"
+        },
+        Privacy: {
             type: "http",
             behavior: "classical",
             url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Privacy/Privacy.list",
@@ -1102,7 +1018,7 @@ function overwriteRules(params) {
             format: "text",
             proxy: "🎯 节点选择"
         },
-        // 静态cdn
+        // 静态CDN规则
         cdn_domainset: {
             type: "http",
             behavior: "domain",
@@ -1121,7 +1037,7 @@ function overwriteRules(params) {
             format: "text",
             proxy: "🎯 节点选择"
         },
-        //speedtest测速
+        // speedtest测速
         speedtest: {
             type: "http",
             behavior: "domain",
@@ -1131,7 +1047,7 @@ function overwriteRules(params) {
             format: "text",
             proxy: "🎯 节点选择"
         },
-        // 流媒体
+        // 流媒体规则
         stream_non_ip: {
             type: "http",
             behavior: "classical",
@@ -1150,7 +1066,7 @@ function overwriteRules(params) {
             format: "text",
             proxy: "🎯 节点选择"
         },
-        // AIGC
+        // AIGC规则
         ai_non_ip: {
             type: "http",
             behavior: "classical",
@@ -1160,7 +1076,7 @@ function overwriteRules(params) {
             format: "text",
             proxy: "🎯 节点选择"
         },
-        // telegram
+        // Telegram规则
         telegram_non_ip: {
             type: "http",
             behavior: "classical",
@@ -1179,7 +1095,7 @@ function overwriteRules(params) {
             format: "text",
             proxy: "🎯 节点选择"
         },
-        // apple
+        // Apple 相关服务
         apple_cdn: {
             type: "http",
             behavior: "domain",
@@ -1207,7 +1123,7 @@ function overwriteRules(params) {
             format: "text",
             proxy: "🎯 节点选择"
         },
-        //网易音乐
+        // 网易音乐规则
         NeteaseMusic_non_ip: {
             type: "http",
             behavior: "classical",
@@ -1226,7 +1142,7 @@ function overwriteRules(params) {
             format: "text",
             proxy: "🎯 节点选择"
         },
-        // microsoft
+        // Microsoft 相关规则
         microsoft_cdn_non_ip: {
             type: "http",
             behavior: "classical",
@@ -1245,7 +1161,7 @@ function overwriteRules(params) {
             format: "text",
             proxy: "🎯 节点选择"
         },
-        // 软件更新、操作系统等大文件下载
+        // 软件更新等大文件下载资源规则
         download_domainset: {
             type: "http",
             behavior: "domain",
@@ -1263,8 +1179,8 @@ function overwriteRules(params) {
             interval: 43200,
             format: "text",
             proxy: "🎯 节点选择"
-        //搜狗
         },
+        // 搜狗输入法规则
         sogouinput_non_ip: {
             type: "http",
             behavior: "classical",
@@ -1274,7 +1190,7 @@ function overwriteRules(params) {
             format: "text",
             proxy: "🎯 节点选择"
         },
-        // 内网域名和局域网 IP
+        // 内网与局域网规则
         lan_non_ip: {
             type: "http",
             behavior: "classical",
@@ -1346,7 +1262,7 @@ function overwriteRules(params) {
             interval: 43200,
             format: "text",
             proxy: "🎯 节点选择"
-        }   
+        }
     };
 
     params["rule-providers"] = ruleProviders;
