@@ -53,6 +53,7 @@
 104.21.80.1  krx18.com
 66.254.114.41  cn.pornhub.com
 0.0.0.0  spankbang.com
+0.0.0.0  xhamster.com
 
 
 # DNS、网络代理站点 #
