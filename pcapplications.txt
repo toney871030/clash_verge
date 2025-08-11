@@ -1,1 +1,44 @@
-
+payload:
+  - PROCESS-NAME,crashpad_handler.exe
+  - PROCESS-NAME,ProcessLasso.exe
+  - PROCESS-NAME,ProcessGovernor.exe
+  - PROCESS-NAME,bitsumsessionagent.exe
+  - PROCESS-NAME,srvstub.exe
+  - PROCESS-NAME,MacTray.exe
+  - PROCESS-NAME,mt64agnt.exe
+  - PROCESS-NAME,TranslucentTB.exe
+  - PROCESS-NAME,eCloud.exe
+  - PROCESS-NAME,SSDFresh.exe
+  - PROCESS-NAME,FxSound.exe
+  - PROCESS-NAME,FanControl.exe
+  - PROCESS-NAME,FlashPad.exe
+  - PROCESS-NAME,Notepad3.exe
+  - PROCESS-NAME,LosslessCut.exe
+  - PROCESS-NAME,Video.UI.exe
+  - PROCESS-NAME,RtkAudUService64.exe
+  - PROCESS-NAME,StartMenuExperienceHost.exe
+  - PROCESS-NAME,进程管理工具(支持PE)V3.0.exe
+  - PROCESS-NAME,YY.exe
+  - PROCESS-NAME,yyexternal.exe
+  - PROCESS-NAME,gslbexternal.exe
+  - PROCESS-NAME,yyldrsvr.exe
+  - PROCESS-NAME,AliIM.exe
+  - PROCESS-NAME,AliRender.exe
+  - PROCESS-NAME,WeChat.exe
+  - PROCESS-NAME,WeChatAppEx.exe
+  - PROCESS-NAME,WeChatPlayer.exe
+  - PROCESS-NAME,WeChatUtility.exe
+  - PROCESS-NAME,mmcrashpad_handler64.exe
+  - PROCESS-NAME,TIM.exe
+  - PROCESS-NAME,TXPlatform.exe
+  - PROCESS-NAME,QQExternal.exe
+  - PROCESS-NAME,wpscloudsvr.exe
+  - PROCESS-NAME,et.exe
+  - PROCESS-NAME,wps.exe
+  - PROCESS-NAME,wpp.exe
+  - PROCESS-NAME,memreduct.exe
+  - PROCESS-NAME,截图xsnip.exe
+  - PROCESS-NAME,Lively.exe
+  - PROCESS-NAME,Lively.Watchdog.exe
+  - PROCESS-NAME,mpv.exe
+ 
