@@ -194,6 +194,7 @@ function overwriteNameserverPolicy(params) {
         "+.filen.io": "dns.google",
         "+.yfsp.tv": "dns.google",
         "+.sehuatang.net": "dns.google",
+        "+.xhamster.com": "dns.google",
 
         // 直连域使用阿里DNS和 DoH 公共服务器
         "+.linux.do": ["dns.alidns.com", "doh.pub"],
@@ -724,81 +725,24 @@ function overwriteProxyGroups(params) {
 function overwriteRules(params) {
     // PC相关规则列表
     const myPcRules = [
-        "RULE-SET,China,DIRECT",
-        "RULE-SET,Global,自动选择",
+        "RULE-SET,github,🎯 节点选择",
+        "RULE-SET,youtube,🎯 节点选择",
+        "RULE-SET,YouTubeMusic,🎯 节点选择",
+        "RULE-SET,Netflix,🎯 节点选择",
+        "RULE-SET,google,🎯 节点选择",
+        "RULE-SET,HP,🎯 节点选择",
+        "RULE-SET,Intel,🎯 节点选择",
+        "RULE-SET,Gigabyte,🎯 节点选择",
         "RULE-SET,pcdirect,DIRECT",
-        "RULE-SET,pcproxy,自动选择",
-        "RULE-SET,github,自动选择",
-        "RULE-SET,youtube,自动选择",
-        "RULE-SET,google,自动选择",
-        "RULE-SET,HP,自动选择",
-        "RULE-SET,Intel,自动选择",
-        "RULE-SET,Gigabyt,自动选择"
+        "RULE-SET,pcproxy,🎯 节点选择",
+        "RULE-SET,gfw,🎯 节点选择",
+        "RULE-SET,direct,DIRECT",
+        "RULE-SET,proxy,🎯 节点选择"
     ];
 
     // 自定义进程名规则
     const customRules = [
-        "PROCESS-NAME,PixPin.exe,DIRECT",
-        "PROCESS-NAME,crashpad_handler.exe,DIRECT",
-        "PROCESS-NAME,ProcessLasso.exe,DIRECT",
-        "PROCESS-NAME,ProcessGovernor.exe,DIRECT",
-        "PROCESS-NAME,bitsumsessionagent.exe,DIRECT",
-        "PROCESS-NAME,srvstub.exe,DIRECT",
-        "PROCESS-NAME,MacTray.exe,DIRECT",
-        "PROCESS-NAME,mt64agnt.exe,DIRECT",
-        "PROCESS-NAME,TranslucentTB.exe,DIRECT",
-        "PROCESS-NAME,eCloud.exe,DIRECT",
-        "PROCESS-NAME,DiskInfo64.exe,DIRECT",
-        "PROCESS-NAME,SSDFresh.exe,DIRECT",
-        "PROCESS-NAME,careueyes.exe,DIRECT",
-        "PROCESS-NAME,FxSound.exe,DIRECT",
-        "PROCESS-NAME,FanControl.exe,DIRECT",
-        "PROCESS-NAME,FlashPad.exe,DIRECT",
-        "PROCESS-NAME,Notepad3.exe,DIRECT",
-        "PROCESS-NAME,LosslessCut.exe,DIRECT",
-        "PROCESS-NAME,Video.UI.exe,DIRECT",
-        "PROCESS-NAME,RtkAudUService64.exe,DIRECT",
-        "PROCESS-NAME,StartMenuExperienceHost.exe,DIRECT",
-        "PROCESS-NAME,进程管理工具(支持PE)V3.0.exe,DIRECT",
-        "PROCESS-NAME,clash,DIRECT",
-        "PROCESS-NAME,v2ray,DIRECT",
-        "PROCESS-NAME,xray,DIRECT",
-        "PROCESS-NAME,naive,DIRECT",
-        "PROCESS-NAME,trojan,DIRECT",
-        "PROCESS-NAME,trojan-go,DIRECT",
-        "PROCESS-NAME,ss-local,DIRECT",
-        "PROCESS-NAME,privoxy,DIRECT",
-        "PROCESS-NAME,leaf,DIRECT",
-        "PROCESS-NAME,Thunder,DIRECT",
-        "PROCESS-NAME,DownloadService,DIRECT",
-        "PROCESS-NAME,qBittorrent,DIRECT",
-        "PROCESS-NAME,Transmission,DIRECT",
-        "PROCESS-NAME,fdm,DIRECT",
-        "PROCESS-NAME,aria2c,DIRECT",
-        "PROCESS-NAME,Folx,DIRECT",
-        "PROCESS-NAME,NetTransport,DIRECT",
-        "PROCESS-NAME,uTorrent,DIRECT",
-        "PROCESS-NAME,WebTorrent,DIRECT",
-        "PROCESS-NAME,YY.exe,DIRECT",
-        "PROCESS-NAME,yyexternal.exe,DIRECT",
-        "PROCESS-NAME,gslbexternal.exe,DIRECT",
-        "PROCESS-NAME,yyldrsvr.exe,DIRECT",
-        "PROCESS-NAME,AliIM.exe,DIRECT",
-        "PROCESS-NAME,AliRender.exe,DIRECT",
-        "PROCESS-NAME,WeChat.exe,DIRECT",
-        "PROCESS-NAME,WeChatAppEx.exe,DIRECT",
-        "PROCESS-NAME,WeChatPlayer.exe,DIRECT",
-        "PROCESS-NAME,WeChatUtility.exe,DIRECT",
-        "PROCESS-NAME,mmcrashpad_handler64.exe,DIRECT",
-        "PROCESS-NAME,TIM.exe,DIRECT",
-        "PROCESS-NAME,TXPlatform.exe,DIRECT",
-        "PROCESS-NAME,QQExternal.exe,DIRECT",
-        "PROCESS-NAME,wpscloudsvr.exe,DIRECT",
-        "PROCESS-NAME,et.exe,DIRECT",
-        "PROCESS-NAME,wps.exe,DIRECT",
-        "PROCESS-NAME,wpp.exe,DIRECT",
-        "PROCESS-NAME,IObitUnlocker.exe,DIRECT",
-        "PROCESS-NAME,IObitUnlocker辅助器.exe,DIRECT",
+        "RULE-SET,pcapplications,DIRECT"
     ];
 
     // 去广告相关规则
@@ -855,23 +799,95 @@ function overwriteRules(params) {
     // =================== 规则提供者配置 ===================
     const ruleProviders = {
         // PC相关规则 sets
-        China: {
+        github: {
             type: "http",
             behavior: "classical",
-            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/China/China.list",
-            path: "./rule_set/my_ruleset/China.txt",
+            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GitHub/GitHub.list",
+            path: "./rule_set/my_ruleset/github.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "🎯 节点选择"
+        },
+        youtube: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/YouTube/YouTube.list",
+            path: "./rule_set/my_ruleset/youtube.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "🎯 节点选择"
+        },
+        YouTubeMusic: {
+            type: "http",
+            behavior: "domain",
+            url:"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/YouTubeMusic/YouTubeMusic.list",
+            path: "./rule_set/my_ruleset/YouTubeMusic.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "🎯 节点选择"
+        },
+        Netflix: {
+            type: "http",
+            behavior: "domain",
+            url:"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Netflix/Netflix.list",
+            path: "./rule_set/my_ruleset/Netflix.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "🎯 节点选择"
+        },
+        google: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Google/Google.list",
+            path: "./rule_set/my_ruleset/google.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "🎯 节点选择"
+        },
+        Python: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Python/Python.list",
+            path: "./rule_set/my_ruleset/Python.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "🎯 节点选择"
+        },
+        HP: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/HP/HP.list",
+            path: "./rule_set/my_ruleset/HP.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "🎯 节点选择"
+        },
+        Intel: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Intel/Intel.list",
+            path: "./rule_set/my_ruleset/Intel.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "🎯 节点选择"
+        },
+        Gigabyte: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Gigabyte/Gigabyte.list",
+            path: "./rule_set/my_ruleset/Gigabyte.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "🎯 节点选择"
+        },
+        pcapplications: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/pcapplications.txt",
+            path: "./rule_set/my_ruleset/pcapplications.txt",
             interval: 43200,
             format: "text",
             proxy: "DIRECT"
-        },
-        Global: {
-            type: "http",
-            behavior: "classical",
-            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/China/China.list",
-            path: "./rule_set/my_ruleset/Global.txt",
-            interval: 43200,
-            format: "text",
-            proxy: "自动选择"
         },
         pcdirect: {
             type: "http",
@@ -882,68 +898,41 @@ function overwriteRules(params) {
             format: "text",
             proxy: "DIRECT"
         },
-        pcproxy: {
+       pcproxy: {
             type: "http",
             behavior: "classical",
             url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/pcproxy.txt",
             path: "./rule_set/my_ruleset/pcproxy.txt",
             interval: 43200,
             format: "text",
-            proxy: "自动选择"
-        },
-        github: {
+            proxy: "🎯 节点选择"
+        },  
+        gfw: {
             type: "http",
-            behavior: "classical",
-            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/GitHub/GitHub.list",
-            path: "./rule_set/my_ruleset/github.txt",
+            behavior: "domain",
+            url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt",
+            path: "./rule_set/my_ruleset/gfw.txt",
             interval: 43200,
             format: "text",
-            proxy: "自动选择"
-        },
-        youtube: {
+            proxy: "DIRECT"
+        }, 
+        direct: {
             type: "http",
-            behavior: "classical",
-            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/YouTube/YouTube.list",
-            path: "./rule_set/my_ruleset/youtube.txt",
+            behavior: "domain",
+            url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt",
+            path: "./rule_set/my_ruleset/direct.txt",
             interval: 43200,
             format: "text",
-            proxy: "自动选择"
-        },
-        google: {
+            proxy: "DIRECT"
+        },  
+        proxy: {
             type: "http",
-            behavior: "classical",
-            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Google/Google.list",
-            path: "./rule_set/my_ruleset/google.txt",
+            behavior: "domain",
+            url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt",
+            path: "./rule_set/my_ruleset/proxy.txt",
             interval: 43200,
             format: "text",
-            proxy: "自动选择"
-        },
-        HP: {
-            type: "http",
-            behavior: "classical",
-            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/HP/HP.list",
-            path: "./rule_set/my_ruleset/HP.txt",
-            interval: 43200,
-            format: "text",
-            proxy: "自动选择"
-        },
-        Intel: {
-            type: "http",
-            behavior: "classical",
-            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Intel/Intel.list",
-            path: "./rule_set/my_ruleset/Intel.txt",
-            interval: 43200,
-            format: "text",
-            proxy: "自动选择"
-        },
-        Gigabyt: {
-            type: "http",
-            behavior: "classical",
-            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Gigabyte/Gigabyte.list",
-            path: "./rule_set/my_ruleset/Gigabyt.txt",
-            interval: 43200,
-            format: "text",
-            proxy: "自动选择"
+            proxy: "🎯 节点选择"
         },
         // 去广告规则提供者
         reject_non_ip_no_drop: {
