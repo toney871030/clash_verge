@@ -8,11 +8,11 @@
 151.101.1.229  fastly.jsdelivr.net
 104.17.111.184  dash.cloudflare.com
 150.171.28.10  bing.com
-13.107.21.200  cn.bing.com
-110.242.68.66  baidu.com
+204.79.197.200  cn.bing.com
+182.61.201.211  baidu.com
 59.111.160.244  163.com
 103.135.240.77  music.163.com
-203.205.254.157  qq.com
+123.150.76.218  qq.com
 43.159.233.74  wx.mail.qq.com
 
 
@@ -23,7 +23,7 @@
 124.156.141.225  winos.me
 127.0.0.1  pc528.net 
 104.21.64.126  meta.appinn.net
-104.21.46.211  rainmeter.cn
+172.67.142.50  rainmeter.cn
 172.241.24.20  eyny.com
 104.26.13.68  oursogo.com
 0.0.0.0  sehuatang.net
