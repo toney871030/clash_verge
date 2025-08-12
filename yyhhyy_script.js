@@ -725,14 +725,32 @@ function overwriteProxyGroups(params) {
 function overwriteRules(params) {
     // PC相关规则列表
     const myPcRules = [
+        "RULE-SET,OpenAI,🎯 节点选择",
+        "RULE-SET,Gemini,🎯 节点选择",
         "RULE-SET,github,🎯 节点选择",
         "RULE-SET,youtube,🎯 节点选择",
         "RULE-SET,YouTubeMusic,🎯 节点选择",
+        "RULE-SET,Emby,🎯 节点选择",
+        "RULE-SET,Spotify,🎯 节点选择",
+        "RULE-SET,Cloudflare,🎯 节点选择",
+        "RULE-SET,Facebook,🎯 节点选择",
+        "RULE-SET,PikPak,🎯 节点选择",
         "RULE-SET,Netflix,🎯 节点选择",
+        "RULE-SET,BiliBili,DIRECT",
         "RULE-SET,google,🎯 节点选择",
+        "RULE-SET,Nvidia,🎯 节点选择",
         "RULE-SET,HP,🎯 节点选择",
         "RULE-SET,Intel,🎯 节点选择",
         "RULE-SET,Gigabyte,🎯 节点选择",
+        "RULE-SET,LanZouYun,DIRECT",
+        "RULE-SET,CCTV,DIRECT",
+        "RULE-SET,Xunlei,DIRECT",
+        "RULE-SET,ChinaTelecom,DIRECT",
+        "RULE-SET,WeChat,DIRECT",
+        "RULE-SET,Zhihu,DIRECT",
+        "RULE-SET,Baidu,DIRECT",
+        "RULE-SET,BaiDuTieBa,DIRECT",
+        "RULE-SET,360,DIRECT",
         "RULE-SET,pcdirect,DIRECT",
         "RULE-SET,pcproxy,🎯 节点选择",
         "RULE-SET,gfw,🎯 节点选择",
@@ -799,6 +817,24 @@ function overwriteRules(params) {
     // =================== 规则提供者配置 ===================
     const ruleProviders = {
         // PC相关规则 sets
+        OpenAI: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/OpenAI/OpenAI.list",
+            path: "./rule_set/my_ruleset/OpenAI.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "🎯 节点选择"
+        },
+        Gemini: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Gemini/Gemini.list",
+            path: "./rule_set/my_ruleset/Gemini.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "🎯 节点选择"
+        },
         github: {
             type: "http",
             behavior: "classical",
@@ -826,6 +862,24 @@ function overwriteRules(params) {
             format: "text",
             proxy: "🎯 节点选择"
         },
+        Emby: {
+            type: "http",
+            behavior: "domain",
+            url:"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Emby/Emby.list",
+            path: "./rule_set/my_ruleset/Emby.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "🎯 节点选择"
+        },
+         Spotify: {
+            type: "http",
+            behavior: "domain",
+            url:"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Spotify/Spotify.list",
+            path: "./rule_set/my_ruleset/Spotify.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "🎯 节点选择"
+        },
         Netflix: {
             type: "http",
             behavior: "domain",
@@ -834,6 +888,15 @@ function overwriteRules(params) {
             interval: 43200,
             format: "text",
             proxy: "🎯 节点选择"
+        },
+        BiliBili: {
+            type: "http",
+            behavior: "domain",
+            url:"https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BiliBili/BiliBili.list",
+            path: "./rule_set/my_ruleset/BiliBili.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "DIRECT"
         },
         google: {
             type: "http",
@@ -844,11 +907,47 @@ function overwriteRules(params) {
             format: "text",
             proxy: "🎯 节点选择"
         },
+        Cloudflare: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Cloudflare/Cloudflare.list",
+            path: "./rule_set/my_ruleset/Cloudflare.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "🎯 节点选择"
+        },
+        Facebook: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Facebook/Facebook.list",
+            path: "./rule_set/my_ruleset/Facebook.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "🎯 节点选择"
+        },
         Python: {
             type: "http",
             behavior: "classical",
             url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Python/Python.list",
             path: "./rule_set/my_ruleset/Python.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "🎯 节点选择"
+        },
+        PikPak: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/PikPak/PikPak.list",
+            path: "./rule_set/my_ruleset/PikPak.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "🎯 节点选择"
+        },
+        Nvidia: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Nvidia/Nvidia.list",
+            path: "./rule_set/my_ruleset/Nvidia.txt",
             interval: 43200,
             format: "text",
             proxy: "🎯 节点选择"
@@ -885,6 +984,87 @@ function overwriteRules(params) {
             behavior: "classical",
             url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/pcapplications.txt",
             path: "./rule_set/my_ruleset/pcapplications.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "DIRECT"
+        },
+        LanZouYun: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/LanZouYun/LanZouYun.list",
+            path: "./rule_set/my_ruleset/LanZouYun.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "DIRECT"
+        },
+        CCTV: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/CCTV/CCTV.list",
+            path: "./rule_set/my_ruleset/CCTV.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "DIRECT"
+        },
+        Xunlei: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Xunlei/Xunlei.list",
+            path: "./rule_set/my_ruleset/Xunlei.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "DIRECT"
+        },
+        ChinaTelecom: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaTelecom/ChinaTelecom.list",
+            path: "./rule_set/my_ruleset/ChinaTelecom.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "DIRECT"
+        },
+        WeChat: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/WeChat/WeChat.list",
+            path: "./rule_set/my_ruleset/WeChat.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "DIRECT"
+        },
+        Zhihu: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Zhihu/Zhihu.list",
+            path: "./rule_set/my_ruleset/Zhihu.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "DIRECT"
+        },
+        BaiDuTieBa: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/BaiDuTieBa/BaiDuTieBa.list",
+            path: "./rule_set/my_ruleset/BaiDuTieBa.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "DIRECT"
+        },
+        Baidu: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Baidu/Baidu.list",
+            path: "./rule_set/my_ruleset/Baidu.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "DIRECT"
+        },
+        360: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/360/360.list",
+            path: "./rule_set/my_ruleset/360.txt",
             interval: 43200,
             format: "text",
             proxy: "DIRECT"
