@@ -1,4 +1,4 @@
-// Mihomo Party 覆写 / Clash Verge Rev 扩展脚本
+// Mihomo Party 覆写扩展脚本
 
 function getProxiesByRegex(params, regex) {
     const matchedProxies = params.proxies.filter((e) => regex.test(e.name)).map((e) => e.name);
