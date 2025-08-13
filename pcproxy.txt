@@ -44,6 +44,7 @@ DOMAIN-SUFFIX,m.mubai.link
 DOMAIN-SUFFIX,hifini.com
 DOMAIN-SUFFIX,ysxq.cc
 DOMAIN-SUFFIX,yfsp.tv
+DOMAIN-SUFFIX,libvio.cc
 
 # 脚本插件
 DOMAIN-SUFFIX,greasyfork.org
