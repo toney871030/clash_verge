@@ -1,9 +1,4 @@
 # NAME: ChinaTelecom
-# AUTHOR: blackmatrix7
-# REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-06-06 09:17:32
-# DOMAIN-SUFFIX: 83
-# TOTAL: 83
 DOMAIN-SUFFIX,01058511989.com
 DOMAIN-SUFFIX,10000.gd.cn
 DOMAIN-SUFFIX,189.cn
