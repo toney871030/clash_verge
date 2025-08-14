@@ -1,10 +1,4 @@
 # NAME: PikPak
-# AUTHOR: tugepaopao
-# REPO: https://github.com/tugepaopao/Image-Storage
-# UPDATED: 2025-06-06 09:18:50
-# DOMAIN-KEYWORD: 1
-# DOMAIN-SUFFIX: 6
-# TOTAL: 7
 DOMAIN-SUFFIX,dlandroid.rcv.sandai.net
 DOMAIN-SUFFIX,hub5idx.v6.shub.sandai.net
 DOMAIN-SUFFIX,hub5pn.wap.sandai.net
