@@ -1,0 +1,77 @@
+#下面是本人常用网页Hosts:
+
+# AI #
+172.64.155.209  chatgpt.com
+172.67.189.87  styleai.art
+
+# 搜索引擎、服务器类 #
+151.101.1.229  fastly.jsdelivr.net
+104.17.111.184  dash.cloudflare.com
+150.171.28.10  bing.com
+204.79.197.200  cn.bing.com
+182.61.201.211  baidu.com
+59.111.160.244  163.com
+103.135.240.77  music.163.com
+123.150.76.218  qq.com
+43.159.233.74  wx.mail.qq.com
+
+
+# 软件、论坛、博客站点 #
+172.66.166.61  linux.do
+172.66.166.61  connect.linux.do
+124.232.185.97  52pojie.cn
+124.156.141.225  winos.me
+127.0.0.1  pc528.net 
+104.21.64.126  meta.appinn.net
+172.67.142.50  rainmeter.cn
+172.241.24.20  eyny.com
+104.26.13.68  oursogo.com
+0.0.0.0  sehuatang.net
+104.22.36.105  18comic.vip
+103.248.152.174  3dmgame.com
+104.21.18.193  masuit.net
+43.249.193.76  hybase.com
+45.151.132.50  423down.com
+104.21.32.1  applnn.com
+104.20.4.235  pastebin.com
+
+
+# 娱乐、影视、音乐站点 #
+172.67.132.173  libvio.cc
+104.18.33.60  yfsp.tv
+156.238.249.39  82mao.com
+172.67.173.61  3jihome.com
+154.84.8.52 svip.ffzyplay.com
+104.21.93.9  v.ikanbot.com
+172.67.156.89  music.ydev.tech
+23.225.30.102  agedm.org
+104.26.11.121  ddys.mov
+104.21.4.135  m.mubai.link
+103.231.14.222  boju.cc
+103.231.14.222  ysxq.cc
+103.117.121.121  hifiti.com
+0.0.0.0  xvideos.com
+104.21.80.1  krx18.com
+66.254.114.41  cn.pornhub.com
+0.0.0.0  spankbang.com
+0.0.0.0  xhamster.com
+
+
+# DNS、网络代理站点 #
+202.140.141.28  itdog.cn
+104.26.8.179  ping.pe
+216.239.32.27  toolbox.googleapps.com
+172.67.132.227  v2rayse.com
+0.0.0.0  ping0.cc
+
+
+
+# 其它资源站点 #
+104.21.33.155  greasyfork.org
+104.21.80.1  sleazyfork.org
+104.26.10.35  wallhaven.cc
+110.42.51.228  haowallpaper.com
+144.76.236.14  wallpaperswide.com
+
+# 网盘下载 #
+103.214.175.60  panwiki.com
