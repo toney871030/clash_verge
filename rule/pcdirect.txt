@@ -1,0 +1,69 @@
+# 直连补充列表(国内域名不解析时，防止走代理使用)
+
+# 国内DNS
+DOMAIN-SUFFIX,dns.alidns.com
+DOMAIN-SUFFIX,doh.360.cn
+DOMAIN-SUFFIX,doh.pub
+IP-CIDR,1.12.12.12/32,no-resolve
+IP-CIDR,119.29.29.29/32,no-resolve
+IP-CIDR,223.5.5.5/32,no-resolve
+IP-CIDR,223.6.6.6/32,no-resolve
+IP-CIDR,114.114.114.114/32,no-resolve
+
+# MyList
+# 域名后缀匹配
+DOMAIN-SUFFIX,time.windows.com
+DOMAIN-SUFFIX,lanzov.com
+DOMAIN-SUFFIX,msftcomecttest.com
+DOMAIN-SUFFIX,dns.msftncsi.com
+DOMAIN-SUFFIX,ipv6.msftconnecttest.com
+
+# 域名关键字匹配
+DOMAIN-KEYWORD,mirror
+DOMAIN-KEYWORD,ghp
+
+# rules更新
+DOMAIN-SUFFIX,ruleset.skk.moe
+
+# Ip检测
+DOMAIN-SUFFIX,itdog.cn
+
+# 大陆维权网站
+DOMAIN-SUFFIX,ts.isc.org.cn
+DOMAIN-SUFFIX,sswz.spb.gov.cn
+DOMAIN-SUFFIX,tousu.sina.com.cn
+
+# 论坛博客
+DOMAIN-SUFFIX,linux.do
+DOMAIN-SUFFIX,winos.me
+DOMAIN-SUFFIX,cmdpe.com
+DOMAIN-SUFFIX,52pojie.cn
+DOMAIN-SUFFIX,pc528.net
+DOMAIN-KEYWORD,pc528
+DOMAIN-SUFFIX,3dmgame.com
+DOMAIN-SUFFIX,rainmeter.cn
+
+# 软件下载站
+DOMAIN-SUFFIX,masuit.net
+DOMAIN-SUFFIX,hybase.com
+DOMAIN-SUFFIX,applnn.com
+DOMAIN-SUFFIX,youxiaohou.com
+
+# 壁纸下载站
+DOMAIN-SUFFIX,haowallpaper.com
+
+# 网盘登录
+DOMAIN-SUFFIX,cloud.189.cn
+DOMAIN-SUFFIX,alipan.com
+DOMAIN-SUFFIX,pan.baidu.com
+DOMAIN-SUFFIX,123pan.com
+DOMAIN-SUFFIX,pan.huang1111.cn
+DOMAIN-SUFFIX,panwiki.com
+DOMAIN-SUFFIX,pan.xunlei.com
+
+# 在线影音
+DOMAIN-SUFFIX,ysxq.cc
+DOMAIN-SUFFIX,ddys.mov
+DOMAIN-SUFFIX,v.ikanbot.com
+DOMAIN-SUFFIX,agedm.org
+DOMAIN-SUFFIX,82mao.com

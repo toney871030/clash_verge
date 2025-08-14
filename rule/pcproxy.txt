@@ -1,0 +1,77 @@
+# 代理补充列表
+
+# 国外DNS
+DOMAIN-SUFFIX,dns.google
+DOMAIN-SUFFIX,1dot1dot1dot1.cloudflare-dns.com
+DOMAIN-SUFFIX,dot.sb
+DOMAIN-SUFFIX,dns.umbrella.com
+DOMAIN-SUFFIX,dns.quad9.net
+DOMAIN-SUFFIX,dns.google
+DOMAIN-SUFFIX,cloudflare-dns.com
+DOMAIN-SUFFIX,doh.dns.sb
+DOMAIN-SUFFIX,doh.opendns.com
+DOMAIN-SUFFIX,dns.quad9.net
+DOMAIN-SUFFIX,hk-hkg.doh.sb
+IP-CIDR,8.8.8.8/32,no-resolve
+IP-CIDR,8.8.4.4/32,no-resolve
+IP-CIDR,1.1.1.1/32,no-resolve
+IP-CIDR,1.0.0.1/32,no-resolve
+IP-CIDR,185.222.222.222/32,no-resolve
+IP-CIDR,208.67.222.222/32,no-resolve
+IP-CIDR,208.67.220.220/32,no-resolve
+
+# IP DNS监测
+DOMAIN-SUFFIX,ping.pe
+DOMAIN-SUFFIX,toolbox.googleapps.com
+DOMAIN-SUFFIX,ping0.cc
+DOMAIN-SUFFIX,v2rayse.com
+
+# AI图像生成
+DOMAIN-SUFFIX,styleai.art
+
+# 壁纸下载
+DOMAIN-SUFFIX,wallpaperswide.com
+DOMAIN-SUFFIX,wallhaven.cc
+
+# 免费域名
+DOMAIN-SUFFIX,l53.net
+DOMAIN-SUFFIX,zone.id
+DOMAIN-SUFFIX,nic.eu.org
+
+# 电影音乐
+DOMAIN-SUFFIX,music.ydev.tech
+DOMAIN-SUFFIX,m.mubai.link
+DOMAIN-SUFFIX,hifini.com
+DOMAIN-SUFFIX,ysxq.cc
+DOMAIN-SUFFIX,yfsp.tv
+DOMAIN-SUFFIX,libvio.cc
+
+# 脚本插件
+DOMAIN-SUFFIX,greasyfork.org
+DOMAIN-SUFFIX,sleazyfork.org
+
+# Ribi论坛
+DOMAIN-SUFFIX,oursogo.com
+DOMAIN-SUFFIX,eyny.com
+DOMAIN-SUFFIX,18comic.vip
+DOMAIN-SUFFIX,sehuatang.net
+DOMAIN-SUFFIX,xhamster.com
+
+# Ribi网站
+DOMAIN-SUFFIX,xvideos.com
+DOMAIN-SUFFIX,spankbang.com
+DOMAIN-SUFFIX,krx18.com
+
+# Pornhub
+DOMAIN-SUFFIX,phncdn.com
+DOMAIN-SUFFIX,phprcdn.com
+DOMAIN-SUFFIX,pornhub.com
+DOMAIN-SUFFIX,pornhubpremium.com
+
+# Jsdelivr
+DOMAIN-SUFFIX,esm.run
+DOMAIN-SUFFIX,jsdelivr.com
+DOMAIN-SUFFIX,jsdelivr.net
+
+# filen网盘
+DOMAIN-SUFFIX,filen.io
