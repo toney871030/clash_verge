@@ -34,7 +34,6 @@ DOMAIN-SUFFIX,sswz.spb.gov.cn
 DOMAIN-SUFFIX,tousu.sina.com.cn
 
 # 论坛博客
-DOMAIN-SUFFIX,linux.do
 DOMAIN-SUFFIX,winos.me
 DOMAIN-SUFFIX,cmdpe.com
 DOMAIN-SUFFIX,52pojie.cn
