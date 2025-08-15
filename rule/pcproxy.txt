@@ -28,3 +28,7 @@ DOMAIN-SUFFIX,jsdelivr.net
 
 # filen网盘
 DOMAIN-SUFFIX,filen.io
+
+# 雨滴社区
+DOMAIN-SUFFIX,rainmeter.cn
+DOMAIN-SUFFIX,bbs.rainmeter.cn
