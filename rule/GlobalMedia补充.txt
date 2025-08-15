@@ -6,10 +6,6 @@ IP-CIDR,104.18.33.60 /32,no-resolve
 DOMAIN-SUFFIX,libvio.cc
 IP-CIDR,172.67.132.173 /32,no-resolve
 
-DOMAIN-SUFFIX,3jihome.com
-IP-CIDR,172.67.173.61/32,no-resolve
-IP-CIDR,104.21.30.164/32,no-resolve
-
 DOMAIN-SUFFIX,phncdn.com
 DOMAIN-SUFFIX,phprcdn.com
 DOMAIN-SUFFIX,pornhub.com
@@ -32,10 +28,13 @@ DOMAIN-SUFFIX,18comic.vip/?shunt=3
 DOMAIN-SUFFIX,18comic.vip/?shunt=4
 
 DOMAIN-SUFFIX,music.ydev.tech
+DOMAIN-SUFFIX,3jihome.com
 
 DOMAIN-SUFFIX,xvideos.com
 DOMAIN-SUFFIX,spankbang.com
 DOMAIN-SUFFIX,xhamster.com
 DOMAIN-SUFFIX,sehuatang.net
+
+
 
 
