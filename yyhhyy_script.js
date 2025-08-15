@@ -196,7 +196,7 @@ function overwriteNameserverPolicy(params) {
         "+.filen.io": ["dns.cloudflare", "dns.google"],
         "+.yfsp.tv": ["dns.cloudflare", "dns.google"],
         "+.libvio.cc": ["dns.cloudflare", "dns.google"],
-        "+.sehuatang.net": ["dns.cloudflare", "dns.google"],
+        "+.sehuatang.org": ["dns.cloudflare", "dns.google"],
         "+.xhamster.com": ["dns.cloudflare", "dns.google"],
 
         // 直连域使用阿里DNS和 DoH 公共服务器
