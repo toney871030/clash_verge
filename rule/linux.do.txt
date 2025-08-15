@@ -5,5 +5,4 @@ DOMAIN-SUFFIX,nav.linux.do
 DOMAIN-SUFFIX,webmail.linux.do
 DOMAIN-SUFFIX,wiki.linux.do
 DOMAIN-SUFFIX,cdk.linux.do
-IP-CIDR,172.66.166.61/32,no-resolve
-IP-CIDR,104.20.16.234/32,no-resolve
+
