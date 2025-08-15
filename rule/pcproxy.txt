@@ -38,35 +38,9 @@ DOMAIN-SUFFIX,l53.net
 DOMAIN-SUFFIX,zone.id
 DOMAIN-SUFFIX,nic.eu.org
 
-# 电影音乐
-DOMAIN-SUFFIX,music.ydev.tech
-DOMAIN-SUFFIX,m.mubai.link
-DOMAIN-SUFFIX,hifini.com
-DOMAIN-SUFFIX,ysxq.cc
-DOMAIN-SUFFIX,yfsp.tv
-DOMAIN-SUFFIX,libvio.cc
-
 # 脚本插件
 DOMAIN-SUFFIX,greasyfork.org
 DOMAIN-SUFFIX,sleazyfork.org
-
-# Ribi论坛
-DOMAIN-SUFFIX,oursogo.com
-DOMAIN-SUFFIX,eyny.com
-DOMAIN-SUFFIX,18comic.vip
-DOMAIN-SUFFIX,sehuatang.net
-DOMAIN-SUFFIX,xhamster.com
-
-# Ribi网站
-DOMAIN-SUFFIX,xvideos.com
-DOMAIN-SUFFIX,spankbang.com
-DOMAIN-SUFFIX,krx18.com
-
-# Pornhub
-DOMAIN-SUFFIX,phncdn.com
-DOMAIN-SUFFIX,phprcdn.com
-DOMAIN-SUFFIX,pornhub.com
-DOMAIN-SUFFIX,pornhubpremium.com
 
 # Jsdelivr
 DOMAIN-SUFFIX,esm.run
