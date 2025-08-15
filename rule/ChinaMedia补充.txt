@@ -1,20 +1,8 @@
 # NAME: ChinaMedia补充
-
 DOMAIN-SUFFIX,ysxq.cc
-IP-CIDR,103.231.14.222/32,no-resolve
-
 DOMAIN-SUFFIX,ddys.mov
-IP-CIDR,104.26.11.121/32,no-resolve
-IP-CIDR,104.26.10.121/32,no-resolve
-IP-CIDR,172.67.69.240/32,no-resolve
-
 DOMAIN-SUFFIX,v.ikanbot.com
-IP-CIDR,104.21.93.9/32,no-resolve
-IP-CIDR,172.67.201.222/32,no-resolve
-
 DOMAIN-SUFFIX,agedm.org
-IP-CIDR,23.225.30.102/32,no-resolve
-
 DOMAIN-SUFFIX,82mao.com
 DOMAIN-SUFFIX,85mao.com
 DOMAIN-SUFFIX,125mao.com
@@ -22,9 +10,5 @@ DOMAIN-SUFFIX,126mao.com
 DOMAIN-SUFFIX,eajyy.com
 DOMAIN-SUFFIX,shuangstv.net
 DOMAIN-SUFFIX,113276.xyz
-IP-CIDR,156.238.249.39/32,no-resolve
-IP-CIDR,103.82.170.211/32,no-resolve
-IP-CIDR,156.238.249.125/32,no-resolve
-IP-CIDR,38.102.127.178/32,no-resolve
-
 DOMAIN-SUFFIX,hifiti.com
+
