@@ -743,7 +743,7 @@ function overwriteRules(params) {
         "RULE-SET,pcdirect,DIRECT",
         "RULE-SET,ChinaMedia补充,DIRECT",
         "RULE-SET,吾爱破解Blog,DIRECT",
-        "RULE-SET,不忘初心Blog,DIRECT",
+        "RULE-SET,不忘初心Blog,DIRECT"
     ];
       const myPcproxyRules = [
         "RULE-SET,pcproxy,🎯 节点选择",
