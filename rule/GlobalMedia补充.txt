@@ -33,4 +33,5 @@ DOMAIN-SUFFIX,3jihome.com
 DOMAIN-SUFFIX,xvideos.com
 DOMAIN-SUFFIX,spankbang.com
 DOMAIN-SUFFIX,xhamster.com
-DOMAIN-SUFFIX,sehuatang.net
+DOMAIN-SUFFIX,sehuatang.org
+
