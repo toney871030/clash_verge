@@ -28,13 +28,9 @@ DOMAIN-SUFFIX,18comic.vip/?shunt=3
 DOMAIN-SUFFIX,18comic.vip/?shunt=4
 
 DOMAIN-SUFFIX,music.ydev.tech
+DOMAIN-SUFFIX,3jihome.com
 
 DOMAIN-SUFFIX,xvideos.com
 DOMAIN-SUFFIX,spankbang.com
 DOMAIN-SUFFIX,xhamster.com
 DOMAIN-SUFFIX,sehuatang.net
-
-
-
-
-
