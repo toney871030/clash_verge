@@ -29,10 +29,6 @@ DOMAIN-SUFFIX,v2rayse.com
 # AI图像生成
 DOMAIN-SUFFIX,styleai.art
 
-#Blog论坛
-DOMAIN-SUFFIX,rainmeter.cn
-DOMAIN-SUFFIX,bbs.rainmeter.cn
-
 # 壁纸下载
 DOMAIN-SUFFIX,wallpaperswide.com
 DOMAIN-SUFFIX,wallhaven.cc
