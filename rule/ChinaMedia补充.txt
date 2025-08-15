@@ -28,5 +28,7 @@ IP-CIDR,156.238.249.125/32,no-resolve
 IP-CIDR,38.102.127.178/32,no-resolve
 
 DOMAIN-SUFFIX,hifiti.com
+DOMAIN-SUFFIX,3jihome.com
+
 
 
