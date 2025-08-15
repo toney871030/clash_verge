@@ -1,0 +1,33 @@
+# NAME: GlobalMedia补充
+
+DOMAIN-SUFFIX,yfsp.tv
+IP-CIDR,104.18.33.60 /32,no-resolve
+
+DOMAIN-SUFFIX,libvio.cc
+IP-CIDR,172.67.132.173 /32,no-resolve
+
+DOMAIN-SUFFIX,phncdn.com
+DOMAIN-SUFFIX,phprcdn.com
+DOMAIN-SUFFIX,pornhub.com
+DOMAIN-SUFFIX,pornhubpremium.com
+IP-CIDR,172.67.132.173 /32,no-resolve
+
+DOMAIN-SUFFIX,oursogo.com
+IP-CIDR,104.26.13.68 /32,no-resolve
+
+DOMAIN-SUFFIX,eyny.com
+DOMAIN-SUFFIX,www01.eyny.com
+DOMAIN-SUFFIX,www02.eyny.com
+DOMAIN-SUFFIX,www03.eyny.com
+DOMAIN-SUFFIX,www04.eyny.com
+
+DOMAIN-SUFFIX,18comic.vip
+DOMAIN-SUFFIX,18comic.vip/?shunt=1
+DOMAIN-SUFFIX,18comic.vip/?shunt=2
+DOMAIN-SUFFIX,18comic.vip/?shunt=3
+DOMAIN-SUFFIX,18comic.vip/?shunt=4
+
+DOMAIN-SUFFIX,xvideos.com
+DOMAIN-SUFFIX,spankbang.com
+DOMAIN-SUFFIX,xhamster.com
+DOMAIN-SUFFIX,sehuatang.net
