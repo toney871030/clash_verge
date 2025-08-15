@@ -23,7 +23,6 @@
 124.156.141.225  winos.me
 127.0.0.1  pc528.net 
 104.21.64.126  meta.appinn.net
-104.21.46.211  rainmeter.cn
 172.241.24.20  eyny.com
 104.26.13.68  oursogo.com
 0.0.0.0  sehuatang.net
