@@ -1,0 +1,3 @@
+#NAME:吾爱破解Blog
+DOMAIN-SUFFIX,52pojie.cn
+IP-CIDR,124.232.185.97/32,no-resolve
