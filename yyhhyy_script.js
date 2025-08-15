@@ -157,54 +157,55 @@ function overwriteNameserverPolicy(params) {
     // DNS 服务器名称对应具体解析地址
     const nameserverPolicy = {
         // DNS 服务器配置
+        "dns.cloudflare": "https://dns.cloudflare.com/dns-query",
         "dns.google": "https://dns.google/dns-query",
         "dns.alidns.com": "https://dns.alidns.com/dns-query",
         "doh.pub": "https://doh.pub/dns-query",
 
         // DNS rules 针对特定域解析走指定 DNS
-        "+.ruleset.skk.moe": "dns.google",
-        "+.github.com": "dns.google",
-        "+.github.io": "dns.google",
-        "+.githubusercontent.com": "dns.google",
+        "+.ruleset.skk.moe": ["dns.cloudflare", "dns.google"],
+        "+.github.com": ["dns.cloudflare", "dns.google"],
+        "+.github.io": ["dns.cloudflare", "dns.google"],
+        "+.githubusercontent.com": ["dns.cloudflare", "dns.google"],
 
         // IP DNS 监测走 Google DNS
-        "+.itdog.cn": "dns.google",
-        "+.ping.pe": "dns.google",
-        "+.toolbox.googleapps.com": "dns.google",
-        "+.ping0.cc": "dns.google",
-        "+.v2rayse.com": "dns.google",
+        "+.itdog.cn": ["dns.cloudflare", "dns.google"],
+        "+.ping.pe": ["dns.cloudflare", "dns.google"],
+        "+.toolbox.googleapps.com": ["dns.cloudflare", "dns.google"],
+        "+.ping0.cc": ["dns.cloudflare", "dns.google"],
+        "+.v2rayse.com": ["dns.cloudflare", "dns.google"],
 
         // 代理相关域名走 Google DNS
-        "+.google.com": "dns.google",
-        "+.bing.com": "dns.google",
-        "+.chatgpt.com": "dns.google",
-        "+.youtube.com": "dns.google",
-        "+.xvideos.com": "dns.google",
-        "+.pornhub.com": "dns.google",
-        "+.spankbang.com": "dns.google",
-        "+.netflix.com": "dns.google",
-        "+.wallpaperswide.com": "dns.google",
-        "+.wallhaven.cc": "dns.google",
-        "+.music.ydev.tech": "dns.google",
-        "+.greasyfork.org": "dns.google",
-        "+.sleazyfork.org": "dns.google",
-        "+.oursogo.com": "dns.google",
-        "+.eyny.com": "dns.google",
-        "+.18comic.vip": "dns.google",
-        "+.filen.io": "dns.google",
-        "+.yfsp.tv": "dns.google",
-        "+.libvio.cc": "dns.google",
-        "+.sehuatang.net": "dns.google",
-        "+.xhamster.com": "dns.google",
+        "+.linux.do": ["dns.cloudflare", "dns.google"],
+        "+.google.com": ["dns.cloudflare", "dns.google"],
+        "+.bing.com": ["dns.cloudflare", "dns.google"],
+        "+.chatgpt.com": ["dns.cloudflare", "dns.google"],
+        "+.youtube.com": ["dns.cloudflare", "dns.google"],
+        "+.xvideos.com": ["dns.cloudflare", "dns.google"],
+        "+.pornhub.com": ["dns.cloudflare", "dns.google"],
+        "+.spankbang.com": ["dns.cloudflare", "dns.google"],
+        "+.netflix.com": ["dns.cloudflare", "dns.google"],
+        "+.wallpaperswide.com": ["dns.cloudflare", "dns.google"],
+        "+.wallhaven.cc": ["dns.cloudflare", "dns.google"],
+        "+.music.ydev.tech": ["dns.cloudflare", "dns.google"],
+        "+.greasyfork.org": ["dns.cloudflare", "dns.google"],
+        "+.sleazyfork.org": ["dns.cloudflare", "dns.google"],
+        "+.oursogo.com": ["dns.cloudflare", "dns.google"],
+        "+.eyny.com": ["dns.cloudflare", "dns.google"],
+        "+.18comic.vip": ["dns.cloudflare", "dns.google"],
+        "+.filen.io": ["dns.cloudflare", "dns.google"],
+        "+.yfsp.tv": ["dns.cloudflare", "dns.google"],
+        "+.libvio.cc": ["dns.cloudflare", "dns.google"],
+        "+.sehuatang.net": ["dns.cloudflare", "dns.google"],
+        "+.xhamster.com": ["dns.cloudflare", "dns.google"],
 
         // 直连域使用阿里DNS和 DoH 公共服务器
-        "+.linux.do": ["dns.alidns.com", "doh.pub"],
         "+.winos.me": ["dns.alidns.com", "doh.pub"],
         "+.cmdpe.com": ["dns.alidns.com", "doh.pub"],
         "+.52pojie.cn": ["dns.alidns.com", "doh.pub"],
+        "+.rainmeter.cn": ["dns.alidns.com", "doh.pub"],
         "+.pc528.net": ["dns.alidns.com", "doh.pub"],
         "+.bbs.3dmgame.com": ["dns.alidns.com", "doh.pub"],
-        "+.bbs.rainmeter.cn": ["dns.alidns.com", "doh.pub"],
         "+.masuit.net": ["dns.alidns.com", "doh.pub"],
         "+.hybase.com": ["dns.alidns.com", "doh.pub"],
         "+.applnn.com": ["dns.alidns.com", "doh.pub"],
@@ -218,13 +219,13 @@ function overwriteNameserverPolicy(params) {
         "+.pan.huang1111.cn": ["dns.alidns.com", "doh.pub"],
         "+.ysxq.cc": ["dns.alidns.com", "doh.pub"],
         "+.boju.cc": ["dns.alidns.com", "doh.pub"],
-        "+.ddys.pro": ["dns.alidns.com", "doh.pub"],
+        "+.ddys.mov": ["dns.alidns.com", "doh.pub"],
         "+.m.mubai.link": ["dns.alidns.com", "doh.pub"],
         "+.meta.appinn.net": ["dns.alidns.com", "doh.pub"],
         "+.hifiti.com/": ["dns.alidns.com", "doh.pub"],
         "+.v.ikanbot.com": ["dns.alidns.com", "doh.pub"],
         "+.agedm.org": ["dns.alidns.com", "doh.pub"],
-        "+.82mao.com": ["dns.alidns.com", "doh.pub"],
+        "+.82mao.com": ["223.5.5.5", "119.29.29.29"],
         "+.3jihome.com": ["dns.alidns.com", "doh.pub"],
         "+.svip.ffzyplay.com": ["dns.alidns.com", "doh.pub"],
 
@@ -547,6 +548,7 @@ function overwriteNameserverPolicy(params) {
 // ======================= Hosts =======================
 function overwriteHosts(params) {
     const hosts = {
+        "dns.cloudflare": ["1.1.1.1", "1.0.0.1", "2606:4700:4700::1111", "2606:4700:4700::1001"],
         "dns.google": ["8.8.8.8", "8.8.4.4", "2001:4860:4860::8888", "2001:4860:4860::8844"],
         "dns.alidns.com": ['223.5.5.5', '223.6.6.6', '2400:3200:baba::1', '2400:3200::1'],
         "doh.pub": ['119.29.29.29', '1.12.12.12'],
@@ -726,9 +728,29 @@ function overwriteProxyGroups(params) {
 function overwriteRules(params) {
     // PC相关规则列表
     const myPcRules = [
+    //直连规则列表
         "RULE-SET,pcdirect,DIRECT",
+        "RULE-SET,ChinaMedia补充,DIRECT",
+        "RULE-SET,IPTVMainland,DIRECT",
+        "RULE-SET,BiliBili,DIRECT",
+        "RULE-SET,iQIYI,DIRECT",
+        "RULE-SET,TencentVideo,DIRECT",
+        "RULE-SET,Youku,DIRECT",
+        "RULE-SET,CCTV,DIRECT",
+        "RULE-SET,吾爱破解Blog,DIRECT",
+        "RULE-SET,不忘初心Blog,DIRECT",
+        "RULE-SET,LanZouYun,DIRECT",
+        "RULE-SET,Xunlei,DIRECT",
+        "RULE-SET,ChinaTelecom,DIRECT",
+        "RULE-SET,WeChat,DIRECT",
+        "RULE-SET,Zhihu,DIRECT",
+        "RULE-SET,Baidu,DIRECT",
+        "RULE-SET,BaiDuTieBa,DIRECT",
+        "RULE-SET,360,DIRECT",
+    //代理规则列表
         "RULE-SET,pcproxy,🎯 节点选择",
-        "RULE-SET,linux_do,DIRECT",
+        "RULE-SET,GlobalMedia补充,🎯 节点选择",
+        "RULE-SET,linux_do,🎯 节点选择",
         "RULE-SET,google,🎯 节点选择",
         "RULE-SET,github,🎯 节点选择",
         "RULE-SET,youtube,🎯 节点选择",
@@ -742,20 +764,11 @@ function overwriteRules(params) {
         "RULE-SET,PikPak,🎯 节点选择",
         "RULE-SET,OneDrive,🎯 节点选择",
         "RULE-SET,Netflix,🎯 节点选择",
-        "RULE-SET,BiliBili,DIRECT",
+        "RULE-SET,IPTVOther,🎯 节点选择",
         "RULE-SET,Nvidia,🎯 节点选择",
         "RULE-SET,HP,🎯 节点选择",
         "RULE-SET,Intel,🎯 节点选择",
-        "RULE-SET,Gigabyte,🎯 节点选择",
-        "RULE-SET,LanZouYun,DIRECT",
-        "RULE-SET,CCTV,DIRECT",
-        "RULE-SET,Xunlei,DIRECT",
-        "RULE-SET,ChinaTelecom,DIRECT",
-        "RULE-SET,WeChat,DIRECT",
-        "RULE-SET,Zhihu,DIRECT",
-        "RULE-SET,Baidu,DIRECT",
-        "RULE-SET,BaiDuTieBa,DIRECT",
-        "RULE-SET,360,DIRECT"
+        "RULE-SET,Gigabyte,🎯 节点选择"
     ];
 
     // 自定义进程名规则
@@ -826,6 +839,15 @@ function overwriteRules(params) {
             format: "text",
             proxy: "DIRECT"
         },
+        ChinaMedia补充: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/ChinaMedia补充.txt",
+            path: "./rule_set/my_ruleset/ChinaMedia补充.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "DIRECT"
+        },
         pcproxy: {
             type: "http",
             behavior: "classical",
@@ -835,11 +857,38 @@ function overwriteRules(params) {
             format: "text",
             proxy: "🎯 节点选择"
         },
+        GlobalMedia补充: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/GlobalMedia补充.txt",
+            path: "./rule_set/my_ruleset/GlobalMedia补充.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "🎯 节点选择"
+        },
         linux_do: {
             type: "http",
             behavior: "classical",
             url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/linux.do.txt",
             path: "./rule_set/my_ruleset/linux_do.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "🎯 节点选择"
+        },
+        不忘初心Blog: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/不忘初心Blog.txt",
+            path: "./rule_set/my_ruleset/不忘初心Blog.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "DIRECT"
+        },
+        吾爱破解Blog: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/52pojie.txt",
+            path: "./rule_set/my_ruleset/吾爱破解Blog.txt",
             interval: 43200,
             format: "text",
             proxy: "DIRECT"
@@ -925,11 +974,56 @@ function overwriteRules(params) {
             format: "text",
             proxy: "🎯 节点选择"
         },
+        IPTVOther: {
+            type: "http",
+            behavior: "domain",
+            url:"https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/IPTVOther.txt",
+            path: "./rule_set/my_ruleset/IPTVOther.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "🎯 节点选择"
+        },
+        IPTVMainland: {
+            type: "http",
+            behavior: "domain",
+            url:"https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/IPTVMainland.txt",
+            path: "./rule_set/my_ruleset/IPTVMainland.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "DIRECT"
+        },
         BiliBili: {
             type: "http",
             behavior: "domain",
             url:"https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/BiliBili.txt",
             path: "./rule_set/my_ruleset/BiliBili.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "DIRECT"
+        },
+        iQIYI: {
+            type: "http",
+            behavior: "domain",
+            url:"https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/iQIYI.txt",
+            path: "./rule_set/my_ruleset/iQIYI.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "DIRECT"
+        },
+        TencentVideo: {
+            type: "http",
+            behavior: "domain",
+            url:"https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/TencentVideo.txt",
+            path: "./rule_set/my_ruleset/TencentVideo.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "DIRECT"
+        },
+        Youku: {
+            type: "http",
+            behavior: "domain",
+            url:"https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/Youku.txt",
+            path: "./rule_set/my_ruleset/Youku.txt",
             interval: 43200,
             format: "text",
             proxy: "DIRECT"
