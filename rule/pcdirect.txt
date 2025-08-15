@@ -54,15 +54,8 @@ DOMAIN-SUFFIX,haowallpaper.com
 # 网盘登录
 DOMAIN-SUFFIX,cloud.189.cn
 DOMAIN-SUFFIX,alipan.com
-DOMAIN-SUFFIX,pan.baidu.com
 DOMAIN-SUFFIX,123pan.com
 DOMAIN-SUFFIX,pan.huang1111.cn
 DOMAIN-SUFFIX,panwiki.com
-DOMAIN-SUFFIX,pan.xunlei.com
 
-# 在线影音
-DOMAIN-SUFFIX,ysxq.cc
-DOMAIN-SUFFIX,ddys.mov
-DOMAIN-SUFFIX,v.ikanbot.com
-DOMAIN-SUFFIX,agedm.org
-DOMAIN-SUFFIX,82mao.com
+
