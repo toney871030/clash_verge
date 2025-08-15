@@ -37,6 +37,8 @@ DOMAIN-SUFFIX,tousu.sina.com.cn
 DOMAIN-SUFFIX,winos.me
 DOMAIN-SUFFIX,cmdpe.com
 DOMAIN-SUFFIX,3dmgame.com
+DOMAIN-SUFFIX,rainmeter.cn
+DOMAIN-SUFFIX,bbs.rainmeter.cn
 
 # 软件下载站
 DOMAIN-SUFFIX,masuit.net
