@@ -27,6 +27,10 @@ DOMAIN-SUFFIX,winos.me
 DOMAIN-SUFFIX,cmdpe.com
 DOMAIN-SUFFIX,3dmgame.com
 
+# 雨滴社区
+DOMAIN-SUFFIX,rainmeter.cn
+DOMAIN-SUFFIX,bbs.rainmeter.cn
+
 # 软件下载站
 DOMAIN-SUFFIX,masuit.net
 DOMAIN-SUFFIX,hybase.com
