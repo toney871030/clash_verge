@@ -21,7 +21,7 @@ function overwriteBasicOptions(params) {
         "allow-lan": true,
         mode: "rule",
         "log-level": "warning",
-        ipv6: false,
+        ipv6: true,
         "find-process-mode": "strict",
         profile: {
             "store-selected": true,
@@ -67,7 +67,7 @@ function overwriteDns(params) {
     const dnsOptions = {
         enable: true,
         "prefer-h3": true,
-        ipv6: false,
+        ipv6: true,
         "enhanced-mode": "fake-ip",
         "fake-ip-range": "198.18.0.1/16",
         nameserver: dnsList,
@@ -743,7 +743,8 @@ function overwriteRules(params) {
         "RULE-SET,pcdirect,DIRECT",
         "RULE-SET,ChinaMedia补充,DIRECT",
         "RULE-SET,吾爱破解Blog,DIRECT",
-        "RULE-SET,不忘初心Blog,DIRECT"
+        "RULE-SET,不忘初心Blog,DIRECT",
+        "RULE-SET,直连软件列表,DIRECT"
     ];
       const myPcproxyRules = [
         "RULE-SET,pcproxy,🎯 节点选择",
@@ -751,6 +752,7 @@ function overwriteRules(params) {
         "RULE-SET,linux_do,🎯 节点选择",
         "RULE-SET,google,🎯 节点选择",
         "RULE-SET,github,🎯 节点选择",
+        "RULE-SET,Python,🎯 节点选择",
         "RULE-SET,youtube,🎯 节点选择"
     ];
     const adNonipRules = [
@@ -891,6 +893,15 @@ function overwriteRules(params) {
             format: "text",
             proxy: "🎯 节点选择"
         },
+        Python: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/Python.txt",
+            path: "./rule_set/my_ruleset/Python.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "🎯 节点选择"
+        },
         youtube: {
             type: "http",
             behavior: "classical",
@@ -899,6 +910,15 @@ function overwriteRules(params) {
             interval: 43200,
             format: "text",
             proxy: "🎯 节点选择"
+        },
+        直连软件列表: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/pcapplications.txt",
+            path: "./rule_set/my_ruleset/直连软件列表.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "DIRECT"
         },
         // 去广告
         reject_non_ip_no_drop: {
