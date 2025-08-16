@@ -740,6 +740,7 @@ function overwriteProxyGroups(params) {
 // 覆写规则
 function overwriteRules(params) {
      const myPcRules = [
+        "RULE-SET,DNS,DIRECT",
         "RULE-SET,pcdirect,DIRECT",
         "RULE-SET,ChinaMedia补充,DIRECT",
         "RULE-SET,吾爱破解Blog,DIRECT",
@@ -753,6 +754,7 @@ function overwriteRules(params) {
         "RULE-SET,google,🎯 节点选择",
         "RULE-SET,github,🎯 节点选择",
         "RULE-SET,Python,🎯 节点选择",
+        "RULE-SET,Cloudflare,🎯 节点选择",
         "RULE-SET,youtube,🎯 节点选择"
     ];
     const adNonipRules = [
@@ -812,6 +814,15 @@ function overwriteRules(params) {
     ];
 
     const ruleProviders = {
+        DNS: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/DNS.txt",
+            path: "./rule_set/my_ruleset/DNS.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "DIRECT"
+        },
         pcdirect: {
             type: "http",
             behavior: "classical",
@@ -898,6 +909,15 @@ function overwriteRules(params) {
             behavior: "classical",
             url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/Python.txt",
             path: "./rule_set/my_ruleset/Python.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "🎯 节点选择"
+        },
+        Cloudflare: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/Cloudflare.txt",
+            path: "./rule_set/my_ruleset/Cloudflare.txt",
             interval: 43200,
             format: "text",
             proxy: "🎯 节点选择"
