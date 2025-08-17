@@ -1,5 +1,5 @@
 
-// Mihomo Party 覆写 / Clash Verge Rev 扩展脚本
+// Mihomo Party 覆写扩展脚本
 
 function main(params) {
     if (!params.proxies) return params;
@@ -782,6 +782,12 @@ function overwriteRules(params) {
      const myPcRules = [
         "RULE-SET,DNS,DIRECT",
         "RULE-SET,pcdirect,DIRECT",
+        "RULE-SET,CCTV,DIRECT",
+        "RULE-SET,IPTVMainland,DIRECT",
+        "RULE-SET,BiliBili,DIRECT",
+        "RULE-SET,Youku,DIRECT",
+        "RULE-SET,iQIYI,DIRECT",
+        "RULE-SET,TencentVideo,DIRECT",
         "RULE-SET,ChinaMedia补充,DIRECT",
         "RULE-SET,吾爱破解Blog,DIRECT",
         "RULE-SET,不忘初心Blog,DIRECT",
@@ -789,13 +795,18 @@ function overwriteRules(params) {
     ];
       const myPcproxyRules = [
         "RULE-SET,pcproxy,🎯 节点选择",
+        "RULE-SET,IPTVOther,🎯 节点选择",
         "RULE-SET,GlobalMedia补充,🎯 节点选择",
         "RULE-SET,linux_do,🎯 节点选择",
         "RULE-SET,google,🎯 节点选择",
         "RULE-SET,github,🎯 节点选择",
         "RULE-SET,Python,🎯 节点选择",
         "RULE-SET,Cloudflare,🎯 节点选择",
-        "RULE-SET,youtube,🎯 节点选择"
+        "RULE-SET,Facebook,🎯 节点选择",
+        "RULE-SET,youtube,🎯 节点选择",
+        "RULE-SET,Emby,🎯 节点选择",
+        "RULE-SET,Netflix,🎯 节点选择",
+        "RULE-SET,Spotify,🎯 节点选择"
     ];
     const adNonipRules = [
         "RULE-SET,reject_non_ip,REJECT",
@@ -868,6 +879,69 @@ function overwriteRules(params) {
             behavior: "classical",
             url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/pcdirect.txt",
             path: "./rule_set/my_ruleset/pcdirect.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "DIRECT"
+        },
+        CCTV: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/CCTV.txt",
+            path: "./rule_set/my_ruleset/CCTV.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "DIRECT"
+        },
+        IPTVMainland: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/IPTVMainland.txt",
+            path: "./rule_set/my_ruleset/IPTVMainland.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "DIRECT"
+        },
+        IPTVOther: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/IPTVOther.txt",
+            path: "./rule_set/my_ruleset/IPTVOther.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "🎯 节点选择"
+        },
+        BiliBili: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/BiliBili.txt",
+            path: "./rule_set/my_ruleset/BiliBili.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "DIRECT"
+        },
+        Youku: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/Youku.txt",
+            path: "./rule_set/my_ruleset/Youku.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "DIRECT"
+        },
+        iQIYI: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/iQIYI.txt",
+            path: "./rule_set/my_ruleset/iQIYI.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "DIRECT"
+        },
+        TencentVideo: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/TencentVideo.txt",
+            path: "./rule_set/my_ruleset/TencentVideo.txt",
             interval: 43200,
             format: "text",
             proxy: "DIRECT"
@@ -967,6 +1041,42 @@ function overwriteRules(params) {
             behavior: "classical",
             url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/youtube.txt",
             path: "./rule_set/my_ruleset/youtube.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "🎯 节点选择"
+        },
+        Netflix: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/Netflix.txt",
+            path: "./rule_set/my_ruleset/Netflix.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "🎯 节点选择"
+        },
+        Spotify: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/Spotify.txt",
+            path: "./rule_set/my_ruleset/Spotify.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "🎯 节点选择"
+        },
+        Emby: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/Emby.txt",
+            path: "./rule_set/my_ruleset/Emby.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "🎯 节点选择"
+        },
+        Facebook: {
+            type: "http",
+            behavior: "classical",
+            url: "https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/Facebook.txt",
+            path: "./rule_set/my_ruleset/Facebook.txt",
             interval: 43200,
             format: "text",
             proxy: "🎯 节点选择"
