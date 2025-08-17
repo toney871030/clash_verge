@@ -526,6 +526,7 @@ function overwriteHosts (params) {
         "52pojie.cn":"124.232.185.97",
         "pc528.net":"23.225.149.62",
         "winos.me":"124.156.141.225",
+        "masuit.net":"172.67.183.74",
         "greasyfork.org":"172.67.164.117",
         "sleazyfork.org":"104.21.32.1",
         "haowallpaper.com":"110.42.51.228",
