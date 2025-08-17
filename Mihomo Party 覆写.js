@@ -67,6 +67,7 @@ function overwriteDns(params) {
     const dnsOptions = {
         enable: true,
         "prefer-h3": true,
+        "use-hosts": true,
         ipv6: true,
         "enhanced-mode": "fake-ip",
         "fake-ip-range": "198.18.0.1/16",
@@ -145,7 +146,7 @@ function overwriteNameserverPolicy (params) {
         "+.52pojie.cn": "quic://223.5.5.5:853",
         "+.rainmeter.cn": "quic://223.5.5.5:853",
         "+.pc528.net": "quic://223.5.5.5:853",
-        "+.bbs.3dmgame.com": "quic://223.5.5.5:853",
+        "+.3dmgame.com": "quic://223.5.5.5:853",
         "+.masuit.net": "quic://223.5.5.5:853",
         "+.hybase.com": "quic://223.5.5.5:853",
         "+.applnn.com": "quic://223.5.5.5:853",
@@ -520,7 +521,27 @@ function overwriteHosts (params) {
     const hosts = {
         "dns.alidns.com": ['223.5.5.5', '223.6.6.6', '2400:3200:baba::1', '2400:3200::1'],
         "doh.pub": ['120.53.53.53', '1.12.12.12'],
-        "cdn.jsdelivr.net": "cdn.jsdelivr.net.cdn.cloudflare.net"
+        "cdn.jsdelivr.net": "cdn.jsdelivr.net.cdn.cloudflare.net",
+        "linux.do":"172.66.166.61",
+        "52pojie.cn":"124.232.185.97:80",
+        "pc528.net":"23.225.149.62:80",
+        "winos.me":"124.156.141.225:80",
+        "greasyfork.org":"172.67.164.117",
+        "sleazyfork.org":"104.21.32.1",
+        "haowallpaper.com":"110.42.51.228",
+        "wallhaven.cc":"104.26.11.35",
+        "yfsp.tv":"104.18.33.60",
+        "ddys.mov":"104.26.11.121",
+        "3jihome.com":"172.67.173.61",
+        "ysxq.cc":"45.197.149.246",
+        "82mao.com":"156.238.249.39",
+        "v.ikanbot.com":"172.67.201.222",
+        "agedm.vip":"23.224.60.155",
+        "xvideos.com":"185.88.181.9:80",
+        "pornhub.com":"66.254.114.41:80",
+        "spankbang.com":"104.18.96.242",
+        "xhamster.com":"104.18.147.40",
+        "sehuatang.org":"104.21.28.80"
     };
     params.hosts = hosts;
 }
