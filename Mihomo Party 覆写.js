@@ -68,7 +68,6 @@ function overwriteDns(params) {
         enable: true,
         "prefer-h3": true,
         "use-hosts": true,
-        "use-system-hosts": false,
         ipv6: true,
         "enhanced-mode": "fake-ip",
         "fake-ip-range": "198.18.0.1/16",
