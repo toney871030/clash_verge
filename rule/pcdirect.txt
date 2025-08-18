@@ -14,9 +14,6 @@ DOMAIN-KEYWORD,ghp
 # rules更新
 DOMAIN-SUFFIX,ruleset.skk.moe
 
-# Ip检测
-DOMAIN-SUFFIX,itdog.cn
-
 # 大陆维权网站
 DOMAIN-SUFFIX,ts.isc.org.cn
 DOMAIN-SUFFIX,sswz.spb.gov.cn
