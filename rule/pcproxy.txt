@@ -4,6 +4,7 @@ DOMAIN-SUFFIX,ping.pe
 DOMAIN-SUFFIX,toolbox.googleapps.com
 DOMAIN-SUFFIX,ping0.cc
 DOMAIN-SUFFIX,v2rayse.com
+DOMAIN-SUFFIX,itdog.cn
 
 # AI图像生成
 DOMAIN-SUFFIX,styleai.art
