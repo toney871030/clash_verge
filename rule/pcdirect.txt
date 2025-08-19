@@ -11,37 +11,53 @@ DOMAIN-SUFFIX,ipv6.msftconnecttest.com
 DOMAIN-KEYWORD,mirror
 DOMAIN-KEYWORD,ghp
 
-# rules更新
+# Sukka Ruleset Server
 DOMAIN-SUFFIX,ruleset.skk.moe
 
-# 大陆维权网站
+# 互联网信息投诉
 DOMAIN-SUFFIX,ts.isc.org.cn
-DOMAIN-SUFFIX,sswz.spb.gov.cn
-DOMAIN-SUFFIX,tousu.sina.com.cn
 
-# 论坛博客
+# 邮政业申诉服务
+DOMAIN-SUFFIX,sswz.spb.gov.cn
+
+# WINOS
 DOMAIN-SUFFIX,winos.me
+
+# CMDPE
 DOMAIN-SUFFIX,cmdpe.com
-DOMAIN-SUFFIX,3dmgame.com
 
 # 雨滴社区
 DOMAIN-SUFFIX,rainmeter.cn
 DOMAIN-SUFFIX,bbs.rainmeter.cn
 
-# 软件下载站
+# 懒得勤快Blog
 DOMAIN-SUFFIX,masuit.net
+
+# 黑域基地
 DOMAIN-SUFFIX,hybase.com
+
+# Applnn
 DOMAIN-SUFFIX,applnn.com
+
+#油小猴
 DOMAIN-SUFFIX,youxiaohou.com
 
-# 壁纸下载站
+# 哲风壁纸
 DOMAIN-SUFFIX,haowallpaper.com
 
-# 网盘登录
+# 天翼云盘
 DOMAIN-SUFFIX,cloud.189.cn
+
+# 阿里云盘
 DOMAIN-SUFFIX,alipan.com
+
+# 123云盘
 DOMAIN-SUFFIX,123pan.com
+
+# Huang1111网盘
 DOMAIN-SUFFIX,pan.huang1111.cn
+
+# Panwiki - （原我的小站论坛）
 DOMAIN-SUFFIX,panwiki.com
 
 
