@@ -36,7 +36,7 @@ DOMAIN-SUFFIX,ping.pe
 DOMAIN-SUFFIX,toolbox.googleapps.com
 DOMAIN-SUFFIX,ping0.cc
 
-# V2RaySE
+# V2Ray科学上网
 DOMAIN-SUFFIX,v2rayse.com
 
 # SHODAN
