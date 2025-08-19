@@ -63,19 +63,20 @@ function overwriteDns(params) {
     ];
 
     const proxyDnsList = [
-        "tls://223.5.5.5#dns",
         "tls://8.8.8.8#dns",
+        "tls://223.5.5.5#dns",
         "tls://1.1.1.1#dns",
-        "tls://[2400:3200::1]#dns",
         "tls://[2001:4860:4860::8888]#dns",
+        "tls://[2400:3200::1]#dns",
         "tls://[2606:4700:4700::1111]#dns"
     ];
 
     const dnsOptions = {
         enable: true,
         listen: ":53",
-        "use-hosts": true,
         "prefer-h3": true,
+        "use-hosts": true,
+        "use-system-hosts": true,
         ipv6: true,
         "enhanced-mode": "fake-ip",
         "fake-ip-range": "198.18.0.1/16",
@@ -115,7 +116,7 @@ function overwriteFakeIpFilter (params) {
 // 覆写DNS.Nameserver Policy
 function overwriteNameserverPolicy (params) {
     const nameserverPolicy = {
-        "dns.alidns.com": "quic://223.5.5.5:853",
+        "dns.alidns.com": "tls://223.5.5.5#dns",
         "doh.pub": "https://1.12.12.12/dns-query",
         "doh.360.cn": "101.198.198.198",
         "+.ruleset.skk.moe": "dns.alidns.com",
@@ -554,7 +555,8 @@ function overwriteHosts (params) {
         "pornhub.com":"66.254.114.41",
         "spankbang.com":"104.18.96.242",
         "xhamster.com":"104.18.146.40",
-        "sehuatang.org":"104.21.28.80"
+        "sehuatang.org":"104.21.28.80",
+        "j-av.com":"104.21.96.1"
     };
     params.hosts = hosts;
 }
@@ -801,8 +803,10 @@ function overwriteRules(params) {
         "RULE-SET,不忘初心Blog,DIRECT",
         "RULE-SET,idm,DIRECT",
         "RULE-SET,360,DIRECT",
+        "RULE-SET,XiaoMi,DIRECT",
         "RULE-SET,Baidu,DIRECT",
         "RULE-SET,BaiDuTieBa,DIRECT",
+        "RULE-SET,Baidudisk,DIRECT",
         "RULE-SET,xunlei,DIRECT"    
     ];
     
@@ -812,6 +816,7 @@ function overwriteRules(params) {
         "RULE-SET,GlobalMedia补充,🎯 节点选择",
         "RULE-SET,linux_do,🎯 节点选择",
         "RULE-SET,google,🎯 节点选择",
+        "RULE-SET,Bing,🎯 节点选择",
         "RULE-SET,github,🎯 节点选择",
         "RULE-SET,Python,🎯 节点选择",
         "RULE-SET,Cloudflare,🎯 节点选择",
@@ -820,7 +825,7 @@ function overwriteRules(params) {
         "RULE-SET,Emby,🎯 节点选择",
         "RULE-SET,Netflix,🎯 节点选择",
         "RULE-SET,Spotify,🎯 节点选择",
-        "RULE-SET,Pornhub,🎯 节点选择"
+        "RULE-SET,Porn,🎯 节点选择"
     ];
 
     const nonipRules = [
@@ -938,6 +943,15 @@ function overwriteRules(params) {
             format: "text",
             proxy: "DIRECT"
         },
+        XiaoMi: {
+            type: "http",
+            behavior: "classical",
+            url: "https://ghfast.top/https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/XiaoMi.txt",
+            path: "./rule_set/my_ruleset/XiaoMi.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "DIRECT"
+        },
         Baidu: {
             type: "http",
             behavior: "classical",
@@ -952,6 +966,15 @@ function overwriteRules(params) {
             behavior: "classical",
             url: "https://ghfast.top/https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/BaiDuTieBa.txt",
             path: "./rule_set/my_ruleset/BaiDuTieBa.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "DIRECT"
+        },
+        Baidudisk: {
+            type: "http",
+            behavior: "classical",
+            url: "https://ghfast.top/https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/Baidudisk.txt",
+            path: "./rule_set/my_ruleset/Baidudisk.txt",
             interval: 43200,
             format: "text",
             proxy: "DIRECT"
@@ -1074,6 +1097,15 @@ function overwriteRules(params) {
             format: "text",
             proxy: "🎯 节点选择"
         },
+        Bing: {
+            type: "http",
+            behavior: "classical",
+            url: "https://ghfast.top/https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/Bing.txt",
+            path: "./rule_set/my_ruleset/Bing.txt",
+            interval: 43200,
+            format: "text",
+            proxy: "🎯 节点选择"
+        },
         github: {
             type: "http",
             behavior: "classical",
@@ -1137,11 +1169,11 @@ function overwriteRules(params) {
             format: "text",
             proxy: "🎯 节点选择"
         },
-        Pornhub: {
+        Porn: {
             type: "http",
             behavior: "classical",
-            url: "https://ghfast.top/https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/Pornhub.txt",
-            path: "./rule_set/my_ruleset/Pornhub.txt",
+            url: "https://ghfast.top/https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/Porn.txt",
+            path: "./rule_set/my_ruleset/Porn.txt",
             interval: 43200,
             format: "text",
             proxy: "🎯 节点选择"
