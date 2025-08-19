@@ -107,6 +107,7 @@ proxy-groups:
 rules:
   - DOMAIN-SUFFIX,qichiyu.com,🐸 手动选择
   - RULE-SET,pcdirect,DIRECT
+  - RULE-SET,ChinaMedia补充,DIRECT
   - RULE-SET,吾爱破解Blog,DIRECT
   - RULE-SET,不忘初心Blog,DIRECT
   - RULE-SET,idm,DIRECT
@@ -117,8 +118,8 @@ rules:
   - RULE-SET,Porn,🐸 手动选择
   - RULE-SET,Python,🐸 手动选择
   - RULE-SET,private_domain,🎯 全球直连
-  - RULE-SET,neteasemusic_non_ip,🐸 手动选择
-  - RULE-SET,neteasemusic_ip,🐸 手动选择
+  - RULE-SET,neteasemusic_non_ip,🎯 全球直连
+  - RULE-SET,neteasemusic_ip,🎯 全球直连
   - RULE-SET,Cloudflare_non_ip,🎯 全球直连
   - RULE-SET,Cloudflare_ip,🎯 全球直连
   - RULE-SET,apple_domain,🍎 Apple
@@ -182,6 +183,7 @@ rule-providers:
   Porn: { <<: *class, url: "https://ghfast.top/https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/Porn.txt"}
   Python: { <<: *class, url: "https://ghfast.top/https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/Python.txt"}
   pcdirect: { <<: *class, url: "https://ghfast.top/https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/pcdirect.txt"}
+  ChinaMedia补充: { <<: *class, url: "https://ghfast.top/https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/ChinaMedia补充.txt"}
   吾爱破解Blog: { <<: *class, url: "https://ghfast.top/https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/52pojie.txt"}
   不忘初心Blog: { <<: *class, url: "https://ghfast.top/https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/不忘初心Blog.txt"}
   idm: { <<: *class, url: "https://ghfast.top/https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/IDM.txt"}
