@@ -24,3 +24,5 @@ DOMAIN-SUFFIX,xvideos.com
 DOMAIN-SUFFIX,ypncdn.com
 DOMAIN-SUFFIX,sehuatang.org
 DOMAIN-SUFFIX,sehuatang.net
+DOMAIN-SUFFIX,twdvd.com
+DOMAIN-SUFFIX,j-av.com
