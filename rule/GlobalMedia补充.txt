@@ -1,23 +1,29 @@
 # NAME: GlobalMedia补充
+
+# 爱壹帆
 DOMAIN-SUFFIX,yfsp.tv
-DOMAIN-SUFFIX,libvio.cc
+# 三级之家
+DOMAIN-SUFFIX,3jihome.com
+# SOGO論壇
 DOMAIN-SUFFIX,oursogo.com
+# SPlayer
+DOMAIN-SUFFIX,music.ydev.tech
+# EYNY社区
 DOMAIN-SUFFIX,eyny.com
 DOMAIN-SUFFIX,www01.eyny.com
 DOMAIN-SUFFIX,www02.eyny.com
 DOMAIN-SUFFIX,www03.eyny.com
 DOMAIN-SUFFIX,www04.eyny.com
+# 禁漫天堂
 DOMAIN-SUFFIX,18comic.vip
 DOMAIN-SUFFIX,18comic.vip/?shunt=1
 DOMAIN-SUFFIX,18comic.vip/?shunt=2
 DOMAIN-SUFFIX,18comic.vip/?shunt=3
 DOMAIN-SUFFIX,18comic.vip/?shunt=4
-DOMAIN-SUFFIX,music.ydev.tech
-DOMAIN-SUFFIX,3jihome.com
-DOMAIN-SUFFIX,xvideos.com
-DOMAIN-SUFFIX,spankbang.com
-DOMAIN-SUFFIX,xhamster.com
-DOMAIN-SUFFIX,sehuatang.org
+
+
+
+
 
 
 
