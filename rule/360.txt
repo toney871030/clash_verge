@@ -254,8 +254,9 @@ DOMAIN-SUFFIX,xihuan.me
 DOMAIN-SUFFIX,xjietiao.com
 DOMAIN-SUFFIX,yiwanzhushou.com
 DOMAIN-SUFFIX,youhua.com
-URL-REGEX,(.+\.|^)(360|so)\.(cn|com)
 DOMAIN-SUFFIX,your360loans.com
 DOMAIN-SUFFIX,yunpan.cn
 DOMAIN-SUFFIX,yunpan.com
 DOMAIN-SUFFIX,yunpan.com.cn
+URL-REGEX,(.+.|^)(360|so|qihoo|360safe|qhimg|360totalsecurity|yunpan).(cn|com)
+URL-REGEX,(.+\.|^)(360|so)\.(cn|com)
