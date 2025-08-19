@@ -1,7 +1,7 @@
 # 机场订阅
 proxy-providers:
   Airport1:
-    url: "http://38.207.177.31/api/v1/client/subscribe?token=7644909b02c60f79520eaeb61173ca31"
+    url: "订阅地址"
     type: http
     interval: 86400
     health-check:
@@ -11,7 +11,7 @@ proxy-providers:
     proxy: 🎯 全球直连
     
   Airport2:
-    url: "https://substore.000000000.qzz.io/64701033-3b5e-ae47-1135-41f3ea0d3be2/api/file/mihomo"
+    url: "订阅地址"
     type: http
     interval: 86400
     health-check:
@@ -22,105 +22,7 @@ proxy-providers:
 
 # 节点信息 # dialer-proxy: 香港手动
 proxies:
-  - name: "美亚  WB+CDN-大漠孤狼李哥"
-    type: vless
-    server: 147.75.230.33
-    port: 443
-    uuid: 0265578d-2cbe-4ae8-bf62-87171d2b8b9c
-    network: ws
-    tls: true
-    alpn: [h2, http/1.1]
-    client-fingerprint: chrome
-    ws-opts:
-      path: /ws
-      headers:
-        Host: lucky.xiaoyaogpt.com
-  
-  - name: "CDN WB-建材批发王总"
-    type: vless
-    server: 162.159.129.243
-    port: 2053
-    uuid: 79446e84-5a11-4186-890d-6ebc64a94bed
-    network: ws
-    tls: true
-    alpn: [h2, http/1.1]
-    client-fingerprint: chrome
-    ws-opts:
-      path: /ws
-      headers:
-        Host: boss.xiaoyaogpt.com
-  
-  - name: "233boy-reality-165.232.149.143"
-    type: vless
-    server: 165.232.149.143
-    port: 49961
-    uuid: d109adf6-ec17-4cf8-b9bd-0b8625947fa6
-    network: tcp
-    tls: true
-    servername: dash.cloudflare.com
-    reality-opts:
-      public-key: OLNgQ38IP5qqpjApzySpq7sEMCRXZ6aKbsow8NHQvQE
-      short-id: ""
-    client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    
-  - name: "233boy-reality-LL-HK"
-    type: vless
-    server: 45.207.157.139
-    port: 13927
-    uuid: 95d238d9-bd58-42e5-8029-f59fcc44774e
-    network: tcp
-    servername: dash.cloudflare.com
-    tls: true
-    encryption: none
-    reality-opts:
-      public-key: 8daVYt0JHvXDAxSRbhXX5Csv51KZk_gW5QzozIQFXUM
-    client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    
-  - name: 233boy-reality-38.244.32.33
-    type: vless
-    server: 38.244.32.33
-    port: 20147
-    uuid: 2d0dfffb-2f6e-44c7-8e33-f1c7bb0e39d0
-    network: tcp
-    servername: aws.amazon.com
-    tls: true
-    encryption: none
-    reality-opts:
-      public-key: 4TpzGBCEilpbGh9z3cTM47bY4SpqXyLoGJvdfgpuWF8
-    client-fingerprint: chrome
-    flow: xtls-rprx-vision
-  
-  - name: 233boy-reality-38.76.148.9
-    type: vless
-    server: 38.76.148.9
-    port: 35178
-    uuid: 81f51388-67b1-44c7-beec-ccc6dba07e56
-    network: tcp
-    servername: www.ebay.com
-    tls: true
-    encryption: none
-    reality-opts:
-      public-key: 6lz-sdapSEubZS16kzRYpy97L150kl9nFNy-KtjvYm0
-    client-fingerprint: chrome
-    flow: xtls-rprx-vision
-    
-  - name: vl-reality-localhost
-    type: vless
-    server: 104.244.76.174
-    port: 57735
-    uuid: cf73ba63-6097-45b1-a1f2-7094307be1cb
-    network: tcp
-    servername: www.yahoo.com
-    tls: true
-    encryption: none
-    reality-opts:
-      public-key: 3FKbWYoh8yiaMbKYOLWe5I7pfdRzrrMHTVPgLMS1JAY
-      short-id: f438822f
-    client-fingerprint: chrome
-    flow: xtls-rprx-vision
-
+  // 添加节点信息
   - name: "🎯 全球直连"
     type: direct
     udp: true
