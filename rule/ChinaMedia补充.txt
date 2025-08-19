@@ -1,8 +1,18 @@
 # NAME: ChinaMedia补充
+
+# 播剧网
 DOMAIN-SUFFIX,ysxq.cc
+
+# 低端影视
 DOMAIN-SUFFIX,ddys.mov
+
+# 爱看机器人
 DOMAIN-SUFFIX,v.ikanbot.com
+
+# AGE动漫
 DOMAIN-SUFFIX,agedm.org
+
+# 天龙影院
 DOMAIN-SUFFIX,82mao.com
 DOMAIN-SUFFIX,85mao.com
 DOMAIN-SUFFIX,125mao.com
@@ -10,5 +20,8 @@ DOMAIN-SUFFIX,126mao.com
 DOMAIN-SUFFIX,eajyy.com
 DOMAIN-SUFFIX,shuangstv.net
 DOMAIN-SUFFIX,113276.xyz
+
+# HIFINI 音乐磁场
 DOMAIN-SUFFIX,hifiti.com
+
 
