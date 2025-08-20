@@ -9,6 +9,7 @@ DOMAIN-SUFFIX,82mao.com
 # 低端影视
 DOMAIN-SUFFIX,ddys.pro
 DOMAIN-SUFFIX,ddys.mov
+DOMAIN-KEYWORD,ddys
 
 # 三级之家
 DOMAIN-SUFFIX,3jihome.com
@@ -21,17 +22,11 @@ DOMAIN-SUFFIX,music.ydev.tech
 
 # EYNY社区
 DOMAIN-SUFFIX,eyny.com
-DOMAIN-SUFFIX,www01.eyny.com
-DOMAIN-SUFFIX,www02.eyny.com
-DOMAIN-SUFFIX,www03.eyny.com
-DOMAIN-SUFFIX,www04.eyny.com
+DOMAIN-KEYWORD,eyny
 
 # 禁漫天堂
 DOMAIN-SUFFIX,18comic.vip
-DOMAIN-SUFFIX,18comic.vip/?shunt=1
-DOMAIN-SUFFIX,18comic.vip/?shunt=2
-DOMAIN-SUFFIX,18comic.vip/?shunt=3
-DOMAIN-SUFFIX,18comic.vip/?shunt=4
+DOMAIN-KEYWORD,18comic
 
 # Porn
 DOMAIN-KEYWORD,porn
@@ -61,5 +56,6 @@ DOMAIN-SUFFIX,sehuatang.org
 DOMAIN-SUFFIX,sehuatang.net
 DOMAIN-SUFFIX,twdvd.com
 DOMAIN-SUFFIX,j-av.com
+
 
 
