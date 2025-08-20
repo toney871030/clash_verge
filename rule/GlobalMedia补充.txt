@@ -25,8 +25,8 @@ DOMAIN-SUFFIX,eyny.com
 DOMAIN-KEYWORD,eyny
 
 # 禁漫天堂
-DOMAIN-SUFFIX,18comic.vip
-DOMAIN-KEYWORD,18comic
+DOMAIN-SUFFIX,jm18c-qwq.org
+DOMAIN-KEYWORD,jm18c
 
 # Porn
 DOMAIN-KEYWORD,porn
@@ -56,6 +56,7 @@ DOMAIN-SUFFIX,sehuatang.org
 DOMAIN-SUFFIX,sehuatang.net
 DOMAIN-SUFFIX,twdvd.com
 DOMAIN-SUFFIX,j-av.com
+
 
 
 
