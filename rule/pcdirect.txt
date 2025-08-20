@@ -20,6 +20,13 @@ DOMAIN-SUFFIX,ts.isc.org.cn
 # 邮政业申诉服务
 DOMAIN-SUFFIX,sswz.spb.gov.cn
 
+# 不忘初心Blog
+DOMAIN-SUFFIX,pc528.net
+DOMAIN-KEYWORD,pc528
+
+# 吾爱破解Blog
+DOMAIN-SUFFIX,52pojie.cn
+
 # WINOS
 DOMAIN-SUFFIX,winos.me
 
@@ -59,5 +66,58 @@ DOMAIN-SUFFIX,pan.huang1111.cn
 
 # Panwiki - （原我的小站论坛）
 DOMAIN-SUFFIX,panwiki.com
+
+# IDM
+DOMAIN-SUFFIX,tonec.com
+DOMAIN-SUFFIX,registeridm.com
+DOMAIN-SUFFIX,internetdownloadmanager.com
+DOMAIN,www.tonec.com
+DOMAIN,www.registeridm.com
+DOMAIN,secure.registeridm.com
+DOMAIN,www.internetdownloadmanager.com
+DOMAIN,secure.internetdownloadmanager.com
+DOMAIN,mirror.internetdownloadmanager.com
+DOMAIN,mirror2.internetdownloadmanager.com
+DOMAIN,mirror3.internetdownloadmanager.com
+DOMAIN,star.tonec.com
+
+# NAME: Xunlei
+DOMAIN-SUFFIX,00cdn.com
+DOMAIN-SUFFIX,155.com
+DOMAIN-SUFFIX,2sonar.com
+DOMAIN-SUFFIX,88cdn.com
+DOMAIN-SUFFIX,8uri.cn
+DOMAIN-SUFFIX,falconalliance.cn
+DOMAIN-SUFFIX,fontong.com
+DOMAIN-SUFFIX,geilijiasu.com
+DOMAIN-SUFFIX,geilijiasu.net
+DOMAIN-SUFFIX,gigaget.com
+DOMAIN-SUFFIX,kanimg.com
+DOMAIN-SUFFIX,kankan.com
+DOMAIN-SUFFIX,kuaipan.cn
+DOMAIN-SUFFIX,n0808.com
+DOMAIN-SUFFIX,neoimaging.cn
+DOMAIN-SUFFIX,newvr.com
+DOMAIN-SUFFIX,p2cdn.com
+DOMAIN-SUFFIX,sandai.net
+DOMAIN-SUFFIX,sjzhushou.com
+DOMAIN-SUFFIX,szxlxzb.com
+DOMAIN-SUFFIX,thundercdn.com
+DOMAIN-SUFFIX,thunderurl.com
+DOMAIN-SUFFIX,xbase.cloud
+DOMAIN-SUFFIX,xbase.xyz
+DOMAIN-SUFFIX,xcloudbase.com
+DOMAIN-SUFFIX,xlisp.net
+DOMAIN-SUFFIX,xlpan.com
+DOMAIN-SUFFIX,xlyouxi.net
+DOMAIN-SUFFIX,xunlei.cn
+DOMAIN-SUFFIX,xunlei.com
+DOMAIN-SUFFIX,xunlei.net
+PROCESS-NAME,Thunder
+PROCESS-NAME,Thunder.exe
+URL-REGEX,(.+.)?(torrent|announce.php?passkey=|tracker|BitTorrent|bt_key|ed2k|find_node|get_peers|info_hash|magnet:|peer_id=|xunlei)(..+)?
+URL-REGEX,(.?)(xunlei|sandai|Thunder|XLLiveUD)(.)
+PROCESS-NAME,DownloadService.exe
+
 
 
