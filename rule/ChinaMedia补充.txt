@@ -13,11 +13,9 @@ DOMAIN-SUFFIX,v.ikanbot.com
 DOMAIN-SUFFIX,agedm.org
 DOMAIN-SUFFIX,agedm.vip
 
-# 天龙影院
-DOMAIN-SUFFIX,82mao.com
-
 # HIFINI 音乐磁场
 DOMAIN-SUFFIX,hifiti.com
+
 
 
 
