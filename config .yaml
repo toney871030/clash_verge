@@ -32,7 +32,8 @@ proxy-providers:
 
 # 节点信息 # dialer-proxy: 香港手动
 proxies:
-  - {name: 直连, type: direct}
+  
+  - {name: 直连, type: direct, udp: true}
   
   - name: "美亚  WB+CDN-大漠孤狼李哥"
     type: vless
@@ -235,19 +236,13 @@ proxy-groups:
 
 # 规则匹配
 rules:
+  - RULE-SET,private_ip,直连
+  - RULE-SET,private_domain,直连
   - DOMAIN-SUFFIX,qichiyu.com,🚀 默认代理
   - RULE-SET,pcdirect,直连
   - RULE-SET,ChinaMedia补充,直连
-  - RULE-SET,吾爱破解Blog,直连
-  - RULE-SET,不忘初心Blog,直连
-  - RULE-SET,idm,直连
-  - RULE-SET,xunlei,直连
   - RULE-SET,pcproxy,🚀 默认代理
   - RULE-SET,GlobalMedia补充,🚀 默认代理
-  - RULE-SET,linux_do,🚀 默认代理
-  - RULE-SET,Porn,🚀 默认代理
-  - RULE-SET,Python,🚀 默认代理
-  - RULE-SET,private_domain,直连
   - RULE-SET,neteasemusic_non_ip,直连
   - RULE-SET,neteasemusic_ip,直连
   - RULE-SET,Cloudflare_non_ip,直连
@@ -281,13 +276,24 @@ rule-anchor:
   domain: &domain {type: http, interval: 86400, behavior: domain, format: mrs}
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
 rule-providers: 
+  pcproxy: { <<: *class, url: "https://ghfast.top/https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/pcproxy.txt"}
+  GlobalMedia补充: { <<: *class, url: "https://ghfast.top/https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/GlobalMedia补充.txt"}
+  
+  pcdirect: { <<: *class, url: "https://ghfast.top/https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/pcdirect.txt"}
+  ChinaMedia补充: { <<: *class, url: "https://ghfast.top/https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/ChinaMedia补充.txt"}
+  
+  private_ip: {<<: *ip, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geoip/private.mrs"}
   private_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"}
+  
   lan_non_ip: { <<: *class, url: "https://ruleset.skk.moe/Clash/non_ip/lan.txt"}
   lan_ip: { <<: *class, url: "https://ruleset.skk.moe/Clash/ip/lan.txt"}
+  
   neteasemusic_non_ip: { <<: *class, url: "https://ruleset.skk.moe/Clash/non_ip/neteasemusic.txt"}
   neteasemusic_ip: { <<: *class, url: "https://ruleset.skk.moe/Clash/ip/neteasemusic.txt"}
+  
   Cloudflare_non_ip: { <<: *class, url: "https://ghfast.top/https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/Cloudflare.txt"}
   Cloudflare_ip: { <<: *class, url: "https://ghfast.top/https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/Cloudflare_ip.txt"}
+  
   ai: {  <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-ai-!cn.mrs" }
   youtube_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs"}
   google_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs"}
@@ -307,14 +313,3 @@ rule-providers:
   google_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/google.mrs"}
   telegram_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs"}
   netflix_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/netflix.mrs"}
-  pcproxy: { <<: *class, url: "https://ghfast.top/https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/pcproxy.txt"}
-  GlobalMedia补充: { <<: *class, url: "https://ghfast.top/https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/GlobalMedia补充.txt"}
-  linux_do: { <<: *class, url: "https://ghfast.top/https://github.com/toney871030/clash_verge/blob/master/rule/linux.do.txt"}
-  Porn: { <<: *class, url: "https://ghfast.top/https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/Porn.txt"}
-  Python: { <<: *class, url: "https://ghfast.top/https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/Python.txt"}
-  pcdirect: { <<: *class, url: "https://ghfast.top/https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/pcdirect.txt"}
-  ChinaMedia补充: { <<: *class, url: "https://ghfast.top/https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/ChinaMedia补充.txt"}
-  吾爱破解Blog: { <<: *class, url: "https://ghfast.top/https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/52pojie.txt"}
-  不忘初心Blog: { <<: *class, url: "https://ghfast.top/https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/不忘初心Blog.txt"}
-  idm: { <<: *class, url: "https://ghfast.top/https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/IDM.txt"}
-  xunlei: { <<: *class, url: "https://ghfast.top/https://raw.githubusercontent.com/toney871030/clash_verge/refs/heads/master/rule/Xunlei.txt"}
