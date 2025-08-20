@@ -2,6 +2,8 @@
 
 # 爱壹帆
 DOMAIN-SUFFIX,yfsp.tv
+# 天龙影院
+DOMAIN-SUFFIX,82mao.com
 # 三级之家
 DOMAIN-SUFFIX,3jihome.com
 # SOGO論壇
@@ -20,6 +22,7 @@ DOMAIN-SUFFIX,18comic.vip/?shunt=1
 DOMAIN-SUFFIX,18comic.vip/?shunt=2
 DOMAIN-SUFFIX,18comic.vip/?shunt=3
 DOMAIN-SUFFIX,18comic.vip/?shunt=4
+
 
 
 
