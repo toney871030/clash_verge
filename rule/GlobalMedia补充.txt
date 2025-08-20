@@ -7,6 +7,7 @@ DOMAIN-SUFFIX,yfsp.tv
 DOMAIN-SUFFIX,82mao.com
 
 # 低端影视
+DOMAIN-SUFFIX,ddys.pro
 DOMAIN-SUFFIX,ddys.mov
 
 # 三级之家
@@ -60,4 +61,5 @@ DOMAIN-SUFFIX,sehuatang.org
 DOMAIN-SUFFIX,sehuatang.net
 DOMAIN-SUFFIX,twdvd.com
 DOMAIN-SUFFIX,j-av.com
+
 
