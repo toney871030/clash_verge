@@ -24,10 +24,6 @@ DOMAIN-SUFFIX,music.ydev.tech
 DOMAIN-SUFFIX,eyny.com
 DOMAIN-KEYWORD,eyny
 
-# 禁漫天堂
-DOMAIN-SUFFIX,jm18c-qwq.org
-DOMAIN-KEYWORD,jm18c
-
 # Porn
 DOMAIN-KEYWORD,porn
 DOMAIN-SUFFIX,8teenxxx.com
@@ -56,6 +52,7 @@ DOMAIN-SUFFIX,sehuatang.org
 DOMAIN-SUFFIX,sehuatang.net
 DOMAIN-SUFFIX,twdvd.com
 DOMAIN-SUFFIX,j-av.com
+
 
 
 
