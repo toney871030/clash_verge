@@ -14,29 +14,24 @@ Gmail联系方式：toney871030@gmail.com
 # linux do论坛
   https://linux.do/
 
-# Sukka Ruleset Server仓库地址：
+# 七尺宇
+  Blog地址 : https://www.qichiyu.com
+  Github地址 : https://www.qichiyu.com](https://github.com/qichiyuhub
+
+# Loyalsoldier rule分类仓库: 
+  https://github.com/Loyalsoldier](https://github.com/Loyalsoldier/clash-rules
+
+# Sukka Ruleset Server：
  https://ruleset.skk.moe/
 
-# Loyalsoldier大佬的仓库地址: 
-  https://github.com/Loyalsoldier
-
-# blackmatrix7大佬的rule分类仓库:
+# blackmatrix7 rule分类仓库:
   https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Clash/README.md
 
 # 科学上网工具：
   https://v2rayse.com
 
-# Yuju的订阅转换网站:
-  https://sub.yuju.love
-
-# clash verge下载地址
-  https://github.com/clash-verge-rev/clash-verge-rev/releases
-
 # mihomo party下载地址
   https://github.com/mihomo-party-org/mihomo-party/releases
-
-# v2rayn下载地址
-  https://github.com/2dust/v2rayN/releases
 
 # SwitchHosts下载地址
   https://github.com/oldj/SwitchHosts/releases
