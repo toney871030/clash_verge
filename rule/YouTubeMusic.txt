@@ -1,2 +1,0 @@
-# NAME: YouTubeMusic
-DOMAIN,music.youtube.com
