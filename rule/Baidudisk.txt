@@ -1,4 +1,0 @@
-#Baidu disk
-PROCESS-NAME,baidunetdisk.exe
-
-URL-REGEX,(api|ps|sv|offnavi|newvector|ulog.imap|newloc)(.map|).(baidu|n.shifen).com
