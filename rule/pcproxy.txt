@@ -1,96 +1,97 @@
 # 代理补充列表
+payload:
 
 # 国外域名
-DOMAIN-SUFFIX,eu
-DOMAIN-SUFFIX,hk
-DOMAIN-SUFFIX,jp
-DOMAIN-SUFFIX,kr
-DOMAIN-SUFFIX,sg
-DOMAIN-SUFFIX,tw
-DOMAIN-SUFFIX,uk
+- DOMAIN-SUFFIX,eu
+- DOMAIN-SUFFIX,hk
+- DOMAIN-SUFFIX,jp
+- DOMAIN-SUFFIX,kr
+- DOMAIN-SUFFIX,sg
+- DOMAIN-SUFFIX,tw
+- DOMAIN-SUFFIX,uk
 
 # 国外域名关键字
-DOMAIN-KEYWORD,1e100
-DOMAIN-KEYWORD,abema
-DOMAIN-KEYWORD,appledaily
-DOMAIN-KEYWORD,avtb
-DOMAIN-KEYWORD,beetalk
-DOMAIN-KEYWORD,blogspot
-DOMAIN-KEYWORD,dropbox
-DOMAIN-KEYWORD,facebook
-DOMAIN-KEYWORD,fbcdn
-DOMAIN-KEYWORD,github
-DOMAIN-KEYWORD,gmail
-DOMAIN-KEYWORD,google
-DOMAIN-KEYWORD,instagram
-DOMAIN-KEYWORD,porn
-DOMAIN-KEYWORD,sci-hub
-DOMAIN-KEYWORD,spotify
-DOMAIN-KEYWORD,telegram
-DOMAIN-KEYWORD,twitter
-DOMAIN-KEYWORD,whatsapp
-DOMAIN-KEYWORD,youtube
+- DOMAIN-KEYWORD,1e100
+- DOMAIN-KEYWORD,abema
+- DOMAIN-KEYWORD,appledaily
+- DOMAIN-KEYWORD,avtb
+- DOMAIN-KEYWORD,beetalk
+- DOMAIN-KEYWORD,blogspot
+- DOMAIN-KEYWORD,dropbox
+- DOMAIN-KEYWORD,facebook
+- DOMAIN-KEYWORD,fbcdn
+- DOMAIN-KEYWORD,github
+- DOMAIN-KEYWORD,gmail
+- DOMAIN-KEYWORD,google
+- DOMAIN-KEYWORD,instagram
+- DOMAIN-KEYWORD,porn
+- DOMAIN-KEYWORD,sci-hub
+- DOMAIN-KEYWORD,spotify
+- DOMAIN-KEYWORD,telegram
+- DOMAIN-KEYWORD,twitter
+- DOMAIN-KEYWORD,whatsapp
+- DOMAIN-KEYWORD,youtube
 
 # 国外DNS
-DOMAIN-SUFFIX,dns.google
-DOMAIN-SUFFIX,1dot1dot1dot1.cloudflare-dns.com
-DOMAIN-SUFFIX,dot.sb
-DOMAIN-SUFFIX,dns.umbrella.com
-DOMAIN-SUFFIX,dns.quad9.net
-DOMAIN-SUFFIX,dns.google
-DOMAIN-SUFFIX,cloudflare-dns.com
-DOMAIN-SUFFIX,doh.dns.sb
-DOMAIN-SUFFIX,doh.opendns.com
-DOMAIN-SUFFIX,dns.quad9.net
-DOMAIN-SUFFIX,hk-hkg.doh.sb
-IP-CIDR,8.8.8.8/32,no-resolve
-IP-CIDR,8.8.4.4/32,no-resolve
-IP-CIDR,1.1.1.1/32,no-resolve
-IP-CIDR,1.0.0.1/32,no-resolve
-IP-CIDR,185.222.222.222/32,no-resolve
-IP-CIDR,208.67.222.222/32,no-resolve
-IP-CIDR,208.67.220.220/32,no-resolve
+- DOMAIN-SUFFIX,dns.google
+- DOMAIN-SUFFIX,1dot1dot1dot1.cloudflare-dns.com
+- DOMAIN-SUFFIX,dot.sb
+- DOMAIN-SUFFIX,dns.umbrella.com
+- DOMAIN-SUFFIX,dns.quad9.net
+- DOMAIN-SUFFIX,dns.google
+- DOMAIN-SUFFIX,cloudflare-dns.com
+- DOMAIN-SUFFIX,doh.dns.sb
+- DOMAIN-SUFFIX,doh.opendns.com
+- DOMAIN-SUFFIX,dns.quad9.net
+- DOMAIN-SUFFIX,hk-hkg.doh.sb
+- IP-CIDR,8.8.8.8/32,no-resolve
+- IP-CIDR,8.8.4.4/32,no-resolve
+- IP-CIDR,1.1.1.1/32,no-resolve
+- IP-CIDR,1.0.0.1/32,no-resolve
+- IP-CIDR,185.222.222.222/32,no-resolve
+- IP-CIDR,208.67.222.222/32,no-resolve
+- IP-CIDR,208.67.220.220/32,no-resolve
 
-# IP DNS监测
-DOMAIN-SUFFIX,ping.pe
-DOMAIN-SUFFIX,toolbox.googleapps.com
-DOMAIN-SUFFIX,ping0.cc
+# - IP DNS监测
+- DOMAIN-SUFFIX,ping.pe
+- DOMAIN-SUFFIX,toolbox.googleapps.com
+- DOMAIN-SUFFIX,ping0.cc
 
 # V2Ray科学上网
-DOMAIN-SUFFIX,v2rayse.com
+- DOMAIN-SUFFIX,v2rayse.com
 
 # SHODAN
-DOMAIN-SUFFIX,shodan.io
+- DOMAIN-SUFFIX,shodan.io
 
 # Wallhaven
-DOMAIN-SUFFIX,wallhaven.cc
+- DOMAIN-SUFFIX,wallhaven.cc
 
 # 免费域名
-DOMAIN-SUFFIX,l53.net
-DOMAIN-SUFFIX,zone.id
-DOMAIN-SUFFIX,nic.eu.org
+- DOMAIN-SUFFIX,l53.net
+- DOMAIN-SUFFIX,zone.id
+- DOMAIN-SUFFIX,nic.eu.org
 
 # 脚本插件
-DOMAIN-SUFFIX,greasyfork.org
-DOMAIN-SUFFIX,sleazyfork.org
+- DOMAIN-SUFFIX,greasyfork.org
+- DOMAIN-SUFFIX,sleazyfork.org
 
 # Jsdelivr
-DOMAIN-SUFFIX,esm.run
-DOMAIN-SUFFIX,jsdelivr.com
-DOMAIN-SUFFIX,jsdelivr.net
+- DOMAIN-SUFFIX,esm.run
+- DOMAIN-SUFFIX,jsdelivr.com
+- DOMAIN-SUFFIX,jsdelivr.net
 
 # linux.do
-DOMAIN-SUFFIX,linux.do
-DOMAIN-SUFFIX,connect.linux.do
-DOMAIN-SUFFIX,nav.linux.do
-DOMAIN-SUFFIX,webmail.linux.do
-DOMAIN-SUFFIX,wiki.linux.do
-DOMAIN-SUFFIX,cdk.linux.do
+- DOMAIN-SUFFIX,linux.do
+- DOMAIN-SUFFIX,connect.linux.do
+- DOMAIN-SUFFIX,nav.linux.do
+- DOMAIN-SUFFIX,webmail.linux.do
+- DOMAIN-SUFFIX,wiki.linux.do
+- DOMAIN-SUFFIX,cdk.linux.do
 
 # Python
-DOMAIN-SUFFIX,pycon.org
-DOMAIN-SUFFIX,pypa.io
-DOMAIN-SUFFIX,pypi.io
-DOMAIN-SUFFIX,pypi.org
-DOMAIN-SUFFIX,python.org
-DOMAIN-SUFFIX,pythonhosted.org
+- DOMAIN-SUFFIX,pycon.org
+- DOMAIN-SUFFIX,pypa.io
+- DOMAIN-SUFFIX,pypi.io
+- DOMAIN-SUFFIX,pypi.org
+- DOMAIN-SUFFIX,python.org
+- DOMAIN-SUFFIX,pythonhosted.org
