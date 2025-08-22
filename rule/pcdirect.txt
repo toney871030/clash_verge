@@ -115,8 +115,6 @@ DOMAIN-SUFFIX,xunlei.com
 DOMAIN-SUFFIX,xunlei.net
 PROCESS-NAME,Thunder
 PROCESS-NAME,Thunder.exe
-URL-REGEX,(.+.)?(torrent|announce.php?passkey=|tracker|BitTorrent|bt_key|ed2k|find_node|get_peers|info_hash|magnet:|peer_id=|xunlei)(..+)?
-URL-REGEX,(.?)(xunlei|sandai|Thunder|XLLiveUD)(.)
 PROCESS-NAME,DownloadService.exe
 
 
@@ -380,8 +378,6 @@ DOMAIN-SUFFIX,your360loans.com
 DOMAIN-SUFFIX,yunpan.cn
 DOMAIN-SUFFIX,yunpan.com
 DOMAIN-SUFFIX,yunpan.com.cn
-URL-REGEX,(.+.|^)(360|so|qihoo|360safe|qhimg|360totalsecurity|yunpan).(cn|com)
-URL-REGEX,(.+\.|^)(360|so)\.(cn|com)
 
 # XiaoMi
 DOMAIN-SUFFIX,408399.com
