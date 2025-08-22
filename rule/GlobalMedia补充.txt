@@ -1,57 +1,59 @@
 # NAME: GlobalMedia补充
+payload:
 
 # 爱壹帆
-DOMAIN-SUFFIX,yfsp.tv
+  - DOMAIN-SUFFIX,yfsp.tv
 
 # 天龙影院
-DOMAIN-SUFFIX,82mao.com
+  - DOMAIN-SUFFIX,82mao.com
 
 # 低端影视
-DOMAIN-SUFFIX,ddys.pro
-DOMAIN-SUFFIX,ddys.mov
-DOMAIN-KEYWORD,ddys
+  - DOMAIN-SUFFIX,ddys.pro
+  - DOMAIN-SUFFIX,ddys.mov
+  - DOMAIN-KEYWORD,ddys
 
 # 三级之家
-DOMAIN-SUFFIX,3jihome.com
+  - DOMAIN-SUFFIX,3jihome.com
 
 # SOGO論壇
-DOMAIN-SUFFIX,oursogo.com
+  - DOMAIN-SUFFIX,oursogo.com
 
 # SPlayer
-DOMAIN-SUFFIX,music.ydev.tech
+  - DOMAIN-SUFFIX,music.ydev.tech
 
 # EYNY社区
-DOMAIN-SUFFIX,eyny.com
-DOMAIN-KEYWORD,eyny
+  - DOMAIN-SUFFIX,eyny.com
+  - DOMAIN-KEYWORD,eyny
 
 # Porn
-DOMAIN-KEYWORD,porn
-DOMAIN-SUFFIX,8teenxxx.com
-DOMAIN-SUFFIX,ahcdn.com
-DOMAIN-SUFFIX,bcvcdn.com
-DOMAIN-SUFFIX,bongacams.com
-DOMAIN-SUFFIX,chaturbate.com
-DOMAIN-SUFFIX,dditscdn.com
-DOMAIN-SUFFIX,livejasmin.com
-DOMAIN-SUFFIX,phncdn.com
-DOMAIN-SUFFIX,phprcdn.com
-DOMAIN-SUFFIX,pornhub.com
-DOMAIN-SUFFIX,pornhubpremium.com
-DOMAIN-SUFFIX,rdtcdn.com
-DOMAIN-SUFFIX,redtube.com
-DOMAIN-SUFFIX,sb-cd.com
-DOMAIN-SUFFIX,spankbang.com
-DOMAIN-SUFFIX,t66y.com
-DOMAIN-SUFFIX,xhamster.com
-DOMAIN-SUFFIX,xnxx-cdn.com
-DOMAIN-SUFFIX,xnxx.com
-DOMAIN-SUFFIX,xvideos-cdn.com
-DOMAIN-SUFFIX,xvideos.com
-DOMAIN-SUFFIX,ypncdn.com
-DOMAIN-SUFFIX,sehuatang.org
-DOMAIN-SUFFIX,sehuatang.net
-DOMAIN-SUFFIX,twdvd.com
-DOMAIN-SUFFIX,j-av.com
+  - DOMAIN-KEYWORD,porn
+  - DOMAIN-SUFFIX,8teenxxx.com
+  - DOMAIN-SUFFIX,ahcdn.com
+  - DOMAIN-SUFFIX,bcvcdn.com
+  - DOMAIN-SUFFIX,bongacams.com
+  - DOMAIN-SUFFIX,chaturbate.com
+  - DOMAIN-SUFFIX,dditscdn.com
+  - DOMAIN-SUFFIX,livejasmin.com
+  - DOMAIN-SUFFIX,phncdn.com
+  - DOMAIN-SUFFIX,phprcdn.com
+  - DOMAIN-SUFFIX,pornhub.com
+  - DOMAIN-SUFFIX,pornhubpremium.com
+  - DOMAIN-SUFFIX,rdtcdn.com
+  - DOMAIN-SUFFIX,redtube.com
+  - DOMAIN-SUFFIX,sb-cd.com
+  - DOMAIN-SUFFIX,spankbang.com
+  - DOMAIN-SUFFIX,t66y.com
+  - DOMAIN-SUFFIX,xhamster.com
+  - DOMAIN-SUFFIX,xnxx-cdn.com
+  - DOMAIN-SUFFIX,xnxx.com
+  - DOMAIN-SUFFIX,xvideos-cdn.com
+  - DOMAIN-SUFFIX,xvideos.com
+  - DOMAIN-SUFFIX,ypncdn.com
+  - DOMAIN-SUFFIX,sehuatang.org
+  - DOMAIN-SUFFIX,sehuatang.net
+  - DOMAIN-SUFFIX,twdvd.com
+  - DOMAIN-SUFFIX,j-av.com
+
 
 
 
