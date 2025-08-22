@@ -1,14 +1,16 @@
 # NAME: ChinaMedia补充
+payload:
 
 # 播剧网
-DOMAIN-SUFFIX,ysxq.cc
+  - DOMAIN-SUFFIX,ysxq.cc
 
 # 爱看机器人
-DOMAIN-SUFFIX,v.ikanbot.com
+  - DOMAIN-SUFFIX,v.ikanbot.com
 
 # AGE动漫
-DOMAIN-SUFFIX,agedm.org
-DOMAIN-SUFFIX,agedm.vip
+  - DOMAIN-SUFFIX,agedm.org
+  - DOMAIN-SUFFIX,agedm.vip
 
 # HIFINI 音乐磁场
-DOMAIN-SUFFIX,hifiti.com
+  - DOMAIN-SUFFIX,hifiti.com
+
