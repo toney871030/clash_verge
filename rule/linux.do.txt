@@ -1,9 +1,0 @@
-# NAME: linux.do
-DOMAIN-SUFFIX,linux.do
-DOMAIN-SUFFIX,connect.linux.do
-DOMAIN-SUFFIX,nav.linux.do
-DOMAIN-SUFFIX,webmail.linux.do
-DOMAIN-SUFFIX,wiki.linux.do
-DOMAIN-SUFFIX,cdk.linux.do
-
-
