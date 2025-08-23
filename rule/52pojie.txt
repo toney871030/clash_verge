@@ -1,2 +1,0 @@
-#NAME:吾爱破解Blog
-DOMAIN-SUFFIX,52pojie.cn
