@@ -1,0 +1,257 @@
+# xiaoxingxing.yaml
+proxies:
+  - type: vless
+    name: CDN小星星-小星星_1
+    server: 43.156.116.194
+    port: 443
+    uuid: 8f03e34f-4c52-4dac-9fec-07262a5c0223
+    network: ws
+    servername: hongkong.xiaoyaogpt.com
+    tls: true
+    encryption: none
+    ws-opts:
+      path: /ws
+      headers:
+        Host: hongkong.xiaoyaogpt.com
+    client-fingerprint: chrome
+    alpn:
+      - h2
+      - http/1.1
+  - type: vless
+    name: CDN小星星-小星星_2
+    server: 8.219.126.240
+    port: 443
+    uuid: 8f03e34f-4c52-4dac-9fec-07262a5c0223
+    network: ws
+    servername: hongkong.xiaoyaogpt.com
+    tls: true
+    encryption: none
+    ws-opts:
+      path: /ws
+      headers:
+        Host: hongkong.xiaoyaogpt.com
+    client-fingerprint: chrome
+    alpn:
+      - h2
+      - http/1.1
+  - type: vless
+    name: CDN小星星-小星星_3
+    server: 45.77.9.114
+    port: 443
+    uuid: 8f03e34f-4c52-4dac-9fec-07262a5c0223
+    network: ws
+    servername: hongkong.xiaoyaogpt.com
+    tls: true
+    encryption: none
+    ws-opts:
+      path: /ws
+      headers:
+        Host: hongkong.xiaoyaogpt.com
+    client-fingerprint: chrome
+    alpn:
+      - h2
+      - http/1.1
+  - type: vless
+    name: CDN小星星-小星星_4
+    server: 168.138.194.74
+    port: 443
+    uuid: 8f03e34f-4c52-4dac-9fec-07262a5c0223
+    network: ws
+    servername: hongkong.xiaoyaogpt.com
+    tls: true
+    encryption: none
+    ws-opts:
+      path: /ws
+      headers:
+        Host: hongkong.xiaoyaogpt.com
+    client-fingerprint: chrome
+    alpn:
+      - h2
+      - http/1.1
+  - type: vless
+    name: CDN小星星-小星星_5
+    server: 207.148.105.247
+    port: 443
+    uuid: 8f03e34f-4c52-4dac-9fec-07262a5c0223
+    network: ws
+    servername: hongkong.xiaoyaogpt.com
+    tls: true
+    encryption: none
+    ws-opts:
+      path: /ws
+      headers:
+        Host: hongkong.xiaoyaogpt.com
+    client-fingerprint: chrome
+    alpn:
+      - h2
+      - http/1.1
+  - type: vless
+    name: CDN小星星-小星星_6
+    server: 124.156.238.155
+    port: 443
+    uuid: 8f03e34f-4c52-4dac-9fec-07262a5c0223
+    network: ws
+    servername: hongkong.xiaoyaogpt.com
+    tls: true
+    encryption: none
+    ws-opts:
+      path: /ws
+      headers:
+        Host: hongkong.xiaoyaogpt.com
+    client-fingerprint: chrome
+    alpn:
+      - h2
+      - http/1.1
+  - type: vless
+    name: CDN小星星-小星星_7
+    server: 204.93.210.86
+    port: 443
+    uuid: 8f03e34f-4c52-4dac-9fec-07262a5c0223
+    network: ws
+    servername: hongkong.xiaoyaogpt.com
+    tls: true
+    encryption: none
+    ws-opts:
+      path: /ws
+      headers:
+        Host: hongkong.xiaoyaogpt.com
+    client-fingerprint: chrome
+    alpn:
+      - h2
+      - http/1.1
+  - type: vless
+    name: CDN小星星-小星星_8
+    server: 204.93.210.84
+    port: 443
+    uuid: 8f03e34f-4c52-4dac-9fec-07262a5c0223
+    network: ws
+    servername: hongkong.xiaoyaogpt.com
+    tls: true
+    encryption: none
+    ws-opts:
+      path: /ws
+      headers:
+        Host: hongkong.xiaoyaogpt.com
+    client-fingerprint: chrome
+    alpn:
+      - h2
+      - http/1.1
+  - type: vless
+    name: CDN小星星-小星星_9
+    server: 155.248.181.189
+    port: 443
+    uuid: 8f03e34f-4c52-4dac-9fec-07262a5c0223
+    network: ws
+    servername: hongkong.xiaoyaogpt.com
+    tls: true
+    encryption: none
+    ws-opts:
+      path: /ws
+      headers:
+        Host: hongkong.xiaoyaogpt.com
+    client-fingerprint: chrome
+    alpn:
+      - h2
+      - http/1.1
+  - type: vless
+    name: CDN小星星-小星星_10
+    server: 141.147.185.15
+    port: 443
+    uuid: 8f03e34f-4c52-4dac-9fec-07262a5c0223
+    network: ws
+    servername: hongkong.xiaoyaogpt.com
+    tls: true
+    encryption: none
+    ws-opts:
+      path: /ws
+      headers:
+        Host: hongkong.xiaoyaogpt.com
+    client-fingerprint: chrome
+    alpn:
+      - h2
+      - http/1.1
+  - type: vless
+    name: CDN小星星-小星星_11
+    server: 152.69.195.36
+    port: 443
+    uuid: 8f03e34f-4c52-4dac-9fec-07262a5c0223
+    network: ws
+    servername: hongkong.xiaoyaogpt.com
+    tls: true
+    encryption: none
+    ws-opts:
+      path: /ws
+      headers:
+        Host: hongkong.xiaoyaogpt.com
+    client-fingerprint: chrome
+    alpn:
+      - h2
+      - http/1.1
+  - type: vless
+    name: CDN小星星-小星星_12
+    server: 132.226.7.217
+    port: 443
+    uuid: 8f03e34f-4c52-4dac-9fec-07262a5c0223
+    network: ws
+    servername: hongkong.xiaoyaogpt.com
+    tls: true
+    encryption: none
+    ws-opts:
+      path: /ws
+      headers:
+        Host: hongkong.xiaoyaogpt.com
+    client-fingerprint: chrome
+    alpn:
+      - h2
+      - http/1.1
+  - type: vless
+    name: CDN小星星-小星星_13
+    server: 8.220.134.136
+    port: 443
+    uuid: 8f03e34f-4c52-4dac-9fec-07262a5c0223
+    network: ws
+    servername: hongkong.xiaoyaogpt.com
+    tls: true
+    encryption: none
+    ws-opts:
+      path: /ws
+      headers:
+        Host: hongkong.xiaoyaogpt.com
+    client-fingerprint: chrome
+    alpn:
+      - h2
+      - http/1.1
+  - type: vless
+    name: CDN小星星-小星星_14
+    server: 168.138.165.174
+    port: 443
+    uuid: 8f03e34f-4c52-4dac-9fec-07262a5c0223
+    network: ws
+    servername: hongkong.xiaoyaogpt.com
+    tls: true
+    encryption: none
+    ws-opts:
+      path: /ws
+      headers:
+        Host: hongkong.xiaoyaogpt.com
+    client-fingerprint: chrome
+    alpn:
+      - h2
+      - http/1.1
+  - type: vless
+    name: CDN小星星-小星星_15
+    server: 13.230.34.30
+    port: 443
+    uuid: 8f03e34f-4c52-4dac-9fec-07262a5c0223
+    network: ws
+    servername: hongkong.xiaoyaogpt.com
+    tls: true
+    encryption: none
+    ws-opts:
+      path: /ws
+      headers:
+        Host: hongkong.xiaoyaogpt.com
+    client-fingerprint: chrome
+    alpn:
+      - h2
+      - http/1.1
