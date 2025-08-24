@@ -21,21 +21,19 @@ Select: &Select {type: select, include-all: true}
 UrlTest: &UrlTest {type: url-test, include-all: true, tolerance: 20, interval: 300}
 FallBack: &FallBack {type: fallback, include-all: true, tolerance: 20, interval: 300}
 
-### 策略组基础配置
-Select: &Select {type: select, url: 'http://www.gstatic.com/generate_204', disable-udp: false, hidden: false, include-all: true}
-# 自动选择 [每 300 秒一次惰性健康检查，容差 20ms，时延超过 2 秒判定为失败，失败 3 次自动触发健康检查]
-UrlTest: &UrlTest {type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 300, lazy: true, tolerance: 20, timeout: 2000, disable-udp: false, max-failed-times: 3, hidden: true, include-all: true}
-# 自动回退 [每 300 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次自动触发健康检查]
-FallBack: &FallBack {type: fallback, url: 'http://www.gstatic.com/generate_204', interval: 300, lazy: true, timeout: 2000, disable-udp: false, max-failed-times: 3, hidden: true, include-all: true}
-
 # 定义通用的 proxies 列表 (锚点)
 AllProxies: &AllProxies [🔯 香港故转, 🔯 日本故转, 🔯 台湾故转, 🔯 狮城故转, 🔯 美国故转, 🔯 韩国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 台湾自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 韩国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇨🇳 台湾节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇰🇷 韩国节点, 🌐 其它节点, 🌐 全部节点, 直连]
 # 定义主选择组 proxies 列表 (锚点)
 Proxieslite: &Proxieslite [🔯 香港故转, 🔯 日本故转, 🔯 台湾故转, 🔯 狮城故转, 🔯 美国故转, 🔯 韩国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 台湾自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 韩国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇨🇳 台湾节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇰🇷 韩国节点, 🌐 其它节点]
 # 定义漏网之鱼 proxies 列表 (锚点)
 Proxiesmatch: &Proxiesmatch [🚀 默认代理, 🔯 香港故转, 🔯 日本故转, 🔯 台湾故转, 🔯 狮城故转, 🔯 美国故转, 🔯 韩国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 台湾自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 韩国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇨🇳 台湾节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇰🇷 韩国节点, 🌐 其它节点]
-# 定义 ChatGPT 专属 proxies 列表 (锚点)
-ChatGPTProxies: &ChatGPTProxies [🔯 日本故转, 🔯 美国故转, ♻️ 日本自动, ♻️ 美国自动, 🇯🇵 日本节点, 🇺🇲 美国节点]
+# 定义 日本 专属 proxies 列表
+JPProxies: &JPProxies [🔯 日本故转, ♻️ 日本自动, 🇯🇵 日本节点]
+# 定义 美国 专属 proxies 列表
+USProxies: &USProxies [🔯 美国故转, ♻️ 美国自动, 🇺🇲 美国节点]
+# 定义 香港 专属 proxies 列表
+HKProxies: &HKProxies [🔯 香港故转, ♻️ 香港自动, 🇭🇰 香港节点]
+
 
 # 策略组
 proxy-groups:
@@ -74,15 +72,14 @@ proxy-groups:
   - {name: 🌐 全部节点, <<: *Select, filter: *FilterAll}
  
  # 应用分组
-  - {name: 📹 YouTube, type: select, proxies: *AllProxies}
-  - {name: 🍀 Google, type: select, proxies: *AllProxies}
-  - {name: 🤖 ChatGPT, type: select, proxies: *ChatGPTProxies}
-  - {name: 👨🏿‍💻 GitHub, type: select, proxies: *AllProxies}
-  - {name: 🐬 OneDrive, type: select, proxies: *AllProxies}
-  - {name: 🪟 Microsoft, type: select, proxies: *AllProxies}
-  - {name: 🎵 TikTok, type: select, proxies: *AllProxies}
-  - {name: 📲 Telegram, type: select, proxies: *AllProxies}
-  - {name: 🎥 NETFLIX, type: select, proxies: *AllProxies}
+  - {name: 📹 YouTube, type: select, proxies: *HKProxies}
+  - {name: 🍀 Google, type: select, proxies: *USProxies}
+  - {name: 🤖 ChatGPT, type: select, proxies: *JPProxies}
+  - {name: 👨🏿‍💻 GitHub, type: select, proxies: *HKProxies}
+  - {name: 🐬 OneDrive, type: select, proxies: *HKProxies}
+  - {name: 🪟 Microsoft, type: select, proxies: *HKProxies}
+  - {name: 🎵 TikTok, type: select, proxies: *JPProxies}
+  - {name: 📲 Telegram, type: select, proxies: *USProxies}
+  - {name: 🎥 NETFLIX, type: select, proxies: *USProxies}
   - {name: 💶 PayPal, type: select, proxies: *AllProxies}
   - {name: 🐟 漏网之鱼, type: select, proxies: *Proxiesmatch}
-
