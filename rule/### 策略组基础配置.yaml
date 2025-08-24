@@ -1,0 +1,82 @@
+# 出站策略，根据自己情况调整每个策略里分组排序，增删都可以，比如把美国自动放到第一个，比如删除香港故转，注意别漏掉表情逗号等。
+# 如果相应分组没有筛选到对应的国家，请根据自己节点名字调整筛选关键字。
+# 没有再使用锚点，是考虑很多新手修改难度，这样新手修改某个分组更容易些。
+
+# 节点筛选
+# 按地区筛选
+FilterHK: &FilterHK '^(?=.*((?i)🇭🇰|香港|\b(HK|Hong)(\d+)?\b))(?!.*((?i)回国|校园|网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点)).*$'
+FilterTW: &FilterTW '^(?=.*((?i)🇹🇼|台湾|\b(TW|Tai|Taiwan)(\d+)?\b))(?!.*((?i)回国|校园|网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点)).*$'
+FilterJP: &FilterJP '^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|\b(JP|Japan)(\d+)?\b))(?!.*((?i)回国|校园|网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点)).*$'
+FilterKR: &FilterKR '^(?=.*((?i)🇰🇷|韩国|韓|首尔|\b(KR|Korea)(\d+)?\b))(?!.*((?i)回国|校园|网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点)).*$'
+FilterSG: &FilterSG '^(?=.*((?i)🇸🇬|新加坡|狮|\b(SG|Singapore)(\d+)?\b))(?!.*((?i)回国|校园|网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点)).*$'
+FilterUS: &FilterUS '^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|\b(US|United States)(\d+)?\b))(?!.*((?i)回国|校园|网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点)).*$'
+FilterUK: &FilterUK '^(?=.*((?i)🇬🇧|英国|伦敦|\b(UK|United Kingdom)(\d+)?\b))(?!.*((?i)回国|校园|网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点)).*$'
+FilterFR: &FilterFR '^(?=.*((?i)🇫🇷|法国|\b(FR|France)(\d+)?\b))(?!.*((?i)回国|校园|网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点)).*$'
+FilterDE: &FilterDE '^(?=.*((?i)🇩🇪|德国|\b(DE|Germany)(\d+)?\b))(?!.*((?i)回国|校园|网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点)).*$'
+FilterOthers: &FilterOthers '^(?!.*(🇭🇰|HK|Hong|香港|🇹🇼|TW|Taiwan|Wan|🇯🇵|JP|Japan|日本|🇸🇬|SG|Singapore|狮城|🇺🇸|US|United States|America|美国|🇩🇪|DE|Germany|德国|🇬🇧|UK|United Kingdom|英国|🇰🇷|KR|Korea|韩国|韓|🇫🇷|FR|France|法国|直连)).*$'
+FilterAll: &FilterAll '^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$'
+
+### 策略组基础配置
+Select: &Select {type: select, url: 'http://www.gstatic.com/generate_204', disable-udp: false, hidden: false, include-all: true}
+# 自动选择 [每 300 秒一次惰性健康检查，容差 20ms，时延超过 2 秒判定为失败，失败 3 次自动触发健康检查]
+UrlTest: &UrlTest {type: url-test, url: 'http://www.gstatic.com/generate_204', interval: 300, lazy: true, tolerance: 20, timeout: 2000, disable-udp: false, max-failed-times: 3, hidden: true, include-all: true}
+# 自动回退 [每 300 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次自动触发健康检查]
+FallBack: &FallBack {type: fallback, url: 'http://www.gstatic.com/generate_204', interval: 300, lazy: true, timeout: 2000, disable-udp: false, max-failed-times: 3, hidden: true, include-all: true}
+
+# 定义通用的 proxies 列表 (锚点)
+AllProxies: &AllProxies [🔯 香港故转, 🔯 日本故转, 🔯 台湾故转, 🔯 狮城故转, 🔯 美国故转, 🔯 韩国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 台湾自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 韩国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇨🇳 台湾节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇰🇷 韩国节点, 🌐 其它节点, 🌐 全部节点, 直连]
+# 定义主选择组 proxies 列表 (锚点)
+Proxieslite: &Proxieslite [🔯 香港故转, 🔯 日本故转, 🔯 台湾故转, 🔯 狮城故转, 🔯 美国故转, 🔯 韩国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 台湾自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 韩国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇨🇳 台湾节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇰🇷 韩国节点, 🌐 其它节点]
+# 定义漏网之鱼 proxies 列表 (锚点)
+Proxiesmatch: &Proxiesmatch [🚀 默认代理, 🔯 香港故转, 🔯 日本故转, 🔯 台湾故转, 🔯 狮城故转, 🔯 美国故转, 🔯 韩国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 台湾自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 韩国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇨🇳 台湾节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇰🇷 韩国节点, 🌐 其它节点]
+# 定义 ChatGPT 专属 proxies 列表
+ChatGPTProxies: &ChatGPTProxies [🔯 日本故转, 🔯 美国故转, ♻️ 日本自动, ♻️ 美国自动, 🇯🇵 日本节点, 🇺🇲 美国节点]
+
+# 策略组
+proxy-groups:
+# 主选择组
+  - {name: 🚀 默认代理, type: select, proxies: *Proxieslite}
+
+# 其它分组
+  - {name: 🌐 其它节点, <<: *Select, filter: *FilterOthers}
+
+# 按地区分组
+  - {name: 🇭🇰 香港节点, <<: *Select, filter: *FilterHK}
+  - {name: 🔯 香港故转, <<: *FallBack, filter: *FilterHK}
+  - {name: ♻️ 香港自动, <<: *UrlTest, filter: *FilterHK}
+ 
+  - {name: 🇯🇵 日本节点, <<: *Select, filter: *FilterJP}
+  - {name: 🔯 日本故转, <<: *FallBack, filter: *FilterJP}
+  - {name: ♻️ 日本自动, <<: *UrlTest, filter: *FilterJP}
+ 
+  - {name: 🇺🇲 美国节点, <<: *Select, filter: *FilterUS}
+  - {name: 🔯 美国故转, <<: *FallBack, filter: *FilterUS}
+  - {name: ♻️ 美国自动, <<: *UrlTest, filter: *FilterUS}
+ 
+  - {name: 🇨🇳 台湾节点, <<: *Select, filter: *FilterTW}
+  - {name: 🔯 台湾故转, <<: *FallBack, filter: *FilterTW}
+  - {name: ♻️ 台湾自动, <<: *UrlTest, filter: *FilterTW}
+ 
+  - {name: 🇸🇬 狮城节点, <<: *Select, filter: *FilterSG}
+  - {name: 🔯 狮城故转, <<: *FallBack, filter: *FilterSG}
+  - {name: ♻️ 狮城自动, <<: *UrlTest, filter: *FilterSG}
+ 
+  - {name: 🇰🇷 韩国节点, <<: *Select, filter: *FilterKR}
+  - {name: 🔯 韩国故转, <<: *FallBack, filter: *FilterKR}
+  - {name: ♻️ 韩国自动, <<: *UrlTest, filter: *FilterKR}
+ 
+  - {name: ♻️ 自动选择, <<: *UrlTest, filter: "^((?!(直连)).)*$"}
+  - {name: 🌐 全部节点, <<: *Select, filter: *FilterAll}
+ 
+ # 应用分组
+  - {name: 📹 YouTube, type: select, proxies: *AllProxies}
+  - {name: 🍀 Google, type: select, proxies: *AllProxies}
+  - {name: 🤖 ChatGPT, type: select, proxies: *ChatGPTProxies}
+  - {name: 👨🏿‍💻 GitHub, type: select, proxies: *AllProxies}
+  - {name: 🐬 OneDrive, type: select, proxies: *AllProxies}
+  - {name: 🪟 Microsoft, type: select, proxies: *AllProxies}
+  - {name: 🎵 TikTok, type: select, proxies: *AllProxies}
+  - {name: 📲 Telegram, type: select, proxies: *AllProxies}
+  - {name: 🎥 NETFLIX, type: select, proxies: *AllProxies}
+  - {name: 💶 PayPal, type: select, proxies: *AllProxies}
+  - {name: 🐟 漏网之鱼, type: select, proxies: *Proxiesmatch}
