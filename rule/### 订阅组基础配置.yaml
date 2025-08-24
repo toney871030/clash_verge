@@ -1,0 +1,20 @@
+# 订阅更新和延迟测试相关
+providers: &providers {type: http, interval: 18000, health-check: {enable: true, url: "https://www.gstatic.com/generate_204", interval: 1800, filter: "(?i)^(?!unavailable).*$"}}
+
+# 机场订阅
+proxy-providers:
+  订阅 1: # 免费公益节点
+    <<: *providers
+    url: "https://substore.000000000.qzz.io/64701033-3b5e-ae47-1135-41f3ea0d3be2/api/file/mihomo"
+   
+  订阅 2: # BestSub订阅
+    <<: *providers
+    url: "https://bestsub.bestrui.ggff.net/share/bestsub/cdcefaa4-1f0d-462e-ba76-627b344989f2/speed.yaml"
+    
+  订阅 3: # xiaoxingxing
+    <<: *providers
+    url: "https://raw.githubusercontent.com/toney871030/clash/refs/heads/master/proxies/xiaoxingxing.yaml"
+    
+# 节点信息
+proxies:
+  - {name: 直连, type: direct}
