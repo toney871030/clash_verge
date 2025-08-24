@@ -29,7 +29,7 @@ AllProxies: &AllProxies [🔯 香港故转, 🔯 日本故转, 🔯 台湾故转
 Proxieslite: &Proxieslite [🔯 香港故转, 🔯 日本故转, 🔯 台湾故转, 🔯 狮城故转, 🔯 美国故转, 🔯 韩国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 台湾自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 韩国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇨🇳 台湾节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇰🇷 韩国节点, 🌐 其它节点]
 # 定义漏网之鱼 proxies 列表 (锚点)
 Proxiesmatch: &Proxiesmatch [🚀 默认代理, 🔯 香港故转, 🔯 日本故转, 🔯 台湾故转, 🔯 狮城故转, 🔯 美国故转, 🔯 韩国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 台湾自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 韩国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇨🇳 台湾节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇰🇷 韩国节点, 🌐 其它节点]
-# 定义 ChatGPT 专属 proxies 列表
+# 定义 ChatGPT 专属 proxies 列表 (锚点)
 ChatGPTProxies: &ChatGPTProxies [🔯 日本故转, 🔯 美国故转, ♻️ 日本自动, ♻️ 美国自动, 🇯🇵 日本节点, 🇺🇲 美国节点]
 
 # 策略组
@@ -40,27 +40,27 @@ proxy-groups:
 # 其它分组
   - {name: 🌐 其它节点, <<: *Select, filter: *FilterOthers}
 
-# 按地区分组
+# 香港分组
   - {name: 🇭🇰 香港节点, <<: *Select, filter: *FilterHK}
   - {name: 🔯 香港故转, <<: *FallBack, filter: *FilterHK}
   - {name: ♻️ 香港自动, <<: *UrlTest, filter: *FilterHK}
- 
+# 日本分组
   - {name: 🇯🇵 日本节点, <<: *Select, filter: *FilterJP}
   - {name: 🔯 日本故转, <<: *FallBack, filter: *FilterJP}
   - {name: ♻️ 日本自动, <<: *UrlTest, filter: *FilterJP}
- 
+ # 美国分组
   - {name: 🇺🇲 美国节点, <<: *Select, filter: *FilterUS}
   - {name: 🔯 美国故转, <<: *FallBack, filter: *FilterUS}
   - {name: ♻️ 美国自动, <<: *UrlTest, filter: *FilterUS}
- 
+ # 台湾分组
   - {name: 🇨🇳 台湾节点, <<: *Select, filter: *FilterTW}
   - {name: 🔯 台湾故转, <<: *FallBack, filter: *FilterTW}
   - {name: ♻️ 台湾自动, <<: *UrlTest, filter: *FilterTW}
- 
+ # 狮城分组
   - {name: 🇸🇬 狮城节点, <<: *Select, filter: *FilterSG}
   - {name: 🔯 狮城故转, <<: *FallBack, filter: *FilterSG}
   - {name: ♻️ 狮城自动, <<: *UrlTest, filter: *FilterSG}
- 
+ # 韩国分组
   - {name: 🇰🇷 韩国节点, <<: *Select, filter: *FilterKR}
   - {name: 🔯 韩国故转, <<: *FallBack, filter: *FilterKR}
   - {name: ♻️ 韩国自动, <<: *UrlTest, filter: *FilterKR}
